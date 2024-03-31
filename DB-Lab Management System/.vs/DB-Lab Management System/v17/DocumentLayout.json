@@ -7,11 +7,11 @@
       "RelativeMoniker": "D:0:0:{3F249A55-1F54-4181-9AFD-37143A10FCE5}|DB-Lab Management System\\DB-Lab Management System.csproj|solutionrelative:db-lab management system\\attendance\\studentregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F249A55-1F54-4181-9AFD-37143A10FCE5}|DB-Lab Management System\\DB-Lab Management System.csproj|d:\\project\\second semester\\db-lab management system\\db-lab management system\\attendance\\studentregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{3F249A55-1F54-4181-9AFD-37143A10FCE5}|DB-Lab Management System\\DB-Lab Management System.csproj|D:\\Project\\Second Semester\\DB-Lab Management System\\db-lab management system\\attendance\\studentregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3F249A55-1F54-4181-9AFD-37143A10FCE5}|DB-Lab Management System\\DB-Lab Management System.csproj|solutionrelative:db-lab management system\\attendance\\studentregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F249A55-1F54-4181-9AFD-37143A10FCE5}|DB-Lab Management System\\DB-Lab Management System.csproj|d:\\project\\second semester\\db-lab management system\\db-lab management system\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{3F249A55-1F54-4181-9AFD-37143A10FCE5}|DB-Lab Management System\\DB-Lab Management System.csproj|D:\\Project\\Second Semester\\DB-Lab Management System\\db-lab management system\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3F249A55-1F54-4181-9AFD-37143A10FCE5}|DB-Lab Management System\\DB-Lab Management System.csproj|solutionrelative:db-lab management system\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -52,7 +52,7 @@
               "RelativeDocumentMoniker": "DB-Lab Management System\\Attendance\\StudentRegistration.cs",
               "ToolTip": "D:\\Project\\Second Semester\\DB-Lab Management System\\DB-Lab Management System\\Attendance\\StudentRegistration.cs",
               "RelativeToolTip": "DB-Lab Management System\\Attendance\\StudentRegistration.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAxwA4AAAAiAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA4AAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-29T16:10:19.775Z",
               "EditorCaption": ""
@@ -66,8 +66,7 @@
               "ToolTip": "D:\\Project\\Second Semester\\DB-Lab Management System\\DB-Lab Management System\\Attendance\\StudentRegistration.cs [Design]",
               "RelativeToolTip": "DB-Lab Management System\\Attendance\\StudentRegistration.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-29T16:10:17.628Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-03-29T16:10:17.628Z"
             },
             {
               "$type": "Document",
@@ -126,8 +125,7 @@
               "ToolTip": "D:\\Project\\Second Semester\\DB-Lab Management System\\DB-Lab Management System\\AdminDashboard.cs [Design]",
               "RelativeToolTip": "DB-Lab Management System\\AdminDashboard.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-25T09:45:49.342Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-03-25T09:45:49.342Z"
             }
           ]
         }
