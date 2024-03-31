@@ -27,3 +27,4 @@ D:\DELL\DELL\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
 D:\DELL\DELL\obj\Debug\DELL.exe.licenses
 D:\DELL\DELL\obj\Debug\DELL.UI.SignIn.resources
 D:\DELL\DELL\obj\Debug\DELL.MainMenu.resources
+D:\DELL\DELL\obj\Debug\DELL.UI.SignUp.resources

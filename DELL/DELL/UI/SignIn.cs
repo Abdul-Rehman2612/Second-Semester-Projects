@@ -21,12 +21,11 @@ namespace DELL.UI
         {
 
         }
-
         private void Back_Click(object sender, EventArgs e)
         {
-            this.Hide();
             MainMenu mainMenu = new MainMenu();
             mainMenu.Show();
+            this.Hide();
         }
     }
 }

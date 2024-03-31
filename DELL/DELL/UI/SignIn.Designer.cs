@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignIn));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.MainPanel = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.TopContainer = new Guna.UI2.WinForms.Guna2Panel();
             this.Logo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.BottomContainer = new Guna.UI2.WinForms.Guna2Panel();
-            this.TextBoxContainer = new System.Windows.Forms.TableLayoutPanel();
-            this.Password = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.UNInput = new Guna.UI2.WinForms.Guna2TextBox();
-            this.Username = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.PInput = new Guna.UI2.WinForms.Guna2TextBox();
             this.ButtonsContainer = new System.Windows.Forms.TableLayoutPanel();
             this.SignInbtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.Back = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.TextBoxContainer = new System.Windows.Forms.TableLayoutPanel();
+            this.Username = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Password = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.UNInput = new Guna.UI2.WinForms.Guna2TextBox();
+            this.PInput = new Guna.UI2.WinForms.Guna2TextBox();
             this.MainPanel.SuspendLayout();
             this.TopContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.BottomContainer.SuspendLayout();
-            this.TextBoxContainer.SuspendLayout();
             this.ButtonsContainer.SuspendLayout();
+            this.TextBoxContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainPanel
@@ -103,98 +103,6 @@
             this.BottomContainer.Size = new System.Drawing.Size(784, 411);
             this.BottomContainer.TabIndex = 1;
             // 
-            // TextBoxContainer
-            // 
-            this.TextBoxContainer.ColumnCount = 5;
-            this.TextBoxContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.36225F));
-            this.TextBoxContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.85714F));
-            this.TextBoxContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.418367F));
-            this.TextBoxContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.44898F));
-            this.TextBoxContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.65816F));
-            this.TextBoxContainer.Controls.Add(this.Username, 1, 1);
-            this.TextBoxContainer.Controls.Add(this.Password, 1, 3);
-            this.TextBoxContainer.Controls.Add(this.UNInput, 3, 1);
-            this.TextBoxContainer.Controls.Add(this.PInput, 3, 3);
-            this.TextBoxContainer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TextBoxContainer.Location = new System.Drawing.Point(0, 0);
-            this.TextBoxContainer.Name = "TextBoxContainer";
-            this.TextBoxContainer.RowCount = 5;
-            this.TextBoxContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 61F));
-            this.TextBoxContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
-            this.TextBoxContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 19F));
-            this.TextBoxContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
-            this.TextBoxContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TextBoxContainer.Size = new System.Drawing.Size(784, 227);
-            this.TextBoxContainer.TabIndex = 0;
-            // 
-            // Password
-            // 
-            this.Password.BackColor = System.Drawing.Color.Transparent;
-            this.Password.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Password.Font = new System.Drawing.Font("Sitka Text", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Password.ForeColor = System.Drawing.SystemColors.Control;
-            this.Password.Location = new System.Drawing.Point(194, 131);
-            this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(132, 41);
-            this.Password.TabIndex = 1;
-            this.Password.Text = "Password";
-            // 
-            // UNInput
-            // 
-            this.UNInput.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.UNInput.DefaultText = "";
-            this.UNInput.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.UNInput.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.UNInput.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.UNInput.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.UNInput.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.UNInput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.UNInput.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UNInput.ForeColor = System.Drawing.Color.Black;
-            this.UNInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.UNInput.Location = new System.Drawing.Point(401, 66);
-            this.UNInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.UNInput.Name = "UNInput";
-            this.UNInput.PasswordChar = '\0';
-            this.UNInput.PlaceholderText = "Enter Username";
-            this.UNInput.SelectedText = "";
-            this.UNInput.Size = new System.Drawing.Size(168, 38);
-            this.UNInput.TabIndex = 2;
-            // 
-            // Username
-            // 
-            this.Username.BackColor = System.Drawing.Color.Transparent;
-            this.Username.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Username.Font = new System.Drawing.Font("Sitka Text", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Username.ForeColor = System.Drawing.SystemColors.Control;
-            this.Username.Location = new System.Drawing.Point(194, 64);
-            this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(137, 41);
-            this.Username.TabIndex = 0;
-            this.Username.Text = "Username";
-            // 
-            // PInput
-            // 
-            this.PInput.BorderColor = System.Drawing.Color.Black;
-            this.PInput.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.PInput.DefaultText = "";
-            this.PInput.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.PInput.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.PInput.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.PInput.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.PInput.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PInput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.PInput.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.PInput.Location = new System.Drawing.Point(401, 133);
-            this.PInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.PInput.Name = "PInput";
-            this.PInput.PasswordChar = '\0';
-            this.PInput.PlaceholderText = "Enter Password";
-            this.PInput.SelectedText = "";
-            this.PInput.Size = new System.Drawing.Size(168, 36);
-            this.PInput.TabIndex = 3;
-            // 
             // ButtonsContainer
             // 
             this.ButtonsContainer.ColumnCount = 5;
@@ -234,11 +142,11 @@
             this.SignInbtn.ColorContrastOnClick = 45;
             this.SignInbtn.ColorContrastOnHover = 45;
             this.SignInbtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.SignInbtn.CustomizableEdges = borderEdges5;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.SignInbtn.CustomizableEdges = borderEdges1;
             this.SignInbtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.SignInbtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.SignInbtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -324,11 +232,11 @@
             this.Back.ColorContrastOnClick = 45;
             this.Back.ColorContrastOnHover = 45;
             this.Back.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.Back.CustomizableEdges = borderEdges6;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.Back.CustomizableEdges = borderEdges2;
             this.Back.DialogResult = System.Windows.Forms.DialogResult.None;
             this.Back.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.Back.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -396,6 +304,98 @@
             this.Back.UseDefaultRadiusAndThickness = true;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
+            // TextBoxContainer
+            // 
+            this.TextBoxContainer.ColumnCount = 5;
+            this.TextBoxContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.36225F));
+            this.TextBoxContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.72959F));
+            this.TextBoxContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.545918F));
+            this.TextBoxContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.44898F));
+            this.TextBoxContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.65816F));
+            this.TextBoxContainer.Controls.Add(this.Username, 1, 1);
+            this.TextBoxContainer.Controls.Add(this.Password, 1, 3);
+            this.TextBoxContainer.Controls.Add(this.UNInput, 3, 1);
+            this.TextBoxContainer.Controls.Add(this.PInput, 3, 3);
+            this.TextBoxContainer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TextBoxContainer.Location = new System.Drawing.Point(0, 0);
+            this.TextBoxContainer.Name = "TextBoxContainer";
+            this.TextBoxContainer.RowCount = 5;
+            this.TextBoxContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 61F));
+            this.TextBoxContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.TextBoxContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
+            this.TextBoxContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.TextBoxContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TextBoxContainer.Size = new System.Drawing.Size(784, 227);
+            this.TextBoxContainer.TabIndex = 0;
+            // 
+            // Username
+            // 
+            this.Username.BackColor = System.Drawing.Color.Transparent;
+            this.Username.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Username.Font = new System.Drawing.Font("Sitka Text", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Username.ForeColor = System.Drawing.SystemColors.Control;
+            this.Username.Location = new System.Drawing.Point(194, 64);
+            this.Username.Name = "Username";
+            this.Username.Size = new System.Drawing.Size(137, 41);
+            this.Username.TabIndex = 0;
+            this.Username.Text = "Username";
+            // 
+            // Password
+            // 
+            this.Password.BackColor = System.Drawing.Color.Transparent;
+            this.Password.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Password.Font = new System.Drawing.Font("Sitka Text", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Password.ForeColor = System.Drawing.SystemColors.Control;
+            this.Password.Location = new System.Drawing.Point(194, 131);
+            this.Password.Name = "Password";
+            this.Password.Size = new System.Drawing.Size(132, 41);
+            this.Password.TabIndex = 1;
+            this.Password.Text = "Password";
+            // 
+            // UNInput
+            // 
+            this.UNInput.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.UNInput.DefaultText = "";
+            this.UNInput.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.UNInput.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.UNInput.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.UNInput.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.UNInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.UNInput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.UNInput.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UNInput.ForeColor = System.Drawing.Color.Black;
+            this.UNInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.UNInput.Location = new System.Drawing.Point(401, 66);
+            this.UNInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.UNInput.Name = "UNInput";
+            this.UNInput.PasswordChar = '\0';
+            this.UNInput.PlaceholderText = "Enter Username";
+            this.UNInput.SelectedText = "";
+            this.UNInput.Size = new System.Drawing.Size(168, 36);
+            this.UNInput.TabIndex = 2;
+            // 
+            // PInput
+            // 
+            this.PInput.BorderColor = System.Drawing.Color.Black;
+            this.PInput.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.PInput.DefaultText = "";
+            this.PInput.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.PInput.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.PInput.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.PInput.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.PInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PInput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.PInput.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.PInput.Location = new System.Drawing.Point(401, 133);
+            this.PInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PInput.Name = "PInput";
+            this.PInput.PasswordChar = '\0';
+            this.PInput.PlaceholderText = "Enter Password";
+            this.PInput.SelectedText = "";
+            this.PInput.Size = new System.Drawing.Size(168, 36);
+            this.PInput.TabIndex = 3;
+            // 
             // SignIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -410,9 +410,9 @@
             this.TopContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.BottomContainer.ResumeLayout(false);
+            this.ButtonsContainer.ResumeLayout(false);
             this.TextBoxContainer.ResumeLayout(false);
             this.TextBoxContainer.PerformLayout();
-            this.ButtonsContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
