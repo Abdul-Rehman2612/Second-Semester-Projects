@@ -3,7 +3,6 @@ D:\Project\Second Semester\DELL\DELL\bin\Debug\DELL.exe
 D:\Project\Second Semester\DELL\DELL\bin\Debug\DELL.pdb
 D:\Project\Second Semester\DELL\DELL\bin\Debug\Guna.UI2.dll
 D:\Project\Second Semester\DELL\DELL\obj\Debug\DELL.csproj.AssemblyReference.cache
-D:\Project\Second Semester\DELL\DELL\obj\Debug\DELL.MainPage.resources
 D:\Project\Second Semester\DELL\DELL\obj\Debug\DELL.Properties.Resources.resources
 D:\Project\Second Semester\DELL\DELL\obj\Debug\DELL.csproj.GenerateResource.cache
 D:\Project\Second Semester\DELL\DELL\obj\Debug\DELL.csproj.CoreCompileInputs.cache
@@ -28,3 +27,9 @@ D:\DELL\DELL\obj\Debug\DELL.exe.licenses
 D:\DELL\DELL\obj\Debug\DELL.UI.SignIn.resources
 D:\DELL\DELL\obj\Debug\DELL.MainMenu.resources
 D:\DELL\DELL\obj\Debug\DELL.UI.SignUp.resources
+D:\Project\Second Semester\DELL\DELL\bin\Debug\Bunifu.Licensing.dll
+D:\Project\Second Semester\DELL\DELL\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
+D:\Project\Second Semester\DELL\DELL\obj\Debug\DELL.MainMenu.resources
+D:\Project\Second Semester\DELL\DELL\obj\Debug\DELL.UI.SignIn.resources
+D:\Project\Second Semester\DELL\DELL\obj\Debug\DELL.UI.SignUp.resources
+D:\Project\Second Semester\DELL\DELL\obj\Debug\DELL.exe.licenses

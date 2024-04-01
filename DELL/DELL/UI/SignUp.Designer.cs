@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUp));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.MainPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.BottomContainer = new Guna.UI2.WinForms.Guna2Panel();
             this.Inputs = new System.Windows.Forms.TableLayoutPanel();
@@ -49,10 +49,10 @@
             this.AInput = new Guna.UI2.WinForms.Guna2TextBox();
             this.GInput = new Guna.UI2.WinForms.Guna2ComboBox();
             this.DOBI = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.TopContainer = new Guna.UI2.WinForms.Guna2Panel();
-            this.Logo = new System.Windows.Forms.Label();
             this.SignUpbtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.Registernow = new System.Windows.Forms.LinkLabel();
+            this.TopContainer = new Guna.UI2.WinForms.Guna2Panel();
+            this.Logo = new System.Windows.Forms.Label();
             this.MainPanel.SuspendLayout();
             this.BottomContainer.SuspendLayout();
             this.Inputs.SuspendLayout();
@@ -412,28 +412,6 @@
             this.DOBI.TabIndex = 18;
             this.DOBI.Value = new System.DateTime(2024, 4, 1, 0, 0, 0, 0);
             // 
-            // TopContainer
-            // 
-            this.TopContainer.BackColor = System.Drawing.Color.Transparent;
-            this.TopContainer.Controls.Add(this.Logo);
-            this.TopContainer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TopContainer.Location = new System.Drawing.Point(0, 0);
-            this.TopContainer.Name = "TopContainer";
-            this.TopContainer.Size = new System.Drawing.Size(784, 150);
-            this.TopContainer.TabIndex = 0;
-            // 
-            // Logo
-            // 
-            this.Logo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Logo.Font = new System.Drawing.Font("Sitka Heading", 72F, System.Drawing.FontStyle.Bold);
-            this.Logo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(144)))), ((int)(((byte)(231)))));
-            this.Logo.Location = new System.Drawing.Point(0, 0);
-            this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(784, 150);
-            this.Logo.TabIndex = 1;
-            this.Logo.Text = "Sign Up";
-            this.Logo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // SignUpbtn
             // 
             this.SignUpbtn.AllowAnimations = true;
@@ -453,11 +431,11 @@
             this.SignUpbtn.ColorContrastOnClick = 45;
             this.SignUpbtn.ColorContrastOnHover = 45;
             this.SignUpbtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.SignUpbtn.CustomizableEdges = borderEdges4;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.SignUpbtn.CustomizableEdges = borderEdges2;
             this.SignUpbtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.SignUpbtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.SignUpbtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -527,16 +505,40 @@
             // Registernow
             // 
             this.Registernow.AutoSize = true;
+            this.Registernow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Registernow.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.Registernow.LinkColor = System.Drawing.Color.Silver;
             this.Registernow.Location = new System.Drawing.Point(212, 221);
             this.Registernow.Name = "Registernow";
-            this.Registernow.Size = new System.Drawing.Size(132, 26);
+            this.Registernow.Size = new System.Drawing.Size(160, 62);
             this.Registernow.TabIndex = 20;
             this.Registernow.TabStop = true;
             this.Registernow.Tag = "";
             this.Registernow.Text = "Already have an account?\r\n Sign In now!";
             this.Registernow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Registernow.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Registernow_LinkClicked);
+            // 
+            // TopContainer
+            // 
+            this.TopContainer.BackColor = System.Drawing.Color.Transparent;
+            this.TopContainer.Controls.Add(this.Logo);
+            this.TopContainer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TopContainer.Location = new System.Drawing.Point(0, 0);
+            this.TopContainer.Name = "TopContainer";
+            this.TopContainer.Size = new System.Drawing.Size(784, 150);
+            this.TopContainer.TabIndex = 0;
+            // 
+            // Logo
+            // 
+            this.Logo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Logo.Font = new System.Drawing.Font("Sitka Heading", 72F, System.Drawing.FontStyle.Bold);
+            this.Logo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(144)))), ((int)(((byte)(231)))));
+            this.Logo.Location = new System.Drawing.Point(0, 0);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(784, 150);
+            this.Logo.TabIndex = 1;
+            this.Logo.Text = "Sign Up";
+            this.Logo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SignUp
             // 
@@ -545,6 +547,7 @@
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.MainPanel);
             this.MinimumSize = new System.Drawing.Size(600, 500);
+            this.Name = "SignUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignUp";
             this.MainPanel.ResumeLayout(false);

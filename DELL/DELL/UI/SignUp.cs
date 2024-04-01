@@ -16,5 +16,11 @@ namespace DELL.UI
         {
             InitializeComponent();
         }
+        private void Registernow_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            SignIn signIn = new SignIn();
+            signIn.Show();
+        }
     }
 }

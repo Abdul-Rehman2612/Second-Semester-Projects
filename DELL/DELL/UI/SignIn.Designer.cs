@@ -43,8 +43,8 @@
             this.SignInbtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.Backbtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.Registernow = new System.Windows.Forms.LinkLabel();
-            this.MainPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.Exitbtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.MainPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.TopContainer.SuspendLayout();
             this.BottomContainer.SuspendLayout();
             this.Inputs.SuspendLayout();
@@ -389,17 +389,6 @@
             this.Registernow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Registernow.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Registernow_LinkClicked);
             // 
-            // MainPanel
-            // 
-            this.MainPanel.Controls.Add(this.BottomContainer);
-            this.MainPanel.Controls.Add(this.TopContainer);
-            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainPanel.FillColor = System.Drawing.Color.Lavender;
-            this.MainPanel.Location = new System.Drawing.Point(0, 0);
-            this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(784, 561);
-            this.MainPanel.TabIndex = 1;
-            // 
             // Exitbtn
             // 
             this.Exitbtn.AllowAnimations = true;
@@ -490,6 +479,17 @@
             this.Exitbtn.TextPadding = new System.Windows.Forms.Padding(0);
             this.Exitbtn.UseDefaultRadiusAndThickness = true;
             this.Exitbtn.Click += new System.EventHandler(this.Exitbtn_Click);
+            // 
+            // MainPanel
+            // 
+            this.MainPanel.Controls.Add(this.BottomContainer);
+            this.MainPanel.Controls.Add(this.TopContainer);
+            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPanel.FillColor = System.Drawing.Color.Lavender;
+            this.MainPanel.Location = new System.Drawing.Point(0, 0);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Size = new System.Drawing.Size(784, 561);
+            this.MainPanel.TabIndex = 1;
             // 
             // SignIn
             // 
