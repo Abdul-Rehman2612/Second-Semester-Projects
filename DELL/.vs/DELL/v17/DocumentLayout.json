@@ -1,34 +1,46 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Project\\Second Semester\\DELL\\",
+  "WorkspaceRootPath": "D:\\DELL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\DELL.csproj|d:\\project\\second semester\\dell\\dell\\ui\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\DELL.csproj|D:\\DELL\\dell\\ui\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\DELL.csproj|solutionrelative:dell\\ui\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\DELL.csproj|D:\\DELL\\dell\\ui\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\DELL.csproj|solutionrelative:dell\\ui\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\DELL.csproj|D:\\Project\\Second Semester\\DELL\\dell\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\DELL.csproj|D:\\DELL\\dell\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\DELL.csproj|solutionrelative:dell\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\DELL.csproj|D:\\Project\\Second Semester\\DELL\\dell\\bl\\userbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\DELL.csproj|solutionrelative:dell\\bl\\userbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\DELL.csproj|D:\\DELL\\dell\\ui\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\DELL.csproj|solutionrelative:dell\\ui\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\DELL.csproj|D:\\Project\\Second Semester\\DELL\\dell\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\DELL.csproj|solutionrelative:dell\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\DELL.csproj|d:\\dell\\dell\\ui\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\DELL.csproj|solutionrelative:dell\\ui\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\DELL.csproj|D:\\Project\\Second Semester\\DELL\\dell\\utility\\validations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\DELL.csproj|D:\\DELL\\dell\\bl\\customerbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\DELL.csproj|solutionrelative:dell\\bl\\customerbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\DELL.csproj|D:\\DELL\\dell\\utility\\validations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\DELL.csproj|solutionrelative:dell\\utility\\validations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\DELL.csproj|D:\\Project\\Second Semester\\DELL\\dell\\bl\\employeebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\DELL.csproj|D:\\DELL\\dell\\bl\\employeebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\DELL.csproj|solutionrelative:dell\\bl\\employeebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\DELL.csproj|D:\\Project\\Second Semester\\DELL\\dell\\bl\\customerbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\DELL.csproj|solutionrelative:dell\\bl\\customerbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\DELL.csproj|D:\\DELL\\dell\\bl\\userbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\DELL.csproj|solutionrelative:dell\\bl\\userbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\DELL.csproj|D:\\DELL\\dell\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\DELL.csproj|solutionrelative:dell\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,49 +58,60 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Main.cs [Design]",
-              "DocumentMoniker": "D:\\Project\\Second Semester\\DELL\\DELL\\UI\\Main.cs",
-              "RelativeDocumentMoniker": "DELL\\UI\\Main.cs",
-              "ToolTip": "D:\\Project\\Second Semester\\DELL\\DELL\\UI\\Main.cs [Design]",
-              "RelativeToolTip": "DELL\\UI\\Main.cs [Design]",
+              "DocumentIndex": 5,
+              "Title": "CustomerBL.cs",
+              "DocumentMoniker": "D:\\DELL\\DELL\\BL\\CustomerBL.cs",
+              "RelativeDocumentMoniker": "DELL\\BL\\CustomerBL.cs",
+              "ToolTip": "D:\\DELL\\DELL\\BL\\CustomerBL.cs",
+              "RelativeToolTip": "DELL\\BL\\CustomerBL.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T06:37:44.196Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserBL.cs",
-              "DocumentMoniker": "D:\\Project\\Second Semester\\DELL\\DELL\\BL\\UserBL.cs",
-              "RelativeDocumentMoniker": "DELL\\BL\\UserBL.cs",
-              "ToolTip": "D:\\Project\\Second Semester\\DELL\\DELL\\BL\\UserBL.cs",
-              "RelativeToolTip": "DELL\\BL\\UserBL.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAuwBIAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T12:02:11.328Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Project\\Second Semester\\DELL\\DELL\\Program.cs",
-              "RelativeDocumentMoniker": "DELL\\Program.cs",
-              "ToolTip": "D:\\Project\\Second Semester\\DELL\\DELL\\Program.cs",
-              "RelativeToolTip": "DELL\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T06:25:57.604Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-31T15:05:36.344Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Main.cs",
+              "DocumentMoniker": "D:\\DELL\\DELL\\UI\\Main.cs",
+              "RelativeDocumentMoniker": "DELL\\UI\\Main.cs",
+              "ToolTip": "D:\\DELL\\DELL\\UI\\Main.cs",
+              "RelativeToolTip": "DELL\\UI\\Main.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAIwBoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T05:18:59.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SignUp.cs [Design]",
+              "DocumentMoniker": "D:\\DELL\\DELL\\UI\\SignUp.cs",
+              "RelativeDocumentMoniker": "DELL\\UI\\SignUp.cs",
+              "ToolTip": "D:\\DELL\\DELL\\UI\\SignUp.cs [Design]",
+              "RelativeToolTip": "DELL\\UI\\SignUp.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T17:24:58.708Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Main.cs [Design]",
+              "DocumentMoniker": "D:\\DELL\\DELL\\UI\\Main.cs",
+              "RelativeDocumentMoniker": "DELL\\UI\\Main.cs",
+              "ToolTip": "D:\\DELL\\DELL\\UI\\Main.cs [Design]",
+              "RelativeToolTip": "DELL\\UI\\Main.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T04:59:37.07Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "App.config",
-              "DocumentMoniker": "D:\\Project\\Second Semester\\DELL\\DELL\\App.config",
+              "DocumentMoniker": "D:\\DELL\\DELL\\App.config",
               "RelativeDocumentMoniker": "DELL\\App.config",
-              "ToolTip": "D:\\Project\\Second Semester\\DELL\\DELL\\App.config",
+              "ToolTip": "D:\\DELL\\DELL\\App.config",
               "RelativeToolTip": "DELL\\App.config",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
@@ -97,23 +120,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CustomerBL.cs",
-              "DocumentMoniker": "D:\\Project\\Second Semester\\DELL\\DELL\\BL\\CustomerBL.cs",
-              "RelativeDocumentMoniker": "DELL\\BL\\CustomerBL.cs",
-              "ToolTip": "D:\\Project\\Second Semester\\DELL\\DELL\\BL\\CustomerBL.cs",
-              "RelativeToolTip": "DELL\\BL\\CustomerBL.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAAKAAAA",
+              "DocumentIndex": 8,
+              "Title": "UserBL.cs",
+              "DocumentMoniker": "D:\\DELL\\DELL\\BL\\UserBL.cs",
+              "RelativeDocumentMoniker": "DELL\\BL\\UserBL.cs",
+              "ToolTip": "D:\\DELL\\DELL\\BL\\UserBL.cs",
+              "RelativeToolTip": "DELL\\BL\\UserBL.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAuwA0AAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T15:05:36.344Z"
+              "WhenOpened": "2024-03-31T12:02:11.328Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Validations.cs",
-              "DocumentMoniker": "D:\\Project\\Second Semester\\DELL\\DELL\\Utility\\Validations.cs",
+              "DocumentMoniker": "D:\\DELL\\DELL\\Utility\\Validations.cs",
               "RelativeDocumentMoniker": "DELL\\Utility\\Validations.cs",
-              "ToolTip": "D:\\Project\\Second Semester\\DELL\\DELL\\Utility\\Validations.cs",
+              "ToolTip": "D:\\DELL\\DELL\\Utility\\Validations.cs",
               "RelativeToolTip": "DELL\\Utility\\Validations.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -121,11 +144,36 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\DELL\\DELL\\Program.cs",
+              "RelativeDocumentMoniker": "DELL\\Program.cs",
+              "ToolTip": "D:\\DELL\\DELL\\Program.cs",
+              "RelativeToolTip": "DELL\\Program.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAA1wBMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T06:25:57.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SignIn.cs [Design]",
+              "DocumentMoniker": "D:\\DELL\\DELL\\UI\\SignIn.cs",
+              "RelativeDocumentMoniker": "DELL\\UI\\SignIn.cs",
+              "ToolTip": "D:\\DELL\\DELL\\UI\\SignIn.cs [Design]",
+              "RelativeToolTip": "DELL\\UI\\SignIn.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T07:16:18.287Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "EmployeeBL.cs",
-              "DocumentMoniker": "D:\\Project\\Second Semester\\DELL\\DELL\\BL\\EmployeeBL.cs",
+              "DocumentMoniker": "D:\\DELL\\DELL\\BL\\EmployeeBL.cs",
               "RelativeDocumentMoniker": "DELL\\BL\\EmployeeBL.cs",
-              "ToolTip": "D:\\Project\\Second Semester\\DELL\\DELL\\BL\\EmployeeBL.cs",
+              "ToolTip": "D:\\DELL\\DELL\\BL\\EmployeeBL.cs",
               "RelativeToolTip": "DELL\\BL\\EmployeeBL.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAAoAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
