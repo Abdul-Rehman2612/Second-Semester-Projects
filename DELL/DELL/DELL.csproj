@@ -58,31 +58,16 @@
     <Compile Include="BL\CustomerBL.cs" />
     <Compile Include="BL\EmployeeBL.cs" />
     <Compile Include="BL\UserBL.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\SignIn.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\SignIn.Designer.cs">
-      <DependentUpon>SignIn.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\SignUp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\SignUp.Designer.cs">
-      <DependentUpon>SignUp.cs</DependentUpon>
-    </Compile>
     <Compile Include="Utility\Validations.cs" />
     <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="UI\Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -92,11 +77,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UI\SignIn.resx">
-      <DependentUpon>SignIn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\SignUp.resx">
-      <DependentUpon>SignUp.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

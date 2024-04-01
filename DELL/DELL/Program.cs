@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using DELL.UI;
 
 namespace DELL
 {
@@ -13,7 +14,7 @@ namespace DELL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainMenu());
+            Application.Run(new Main());
         }
     }
 }
