@@ -16,5 +16,25 @@ namespace DELL.UI
         {
             InitializeComponent();
         }
+        private void Registernow_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            SignUp signUp = new SignUp();
+            signUp.Show();
+        }
+        private void Backbtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainMenu mainMenu = new MainMenu();
+            mainMenu.Show();
+        }
+        private void SignInbtn_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void Exitbtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
