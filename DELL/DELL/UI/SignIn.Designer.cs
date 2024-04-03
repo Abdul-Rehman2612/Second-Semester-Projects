@@ -78,9 +78,9 @@
             this.Username.AutoSize = true;
             this.Username.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Username.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Username.Location = new System.Drawing.Point(197, 67);
+            this.Username.Location = new System.Drawing.Point(204, 67);
             this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(140, 52);
+            this.Username.Size = new System.Drawing.Size(122, 52);
             this.Username.TabIndex = 6;
             this.Username.Text = "Username";
             this.Username.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -90,9 +90,9 @@
             this.Password.AutoSize = true;
             this.Password.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Password.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Password.Location = new System.Drawing.Point(197, 119);
+            this.Password.Location = new System.Drawing.Point(204, 119);
             this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(140, 51);
+            this.Password.Size = new System.Drawing.Size(122, 51);
             this.Password.TabIndex = 7;
             this.Password.Text = "Password";
             this.Password.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -110,13 +110,13 @@
             // 
             this.Inputs.BackColor = System.Drawing.Color.GhostWhite;
             this.Inputs.ColumnCount = 7;
-            this.Inputs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.29178F));
-            this.Inputs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.50192F));
-            this.Inputs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.62462F));
-            this.Inputs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.020527F));
-            this.Inputs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.06449F));
-            this.Inputs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.50192F));
-            this.Inputs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.99474F));
+            this.Inputs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.83202F));
+            this.Inputs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.Inputs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.Inputs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.025483F));
+            this.Inputs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.Inputs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.Inputs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.14249F));
             this.Inputs.Controls.Add(this.Username, 2, 1);
             this.Inputs.Controls.Add(this.PInput, 4, 2);
             this.Inputs.Controls.Add(this.Password, 2, 2);
@@ -131,11 +131,11 @@
             this.Inputs.Name = "Inputs";
             this.Inputs.RowCount = 7;
             this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 67F));
-            this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.61539F));
-            this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.76923F));
-            this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.76923F));
-            this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.84615F));
+            this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 81F));
             this.Inputs.Size = new System.Drawing.Size(784, 411);
             this.Inputs.TabIndex = 0;
@@ -156,7 +156,7 @@
             this.PInput.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PInput.ForeColor = System.Drawing.Color.Black;
             this.PInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.PInput.Location = new System.Drawing.Point(353, 125);
+            this.PInput.Location = new System.Drawing.Point(342, 125);
             this.PInput.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.PInput.Name = "PInput";
             this.PInput.PasswordChar = '\0';
@@ -181,7 +181,7 @@
             this.UInput.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UInput.ForeColor = System.Drawing.Color.Black;
             this.UInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.UInput.Location = new System.Drawing.Point(353, 73);
+            this.UInput.Location = new System.Drawing.Point(342, 73);
             this.UInput.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.UInput.Name = "UInput";
             this.UInput.PasswordChar = '\0';
@@ -239,7 +239,7 @@
             this.SignInbtn.IdleIconLeftImage = null;
             this.SignInbtn.IdleIconRightImage = null;
             this.SignInbtn.IndicateFocus = false;
-            this.SignInbtn.Location = new System.Drawing.Point(436, 173);
+            this.SignInbtn.Location = new System.Drawing.Point(425, 173);
             this.SignInbtn.Name = "SignInbtn";
             this.SignInbtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.SignInbtn.OnDisabledState.BorderRadius = 50;
@@ -330,7 +330,7 @@
             this.Backbtn.IdleIconLeftImage = null;
             this.Backbtn.IdleIconRightImage = null;
             this.Backbtn.IndicateFocus = false;
-            this.Backbtn.Location = new System.Drawing.Point(68, 268);
+            this.Backbtn.Location = new System.Drawing.Point(75, 289);
             this.Backbtn.Name = "Backbtn";
             this.Backbtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.Backbtn.OnDisabledState.BorderRadius = 50;
@@ -379,9 +379,9 @@
             this.Registernow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Registernow.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.Registernow.LinkColor = System.Drawing.Color.Silver;
-            this.Registernow.Location = new System.Drawing.Point(197, 170);
+            this.Registernow.Location = new System.Drawing.Point(204, 170);
             this.Registernow.Name = "Registernow";
-            this.Registernow.Size = new System.Drawing.Size(140, 67);
+            this.Registernow.Size = new System.Drawing.Size(122, 66);
             this.Registernow.TabIndex = 16;
             this.Registernow.TabStop = true;
             this.Registernow.Tag = "";
@@ -437,7 +437,7 @@
             this.Exitbtn.IdleIconLeftImage = null;
             this.Exitbtn.IdleIconRightImage = null;
             this.Exitbtn.IndicateFocus = false;
-            this.Exitbtn.Location = new System.Drawing.Point(571, 268);
+            this.Exitbtn.Location = new System.Drawing.Point(560, 289);
             this.Exitbtn.Name = "Exitbtn";
             this.Exitbtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.Exitbtn.OnDisabledState.BorderRadius = 50;

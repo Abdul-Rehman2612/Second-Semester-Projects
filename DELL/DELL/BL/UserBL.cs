@@ -12,7 +12,7 @@ namespace DELL.BL
         protected string username;
         protected string password;
         protected string email;
-        protected string dob;
+        protected DateTime dob;
         protected string address;
         protected string contact;
         protected string gender;
@@ -23,7 +23,7 @@ namespace DELL.BL
             this.username = username;
             this.password = password;
         }
-        public UserBL(string name,string username,string password,string  email,string dob,string address,string contact,string gender,string status)
+        public UserBL(string name,string username,string password,string  email,DateTime dob,string address,string contact,string gender,string status)
         {
             this.name = name;
             this.username = username;
@@ -39,11 +39,10 @@ namespace DELL.BL
         public string Username { get => username; set => username=value; }
         public string Password { get => password; set => password=value; }
         public string Email { get => email; set => email=value; }
-        public string Dob { get => dob; set => dob=value; }
+        public DateTime Dob { get => dob; set => dob=value; }
         public string Address { get => address; set => address=value; }
         public string Contact { get => contact; set => contact=value; }
         public string Gender { get => gender; set => gender=value; }
         public string Status { get => status; set => status=value; }
-        
     }
 }

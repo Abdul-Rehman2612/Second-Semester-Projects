@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.Logo = new System.Windows.Forms.Label();
             this.TopContainer = new Guna.UI2.WinForms.Guna2Panel();
             this.BottomContainer = new Guna.UI2.WinForms.Guna2Panel();
             this.Inputs = new System.Windows.Forms.TableLayoutPanel();
-            this.MainPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.SignInbtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.SignUpbtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.Exitbtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.MainPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.TopContainer.SuspendLayout();
             this.BottomContainer.SuspendLayout();
             this.Inputs.SuspendLayout();
@@ -104,17 +104,6 @@
             this.Inputs.Size = new System.Drawing.Size(784, 411);
             this.Inputs.TabIndex = 0;
             // 
-            // MainPanel
-            // 
-            this.MainPanel.Controls.Add(this.BottomContainer);
-            this.MainPanel.Controls.Add(this.TopContainer);
-            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainPanel.FillColor = System.Drawing.Color.Lavender;
-            this.MainPanel.Location = new System.Drawing.Point(0, 0);
-            this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(784, 561);
-            this.MainPanel.TabIndex = 1;
-            // 
             // SignInbtn
             // 
             this.SignInbtn.AllowAnimations = true;
@@ -134,11 +123,11 @@
             this.SignInbtn.ColorContrastOnClick = 45;
             this.SignInbtn.ColorContrastOnHover = 45;
             this.SignInbtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges7.BottomLeft = true;
-            borderEdges7.BottomRight = true;
-            borderEdges7.TopLeft = true;
-            borderEdges7.TopRight = true;
-            this.SignInbtn.CustomizableEdges = borderEdges7;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.SignInbtn.CustomizableEdges = borderEdges1;
             this.SignInbtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.SignInbtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.SignInbtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -225,11 +214,11 @@
             this.SignUpbtn.ColorContrastOnClick = 45;
             this.SignUpbtn.ColorContrastOnHover = 45;
             this.SignUpbtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges8.BottomLeft = true;
-            borderEdges8.BottomRight = true;
-            borderEdges8.TopLeft = true;
-            borderEdges8.TopRight = true;
-            this.SignUpbtn.CustomizableEdges = borderEdges8;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.SignUpbtn.CustomizableEdges = borderEdges2;
             this.SignUpbtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.SignUpbtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.SignUpbtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -316,11 +305,11 @@
             this.Exitbtn.ColorContrastOnClick = 45;
             this.Exitbtn.ColorContrastOnHover = 45;
             this.Exitbtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges9.BottomLeft = true;
-            borderEdges9.BottomRight = true;
-            borderEdges9.TopLeft = true;
-            borderEdges9.TopRight = true;
-            this.Exitbtn.CustomizableEdges = borderEdges9;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.Exitbtn.CustomizableEdges = borderEdges3;
             this.Exitbtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.Exitbtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.Exitbtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -387,6 +376,17 @@
             this.Exitbtn.TextPadding = new System.Windows.Forms.Padding(0);
             this.Exitbtn.UseDefaultRadiusAndThickness = true;
             this.Exitbtn.Click += new System.EventHandler(this.Exitbtn_Click);
+            // 
+            // MainPanel
+            // 
+            this.MainPanel.Controls.Add(this.BottomContainer);
+            this.MainPanel.Controls.Add(this.TopContainer);
+            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPanel.FillColor = System.Drawing.Color.Lavender;
+            this.MainPanel.Location = new System.Drawing.Point(0, 0);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Size = new System.Drawing.Size(784, 561);
+            this.MainPanel.TabIndex = 1;
             // 
             // MainMenu
             // 
