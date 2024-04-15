@@ -1,0 +1,340 @@
+USE [master]
+GO
+
+/****** Object:  Database [Dell]    Script Date: 4/7/2024 12:40:40 PM ******/
+CREATE DATABASE [Dell]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'Dell', SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+ LOG ON 
+( NAME = N'Dell_log', SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+ WITH CATALOG_COLLATION = DATABASE_DEFAULT, LEDGER = OFF
+GO
+
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [Dell].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+
+ALTER DATABASE [Dell] SET ANSI_NULL_DEFAULT OFF 
+GO
+
+ALTER DATABASE [Dell] SET ANSI_NULLS OFF 
+GO
+
+ALTER DATABASE [Dell] SET ANSI_PADDING OFF 
+GO
+
+ALTER DATABASE [Dell] SET ANSI_WARNINGS OFF 
+GO
+
+ALTER DATABASE [Dell] SET ARITHABORT OFF 
+GO
+
+ALTER DATABASE [Dell] SET AUTO_CLOSE OFF 
+GO
+
+ALTER DATABASE [Dell] SET AUTO_SHRINK OFF 
+GO
+
+ALTER DATABASE [Dell] SET AUTO_UPDATE_STATISTICS ON 
+GO
+
+ALTER DATABASE [Dell] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+
+ALTER DATABASE [Dell] SET CURSOR_DEFAULT  GLOBAL 
+GO
+
+ALTER DATABASE [Dell] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+
+ALTER DATABASE [Dell] SET NUMERIC_ROUNDABORT OFF 
+GO
+
+ALTER DATABASE [Dell] SET QUOTED_IDENTIFIER OFF 
+GO
+
+ALTER DATABASE [Dell] SET RECURSIVE_TRIGGERS OFF 
+GO
+
+ALTER DATABASE [Dell] SET  DISABLE_BROKER 
+GO
+
+ALTER DATABASE [Dell] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+
+ALTER DATABASE [Dell] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+
+ALTER DATABASE [Dell] SET TRUSTWORTHY OFF 
+GO
+
+ALTER DATABASE [Dell] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+
+ALTER DATABASE [Dell] SET PARAMETERIZATION SIMPLE 
+GO
+
+ALTER DATABASE [Dell] SET READ_COMMITTED_SNAPSHOT OFF 
+GO
+
+ALTER DATABASE [Dell] SET HONOR_BROKER_PRIORITY OFF 
+GO
+
+ALTER DATABASE [Dell] SET RECOVERY FULL 
+GO
+
+ALTER DATABASE [Dell] SET  MULTI_USER 
+GO
+
+ALTER DATABASE [Dell] SET PAGE_VERIFY CHECKSUM  
+GO
+
+ALTER DATABASE [Dell] SET DB_CHAINING OFF 
+GO
+
+ALTER DATABASE [Dell] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+GO
+
+ALTER DATABASE [Dell] SET TARGET_RECOVERY_TIME = 60 SECONDS 
+GO
+
+ALTER DATABASE [Dell] SET DELAYED_DURABILITY = DISABLED 
+GO
+
+ALTER DATABASE [Dell] SET ACCELERATED_DATABASE_RECOVERY = OFF  
+GO
+
+ALTER DATABASE [Dell] SET QUERY_STORE = ON
+GO
+
+ALTER DATABASE [Dell] SET QUERY_STORE (OPERATION_MODE = READ_WRITE, CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 30), DATA_FLUSH_INTERVAL_SECONDS = 900, INTERVAL_LENGTH_MINUTES = 60, MAX_STORAGE_SIZE_MB = 1000, QUERY_CAPTURE_MODE = AUTO, SIZE_BASED_CLEANUP_MODE = AUTO, MAX_PLANS_PER_QUERY = 200, WAIT_STATS_CAPTURE_MODE = ON)
+GO
+
+ALTER DATABASE [Dell] SET  READ_WRITE 
+GO
+
+USE [Dell]
+GO
+
+/****** Object:  Table [dbo].[Customers]    Script Date: 4/7/2024 12:45:09 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Customers](
+	[CustomerID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [varchar](50) NOT NULL,
+	[Username] [varchar](50) NOT NULL,
+	[Password] [varchar](50) NOT NULL,
+	[Email] [varchar](50) NOT NULL,
+	[Dob] [date] NOT NULL,
+	[Address] [varchar](500) NOT NULL,
+	[Contact] [varchar](20) NOT NULL,
+	[Gender] [varchar](20) NOT NULL,
+	[Status] [varchar](10) NOT NULL,
+ CONSTRAINT [PK_Customer] PRIMARY KEY CLUSTERED 
+(
+	[CustomerID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+/****** Object:  Table [dbo].[Employees]    Script Date: 4/7/2024 12:48:00 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Employees](
+	[EmployeeID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [varchar](50) NOT NULL,
+	[Username] [varchar](50) NOT NULL,
+	[Password] [varchar](50) NOT NULL,
+	[Email] [varchar](50) NOT NULL,
+	[Dob] [date] NOT NULL,
+	[Address] [varchar](500) NOT NULL,
+	[Contact] [varchar](50) NOT NULL,
+	[Gender] [varchar](50) NOT NULL,
+	[Status] [varchar](10) NOT NULL,
+	[Designation] [varchar](20) NOT NULL,
+	[Hiredate] [date] NOT NULL,
+	[Resignationdate] [date] NULL,
+	[ManagerID] [int] NULL,
+ CONSTRAINT [PK_Employee] PRIMARY KEY CLUSTERED 
+(
+	[EmployeeID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Employees]  WITH CHECK ADD  CONSTRAINT [FK_Employees_Employees] FOREIGN KEY([ManagerID])
+REFERENCES [dbo].[Employees] ([EmployeeID])
+GO
+
+ALTER TABLE [dbo].[Employees] CHECK CONSTRAINT [FK_Employees_Employees]
+GO
+
+/****** Object:  Table [dbo].[Orders]    Script Date: 4/7/2024 12:49:00 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Orders](
+	[OrderID] [int] IDENTITY(1,1) NOT NULL,
+	[CustomerID] [int] NOT NULL,
+	[EmployeeID] [int] NULL,
+	[OrderDate] [datetime] NOT NULL,
+	[CustomerType] [varchar](50) NOT NULL,
+	[TotalPrice] [int] NOT NULL,
+ CONSTRAINT [PK_Orders] PRIMARY KEY CLUSTERED 
+(
+	[OrderID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Orders]  WITH CHECK ADD  CONSTRAINT [FK_Order_Employees] FOREIGN KEY([EmployeeID])
+REFERENCES [dbo].[Employees] ([EmployeeID])
+GO
+
+ALTER TABLE [dbo].[Orders] CHECK CONSTRAINT [FK_Order_Employees]
+GO
+
+ALTER TABLE [dbo].[Orders]  WITH CHECK ADD  CONSTRAINT [FK_Orders_Customers] FOREIGN KEY([CustomerID])
+REFERENCES [dbo].[Customers] ([CustomerID])
+GO
+
+ALTER TABLE [dbo].[Orders] CHECK CONSTRAINT [FK_Orders_Customers]
+GO
+
+/****** Object:  Table [dbo].[Products]    Script Date: 4/7/2024 12:49:15 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Products](
+	[ProductID] [int] IDENTITY(1,1) NOT NULL,
+	[ProductName] [varchar](50) NOT NULL,
+	[ProductModel] [varchar](50) NOT NULL,
+	[Details] [varchar](500) NOT NULL,
+	[UnitPrice] [int] NOT NULL,
+	[UnitsInStock] [int] NOT NULL,
+	[ProductStatus] [varchar](50) NOT NULL,
+ CONSTRAINT [PK_Products] PRIMARY KEY CLUSTERED 
+(
+	[ProductID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+/****** Object:  Table [dbo].[OrderDetails]    Script Date: 4/7/2024 12:48:47 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[OrderDetails](
+	[OrderID] [int] NOT NULL,
+	[ProductID] [int] NOT NULL,
+	[Quantity] [int] NOT NULL,
+	[Price] [int] NOT NULL,
+ CONSTRAINT [PK_OrderDetails] PRIMARY KEY CLUSTERED 
+(
+	[OrderID] ASC,
+	[ProductID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[OrderDetails]  WITH CHECK ADD  CONSTRAINT [FK_OrderDetails_Orders] FOREIGN KEY([OrderID])
+REFERENCES [dbo].[Orders] ([OrderID])
+GO
+
+ALTER TABLE [dbo].[OrderDetails] CHECK CONSTRAINT [FK_OrderDetails_Orders]
+GO
+
+ALTER TABLE [dbo].[OrderDetails]  WITH CHECK ADD  CONSTRAINT [FK_OrderDetails_Products] FOREIGN KEY([ProductID])
+REFERENCES [dbo].[Products] ([ProductID])
+GO
+
+ALTER TABLE [dbo].[OrderDetails] CHECK CONSTRAINT [FK_OrderDetails_Products]
+GO
+
+/****** Object:  Table [dbo].[Reviews]    Script Date: 4/7/2024 12:49:34 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Reviews](
+	[ReviewID] [int] IDENTITY(1,1) NOT NULL,
+	[CustomerID] [int] NOT NULL,
+	[ProductID] [int] NULL,
+	[Comments] [varchar](500) NOT NULL,
+ CONSTRAINT [PK_Reviews] PRIMARY KEY CLUSTERED 
+(
+	[ReviewID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Reviews]  WITH CHECK ADD  CONSTRAINT [FK_Reviews_Customers] FOREIGN KEY([CustomerID])
+REFERENCES [dbo].[Customers] ([CustomerID])
+GO
+
+ALTER TABLE [dbo].[Reviews] CHECK CONSTRAINT [FK_Reviews_Customers]
+GO
+
+ALTER TABLE [dbo].[Reviews]  WITH CHECK ADD  CONSTRAINT [FK_Reviews_Products] FOREIGN KEY([ProductID])
+REFERENCES [dbo].[Products] ([ProductID])
+GO
+
+ALTER TABLE [dbo].[Reviews] CHECK CONSTRAINT [FK_Reviews_Products]
+GO
+/****** Object:  Table [dbo].[EmployeeContribution]    Script Date: 4/7/2024 12:47:19 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[EmployeeContribution](
+	[ContID] [int] IDENTITY(1,1) NOT NULL,
+	[EmployeeID] [int] NOT NULL,
+	[ProductID] [int] NOT NULL,
+	[Quantity] [int] NOT NULL,
+	[DateManufactured] [datetime] NOT NULL,
+ CONSTRAINT [PK_EmployeeContribution] PRIMARY KEY CLUSTERED 
+(
+	[ContID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[EmployeeContribution]  WITH CHECK ADD  CONSTRAINT [FK_EmployeeContribution_Employees] FOREIGN KEY([EmployeeID])
+REFERENCES [dbo].[Employees] ([EmployeeID])
+GO
+
+ALTER TABLE [dbo].[EmployeeContribution] CHECK CONSTRAINT [FK_EmployeeContribution_Employees]
+GO
+
+ALTER TABLE [dbo].[EmployeeContribution]  WITH CHECK ADD  CONSTRAINT [FK_EmployeeContribution_Products] FOREIGN KEY([ProductID])
+REFERENCES [dbo].[Products] ([ProductID])
+GO
+
+ALTER TABLE [dbo].[EmployeeContribution] CHECK CONSTRAINT [FK_EmployeeContribution_Products]
+GO
+INSERT INTO Employees (Name, Username, Password, Email, DOB, Address, Contact, Gender, Status,Designation,HireDate) VALUES ('Admin', 'Admin', 'Admin1', 'Admin@gmail.com', '2000-01-01','Address', '0000', 'Male', 'Active','CEO','2024-04-01')

@@ -88,12 +88,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\CeoBL.cs" />
     <Compile Include="BL\CustomerBL.cs" />
     <Compile Include="BL\EmployeeBL.cs" />
+    <Compile Include="BL\EmployeeContributionBL.cs" />
+    <Compile Include="BL\OrderBL.cs" />
+    <Compile Include="BL\OrderDetailsBL.cs" />
+    <Compile Include="BL\ProductBL.cs" />
+    <Compile Include="BL\SalesPersonBL.cs" />
+    <Compile Include="BL\TechnicianBL.cs" />
     <Compile Include="BL\UserBL.cs" />
-    <Compile Include="DL\CustomerDL.cs" />
-    <Compile Include="DL\EmployeeDL.cs" />
-    <Compile Include="DL\IUserDL.cs" />
+    <Compile Include="DL Interface\ICustomerDL.cs" />
+    <Compile Include="DL Interface\IEmployeeDL.cs" />
+    <Compile Include="DL Interface\IUserDL.cs" />
+    <Compile Include="DL\DB\CustomerDLDB.cs" />
+    <Compile Include="DL\DB\EmployeeDLDB.cs" />
     <Compile Include="UI\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +124,7 @@
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
     <Compile Include="Utility\Configuration.cs" />
+    <Compile Include="Utility\ObjectHandler.cs" />
     <Compile Include="Utility\Validations.cs" />
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="UI\MainMenu.resx">

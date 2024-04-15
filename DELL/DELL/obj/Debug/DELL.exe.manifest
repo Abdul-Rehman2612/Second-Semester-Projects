@@ -66,14 +66,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DELL.exe" size="82440">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DELL.exe" size="88072">
       <assemblyIdentity name="DELL" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>rZJp51ZYb4BMdHA5I4GGxUjExoFp46FFJVHDT0vyXXk=</dsig:DigestValue>
+        <dsig:DigestValue>jin52m4BUD5hziTYBuO8nxir9piuX8R2lPCBzXQjvy8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

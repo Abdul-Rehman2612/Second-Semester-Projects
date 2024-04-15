@@ -52,7 +52,7 @@
             this.GInput = new Guna.UI2.WinForms.Guna2ComboBox();
             this.DOBI = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.SignUpbtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.Registernow = new System.Windows.Forms.LinkLabel();
+            this.SignIn = new System.Windows.Forms.LinkLabel();
             this.Exitbtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.Back = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.TopContainer = new Guna.UI2.WinForms.Guna2Panel();
@@ -111,7 +111,7 @@
             this.Inputs.Controls.Add(this.GInput, 5, 2);
             this.Inputs.Controls.Add(this.DOBI, 5, 1);
             this.Inputs.Controls.Add(this.SignUpbtn, 5, 5);
-            this.Inputs.Controls.Add(this.Registernow, 2, 5);
+            this.Inputs.Controls.Add(this.SignIn, 2, 5);
             this.Inputs.Controls.Add(this.Exitbtn, 5, 6);
             this.Inputs.Controls.Add(this.Back, 1, 6);
             this.Inputs.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -295,11 +295,12 @@
             this.PInput.Location = new System.Drawing.Point(214, 128);
             this.PInput.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.PInput.Name = "PInput";
-            this.PInput.PasswordChar = '\0';
+            this.PInput.PasswordChar = '●';
             this.PInput.PlaceholderText = "******";
             this.PInput.SelectedText = "";
             this.PInput.Size = new System.Drawing.Size(156, 34);
             this.PInput.TabIndex = 13;
+            this.PInput.UseSystemPasswordChar = true;
             // 
             // EInput
             // 
@@ -509,21 +510,21 @@
             this.SignUpbtn.UseDefaultRadiusAndThickness = true;
             this.SignUpbtn.Click += new System.EventHandler(this.SignUpbtn_Click);
             // 
-            // Registernow
+            // SignIn
             // 
-            this.Registernow.AutoSize = true;
-            this.Registernow.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Registernow.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.Registernow.LinkColor = System.Drawing.Color.Silver;
-            this.Registernow.Location = new System.Drawing.Point(212, 214);
-            this.Registernow.Name = "Registernow";
-            this.Registernow.Size = new System.Drawing.Size(160, 63);
-            this.Registernow.TabIndex = 20;
-            this.Registernow.TabStop = true;
-            this.Registernow.Tag = "";
-            this.Registernow.Text = "Already have an account?\r\n Sign In now!";
-            this.Registernow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Registernow.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Registernow_LinkClicked);
+            this.SignIn.AutoSize = true;
+            this.SignIn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SignIn.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.SignIn.LinkColor = System.Drawing.Color.Silver;
+            this.SignIn.Location = new System.Drawing.Point(212, 214);
+            this.SignIn.Name = "SignIn";
+            this.SignIn.Size = new System.Drawing.Size(160, 63);
+            this.SignIn.TabIndex = 20;
+            this.SignIn.TabStop = true;
+            this.SignIn.Tag = "";
+            this.SignIn.Text = "Already have an account?\r\n Sign In now!";
+            this.SignIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.SignIn.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Registernow_LinkClicked);
             // 
             // Exitbtn
             // 
@@ -735,7 +736,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.MainPanel);
-            this.MinimumSize = new System.Drawing.Size(600, 500);
+            this.MinimumSize = new System.Drawing.Size(600, 600);
             this.Name = "SignUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignUp";
@@ -770,7 +771,7 @@
         private Guna.UI2.WinForms.Guna2ComboBox GInput;
         private Guna.UI2.WinForms.Guna2DateTimePicker DOBI;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton SignUpbtn;
-        private System.Windows.Forms.LinkLabel Registernow;
+        private System.Windows.Forms.LinkLabel SignIn;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton Exitbtn;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton Back;
     }

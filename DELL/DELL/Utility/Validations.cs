@@ -1,8 +1,8 @@
 ﻿using DELL.BL;
-using DELL.DL;
+using DELL.DL.DB;
+using DELL.DL_Interface;
 using System.Linq;
 using System.Text.RegularExpressions;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace DELL.Utility
 {
@@ -11,31 +11,31 @@ namespace DELL.Utility
         public static string IsValidUser(UserBL user)
         {
             string Check;
-            if (user.Name=="" || user.Username=="" || user.Password=="" || user.Email=="" || user.Address=="" || user.Contact=="" || user.Gender=="")
+            if (user.GetName()=="" || user.GetUsername()=="" || user.GetPassword()=="" || user.GetEmail()=="" || user.GetAddress()=="" || user.GetContact()=="" || user.GetGender()=="")
             {
                 return "Missing Information!";
             }
-            Check=NameCheck(user.Name);
+            Check=NameCheck(user.GetName());
             if (Check!="True")
             {
                 return Check;
             }
-            Check=UsernameCheck(user.Username);
+            Check=UsernameCheck(user.GetUsername());
             if (Check!="True")
             {
                 return Check;
             }
-            Check=PasswordCheck(user.Password);
+            Check=PasswordCheck(user.GetPassword());
             if (Check!="True")
             {
                 return Check;
             }
-            Check=EmailCheck(user.Email);
+            Check=EmailCheck(user.GetEmail());
             if (Check!="True")
             {
                 return Check;
             }
-            Check= ContactCheck(user.Contact);
+            Check = ContactCheck(user.GetContact());
             return Check;
         }
         public static string ContactCheck(string contact)
@@ -68,30 +68,25 @@ namespace DELL.Utility
             {
                 return "Email is not valid!";
             }
-            IUserDL check = new CustomerDL();
-            if (check.UniqueAttributeCheck(email, "Username"))
+            IUserDL check = new CustomerDLDB();
+            if (check.UniqueAttributeCheck(email, "Email"))
             {
                 return "Email already exists!";
             }
-            check = new EmployeeDL();
-            if (check.UniqueAttributeCheck(email, "Username"))
-            {
-                return "Email already exists!";
-            }
-            return "True";
+            check = new EmployeeDLDB();
+            return check.UniqueAttributeCheck(email, "Email") ? "Email already exists!" : "True";
         }
         public static string PasswordCheck(string password)
         {
             if (password.Length < 6 || password.Length > 20)
+            {
                 return "Password must be between 6 and 20 characters long.";
-
+            }
             if (!password.Any(char.IsLetter) || !password.Any(char.IsDigit))
+            {
                 return "Password must contain at least one letter and one digit.";
-
-            if (password.Any(char.IsWhiteSpace))
-                return "Password cannot contain spaces.";
-
-            return "True";
+            }
+            return password.Any(char.IsWhiteSpace) ? "Password cannot contain spaces." : "True";
         }
         public static string UsernameCheck(string username)
         {
@@ -106,17 +101,13 @@ namespace DELL.Utility
                     return "Username must contain only letters and digits.";
                 }
             }
-            IUserDL check = new CustomerDL();
+            IUserDL check = new CustomerDLDB();
             if (check.UniqueAttributeCheck(username, "Username"))
             {
                 return "Username already exists!";
             }
-            check = new EmployeeDL();
-            if (check.UniqueAttributeCheck(username, "Username"))
-            {
-                return "Username already exists!";
-            }
-            return "True";
+            check = new EmployeeDLDB();
+            return check.UniqueAttributeCheck(username, "Username") ? "Username already exists!" : "True";
         }
         public static string NameCheck(string text)
         {

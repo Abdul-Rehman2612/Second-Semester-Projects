@@ -1,26 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DELL.BL
 {
-    internal class EmployeeBL:UserBL
+    internal class EmployeeBL : UserBL
     {
         private string designation;
-        private DateTime hireDate;
+        readonly private DateTime hireDate;
         private DateTime resignationDate;
-        public string Designation { get => designation; set => designation=value; }
-        public DateTime HireDate { get => hireDate; set => hireDate=value; }
-        public DateTime ResignationDate { get => resignationDate; set => resignationDate=value; }
+        public EmployeeBL(string name, string username, string password, string email, DateTime dob, string address, string contact, string gender, string status, string designation, DateTime hireDate,DateTime resignationDate) : base(name, username, password, email, dob, address, contact, gender, status)
+        {
+            this.designation = designation;
+            this.hireDate = hireDate;
+            this.resignationDate = resignationDate;
+        }
         public EmployeeBL(string name, string username, string password, string email, DateTime dob, string address, string contact, string gender, string status, string designation, DateTime hireDate) : base(name, username, password, email, dob, address, contact, gender, status)
-        { 
+        {
             this.designation = designation;
             this.hireDate = hireDate;
         }
+        public EmployeeBL() { }
         public EmployeeBL(string username, string password) : base(username, password)
         { }
-        
+        public string GetDesignation() { return designation; }
+        public void SetDesignation(string value) { designation = value; }
+        public DateTime GetHireDate() { return hireDate; }
+        public DateTime GetResignationDate() { return resignationDate; }
+        public void SettResignationDate(DateTime value) { resignationDate=value; }
+
     }
 }

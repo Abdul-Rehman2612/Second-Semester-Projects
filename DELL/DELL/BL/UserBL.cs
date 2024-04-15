@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DELL.BL
 {
@@ -23,7 +19,7 @@ namespace DELL.BL
             this.username = username;
             this.password = password;
         }
-        public UserBL(string name,string username,string password,string  email,DateTime dob,string address,string contact,string gender,string status)
+        public UserBL(string name, string username, string password, string email, DateTime dob, string address, string contact, string gender, string status)
         {
             this.name = name;
             this.username = username;
@@ -35,14 +31,23 @@ namespace DELL.BL
             this.gender = gender;
             this.status = status;
         }
-        public string Name { get => name; set => name=value; }
-        public string Username { get => username; set => username=value; }
-        public string Password { get => password; set => password=value; }
-        public string Email { get => email; set => email=value; }
-        public DateTime Dob { get => dob; set => dob=value; }
-        public string Address { get => address; set => address=value; }
-        public string Contact { get => contact; set => contact=value; }
-        public string Gender { get => gender; set => gender=value; }
-        public string Status { get => status; set => status=value; }
+        public string GetName() { return name; }
+        public void SetName(string value) { name = value; }
+        public string GetUsername() { return username; }
+        public void SetUsername(string value) { username = value; }
+        public string GetPassword() { return password; }
+        public void SetPassword(string value) { password = value; }
+        public string GetEmail() { return email; }
+        public void SetEmail(string value) { email = value; }
+        public DateTime GetDob() { return dob; }
+        public void SetDob(DateTime value) { dob = value; }
+        public string GetAddress() { return address; }
+        public void SetAddress(string value) { address = value; }
+        public string GetContact() { return contact; }
+        public void SetContact(string value) { contact = value; }
+        public string GetGender() { return gender; }
+        public void SetGender(string value) { gender = value; }
+        public string GetStatus() { return status; }
+        public void SetStatus(string value) { status = value; }
     }
 }

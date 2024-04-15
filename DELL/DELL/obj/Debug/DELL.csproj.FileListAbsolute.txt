@@ -21,7 +21,6 @@ D:\DELL\DELL\obj\Debug\DELL.csproj.CoreCompileInputs.cache
 D:\DELL\DELL\obj\Debug\DELL.csproj.Up2Date
 D:\DELL\DELL\obj\Debug\DELL.exe
 D:\DELL\DELL\obj\Debug\DELL.pdb
-D:\DELL\DELL\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll
 D:\DELL\DELL\bin\Debug\Bunifu.Licensing.dll
 D:\DELL\DELL\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
 D:\DELL\DELL\obj\Debug\DELL.exe.licenses
@@ -32,3 +31,4 @@ D:\DELL\DELL\bin\Debug\DELL.exe.manifest
 D:\DELL\DELL\bin\Debug\DELL.application
 D:\DELL\DELL\obj\Debug\DELL.exe.manifest
 D:\DELL\DELL\obj\Debug\DELL.application
+D:\DELL\DELL\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll
