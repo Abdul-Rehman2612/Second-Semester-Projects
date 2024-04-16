@@ -1,13 +1,13 @@
 USE [master]
 GO
 
-/****** Object:  Database [Dell]    Script Date: 4/7/2024 12:40:40 PM ******/
+/****** Object:  Database [Dell]    Script Date: 4/15/2024 2:59:35 PM ******/
 CREATE DATABASE [Dell]
  CONTAINMENT = NONE
  ON  PRIMARY 
-( NAME = N'Dell', SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+( NAME = N'Dell', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\Dell.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
  LOG ON 
-( NAME = N'Dell_log', SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+( NAME = N'Dell_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\Dell_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
  WITH CATALOG_COLLATION = DATABASE_DEFAULT, LEDGER = OFF
 GO
 
@@ -119,7 +119,7 @@ GO
 USE [Dell]
 GO
 
-/****** Object:  Table [dbo].[Customers]    Script Date: 4/7/2024 12:45:09 PM ******/
+/****** Object:  Table [dbo].[Customers]    Script Date: 4/15/2024 2:59:48 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -127,7 +127,6 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[Customers](
-	[CustomerID] [int] IDENTITY(1,1) NOT NULL,
 	[Name] [varchar](50) NOT NULL,
 	[Username] [varchar](50) NOT NULL,
 	[Password] [varchar](50) NOT NULL,
@@ -137,15 +136,17 @@ CREATE TABLE [dbo].[Customers](
 	[Contact] [varchar](20) NOT NULL,
 	[Gender] [varchar](20) NOT NULL,
 	[Status] [varchar](10) NOT NULL,
- CONSTRAINT [PK_Customer] PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK_Customers] PRIMARY KEY CLUSTERED 
 (
-	[CustomerID] ASC
+	[Username] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
 
+USE [Dell]
+GO
 
-/****** Object:  Table [dbo].[Employees]    Script Date: 4/7/2024 12:48:00 PM ******/
+/****** Object:  Table [dbo].[Employees]    Script Date: 4/15/2024 3:00:05 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -153,7 +154,6 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[Employees](
-	[EmployeeID] [int] IDENTITY(1,1) NOT NULL,
 	[Name] [varchar](50) NOT NULL,
 	[Username] [varchar](50) NOT NULL,
 	[Password] [varchar](50) NOT NULL,
@@ -166,22 +166,17 @@ CREATE TABLE [dbo].[Employees](
 	[Designation] [varchar](20) NOT NULL,
 	[Hiredate] [date] NOT NULL,
 	[Resignationdate] [date] NULL,
-	[ManagerID] [int] NULL,
- CONSTRAINT [PK_Employee] PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK_Employees] PRIMARY KEY CLUSTERED 
 (
-	[EmployeeID] ASC
+	[Username] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
 
-ALTER TABLE [dbo].[Employees]  WITH CHECK ADD  CONSTRAINT [FK_Employees_Employees] FOREIGN KEY([ManagerID])
-REFERENCES [dbo].[Employees] ([EmployeeID])
+USE [Dell]
 GO
 
-ALTER TABLE [dbo].[Employees] CHECK CONSTRAINT [FK_Employees_Employees]
-GO
-
-/****** Object:  Table [dbo].[Orders]    Script Date: 4/7/2024 12:49:00 PM ******/
+/****** Object:  Table [dbo].[Orders]    Script Date: 4/15/2024 3:00:17 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -190,11 +185,10 @@ GO
 
 CREATE TABLE [dbo].[Orders](
 	[OrderID] [int] IDENTITY(1,1) NOT NULL,
-	[CustomerID] [int] NOT NULL,
-	[EmployeeID] [int] NULL,
+	[CustomerID] [varchar](50) NOT NULL,
+	[EmployeeID] [varchar](50) NULL,
 	[OrderDate] [datetime] NOT NULL,
-	[CustomerType] [varchar](50) NOT NULL,
-	[TotalPrice] [int] NOT NULL,
+	[TotalPrice] [float] NULL,
  CONSTRAINT [PK_Orders] PRIMARY KEY CLUSTERED 
 (
 	[OrderID] ASC
@@ -202,21 +196,22 @@ CREATE TABLE [dbo].[Orders](
 ) ON [PRIMARY]
 GO
 
-ALTER TABLE [dbo].[Orders]  WITH CHECK ADD  CONSTRAINT [FK_Order_Employees] FOREIGN KEY([EmployeeID])
-REFERENCES [dbo].[Employees] ([EmployeeID])
-GO
-
-ALTER TABLE [dbo].[Orders] CHECK CONSTRAINT [FK_Order_Employees]
-GO
-
 ALTER TABLE [dbo].[Orders]  WITH CHECK ADD  CONSTRAINT [FK_Orders_Customers] FOREIGN KEY([CustomerID])
-REFERENCES [dbo].[Customers] ([CustomerID])
+REFERENCES [dbo].[Customers] ([Username])
+ON DELETE CASCADE
+ON UPDATE CASCADE
 GO
 
-ALTER TABLE [dbo].[Orders] CHECK CONSTRAINT [FK_Orders_Customers]
+ALTER TABLE [dbo].[Orders]  WITH CHECK ADD  CONSTRAINT [FK_Orders_Employees] FOREIGN KEY([EmployeeID])
+REFERENCES [dbo].[Employees] ([Username])
+ON DELETE CASCADE
+ON UPDATE CASCADE
 GO
 
-/****** Object:  Table [dbo].[Products]    Script Date: 4/7/2024 12:49:15 PM ******/
+USE [Dell]
+GO
+
+/****** Object:  Table [dbo].[Products]    Script Date: 4/15/2024 3:00:31 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -224,11 +219,10 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[Products](
-	[ProductID] [int] IDENTITY(1,1) NOT NULL,
+	[ProductID] [int] NOT NULL,
 	[ProductName] [varchar](50) NOT NULL,
-	[ProductModel] [varchar](50) NOT NULL,
 	[Details] [varchar](500) NOT NULL,
-	[UnitPrice] [int] NOT NULL,
+	[UnitPrice] [float] NOT NULL,
 	[UnitsInStock] [int] NOT NULL,
 	[ProductStatus] [varchar](50) NOT NULL,
  CONSTRAINT [PK_Products] PRIMARY KEY CLUSTERED 
@@ -237,8 +231,10 @@ CREATE TABLE [dbo].[Products](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
+USE [Dell]
+GO
 
-/****** Object:  Table [dbo].[OrderDetails]    Script Date: 4/7/2024 12:48:47 PM ******/
+/****** Object:  Table [dbo].[OrderDetails]    Script Date: 4/15/2024 3:00:41 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -249,7 +245,7 @@ CREATE TABLE [dbo].[OrderDetails](
 	[OrderID] [int] NOT NULL,
 	[ProductID] [int] NOT NULL,
 	[Quantity] [int] NOT NULL,
-	[Price] [int] NOT NULL,
+	[Price] [float] NOT NULL,
  CONSTRAINT [PK_OrderDetails] PRIMARY KEY CLUSTERED 
 (
 	[OrderID] ASC,
@@ -260,51 +256,20 @@ GO
 
 ALTER TABLE [dbo].[OrderDetails]  WITH CHECK ADD  CONSTRAINT [FK_OrderDetails_Orders] FOREIGN KEY([OrderID])
 REFERENCES [dbo].[Orders] ([OrderID])
-GO
-
-ALTER TABLE [dbo].[OrderDetails] CHECK CONSTRAINT [FK_OrderDetails_Orders]
+ON DELETE CASCADE
+ON UPDATE CASCADE
 GO
 
 ALTER TABLE [dbo].[OrderDetails]  WITH CHECK ADD  CONSTRAINT [FK_OrderDetails_Products] FOREIGN KEY([ProductID])
 REFERENCES [dbo].[Products] ([ProductID])
+ON DELETE CASCADE
+ON UPDATE CASCADE
 GO
 
-ALTER TABLE [dbo].[OrderDetails] CHECK CONSTRAINT [FK_OrderDetails_Products]
+USE [Dell]
 GO
 
-/****** Object:  Table [dbo].[Reviews]    Script Date: 4/7/2024 12:49:34 PM ******/
-SET ANSI_NULLS ON
-GO
-
-SET QUOTED_IDENTIFIER ON
-GO
-
-CREATE TABLE [dbo].[Reviews](
-	[ReviewID] [int] IDENTITY(1,1) NOT NULL,
-	[CustomerID] [int] NOT NULL,
-	[ProductID] [int] NULL,
-	[Comments] [varchar](500) NOT NULL,
- CONSTRAINT [PK_Reviews] PRIMARY KEY CLUSTERED 
-(
-	[ReviewID] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-
-ALTER TABLE [dbo].[Reviews]  WITH CHECK ADD  CONSTRAINT [FK_Reviews_Customers] FOREIGN KEY([CustomerID])
-REFERENCES [dbo].[Customers] ([CustomerID])
-GO
-
-ALTER TABLE [dbo].[Reviews] CHECK CONSTRAINT [FK_Reviews_Customers]
-GO
-
-ALTER TABLE [dbo].[Reviews]  WITH CHECK ADD  CONSTRAINT [FK_Reviews_Products] FOREIGN KEY([ProductID])
-REFERENCES [dbo].[Products] ([ProductID])
-GO
-
-ALTER TABLE [dbo].[Reviews] CHECK CONSTRAINT [FK_Reviews_Products]
-GO
-/****** Object:  Table [dbo].[EmployeeContribution]    Script Date: 4/7/2024 12:47:19 PM ******/
+/****** Object:  Table [dbo].[EmployeeContribution]    Script Date: 4/15/2024 3:00:55 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -313,7 +278,7 @@ GO
 
 CREATE TABLE [dbo].[EmployeeContribution](
 	[ContID] [int] IDENTITY(1,1) NOT NULL,
-	[EmployeeID] [int] NOT NULL,
+	[EmployeeID] [varchar](50) NOT NULL,
 	[ProductID] [int] NOT NULL,
 	[Quantity] [int] NOT NULL,
 	[DateManufactured] [datetime] NOT NULL,
@@ -325,16 +290,49 @@ CREATE TABLE [dbo].[EmployeeContribution](
 GO
 
 ALTER TABLE [dbo].[EmployeeContribution]  WITH CHECK ADD  CONSTRAINT [FK_EmployeeContribution_Employees] FOREIGN KEY([EmployeeID])
-REFERENCES [dbo].[Employees] ([EmployeeID])
-GO
-
-ALTER TABLE [dbo].[EmployeeContribution] CHECK CONSTRAINT [FK_EmployeeContribution_Employees]
+REFERENCES [dbo].[Employees] ([Username])
+ON DELETE CASCADE
+ON UPDATE CASCADE
 GO
 
 ALTER TABLE [dbo].[EmployeeContribution]  WITH CHECK ADD  CONSTRAINT [FK_EmployeeContribution_Products] FOREIGN KEY([ProductID])
 REFERENCES [dbo].[Products] ([ProductID])
+ON DELETE CASCADE
+ON UPDATE CASCADE
 GO
 
-ALTER TABLE [dbo].[EmployeeContribution] CHECK CONSTRAINT [FK_EmployeeContribution_Products]
+USE [Dell]
 GO
+
+/****** Object:  Table [dbo].[Reviews]    Script Date: 4/15/2024 3:01:02 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Reviews](
+	[ReviewID] [int] IDENTITY(1,1) NOT NULL,
+	[CustomerID] [varchar](50) NOT NULL,
+	[ProductID] [int] NULL,
+	[Comments] [varchar](500) NOT NULL,
+ CONSTRAINT [PK_Reviews] PRIMARY KEY CLUSTERED 
+(
+	[ReviewID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Reviews]  WITH CHECK ADD  CONSTRAINT [FK_Reviews_Customers] FOREIGN KEY([CustomerID])
+REFERENCES [dbo].[Customers] ([Username])
+ON DELETE CASCADE
+ON UPDATE CASCADE
+GO
+
+ALTER TABLE [dbo].[Reviews]  WITH CHECK ADD  CONSTRAINT [FK_Reviews_Products] FOREIGN KEY([ProductID])
+REFERENCES [dbo].[Products] ([ProductID])
+ON DELETE CASCADE
+ON UPDATE CASCADE
+GO
+
 INSERT INTO Employees (Name, Username, Password, Email, DOB, Address, Contact, Gender, Status,Designation,HireDate) VALUES ('Admin', 'Admin', 'Admin1', 'Admin@gmail.com', '2000-01-01','Address', '0000', 'Male', 'Active','CEO','2024-04-01')

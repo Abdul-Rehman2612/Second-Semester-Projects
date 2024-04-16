@@ -64,6 +64,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuButton">
       <HintPath>..\..\Bunifu_UI_WinForms_5.0.3\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
     </Reference>
+    <Reference Include="DellLibrary">
+      <HintPath>..\..\DellLibrary\DellLibrary\bin\Debug\DellLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\Guna.UI.dll</HintPath>
@@ -88,21 +91,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BL\CeoBL.cs" />
-    <Compile Include="BL\CustomerBL.cs" />
-    <Compile Include="BL\EmployeeBL.cs" />
-    <Compile Include="BL\EmployeeContributionBL.cs" />
-    <Compile Include="BL\OrderBL.cs" />
-    <Compile Include="BL\OrderDetailsBL.cs" />
-    <Compile Include="BL\ProductBL.cs" />
-    <Compile Include="BL\SalesPersonBL.cs" />
-    <Compile Include="BL\TechnicianBL.cs" />
-    <Compile Include="BL\UserBL.cs" />
-    <Compile Include="DL Interface\ICustomerDL.cs" />
-    <Compile Include="DL Interface\IEmployeeDL.cs" />
-    <Compile Include="DL Interface\IUserDL.cs" />
-    <Compile Include="DL\DB\CustomerDLDB.cs" />
-    <Compile Include="DL\DB\EmployeeDLDB.cs" />
+    <Compile Include="UI\CeoUI\CeoDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CeoUI\CeoDashboard.Designer.cs">
+      <DependentUpon>CeoDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,10 +117,11 @@
     <Compile Include="UI\SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utility\Configuration.cs" />
     <Compile Include="Utility\ObjectHandler.cs" />
-    <Compile Include="Utility\Validations.cs" />
     <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="UI\CeoUI\CeoDashboard.resx">
+      <DependentUpon>CeoDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,6 +166,11 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UI\CustomerUI\" />
+    <Folder Include="UI\SalesPersonUI\" />
+    <Folder Include="UI\TechnicianUI\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

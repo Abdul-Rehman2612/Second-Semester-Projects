@@ -1,5 +1,5 @@
-﻿using DELL.DL.DB;
-using DELL.DL_Interface;
+﻿using DellLibrary.DL.DB;
+using DellLibrary.DL_Interfaces;
 
 namespace DELL.Utility
 {

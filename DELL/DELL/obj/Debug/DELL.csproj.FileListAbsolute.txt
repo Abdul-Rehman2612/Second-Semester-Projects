@@ -3,7 +3,6 @@ D:\Project\Second Semester\DELL\DELL\bin\Debug\DELL.exe
 D:\Project\Second Semester\DELL\DELL\bin\Debug\DELL.pdb
 D:\Project\Second Semester\DELL\DELL\bin\Debug\Guna.UI2.dll
 D:\Project\Second Semester\DELL\DELL\obj\Debug\DELL.csproj.AssemblyReference.cache
-D:\Project\Second Semester\DELL\DELL\obj\Debug\DELL.MainPage.resources
 D:\Project\Second Semester\DELL\DELL\obj\Debug\DELL.Properties.Resources.resources
 D:\Project\Second Semester\DELL\DELL\obj\Debug\DELL.csproj.GenerateResource.cache
 D:\Project\Second Semester\DELL\DELL\obj\Debug\DELL.csproj.CoreCompileInputs.cache
@@ -32,3 +31,21 @@ D:\DELL\DELL\bin\Debug\DELL.application
 D:\DELL\DELL\obj\Debug\DELL.exe.manifest
 D:\DELL\DELL\obj\Debug\DELL.application
 D:\DELL\DELL\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll
+D:\DELL\DELL\obj\Debug\DELL.UI.CeoUI.resources
+D:\DELL\DELL\obj\Debug\DELL.UI.CustomerUI.resources
+D:\DELL\DELL\obj\Debug\DELL.UI.SalesPersonUI.resources
+D:\DELL\DELL\obj\Debug\DELL.UI.TechnicianUI.resources
+D:\DELL\DELL\obj\Debug\DELL.UI.CeoUI.CeoDashboard.resources
+D:\Project\Second Semester\Dell\DELL\bin\Debug\DELL.exe.manifest
+D:\Project\Second Semester\Dell\DELL\bin\Debug\DELL.application
+D:\Project\Second Semester\Dell\DELL\bin\Debug\DellLibrary.dll
+D:\Project\Second Semester\Dell\DELL\bin\Debug\Bunifu.Licensing.dll
+D:\Project\Second Semester\Dell\DELL\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
+D:\Project\Second Semester\Dell\DELL\bin\Debug\DellLibrary.pdb
+D:\Project\Second Semester\Dell\DELL\obj\Debug\DELL.UI.CeoUI.CeoDashboard.resources
+D:\Project\Second Semester\Dell\DELL\obj\Debug\DELL.MainMenu.resources
+D:\Project\Second Semester\Dell\DELL\obj\Debug\DELL.UI.SignIn.resources
+D:\Project\Second Semester\Dell\DELL\obj\Debug\DELL.UI.SignUp.resources
+D:\Project\Second Semester\Dell\DELL\obj\Debug\DELL.exe.licenses
+D:\Project\Second Semester\Dell\DELL\obj\Debug\DELL.exe.manifest
+D:\Project\Second Semester\Dell\DELL\obj\Debug\DELL.application
