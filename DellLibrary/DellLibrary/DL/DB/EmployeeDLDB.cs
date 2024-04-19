@@ -2,13 +2,14 @@
 using DellLibrary.DL_Interfaces;
 using DellLibrary.Utility;
 using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 
 namespace DellLibrary.DL.DB
 {
     public class EmployeeDLDB : IUserDL, IEmployeeDL
     {
-        public string AddEmployee(EmployeeBL user)
+        public string AddEmployee(EmployeeBL user) // adds employee to DB
         {
             string message = Validations.IsValidUser(user); // checks if user is valid or not
             // if the user is valid
@@ -41,7 +42,7 @@ namespace DellLibrary.DL.DB
 
                         // execute command
                         int rowsAffected = command.ExecuteNonQuery();
-                        if (rowsAffected > 0) // if the customer was added
+                        if (rowsAffected > 0) // if the employee was added
                         {
                             message = "True";
                         }
@@ -58,10 +59,200 @@ namespace DellLibrary.DL.DB
             }
             return message; // return the result message
         }
-        // public static string RemoveUser(UserBL user) { };
-        // public static string UpdateUser(UserBL user) { return ""; }
-        // public static List<UserBL> GetAllUsers();
-        public bool UniqueAttributeCheck(string text, string attribute)
+        public string RemoveEmployee(string username) // removes employee
+        {
+            string message = "";
+            // makes connection with DB to remove employee
+            using (SqlConnection con = Configuration.GetConnection())
+            {
+                // first try to execute delete command
+                string query = $"DELETE Employees where Username=@Username;";
+                try
+                {
+                    con.Open(); // opens Database Connection
+                    SqlCommand command = new SqlCommand(query, con); // command to execute the query
+
+                    // Add parameters
+                    command.Parameters.AddWithValue("@Username", username);
+
+                    SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
+                    int rowAffected = sqlDataReader.RecordsAffected;
+                    if (rowAffected>0)
+                    {
+                        message="True";
+                    }
+                }
+                // if any exception returns the exception message
+                catch (Exception e)
+                {
+                    message = e.Message;
+                }
+                finally // closes the database connection at the end
+                {
+                    con.Close();
+                }
+            }
+            // returns the message
+            return message;
+        }
+        public EmployeeBL GetEmployeebyUsername(string username) // returns employee for a username
+        {
+            EmployeeBL employee = null;
+            // makes connection with DB to get employees
+            using (SqlConnection con = Configuration.GetConnection())
+            {
+                string query = $"Select * from Employees where Username=@username;";
+                // first try to execute retreive command
+                try
+                {
+                    con.Open(); // opens Database Connection
+                    SqlCommand command = new SqlCommand(query, con); // command to execute the query
+                    command.Parameters.AddWithValue("@Username", username);
+                    SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
+                    if (sqlDataReader.Read()) // if employees data found
+                    {
+                        while (sqlDataReader.Read())
+                        {
+                            if (sqlDataReader.IsDBNull(11)) // if resignation date is null
+                            {
+                                employee = new EmployeeBL(sqlDataReader.GetString(0), username, sqlDataReader.GetString(2), sqlDataReader.GetString(3), sqlDataReader.GetDateTime(4), sqlDataReader.GetString(5), sqlDataReader.GetString(6), sqlDataReader.GetString(7), sqlDataReader.GetString(8), sqlDataReader.GetString(9), sqlDataReader.GetDateTime(10));
+                            }
+                            else
+                            {
+                                employee = new EmployeeBL(sqlDataReader.GetString(0), username, sqlDataReader.GetString(2), sqlDataReader.GetString(3), sqlDataReader.GetDateTime(4), sqlDataReader.GetString(5), sqlDataReader.GetString(6), sqlDataReader.GetString(7), sqlDataReader.GetString(8), sqlDataReader.GetString(9), sqlDataReader.GetDateTime(10),sqlDataReader.GetDateTime(11));
+                            }
+                        }
+                    }
+                }
+                catch (Exception e) // if any exception returns the exception message
+                {
+                    throw (e);
+                }
+                finally // closes the database connection at the end
+                {
+                    con.Close();
+                }
+            }
+            return employee; // returns list
+        }
+        public List<EmployeeBL> GetAllEmployees() // returns the list of all employees
+        {
+            List<EmployeeBL> Employees = new List<EmployeeBL>();
+            // makes connection with DB to get employees
+            using (SqlConnection con = Configuration.GetConnection())
+            {
+                string query = $"Select * from Employees where Designation<>'CEO';";
+                // first try to execute retreive command
+                try
+                {
+                    con.Open(); // opens Database Connection
+                    SqlCommand command = new SqlCommand(query, con); // command to execute the query
+                    SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
+                    if (sqlDataReader.Read()) // if employees data found
+                    {
+                        while (sqlDataReader.Read())
+                        {
+                            if (sqlDataReader.IsDBNull(11)) // if resignation date is null
+                            {
+                                EmployeeBL employee = new EmployeeBL(sqlDataReader.GetString(0), sqlDataReader.GetString(1), sqlDataReader.GetString(2), sqlDataReader.GetString(3), sqlDataReader.GetDateTime(4), sqlDataReader.GetString(5), sqlDataReader.GetString(6), sqlDataReader.GetString(7), sqlDataReader.GetString(8), sqlDataReader.GetString(9), sqlDataReader.GetDateTime(10));
+                                Employees.Add(employee);
+                            }
+                            else
+                            {
+                                EmployeeBL employee = new EmployeeBL(sqlDataReader.GetString(0), sqlDataReader.GetString(1), sqlDataReader.GetString(2), sqlDataReader.GetString(3), sqlDataReader.GetDateTime(4), sqlDataReader.GetString(5), sqlDataReader.GetString(6), sqlDataReader.GetString(7), sqlDataReader.GetString(8), sqlDataReader.GetString(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11));
+                                Employees.Add(employee);
+                            }
+                        }
+                    }
+                }
+                catch (Exception e) // if any exception returns the exception message
+                {
+                    throw (e);
+                }
+                finally // closes the database connection at the end
+                {
+                    con.Close();
+                }
+            }
+            return Employees; // returns list
+        }
+        public List<EmployeeBL> GetEmployeesByDesignation(string designation) // returns the list of employees with specific designation
+        {
+            List<EmployeeBL> Employees = new List<EmployeeBL>();
+            // makes connection with DB to get employees
+            using (SqlConnection con = Configuration.GetConnection())
+            {
+                string query = $"Select * from Employees where Designation=@Designation;";
+                // first try to execute retreive command
+                try
+                {
+                    con.Open(); // opens Database Connection
+                    SqlCommand command = new SqlCommand(query, con); // command to execute the query
+                    command.Parameters.AddWithValue("@Designation", designation);
+                    SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
+                    if (sqlDataReader.Read()) // if employees data found
+                    {
+                        while (sqlDataReader.Read())
+                        {
+                            string name = sqlDataReader.GetString(0);
+                            string username = sqlDataReader.GetString(1);
+                            string password = sqlDataReader.GetString(2);
+                            string email = sqlDataReader.GetString(3);
+                            DateTime birthDate = sqlDataReader.GetDateTime(4);
+                            string address = sqlDataReader.GetString(5);
+                            string contact = sqlDataReader.GetString(6);
+                            string gender = sqlDataReader.GetString(7);
+                            string status = sqlDataReader.GetString(8);
+                            if (sqlDataReader.IsDBNull(11)) // if resignation date is null
+                            {
+                                EmployeeBL employee = new EmployeeBL(sqlDataReader.GetString(0), sqlDataReader.GetString(1), sqlDataReader.GetString(2), sqlDataReader.GetString(3), sqlDataReader.GetDateTime(4), sqlDataReader.GetString(5), sqlDataReader.GetString(6), sqlDataReader.GetString(7), sqlDataReader.GetString(8), sqlDataReader.GetString(9), sqlDataReader.GetDateTime(10));
+                                Employees.Add(employee);
+                            }
+                        }
+                    }
+                }
+                catch (Exception e) // if any exception returns the exception message
+                {
+                    throw (e);
+                }
+                finally // closes the database connection at the end
+                {
+                    con.Close();
+                }
+            }
+            return Employees; // returns list
+        }
+        public int GetEmployeeCount() // returns count of total employees in database
+        {
+            int EmployeeCount = 0;
+            // makes connection with DB to get employees count
+            using (SqlConnection con = Configuration.GetConnection())
+            {
+                string query = $"Select Count(*) from Employees where Status=@Status;";
+                // first try to execute retreive command
+                try
+                {
+                    con.Open(); // opens Database Connection
+                    SqlCommand command = new SqlCommand(query, con); // command to execute the query
+                    command.Parameters.AddWithValue("@Status", "Active"); // add parameters
+                    SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
+                    if (sqlDataReader.Read()) // if employees data found
+                    {
+                        EmployeeCount= sqlDataReader.GetInt32(0);
+                    }
+                }
+                catch (Exception e) // if any exception returns the exception message
+                {
+                    throw (e);
+                }
+                finally // closes the database connection at the end
+                {
+                    con.Close();
+                }
+            }
+            return EmployeeCount; // returns count
+        }
+        public bool UniqueAttributeCheck(string text, string attribute) // checks database for a unique attribute
         {
             // variable for checking attribute
             bool check = false;
@@ -92,9 +283,9 @@ namespace DellLibrary.DL.DB
             // Return the result of the check
             return check;
         }
-        public string UserSignIn(UserBL user)
+        public UserBL UserSignIn(UserBL user) // checks user in database for signing in
         {
-            string message = "";
+            EmployeeBL employee = null;
             // query to find user in the database
             string query = $"SELECT * FROM Employees WHERE Username COLLATE Latin1_General_BIN = @Username AND Password COLLATE Latin1_General_BIN = @Password AND Status='Active';";
             using (SqlConnection con = Configuration.GetConnection()) // Connection to the database 
@@ -112,25 +303,24 @@ namespace DellLibrary.DL.DB
                         if (sqlDataReader.IsDBNull(11)) // if resignation date is null
                         {
                             string designation = sqlDataReader.GetString(9);
-                            EmployeeBL employee = new EmployeeBL(sqlDataReader.GetString(0), sqlDataReader.GetString(1), sqlDataReader.GetString(2), sqlDataReader.GetString(3), sqlDataReader.GetDateTime(4), sqlDataReader.GetString(5), sqlDataReader.GetString(6), sqlDataReader.GetString(7), sqlDataReader.GetString(8), sqlDataReader.GetString(9), sqlDataReader.GetDateTime(10));
-                            message = designation;
+                            employee = new EmployeeBL(sqlDataReader.GetString(0), sqlDataReader.GetString(1), sqlDataReader.GetString(2), sqlDataReader.GetString(3), sqlDataReader.GetDateTime(4), sqlDataReader.GetString(5), sqlDataReader.GetString(6), sqlDataReader.GetString(7), sqlDataReader.GetString(8), sqlDataReader.GetString(9), sqlDataReader.GetDateTime(10));
                         }
                     }
                     else // if user not found
                     {
-                        message = "Invalid username or password";
+                        employee = null;
                     }
                 }
-                catch (Exception ex)
+                catch (Exception ex) // throw exception in case of errors
                 {
-                    message=ex.Message;
+                    throw (ex);
                 }
                 finally
                 {
                     con.Close();
                 }
             }
-            return message; // return the result message
+            return employee; // return the result message
         }
     }
 }

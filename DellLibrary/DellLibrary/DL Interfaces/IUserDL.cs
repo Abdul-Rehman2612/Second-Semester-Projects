@@ -10,6 +10,6 @@ namespace DellLibrary.DL_Interfaces
     public interface IUserDL
     {
         bool UniqueAttributeCheck(string text, string attribute); // checks for unique attributes
-        string UserSignIn(UserBL user); // checks for a user to sign in
+        UserBL UserSignIn(UserBL user); // checks for a user to sign in
     }
 }

@@ -31,11 +31,6 @@ D:\DELL\DELL\bin\Debug\DELL.application
 D:\DELL\DELL\obj\Debug\DELL.exe.manifest
 D:\DELL\DELL\obj\Debug\DELL.application
 D:\DELL\DELL\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll
-D:\DELL\DELL\obj\Debug\DELL.UI.CeoUI.resources
-D:\DELL\DELL\obj\Debug\DELL.UI.CustomerUI.resources
-D:\DELL\DELL\obj\Debug\DELL.UI.SalesPersonUI.resources
-D:\DELL\DELL\obj\Debug\DELL.UI.TechnicianUI.resources
-D:\DELL\DELL\obj\Debug\DELL.UI.CeoUI.CeoDashboard.resources
 D:\Project\Second Semester\Dell\DELL\bin\Debug\DELL.exe.manifest
 D:\Project\Second Semester\Dell\DELL\bin\Debug\DELL.application
 D:\Project\Second Semester\Dell\DELL\bin\Debug\DellLibrary.dll
@@ -49,3 +44,9 @@ D:\Project\Second Semester\Dell\DELL\obj\Debug\DELL.UI.SignUp.resources
 D:\Project\Second Semester\Dell\DELL\obj\Debug\DELL.exe.licenses
 D:\Project\Second Semester\Dell\DELL\obj\Debug\DELL.exe.manifest
 D:\Project\Second Semester\Dell\DELL\obj\Debug\DELL.application
+D:\DELL\DELL\bin\Debug\DellLibrary.dll
+D:\DELL\DELL\bin\Debug\DellLibrary.pdb
+D:\DELL\DELL\obj\Debug\DELL.UI.UsersUI.CeoUI.resources
+D:\DELL\DELL\obj\Debug\DELL.UI.UsersUI.CustomerUI.resources
+D:\DELL\DELL\obj\Debug\DELL.UI.UsersUI.SalesPersonUI.resources
+D:\DELL\DELL\obj\Debug\DELL.UI.UsersUI.TechnicianUI.resources

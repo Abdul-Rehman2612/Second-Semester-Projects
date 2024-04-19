@@ -119,14 +119,14 @@
             this.Inputs.Location = new System.Drawing.Point(0, 0);
             this.Inputs.Name = "Inputs";
             this.Inputs.RowCount = 8;
-            this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
             this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 81F));
+            this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
             this.Inputs.Size = new System.Drawing.Size(784, 411);
             this.Inputs.TabIndex = 0;
             // 
@@ -135,7 +135,7 @@
             this.Contact.AutoSize = true;
             this.Contact.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Contact.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Contact.Location = new System.Drawing.Point(396, 122);
+            this.Contact.Location = new System.Drawing.Point(396, 139);
             this.Contact.Name = "Contact";
             this.Contact.Size = new System.Drawing.Size(120, 46);
             this.Contact.TabIndex = 3;
@@ -147,7 +147,7 @@
             this.DOB.AutoSize = true;
             this.DOB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DOB.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DOB.Location = new System.Drawing.Point(396, 30);
+            this.DOB.Location = new System.Drawing.Point(396, 47);
             this.DOB.Name = "DOB";
             this.DOB.Size = new System.Drawing.Size(120, 46);
             this.DOB.TabIndex = 10;
@@ -159,7 +159,7 @@
             this.Address.AutoSize = true;
             this.Address.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Address.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Address.Location = new System.Drawing.Point(396, 168);
+            this.Address.Location = new System.Drawing.Point(396, 185);
             this.Address.Name = "Address";
             this.Address.Size = new System.Drawing.Size(120, 46);
             this.Address.TabIndex = 5;
@@ -171,7 +171,7 @@
             this.Gender.AutoSize = true;
             this.Gender.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Gender.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Gender.Location = new System.Drawing.Point(396, 76);
+            this.Gender.Location = new System.Drawing.Point(396, 93);
             this.Gender.Name = "Gender";
             this.Gender.Size = new System.Drawing.Size(120, 46);
             this.Gender.TabIndex = 9;
@@ -183,7 +183,7 @@
             this.Username.AutoSize = true;
             this.Username.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Username.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Username.Location = new System.Drawing.Point(85, 76);
+            this.Username.Location = new System.Drawing.Point(85, 93);
             this.Username.Name = "Username";
             this.Username.Size = new System.Drawing.Size(121, 46);
             this.Username.TabIndex = 6;
@@ -195,7 +195,7 @@
             this.Password.AutoSize = true;
             this.Password.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Password.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Password.Location = new System.Drawing.Point(85, 122);
+            this.Password.Location = new System.Drawing.Point(85, 139);
             this.Password.Name = "Password";
             this.Password.Size = new System.Drawing.Size(121, 46);
             this.Password.TabIndex = 7;
@@ -207,7 +207,7 @@
             this.IName.AutoSize = true;
             this.IName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.IName.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IName.Location = new System.Drawing.Point(85, 30);
+            this.IName.Location = new System.Drawing.Point(85, 47);
             this.IName.Name = "IName";
             this.IName.Size = new System.Drawing.Size(121, 46);
             this.IName.TabIndex = 4;
@@ -219,7 +219,7 @@
             this.Email.AutoSize = true;
             this.Email.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Email.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email.Location = new System.Drawing.Point(85, 168);
+            this.Email.Location = new System.Drawing.Point(85, 185);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(121, 46);
             this.Email.TabIndex = 8;
@@ -242,7 +242,7 @@
             this.NInput.Font = new System.Drawing.Font("Sitka Text", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NInput.ForeColor = System.Drawing.Color.Black;
             this.NInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.NInput.Location = new System.Drawing.Point(214, 36);
+            this.NInput.Location = new System.Drawing.Point(214, 53);
             this.NInput.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.NInput.Name = "NInput";
             this.NInput.PasswordChar = '\0';
@@ -267,7 +267,7 @@
             this.UInput.Font = new System.Drawing.Font("Sitka Text", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UInput.ForeColor = System.Drawing.Color.Black;
             this.UInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.UInput.Location = new System.Drawing.Point(214, 82);
+            this.UInput.Location = new System.Drawing.Point(214, 99);
             this.UInput.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.UInput.Name = "UInput";
             this.UInput.PasswordChar = '\0';
@@ -292,7 +292,7 @@
             this.PInput.Font = new System.Drawing.Font("Sitka Text", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PInput.ForeColor = System.Drawing.Color.Black;
             this.PInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.PInput.Location = new System.Drawing.Point(214, 128);
+            this.PInput.Location = new System.Drawing.Point(214, 145);
             this.PInput.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.PInput.Name = "PInput";
             this.PInput.PasswordChar = '●';
@@ -318,7 +318,7 @@
             this.EInput.Font = new System.Drawing.Font("Sitka Text", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EInput.ForeColor = System.Drawing.Color.Black;
             this.EInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.EInput.Location = new System.Drawing.Point(214, 174);
+            this.EInput.Location = new System.Drawing.Point(214, 191);
             this.EInput.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.EInput.Name = "EInput";
             this.EInput.PasswordChar = '\0';
@@ -343,7 +343,7 @@
             this.CInput.Font = new System.Drawing.Font("Sitka Text", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CInput.ForeColor = System.Drawing.Color.Black;
             this.CInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CInput.Location = new System.Drawing.Point(524, 128);
+            this.CInput.Location = new System.Drawing.Point(524, 145);
             this.CInput.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.CInput.Name = "CInput";
             this.CInput.PasswordChar = '\0';
@@ -368,7 +368,7 @@
             this.AInput.Font = new System.Drawing.Font("Sitka Text", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AInput.ForeColor = System.Drawing.Color.Black;
             this.AInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.AInput.Location = new System.Drawing.Point(524, 174);
+            this.AInput.Location = new System.Drawing.Point(524, 191);
             this.AInput.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.AInput.Name = "AInput";
             this.AInput.PasswordChar = '\0';
@@ -393,9 +393,8 @@
             this.GInput.ItemHeight = 30;
             this.GInput.Items.AddRange(new object[] {
             "Female",
-            "Male",
-            "Rather not say"});
-            this.GInput.Location = new System.Drawing.Point(522, 79);
+            "Male"});
+            this.GInput.Location = new System.Drawing.Point(522, 96);
             this.GInput.Name = "GInput";
             this.GInput.Size = new System.Drawing.Size(171, 36);
             this.GInput.Sorted = true;
@@ -411,7 +410,7 @@
             this.DOBI.FocusedColor = System.Drawing.Color.White;
             this.DOBI.Font = new System.Drawing.Font("Sitka Text", 8F);
             this.DOBI.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.DOBI.Location = new System.Drawing.Point(522, 33);
+            this.DOBI.Location = new System.Drawing.Point(522, 50);
             this.DOBI.MaxDate = new System.DateTime(2024, 4, 1, 0, 0, 0, 0);
             this.DOBI.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.DOBI.Name = "DOBI";
@@ -467,7 +466,7 @@
             this.SignUpbtn.IdleIconLeftImage = null;
             this.SignUpbtn.IdleIconRightImage = null;
             this.SignUpbtn.IndicateFocus = false;
-            this.SignUpbtn.Location = new System.Drawing.Point(522, 217);
+            this.SignUpbtn.Location = new System.Drawing.Point(522, 234);
             this.SignUpbtn.Name = "SignUpbtn";
             this.SignUpbtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.SignUpbtn.OnDisabledState.BorderRadius = 50;
@@ -516,7 +515,7 @@
             this.SignIn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SignIn.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.SignIn.LinkColor = System.Drawing.Color.Silver;
-            this.SignIn.Location = new System.Drawing.Point(212, 214);
+            this.SignIn.Location = new System.Drawing.Point(212, 231);
             this.SignIn.Name = "SignIn";
             this.SignIn.Size = new System.Drawing.Size(160, 63);
             this.SignIn.TabIndex = 20;
@@ -574,7 +573,7 @@
             this.Exitbtn.IdleIconLeftImage = null;
             this.Exitbtn.IdleIconRightImage = null;
             this.Exitbtn.IndicateFocus = false;
-            this.Exitbtn.Location = new System.Drawing.Point(570, 280);
+            this.Exitbtn.Location = new System.Drawing.Point(570, 297);
             this.Exitbtn.Name = "Exitbtn";
             this.Exitbtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.Exitbtn.OnDisabledState.BorderRadius = 50;
@@ -665,7 +664,7 @@
             this.Back.IdleIconLeftImage = null;
             this.Back.IdleIconRightImage = null;
             this.Back.IndicateFocus = false;
-            this.Back.Location = new System.Drawing.Point(85, 280);
+            this.Back.Location = new System.Drawing.Point(85, 297);
             this.Back.Name = "Back";
             this.Back.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.Back.OnDisabledState.BorderRadius = 50;

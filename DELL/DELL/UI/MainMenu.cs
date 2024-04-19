@@ -1,4 +1,5 @@
 ﻿using DELL.UI;
+using DELL.Utility;
 using System;
 using System.Windows.Forms;
 namespace DELL

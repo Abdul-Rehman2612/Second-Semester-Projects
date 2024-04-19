@@ -1,5 +1,6 @@
 ﻿using DellLibrary.BL;
 using DELL.Utility;
+using DELL.UI.UsersUI;
 using System;
 using System.Windows.Forms;
 namespace DELL.UI
@@ -28,34 +29,49 @@ namespace DELL.UI
         private void SignInbtn_Click(object sender, EventArgs e)
         {
             UserBL user = new UserBL(UInput.Text, PInput.Text); // makes object of the user for signing in
-            string message = ObjectHandler.GetCustomerUDL().UserSignIn(user); // checks user in customers data
-            if (message=="Customer") // if user is customer
+            try
             {
-                MessageBox.Show("Signed In successfully!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Hide();
+                CustomerBL customer = (CustomerBL)ObjectHandler.GetCustomerUDL().UserSignIn(user); // checks user in customers data
+                if (customer!=null) // if user is customer
+                {
+                    MessageBox.Show("Signed In successfully!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Hide();
+                    CustomerUI uI = new CustomerUI();
+                    uI.Show();
+                }
+                else // if user is not a customer
+                {
+                    EmployeeBL emp = (EmployeeBL)ObjectHandler.GetEmployeeUDL().UserSignIn(user);  // checks user in employees data
+                    if (emp.GetDesignation()=="CEO") // if user is CEO
+                    {
+                        MessageBox.Show("Signed In successfully!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Hide();
+                        CeoUI uI = new CeoUI(emp);
+                        uI.Show();
+                    }
+                    else if (emp.GetDesignation()=="Technician") // if user is technician
+                    {
+                        MessageBox.Show("Signed In successfully!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Hide();
+                        TechnicianUI uI = new TechnicianUI(emp);
+                        uI.Show();
+                    }
+                    else if (emp.GetDesignation()=="SalesPerson") // if user is salesperson
+                    {
+                        MessageBox.Show("Signed In successfully!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Hide();
+                        SalesPersonUI uI = new SalesPersonUI(emp);
+                        uI.Show();
+                    }
+                    else // if user not found
+                    {
+                        MessageBox.Show("Invalid Credentials!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
             }
-            else // if user is not a customer
+            catch(Exception ex)
             {
-                message = ObjectHandler.GetEmployeeUDL().UserSignIn(user);  // checks user in employees data
-                if (message=="CEO") // if user is CEO
-                {
-                    MessageBox.Show("Signed In successfully!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Hide();
-                }
-                else if (message=="Technician") // if user is technician
-                {
-                    MessageBox.Show("Signed In successfully!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Hide();
-                }
-                else if (message=="SalesPerson") // if user is salesperson
-                {
-                    MessageBox.Show("Signed In successfully!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Hide();
-                }
-                else // if user not found
-                {
-                    MessageBox.Show(message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         // if user clicks exit button application closes

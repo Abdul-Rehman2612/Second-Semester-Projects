@@ -6,33 +6,43 @@ namespace DellLibrary.BL
     public class OrderBL
     {
         private int orderID;
-        readonly private string customerType;
+        readonly private string orderType;
+        readonly private EmployeeBL employee;
         readonly private DateTime orderDate;
-        private List<OrderDetailsBL> orderDetails= new List<OrderDetailsBL>();
-        public OrderBL(string customerType, DateTime orderDate)
+        private List<OrderDetailsBL> orderDetails = new List<OrderDetailsBL>();
+        public OrderBL(string orderType, DateTime orderDate)
         {
-            this.customerType=customerType;
-            this.orderDate=orderDate;
+            this.orderType = orderType;
+            this.orderDate = orderDate;
+            employee = null;
         }
-        public OrderBL(int orderID, string customerType, DateTime orderDate)
+        public OrderBL(string orderType,DateTime orderDate,EmployeeBL employee)
+        {
+            this.orderType = orderType;
+            this.orderDate = orderDate;
+            this.employee = employee;
+        }
+        public OrderBL(int orderID, string orderType, DateTime orderDate,EmployeeBL employee)
         {
             this.orderID = orderID;
-            this.customerType = customerType;
+            this.orderType = orderType;
             this.orderDate = orderDate;
+            this.employee = employee;
         }
         public OrderBL(OrderBL order)
         {
-            this.orderID = order.orderID;
-            this.customerType = order.customerType;
-            this.orderDate = order.orderDate;
+            orderID = order.orderID;
+            orderType = order.orderType;
+            orderDate = order.orderDate;
             foreach(OrderDetailsBL o in order.orderDetails)
             {
-                this.orderDetails.Add(new OrderDetailsBL(o));
+                orderDetails.Add(new OrderDetailsBL(o));
             }
         }
-        public void SetOrderID(int value) { orderID=value; }
+        public void SetOrderID(int value) { orderID = value; }
+        public EmployeeBL GetEmployee() { return employee; }
         public int GetOrderID() { return orderID; }
-        public string GetCustomerType() { return customerType; }
+        public string GetCustomerType() { return orderType; }
         public DateTime GetOrderDate() { return orderDate; }
     }
 }

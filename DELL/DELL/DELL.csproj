@@ -91,11 +91,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UI\CeoUI\CeoDashboard.cs">
+    <Compile Include="UI\ForgotPassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\CeoUI\CeoDashboard.Designer.cs">
-      <DependentUpon>CeoDashboard.cs</DependentUpon>
+    <Compile Include="UI\ForgotPassword.Designer.cs">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UsersUI\CeoUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UsersUI\CeoUI.Designer.cs">
+      <DependentUpon>CeoUI.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\MainMenu.cs">
       <SubType>Form</SubType>
@@ -117,10 +123,31 @@
     <Compile Include="UI\SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\UsersUI\CustomerUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UsersUI\CustomerUI.Designer.cs">
+      <DependentUpon>CustomerUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UsersUI\SalesPersonUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UsersUI\SalesPersonUI.Designer.cs">
+      <DependentUpon>SalesPersonUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UsersUI\TechnicianUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UsersUI\TechnicianUI.Designer.cs">
+      <DependentUpon>TechnicianUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\CustomMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Utility\ObjectHandler.cs" />
     <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="UI\CeoUI\CeoDashboard.resx">
-      <DependentUpon>CeoDashboard.cs</DependentUpon>
+    <EmbeddedResource Include="UI\UsersUI\CeoUI.resx">
+      <DependentUpon>CeoUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
@@ -139,6 +166,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UsersUI\CustomerUI.resx">
+      <DependentUpon>CustomerUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UsersUI\SalesPersonUI.resx">
+      <DependentUpon>SalesPersonUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UsersUI\TechnicianUI.resx">
+      <DependentUpon>TechnicianUI.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DELL_TemporaryKey.pfx" />
     <None Include="packages.config" />
@@ -167,10 +203,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UI\CustomerUI\" />
-    <Folder Include="UI\SalesPersonUI\" />
-    <Folder Include="UI\TechnicianUI\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

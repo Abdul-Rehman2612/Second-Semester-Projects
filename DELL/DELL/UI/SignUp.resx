@@ -147,9 +147,6 @@
         EKa9123zoDJZ/dbp/A9ObLpwFyZpOQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="Exitbtn.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="Exitbtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAHsAAAA4CAYAAADdC4e9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -178,9 +175,6 @@
         sO5dNc2D1VK0Vut/2n6xdP8eyX4AAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="Back.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="Back.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAHkAAAA4CAYAAADZ/leAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8

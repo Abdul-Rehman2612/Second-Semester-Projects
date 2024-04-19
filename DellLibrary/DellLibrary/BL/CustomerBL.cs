@@ -14,5 +14,13 @@ namespace DellLibrary.BL
         {
             orderList.Add(new OrderBL(order));
         }
+        public void AddOrdersList(List<OrderBL> orders)
+        {
+            foreach (OrderBL order in orders)
+            {
+                orderList.Add(new OrderBL(order));
+
+            }
+        }
     }
 }
