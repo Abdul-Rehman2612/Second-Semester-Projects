@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace DELL.UI.UsersUI
@@ -34,8 +35,6 @@ namespace DELL.UI.UsersUI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CeoUI));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
@@ -70,14 +69,6 @@ namespace DELL.UI.UsersUI
             this.DOBI = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.BottomContainer = new System.Windows.Forms.Panel();
             this.SPGridView1 = new System.Windows.Forms.DataGridView();
-            this.ButtonsContainer = new System.Windows.Forms.TableLayoutPanel();
-            this.DeleteSpBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.AddSpbtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.MainPanel = new Guna.UI.WinForms.GunaPanel();
-            this.InputsContainer = new Guna.UI2.WinForms.Guna2Panel();
-            this.TopContainer = new Guna.UI2.WinForms.Guna2Panel();
-            this.Logo2 = new System.Windows.Forms.Label();
-            this.Logo = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -87,7 +78,15 @@ namespace DELL.UI.UsersUI
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ButtonsContainer = new System.Windows.Forms.TableLayoutPanel();
+            this.DeleteSpBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.AddSpbtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.UpdateBtnSp = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.MainPanel = new Guna.UI.WinForms.GunaPanel();
+            this.InputsContainer = new Guna.UI2.WinForms.Guna2Panel();
+            this.TopContainer = new Guna.UI2.WinForms.Guna2Panel();
+            this.Logo2 = new System.Windows.Forms.Label();
+            this.Logo = new System.Windows.Forms.Label();
             this.Dashboard.SuspendLayout();
             this.DashboardInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pic1)).BeginInit();
@@ -595,7 +594,7 @@ namespace DELL.UI.UsersUI
             this.DOBI.Font = new System.Drawing.Font("Sitka Text", 8F);
             this.DOBI.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.DOBI.Location = new System.Drawing.Point(511, 12);
-            this.DOBI.MaxDate = new System.DateTime(2024, 4, 1, 0, 0, 0, 0);
+            this.DOBI.MaxDate = new System.DateTime(2024, 4, 21, 1, 42, 13, 873);
             this.DOBI.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.DOBI.Name = "DOBI";
             this.DOBI.Size = new System.Drawing.Size(168, 43);
@@ -624,7 +623,8 @@ namespace DELL.UI.UsersUI
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.SPGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.SPGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SPGridView1.ColumnHeadersHeight = 30;
+            this.SPGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.SPGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
@@ -635,35 +635,75 @@ namespace DELL.UI.UsersUI
             this.Column7,
             this.Column8,
             this.Column9});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Sitka Text", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.SPGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.SPGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SPGridView1.Location = new System.Drawing.Point(0, 64);
             this.SPGridView1.Name = "SPGridView1";
             this.SPGridView1.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SPGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.SPGridView1.RowHeadersWidth = 40;
             this.SPGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Sitka Text", 12F);
-            this.SPGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Sitka Text", 12F);
+            this.SPGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.SPGridView1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SPGridView1.RowTemplate.Height = 20;
+            this.SPGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.SPGridView1.Size = new System.Drawing.Size(770, 254);
             this.SPGridView1.TabIndex = 1;
-            this.SPGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SPGridView1_CellContentClick);
+            this.SPGridView1.SelectionChanged += new System.EventHandler(this.SPGridView1_SelectionChanged);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Name";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Username";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Password";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Email";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Dob";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Contact";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Address";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.FillWeight = 80F;
+            this.Column8.HeaderText = "Gender";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "HireDate";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
             // 
             // ButtonsContainer
             // 
@@ -776,6 +816,7 @@ namespace DELL.UI.UsersUI
             this.DeleteSpBtn.TextMarginLeft = 0;
             this.DeleteSpBtn.TextPadding = new System.Windows.Forms.Padding(0);
             this.DeleteSpBtn.UseDefaultRadiusAndThickness = true;
+            this.DeleteSpBtn.Click += new System.EventHandler(this.DeleteSpBtn_Click);
             // 
             // AddSpbtn
             // 
@@ -868,109 +909,6 @@ namespace DELL.UI.UsersUI
             this.AddSpbtn.UseDefaultRadiusAndThickness = true;
             this.AddSpbtn.Click += new System.EventHandler(this.AddSpbtn_Click);
             // 
-            // MainPanel
-            // 
-            this.MainPanel.Controls.Add(this.InputsContainer);
-            this.MainPanel.Controls.Add(this.TopContainer);
-            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainPanel.Location = new System.Drawing.Point(0, 0);
-            this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(934, 687);
-            this.MainPanel.TabIndex = 2;
-            // 
-            // InputsContainer
-            // 
-            this.InputsContainer.Controls.Add(this.CeoPanel);
-            this.InputsContainer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.InputsContainer.Location = new System.Drawing.Point(0, 150);
-            this.InputsContainer.Name = "InputsContainer";
-            this.InputsContainer.Size = new System.Drawing.Size(934, 537);
-            this.InputsContainer.TabIndex = 1;
-            // 
-            // TopContainer
-            // 
-            this.TopContainer.Controls.Add(this.Logo2);
-            this.TopContainer.Controls.Add(this.Logo);
-            this.TopContainer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TopContainer.Location = new System.Drawing.Point(0, 0);
-            this.TopContainer.Name = "TopContainer";
-            this.TopContainer.Size = new System.Drawing.Size(934, 150);
-            this.TopContainer.TabIndex = 0;
-            // 
-            // Logo2
-            // 
-            this.Logo2.BackColor = System.Drawing.Color.Lavender;
-            this.Logo2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Logo2.Image = ((System.Drawing.Image)(resources.GetObject("Logo2.Image")));
-            this.Logo2.Location = new System.Drawing.Point(150, 0);
-            this.Logo2.Name = "Logo2";
-            this.Logo2.Size = new System.Drawing.Size(784, 150);
-            this.Logo2.TabIndex = 1;
-            // 
-            // Logo
-            // 
-            this.Logo.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
-            this.Logo.Location = new System.Drawing.Point(0, 0);
-            this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(150, 150);
-            this.Logo.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Name";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Username";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Password";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Email";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Dob";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Contact";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Address";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.FillWeight = 80F;
-            this.Column8.HeaderText = "Gender";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "HireDate";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            // 
             // UpdateBtnSp
             // 
             this.UpdateBtnSp.AllowAnimations = true;
@@ -1060,6 +998,55 @@ namespace DELL.UI.UsersUI
             this.UpdateBtnSp.TextMarginLeft = 0;
             this.UpdateBtnSp.TextPadding = new System.Windows.Forms.Padding(0);
             this.UpdateBtnSp.UseDefaultRadiusAndThickness = true;
+            this.UpdateBtnSp.Click += new System.EventHandler(this.UpdateBtnSp_Click);
+            // 
+            // MainPanel
+            // 
+            this.MainPanel.Controls.Add(this.InputsContainer);
+            this.MainPanel.Controls.Add(this.TopContainer);
+            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPanel.Location = new System.Drawing.Point(0, 0);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Size = new System.Drawing.Size(934, 687);
+            this.MainPanel.TabIndex = 2;
+            // 
+            // InputsContainer
+            // 
+            this.InputsContainer.Controls.Add(this.CeoPanel);
+            this.InputsContainer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.InputsContainer.Location = new System.Drawing.Point(0, 150);
+            this.InputsContainer.Name = "InputsContainer";
+            this.InputsContainer.Size = new System.Drawing.Size(934, 537);
+            this.InputsContainer.TabIndex = 1;
+            // 
+            // TopContainer
+            // 
+            this.TopContainer.Controls.Add(this.Logo2);
+            this.TopContainer.Controls.Add(this.Logo);
+            this.TopContainer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TopContainer.Location = new System.Drawing.Point(0, 0);
+            this.TopContainer.Name = "TopContainer";
+            this.TopContainer.Size = new System.Drawing.Size(934, 150);
+            this.TopContainer.TabIndex = 0;
+            // 
+            // Logo2
+            // 
+            this.Logo2.BackColor = System.Drawing.Color.Lavender;
+            this.Logo2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Logo2.Image = ((System.Drawing.Image)(resources.GetObject("Logo2.Image")));
+            this.Logo2.Location = new System.Drawing.Point(150, 0);
+            this.Logo2.Name = "Logo2";
+            this.Logo2.Size = new System.Drawing.Size(784, 150);
+            this.Logo2.TabIndex = 1;
+            // 
+            // Logo
+            // 
+            this.Logo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
+            this.Logo.Location = new System.Drawing.Point(0, 0);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(150, 150);
+            this.Logo.TabIndex = 0;
             // 
             // CeoUI
             // 
