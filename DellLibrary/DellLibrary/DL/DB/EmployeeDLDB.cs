@@ -95,46 +95,6 @@ namespace DellLibrary.DL.DB
             // returns the message
             return message;
         }
-        public EmployeeBL GetEmployeebyUsername(string username) // returns employee for a username
-        {
-            EmployeeBL employee = null;
-            // makes connection with DB to get employees
-            using (SqlConnection con = Configuration.GetConnection())
-            {
-                string query = $"Select * from Employees where Username=@username;";
-                // first try to execute retreive command
-                try
-                {
-                    con.Open(); // opens Database Connection
-                    SqlCommand command = new SqlCommand(query, con); // command to execute the query
-                    command.Parameters.AddWithValue("@Username", username);
-                    SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
-                    if (sqlDataReader.Read()) // if employees data found
-                    {
-                        while (sqlDataReader.Read())
-                        {
-                            if (sqlDataReader.IsDBNull(11)) // if resignation date is null
-                            {
-                                employee = new EmployeeBL(sqlDataReader.GetString(0), username, sqlDataReader.GetString(2), sqlDataReader.GetString(3), sqlDataReader.GetDateTime(4), sqlDataReader.GetString(5), sqlDataReader.GetString(6), sqlDataReader.GetString(7), sqlDataReader.GetString(8), sqlDataReader.GetString(9), sqlDataReader.GetDateTime(10));
-                            }
-                            else
-                            {
-                                employee = new EmployeeBL(sqlDataReader.GetString(0), username, sqlDataReader.GetString(2), sqlDataReader.GetString(3), sqlDataReader.GetDateTime(4), sqlDataReader.GetString(5), sqlDataReader.GetString(6), sqlDataReader.GetString(7), sqlDataReader.GetString(8), sqlDataReader.GetString(9), sqlDataReader.GetDateTime(10),sqlDataReader.GetDateTime(11));
-                            }
-                        }
-                    }
-                }
-                catch (Exception e) // if any exception returns the exception message
-                {
-                    throw (e);
-                }
-                finally // closes the database connection at the end
-                {
-                    con.Close();
-                }
-            }
-            return employee; // returns list
-        }
         public List<EmployeeBL> GetAllEmployees() // returns the list of all employees
         {
             List<EmployeeBL> Employees = new List<EmployeeBL>();
@@ -175,6 +135,46 @@ namespace DellLibrary.DL.DB
                 }
             }
             return Employees; // returns list
+        }
+        public EmployeeBL GetEmployeebyUsername(string username) // returns employee for a username
+        {
+            EmployeeBL employee = null;
+            // makes connection with DB to get employees
+            using (SqlConnection con = Configuration.GetConnection())
+            {
+                string query = $"Select * from Employees where Username=@username;";
+                // first try to execute retreive command
+                try
+                {
+                    con.Open(); // opens Database Connection
+                    SqlCommand command = new SqlCommand(query, con); // command to execute the query
+                    command.Parameters.AddWithValue("@Username", username);
+                    SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
+                    if (sqlDataReader.Read()) // if employees data found
+                    {
+                        while (sqlDataReader.Read())
+                        {
+                            if (sqlDataReader.IsDBNull(11)) // if resignation date is null
+                            {
+                                employee = new EmployeeBL(sqlDataReader.GetString(0), username, sqlDataReader.GetString(2), sqlDataReader.GetString(3), sqlDataReader.GetDateTime(4), sqlDataReader.GetString(5), sqlDataReader.GetString(6), sqlDataReader.GetString(7), sqlDataReader.GetString(8), sqlDataReader.GetString(9), sqlDataReader.GetDateTime(10));
+                            }
+                            else
+                            {
+                                employee = new EmployeeBL(sqlDataReader.GetString(0), username, sqlDataReader.GetString(2), sqlDataReader.GetString(3), sqlDataReader.GetDateTime(4), sqlDataReader.GetString(5), sqlDataReader.GetString(6), sqlDataReader.GetString(7), sqlDataReader.GetString(8), sqlDataReader.GetString(9), sqlDataReader.GetDateTime(10),sqlDataReader.GetDateTime(11));
+                            }
+                        }
+                    }
+                }
+                catch (Exception e) // if any exception returns the exception message
+                {
+                    throw (e);
+                }
+                finally // closes the database connection at the end
+                {
+                    con.Close();
+                }
+            }
+            return employee; // returns list
         }
         public List<EmployeeBL> GetEmployeesByDesignation(string designation) // returns the list of employees with specific designation
         {
@@ -221,36 +221,6 @@ namespace DellLibrary.DL.DB
                 }
             }
             return Employees; // returns list
-        }
-        public int GetEmployeeCount() // returns count of total employees in database
-        {
-            int EmployeeCount = 0;
-            // makes connection with DB to get employees count
-            using (SqlConnection con = Configuration.GetConnection())
-            {
-                string query = $"Select Count(*) from Employees where Status=@Status;";
-                // first try to execute retreive command
-                try
-                {
-                    con.Open(); // opens Database Connection
-                    SqlCommand command = new SqlCommand(query, con); // command to execute the query
-                    command.Parameters.AddWithValue("@Status", "Active"); // add parameters
-                    SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
-                    if (sqlDataReader.Read()) // if employees data found
-                    {
-                        EmployeeCount= sqlDataReader.GetInt32(0);
-                    }
-                }
-                catch (Exception e) // if any exception returns the exception message
-                {
-                    throw (e);
-                }
-                finally // closes the database connection at the end
-                {
-                    con.Close();
-                }
-            }
-            return EmployeeCount; // returns count
         }
         public bool UniqueAttributeCheck(string text, string attribute) // checks database for a unique attribute
         {
@@ -321,6 +291,36 @@ namespace DellLibrary.DL.DB
                 }
             }
             return employee; // return the result message
+        }
+        public int GetEmployeeCount() // returns count of total employees in database
+        {
+            int EmployeeCount = 0;
+            // makes connection with DB to get employees count
+            using (SqlConnection con = Configuration.GetConnection())
+            {
+                string query = $"Select Count(*) from Employees where Status=@Status;";
+                // first try to execute retreive command
+                try
+                {
+                    con.Open(); // opens Database Connection
+                    SqlCommand command = new SqlCommand(query, con); // command to execute the query
+                    command.Parameters.AddWithValue("@Status", "Active"); // add parameters
+                    SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
+                    if (sqlDataReader.Read()) // if employees data found
+                    {
+                        EmployeeCount= sqlDataReader.GetInt32(0);
+                    }
+                }
+                catch (Exception e) // if any exception returns the exception message
+                {
+                    throw (e);
+                }
+                finally // closes the database connection at the end
+                {
+                    con.Close();
+                }
+            }
+            return EmployeeCount; // returns count
         }
     }
 }

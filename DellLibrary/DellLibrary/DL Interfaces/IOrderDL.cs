@@ -9,7 +9,7 @@ namespace DellLibrary.DL_Interfaces
 {
     public interface IOrderDL
     {
-        int GetOrderCount();
-        List<OrderBL> GetOrdersForUser(string username);
+        int GetOrderCount(); // returns the count of total orders
+        List<OrderBL> GetOrdersForUser(string username); // returns the list of orders for a user
     }
 }

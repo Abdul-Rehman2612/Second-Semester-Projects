@@ -11,23 +11,24 @@ namespace DellLibrary.BL
         private ProductBL product;
         private int quantity;
         private double price;
-        public OrderDetailsBL(ProductBL product,int quantity)
-        {
-            this.product = product;
-            this.quantity = quantity;
-            this.price = quantity*product.GetProductPrice();
-        }
-        public OrderDetailsBL(ProductBL product,int quantity,double price)
-        {
-            this.product = product;
-            this.quantity = quantity;
-            this.price = price;
-        }
+        // public OrderDetailsBL(ProductBL product,int quantity)
+        // {
+        //     this.product = product;
+        //     this.quantity = quantity;
+        //     price = quantity * product.GetProductPrice();
+        // }
+        // public OrderDetailsBL(ProductBL product,int quantity,double price)
+        // {
+        //     this.product = product;
+        //     this.quantity = quantity;
+        //     this.price = price;
+        // }
+        // public double GetPrice() { return price; }
         public OrderDetailsBL(OrderDetailsBL o)
         {
-            this.product = o.product;
-            this.quantity = o.quantity;
-            this.price = o.price;
+            product = o.product;
+            quantity = o.quantity;
+            price = o.price;
         }
     }
 }

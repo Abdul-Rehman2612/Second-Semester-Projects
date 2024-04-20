@@ -10,6 +10,7 @@ namespace DELL.UI
         public SignUp()
         {
             InitializeComponent();
+            WindowState = FormWindowState.Maximized; // maximize windows size
         }
         // if user clicks the label it redirects it to the sign in form
         private void Registernow_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

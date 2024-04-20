@@ -9,25 +9,15 @@ namespace DellLibrary.BL
         readonly private string orderType;
         readonly private EmployeeBL employee;
         readonly private DateTime orderDate;
+        private double totalPrice;
         private List<OrderDetailsBL> orderDetails = new List<OrderDetailsBL>();
-        public OrderBL(string orderType, DateTime orderDate)
-        {
-            this.orderType = orderType;
-            this.orderDate = orderDate;
-            employee = null;
-        }
-        public OrderBL(string orderType,DateTime orderDate,EmployeeBL employee)
-        {
-            this.orderType = orderType;
-            this.orderDate = orderDate;
-            this.employee = employee;
-        }
-        public OrderBL(int orderID, string orderType, DateTime orderDate,EmployeeBL employee)
+        public OrderBL(int orderID, string orderType, DateTime orderDate,EmployeeBL employee,double totalPrice)
         {
             this.orderID = orderID;
             this.orderType = orderType;
             this.orderDate = orderDate;
             this.employee = employee;
+            this.totalPrice = totalPrice;
         }
         public OrderBL(OrderBL order)
         {
@@ -39,10 +29,34 @@ namespace DellLibrary.BL
                 orderDetails.Add(new OrderDetailsBL(o));
             }
         }
-        public void SetOrderID(int value) { orderID = value; }
-        public EmployeeBL GetEmployee() { return employee; }
-        public int GetOrderID() { return orderID; }
-        public string GetCustomerType() { return orderType; }
-        public DateTime GetOrderDate() { return orderDate; }
+        // public OrderBL(string orderType, DateTime orderDate)
+        // {
+        //     this.orderType = orderType;
+        //     this.orderDate = orderDate;
+        //     employee = null;
+        //     totalPrice = 0;
+        // }
+        // public OrderBL(string orderType,DateTime orderDate,EmployeeBL employee)
+        // {
+        //     this.orderType = orderType;
+        //     this.orderDate = orderDate;
+        //     this.employee = employee;
+        //     totalPrice = CalculateTotalPrice();
+        // }
+        // private double CalculateTotalPrice()
+        // {
+        //     double t = 0;
+        //     foreach(OrderDetailsBL od in orderDetails)
+        //     {
+        //         t+=od.GetPrice();
+        //     }
+        //     return t;
+        // }
+        // public void SetOrderID(int value) { orderID = value; }
+        // public EmployeeBL GetEmployee() { return employee; }
+        // public int GetOrderID() { return orderID; }
+        // public double GetTotalPrice() { return totalPrice; }
+        // public string GetCustomerType() { return orderType; }
+        // public DateTime GetOrderDate() { return orderDate; }
     }
 }

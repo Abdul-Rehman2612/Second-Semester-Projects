@@ -10,6 +10,7 @@ namespace DELL.UI
         public SignIn()
         {
             InitializeComponent();
+            WindowState = FormWindowState.Maximized; // maximize windows size
         }
         // if user clicks sign up now label the sign up form opens
         private void Registernow_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -36,32 +37,35 @@ namespace DELL.UI
                 {
                     MessageBox.Show("Signed In successfully!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Hide();
-                    CustomerUI uI = new CustomerUI();
+                    CustomerUI uI = new CustomerUI(customer);
                     uI.Show();
                 }
                 else // if user is not a customer
                 {
                     EmployeeBL emp = (EmployeeBL)ObjectHandler.GetEmployeeUDL().UserSignIn(user);  // checks user in employees data
-                    if (emp.GetDesignation()=="CEO") // if user is CEO
+                    if (emp!=null)
                     {
-                        MessageBox.Show("Signed In successfully!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Hide();
-                        CeoUI uI = new CeoUI(emp);
-                        uI.Show();
-                    }
-                    else if (emp.GetDesignation()=="Technician") // if user is technician
-                    {
-                        MessageBox.Show("Signed In successfully!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Hide();
-                        TechnicianUI uI = new TechnicianUI(emp);
-                        uI.Show();
-                    }
-                    else if (emp.GetDesignation()=="SalesPerson") // if user is salesperson
-                    {
-                        MessageBox.Show("Signed In successfully!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Hide();
-                        SalesPersonUI uI = new SalesPersonUI(emp);
-                        uI.Show();
+                        if (emp.GetDesignation()=="CEO") // if user is CEO
+                        {
+                            MessageBox.Show("Signed In successfully!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Hide();
+                            CeoUI uI = new CeoUI(emp);
+                            uI.Show();
+                        }
+                        else if (emp.GetDesignation()=="Technician") // if user is technician
+                        {
+                            MessageBox.Show("Signed In successfully!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Hide();
+                            TechnicianUI uI = new TechnicianUI(emp);
+                            uI.Show();
+                        }
+                        else if (emp.GetDesignation()=="SalesPerson") // if user is salesperson
+                        {
+                            MessageBox.Show("Signed In successfully!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Hide();
+                            SalesPersonUI uI = new SalesPersonUI(emp);
+                            uI.Show();
+                        }
                     }
                     else // if user not found
                     {

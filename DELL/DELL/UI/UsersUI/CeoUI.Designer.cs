@@ -1,4 +1,7 @@
-﻿namespace DELL.UI.UsersUI
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace DELL.UI.UsersUI
 {
     partial class CeoUI
     {
@@ -31,6 +34,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CeoUI));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
@@ -64,7 +69,15 @@
             this.GInput = new Guna.UI2.WinForms.Guna2ComboBox();
             this.DOBI = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.BottomContainer = new System.Windows.Forms.Panel();
-            this.SalesPersonsDataView = new System.Windows.Forms.DataGridView();
+            this.SPGridView1 = new System.Windows.Forms.DataGridView();
+            this.ButtonsContainer = new System.Windows.Forms.TableLayoutPanel();
+            this.DeleteSpBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.AddSpbtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.MainPanel = new Guna.UI.WinForms.GunaPanel();
+            this.InputsContainer = new Guna.UI2.WinForms.Guna2Panel();
+            this.TopContainer = new Guna.UI2.WinForms.Guna2Panel();
+            this.Logo2 = new System.Windows.Forms.Label();
+            this.Logo = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,15 +87,7 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ButtonsContainer = new System.Windows.Forms.TableLayoutPanel();
-            this.DeleteSpBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.UpdateSpbtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.AddSpbtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.MainPanel = new Guna.UI.WinForms.GunaPanel();
-            this.InputsContainer = new Guna.UI2.WinForms.Guna2Panel();
-            this.TopContainer = new Guna.UI2.WinForms.Guna2Panel();
-            this.Logo2 = new System.Windows.Forms.Label();
-            this.Logo = new System.Windows.Forms.Label();
+            this.UpdateBtnSp = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.Dashboard.SuspendLayout();
             this.DashboardInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pic1)).BeginInit();
@@ -93,7 +98,7 @@
             this.ManageEmployee.SuspendLayout();
             this.Inputs.SuspendLayout();
             this.BottomContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SalesPersonsDataView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SPGridView1)).BeginInit();
             this.ButtonsContainer.SuspendLayout();
             this.MainPanel.SuspendLayout();
             this.InputsContainer.SuspendLayout();
@@ -301,12 +306,11 @@
             this.Inputs.Location = new System.Drawing.Point(3, 3);
             this.Inputs.Name = "Inputs";
             this.Inputs.RowCount = 5;
-            this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.Inputs.Size = new System.Drawing.Size(770, 205);
             this.Inputs.TabIndex = 2;
             // 
@@ -315,9 +319,9 @@
             this.Contact.AutoSize = true;
             this.Contact.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Contact.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Contact.Location = new System.Drawing.Point(387, 110);
+            this.Contact.Location = new System.Drawing.Point(387, 107);
             this.Contact.Name = "Contact";
-            this.Contact.Size = new System.Drawing.Size(118, 46);
+            this.Contact.Size = new System.Drawing.Size(118, 49);
             this.Contact.TabIndex = 3;
             this.Contact.Text = "Contact";
             this.Contact.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -327,9 +331,9 @@
             this.DOB.AutoSize = true;
             this.DOB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DOB.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DOB.Location = new System.Drawing.Point(387, 8);
+            this.DOB.Location = new System.Drawing.Point(387, 9);
             this.DOB.Name = "DOB";
-            this.DOB.Size = new System.Drawing.Size(118, 56);
+            this.DOB.Size = new System.Drawing.Size(118, 49);
             this.DOB.TabIndex = 10;
             this.DOB.Text = "Date of birth";
             this.DOB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -351,9 +355,9 @@
             this.Gender.AutoSize = true;
             this.Gender.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Gender.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Gender.Location = new System.Drawing.Point(387, 64);
+            this.Gender.Location = new System.Drawing.Point(387, 58);
             this.Gender.Name = "Gender";
-            this.Gender.Size = new System.Drawing.Size(118, 46);
+            this.Gender.Size = new System.Drawing.Size(118, 49);
             this.Gender.TabIndex = 9;
             this.Gender.Text = "Gender";
             this.Gender.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -363,9 +367,9 @@
             this.Username.AutoSize = true;
             this.Username.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Username.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Username.Location = new System.Drawing.Point(83, 64);
+            this.Username.Location = new System.Drawing.Point(83, 58);
             this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(118, 46);
+            this.Username.Size = new System.Drawing.Size(118, 49);
             this.Username.TabIndex = 6;
             this.Username.Text = "Username";
             this.Username.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -375,9 +379,9 @@
             this.Password.AutoSize = true;
             this.Password.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Password.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Password.Location = new System.Drawing.Point(83, 110);
+            this.Password.Location = new System.Drawing.Point(83, 107);
             this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(118, 46);
+            this.Password.Size = new System.Drawing.Size(118, 49);
             this.Password.TabIndex = 7;
             this.Password.Text = "Password";
             this.Password.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -387,9 +391,9 @@
             this.IName.AutoSize = true;
             this.IName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.IName.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IName.Location = new System.Drawing.Point(83, 8);
+            this.IName.Location = new System.Drawing.Point(83, 9);
             this.IName.Name = "IName";
-            this.IName.Size = new System.Drawing.Size(118, 56);
+            this.IName.Size = new System.Drawing.Size(118, 49);
             this.IName.TabIndex = 4;
             this.IName.Text = "Name";
             this.IName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -409,7 +413,7 @@
             // NInput
             // 
             this.NInput.AutoRoundedCorners = true;
-            this.NInput.BorderRadius = 21;
+            this.NInput.BorderRadius = 17;
             this.NInput.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.NInput.DefaultText = "";
             this.NInput.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -422,19 +426,19 @@
             this.NInput.Font = new System.Drawing.Font("Sitka Text", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NInput.ForeColor = System.Drawing.Color.Black;
             this.NInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.NInput.Location = new System.Drawing.Point(209, 14);
+            this.NInput.Location = new System.Drawing.Point(209, 15);
             this.NInput.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.NInput.Name = "NInput";
             this.NInput.PasswordChar = '\0';
             this.NInput.PlaceholderText = "Enter name";
             this.NInput.SelectedText = "";
-            this.NInput.Size = new System.Drawing.Size(153, 44);
+            this.NInput.Size = new System.Drawing.Size(153, 37);
             this.NInput.TabIndex = 11;
             // 
             // UInput
             // 
             this.UInput.AutoRoundedCorners = true;
-            this.UInput.BorderRadius = 16;
+            this.UInput.BorderRadius = 17;
             this.UInput.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.UInput.DefaultText = "";
             this.UInput.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -447,19 +451,19 @@
             this.UInput.Font = new System.Drawing.Font("Sitka Text", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UInput.ForeColor = System.Drawing.Color.Black;
             this.UInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.UInput.Location = new System.Drawing.Point(209, 70);
+            this.UInput.Location = new System.Drawing.Point(209, 64);
             this.UInput.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.UInput.Name = "UInput";
             this.UInput.PasswordChar = '\0';
             this.UInput.PlaceholderText = "John123 etc.";
             this.UInput.SelectedText = "";
-            this.UInput.Size = new System.Drawing.Size(153, 34);
+            this.UInput.Size = new System.Drawing.Size(153, 37);
             this.UInput.TabIndex = 12;
             // 
             // PInput
             // 
             this.PInput.AutoRoundedCorners = true;
-            this.PInput.BorderRadius = 16;
+            this.PInput.BorderRadius = 17;
             this.PInput.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.PInput.DefaultText = "";
             this.PInput.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -472,13 +476,13 @@
             this.PInput.Font = new System.Drawing.Font("Sitka Text", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PInput.ForeColor = System.Drawing.Color.Black;
             this.PInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.PInput.Location = new System.Drawing.Point(209, 116);
+            this.PInput.Location = new System.Drawing.Point(209, 113);
             this.PInput.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.PInput.Name = "PInput";
             this.PInput.PasswordChar = '●';
             this.PInput.PlaceholderText = "******";
             this.PInput.SelectedText = "";
-            this.PInput.Size = new System.Drawing.Size(153, 34);
+            this.PInput.Size = new System.Drawing.Size(153, 37);
             this.PInput.TabIndex = 13;
             this.PInput.UseSystemPasswordChar = true;
             // 
@@ -510,7 +514,7 @@
             // CInput
             // 
             this.CInput.AutoRoundedCorners = true;
-            this.CInput.BorderRadius = 16;
+            this.CInput.BorderRadius = 17;
             this.CInput.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.CInput.DefaultText = "";
             this.CInput.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -523,13 +527,13 @@
             this.CInput.Font = new System.Drawing.Font("Sitka Text", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CInput.ForeColor = System.Drawing.Color.Black;
             this.CInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CInput.Location = new System.Drawing.Point(513, 116);
+            this.CInput.Location = new System.Drawing.Point(513, 113);
             this.CInput.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.CInput.Name = "CInput";
             this.CInput.PasswordChar = '\0';
             this.CInput.PlaceholderText = "";
             this.CInput.SelectedText = "";
-            this.CInput.Size = new System.Drawing.Size(164, 34);
+            this.CInput.Size = new System.Drawing.Size(164, 37);
             this.CInput.TabIndex = 15;
             // 
             // AInput
@@ -561,46 +565,46 @@
             // 
             this.GInput.AutoRoundedCorners = true;
             this.GInput.BackColor = System.Drawing.Color.Transparent;
-            this.GInput.BorderRadius = 17;
+            this.GInput.BorderRadius = 19;
             this.GInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GInput.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.GInput.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.GInput.FillColor = System.Drawing.SystemColors.InactiveBorder;
             this.GInput.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.GInput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.GInput.Font = new System.Drawing.Font("Sitka Text", 12F);
+            this.GInput.Font = new System.Drawing.Font("Sitka Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GInput.ForeColor = System.Drawing.Color.Black;
-            this.GInput.ItemHeight = 30;
+            this.GInput.ItemHeight = 34;
             this.GInput.Items.AddRange(new object[] {
             "Female",
             "Male"});
-            this.GInput.Location = new System.Drawing.Point(511, 67);
+            this.GInput.Location = new System.Drawing.Point(511, 61);
             this.GInput.Name = "GInput";
-            this.GInput.Size = new System.Drawing.Size(168, 36);
+            this.GInput.Size = new System.Drawing.Size(168, 40);
             this.GInput.Sorted = true;
             this.GInput.TabIndex = 17;
             // 
             // DOBI
             // 
             this.DOBI.AutoRoundedCorners = true;
-            this.DOBI.BorderRadius = 24;
+            this.DOBI.BorderRadius = 20;
             this.DOBI.Checked = true;
             this.DOBI.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DOBI.FillColor = System.Drawing.Color.White;
             this.DOBI.FocusedColor = System.Drawing.Color.White;
             this.DOBI.Font = new System.Drawing.Font("Sitka Text", 8F);
             this.DOBI.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.DOBI.Location = new System.Drawing.Point(511, 11);
+            this.DOBI.Location = new System.Drawing.Point(511, 12);
             this.DOBI.MaxDate = new System.DateTime(2024, 4, 1, 0, 0, 0, 0);
             this.DOBI.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.DOBI.Name = "DOBI";
-            this.DOBI.Size = new System.Drawing.Size(168, 50);
+            this.DOBI.Size = new System.Drawing.Size(168, 43);
             this.DOBI.TabIndex = 18;
             this.DOBI.Value = new System.DateTime(2024, 4, 1, 0, 0, 0, 0);
             // 
             // BottomContainer
             // 
-            this.BottomContainer.Controls.Add(this.SalesPersonsDataView);
+            this.BottomContainer.Controls.Add(this.SPGridView1);
             this.BottomContainer.Controls.Add(this.ButtonsContainer);
             this.BottomContainer.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.BottomContainer.Location = new System.Drawing.Point(3, 208);
@@ -608,22 +612,20 @@
             this.BottomContainer.Size = new System.Drawing.Size(770, 318);
             this.BottomContainer.TabIndex = 1;
             // 
-            // SalesPersonsDataView
+            // SPGridView1
             // 
-            this.SalesPersonsDataView.AllowUserToAddRows = false;
-            this.SalesPersonsDataView.AllowUserToDeleteRows = false;
-            this.SalesPersonsDataView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.SalesPersonsDataView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.SPGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.SPGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.GhostWhite;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Sitka Heading", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Sitka Display", 12F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SalesPersonsDataView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.SalesPersonsDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.SalesPersonsDataView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SPGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.SPGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SPGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
@@ -633,74 +635,35 @@
             this.Column7,
             this.Column8,
             this.Column9});
-            this.SalesPersonsDataView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SalesPersonsDataView.Location = new System.Drawing.Point(0, 59);
-            this.SalesPersonsDataView.Name = "SalesPersonsDataView";
-            this.SalesPersonsDataView.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Lavender;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Sitka Text", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SalesPersonsDataView.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.SalesPersonsDataView.Size = new System.Drawing.Size(770, 259);
-            this.SalesPersonsDataView.TabIndex = 1;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Name";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Username";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Password";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Email";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "DOB";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Contact";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Address";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Gender";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "HireDate";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.SPGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.SPGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SPGridView1.Location = new System.Drawing.Point(0, 64);
+            this.SPGridView1.Name = "SPGridView1";
+            this.SPGridView1.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SPGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.SPGridView1.RowHeadersWidth = 40;
+            this.SPGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Sitka Text", 12F);
+            this.SPGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.SPGridView1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SPGridView1.RowTemplate.Height = 20;
+            this.SPGridView1.Size = new System.Drawing.Size(770, 254);
+            this.SPGridView1.TabIndex = 1;
+            this.SPGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SPGridView1_CellContentClick);
             // 
             // ButtonsContainer
             // 
@@ -713,15 +676,15 @@
             this.ButtonsContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
             this.ButtonsContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.ButtonsContainer.Controls.Add(this.DeleteSpBtn, 5, 1);
-            this.ButtonsContainer.Controls.Add(this.UpdateSpbtn, 3, 1);
             this.ButtonsContainer.Controls.Add(this.AddSpbtn, 1, 1);
+            this.ButtonsContainer.Controls.Add(this.UpdateBtnSp, 3, 1);
             this.ButtonsContainer.Dock = System.Windows.Forms.DockStyle.Top;
             this.ButtonsContainer.Location = new System.Drawing.Point(0, 0);
             this.ButtonsContainer.Name = "ButtonsContainer";
             this.ButtonsContainer.RowCount = 2;
             this.ButtonsContainer.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.ButtonsContainer.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.ButtonsContainer.Size = new System.Drawing.Size(770, 59);
+            this.ButtonsContainer.Size = new System.Drawing.Size(770, 64);
             this.ButtonsContainer.TabIndex = 0;
             // 
             // DeleteSpBtn
@@ -806,103 +769,13 @@
             this.DeleteSpBtn.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.DeleteSpBtn.OnPressedState.IconLeftImage = null;
             this.DeleteSpBtn.OnPressedState.IconRightImage = null;
-            this.DeleteSpBtn.Size = new System.Drawing.Size(134, 56);
+            this.DeleteSpBtn.Size = new System.Drawing.Size(134, 59);
             this.DeleteSpBtn.TabIndex = 17;
             this.DeleteSpBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.DeleteSpBtn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.DeleteSpBtn.TextMarginLeft = 0;
             this.DeleteSpBtn.TextPadding = new System.Windows.Forms.Padding(0);
             this.DeleteSpBtn.UseDefaultRadiusAndThickness = true;
-            // 
-            // UpdateSpbtn
-            // 
-            this.UpdateSpbtn.AllowAnimations = true;
-            this.UpdateSpbtn.AllowMouseEffects = true;
-            this.UpdateSpbtn.AllowToggling = false;
-            this.UpdateSpbtn.AnimationSpeed = 200;
-            this.UpdateSpbtn.AutoGenerateColors = false;
-            this.UpdateSpbtn.AutoRoundBorders = false;
-            this.UpdateSpbtn.AutoSizeLeftIcon = true;
-            this.UpdateSpbtn.AutoSizeRightIcon = true;
-            this.UpdateSpbtn.BackColor = System.Drawing.Color.Transparent;
-            this.UpdateSpbtn.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(144)))), ((int)(((byte)(231)))));
-            this.UpdateSpbtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("UpdateSpbtn.BackgroundImage")));
-            this.UpdateSpbtn.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.UpdateSpbtn.ButtonText = "Update";
-            this.UpdateSpbtn.ButtonTextMarginLeft = 0;
-            this.UpdateSpbtn.ColorContrastOnClick = 45;
-            this.UpdateSpbtn.ColorContrastOnHover = 45;
-            this.UpdateSpbtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.UpdateSpbtn.CustomizableEdges = borderEdges2;
-            this.UpdateSpbtn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.UpdateSpbtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.UpdateSpbtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.UpdateSpbtn.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.UpdateSpbtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.UpdateSpbtn.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Idle;
-            this.UpdateSpbtn.Font = new System.Drawing.Font("Sitka Display", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateSpbtn.ForeColor = System.Drawing.SystemColors.Info;
-            this.UpdateSpbtn.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.UpdateSpbtn.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.UpdateSpbtn.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.UpdateSpbtn.IconMarginLeft = 11;
-            this.UpdateSpbtn.IconPadding = 10;
-            this.UpdateSpbtn.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.UpdateSpbtn.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.UpdateSpbtn.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.UpdateSpbtn.IconSize = 25;
-            this.UpdateSpbtn.IdleBorderColor = System.Drawing.Color.LightBlue;
-            this.UpdateSpbtn.IdleBorderRadius = 50;
-            this.UpdateSpbtn.IdleBorderThickness = 2;
-            this.UpdateSpbtn.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(144)))), ((int)(((byte)(231)))));
-            this.UpdateSpbtn.IdleIconLeftImage = null;
-            this.UpdateSpbtn.IdleIconRightImage = null;
-            this.UpdateSpbtn.IndicateFocus = false;
-            this.UpdateSpbtn.Location = new System.Drawing.Point(317, 3);
-            this.UpdateSpbtn.Name = "UpdateSpbtn";
-            this.UpdateSpbtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.UpdateSpbtn.OnDisabledState.BorderRadius = 0;
-            this.UpdateSpbtn.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.UpdateSpbtn.OnDisabledState.BorderThickness = 2;
-            this.UpdateSpbtn.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.UpdateSpbtn.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.UpdateSpbtn.OnDisabledState.IconLeftImage = null;
-            this.UpdateSpbtn.OnDisabledState.IconRightImage = null;
-            this.UpdateSpbtn.onHoverState.BorderColor = System.Drawing.Color.Black;
-            this.UpdateSpbtn.onHoverState.BorderRadius = 0;
-            this.UpdateSpbtn.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.UpdateSpbtn.onHoverState.BorderThickness = 2;
-            this.UpdateSpbtn.onHoverState.FillColor = System.Drawing.Color.Red;
-            this.UpdateSpbtn.onHoverState.ForeColor = System.Drawing.Color.Black;
-            this.UpdateSpbtn.onHoverState.IconLeftImage = null;
-            this.UpdateSpbtn.onHoverState.IconRightImage = null;
-            this.UpdateSpbtn.OnIdleState.BorderColor = System.Drawing.Color.LightBlue;
-            this.UpdateSpbtn.OnIdleState.BorderRadius = 0;
-            this.UpdateSpbtn.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.UpdateSpbtn.OnIdleState.BorderThickness = 2;
-            this.UpdateSpbtn.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(144)))), ((int)(((byte)(231)))));
-            this.UpdateSpbtn.OnIdleState.ForeColor = System.Drawing.SystemColors.Info;
-            this.UpdateSpbtn.OnIdleState.IconLeftImage = null;
-            this.UpdateSpbtn.OnIdleState.IconRightImage = null;
-            this.UpdateSpbtn.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.UpdateSpbtn.OnPressedState.BorderRadius = 0;
-            this.UpdateSpbtn.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.UpdateSpbtn.OnPressedState.BorderThickness = 2;
-            this.UpdateSpbtn.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.UpdateSpbtn.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.UpdateSpbtn.OnPressedState.IconLeftImage = null;
-            this.UpdateSpbtn.OnPressedState.IconRightImage = null;
-            this.UpdateSpbtn.Size = new System.Drawing.Size(134, 56);
-            this.UpdateSpbtn.TabIndex = 17;
-            this.UpdateSpbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.UpdateSpbtn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.UpdateSpbtn.TextMarginLeft = 0;
-            this.UpdateSpbtn.TextPadding = new System.Windows.Forms.Padding(0);
-            this.UpdateSpbtn.UseDefaultRadiusAndThickness = true;
             // 
             // AddSpbtn
             // 
@@ -923,11 +796,11 @@
             this.AddSpbtn.ColorContrastOnClick = 45;
             this.AddSpbtn.ColorContrastOnHover = 45;
             this.AddSpbtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.AddSpbtn.CustomizableEdges = borderEdges3;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.AddSpbtn.CustomizableEdges = borderEdges2;
             this.AddSpbtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.AddSpbtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.AddSpbtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -986,7 +859,7 @@
             this.AddSpbtn.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.AddSpbtn.OnPressedState.IconLeftImage = null;
             this.AddSpbtn.OnPressedState.IconRightImage = null;
-            this.AddSpbtn.Size = new System.Drawing.Size(134, 56);
+            this.AddSpbtn.Size = new System.Drawing.Size(134, 59);
             this.AddSpbtn.TabIndex = 16;
             this.AddSpbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.AddSpbtn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1043,6 +916,151 @@
             this.Logo.Size = new System.Drawing.Size(150, 150);
             this.Logo.TabIndex = 0;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Name";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Username";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Password";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Email";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Dob";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Contact";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Address";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.FillWeight = 80F;
+            this.Column8.HeaderText = "Gender";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "HireDate";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // UpdateBtnSp
+            // 
+            this.UpdateBtnSp.AllowAnimations = true;
+            this.UpdateBtnSp.AllowMouseEffects = true;
+            this.UpdateBtnSp.AllowToggling = false;
+            this.UpdateBtnSp.AnimationSpeed = 200;
+            this.UpdateBtnSp.AutoGenerateColors = false;
+            this.UpdateBtnSp.AutoRoundBorders = false;
+            this.UpdateBtnSp.AutoSizeLeftIcon = true;
+            this.UpdateBtnSp.AutoSizeRightIcon = true;
+            this.UpdateBtnSp.BackColor = System.Drawing.Color.Transparent;
+            this.UpdateBtnSp.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(144)))), ((int)(((byte)(231)))));
+            this.UpdateBtnSp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("UpdateBtnSp.BackgroundImage")));
+            this.UpdateBtnSp.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.UpdateBtnSp.ButtonText = "Update";
+            this.UpdateBtnSp.ButtonTextMarginLeft = 0;
+            this.UpdateBtnSp.ColorContrastOnClick = 45;
+            this.UpdateBtnSp.ColorContrastOnHover = 45;
+            this.UpdateBtnSp.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.UpdateBtnSp.CustomizableEdges = borderEdges3;
+            this.UpdateBtnSp.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.UpdateBtnSp.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.UpdateBtnSp.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.UpdateBtnSp.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.UpdateBtnSp.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.UpdateBtnSp.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Idle;
+            this.UpdateBtnSp.Font = new System.Drawing.Font("Sitka Display", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateBtnSp.ForeColor = System.Drawing.SystemColors.Info;
+            this.UpdateBtnSp.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.UpdateBtnSp.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.UpdateBtnSp.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.UpdateBtnSp.IconMarginLeft = 11;
+            this.UpdateBtnSp.IconPadding = 10;
+            this.UpdateBtnSp.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.UpdateBtnSp.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.UpdateBtnSp.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.UpdateBtnSp.IconSize = 25;
+            this.UpdateBtnSp.IdleBorderColor = System.Drawing.Color.LightBlue;
+            this.UpdateBtnSp.IdleBorderRadius = 50;
+            this.UpdateBtnSp.IdleBorderThickness = 2;
+            this.UpdateBtnSp.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(144)))), ((int)(((byte)(231)))));
+            this.UpdateBtnSp.IdleIconLeftImage = null;
+            this.UpdateBtnSp.IdleIconRightImage = null;
+            this.UpdateBtnSp.IndicateFocus = false;
+            this.UpdateBtnSp.Location = new System.Drawing.Point(317, 3);
+            this.UpdateBtnSp.Name = "UpdateBtnSp";
+            this.UpdateBtnSp.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.UpdateBtnSp.OnDisabledState.BorderRadius = 0;
+            this.UpdateBtnSp.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.UpdateBtnSp.OnDisabledState.BorderThickness = 2;
+            this.UpdateBtnSp.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.UpdateBtnSp.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.UpdateBtnSp.OnDisabledState.IconLeftImage = null;
+            this.UpdateBtnSp.OnDisabledState.IconRightImage = null;
+            this.UpdateBtnSp.onHoverState.BorderColor = System.Drawing.Color.Black;
+            this.UpdateBtnSp.onHoverState.BorderRadius = 0;
+            this.UpdateBtnSp.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.UpdateBtnSp.onHoverState.BorderThickness = 2;
+            this.UpdateBtnSp.onHoverState.FillColor = System.Drawing.Color.Red;
+            this.UpdateBtnSp.onHoverState.ForeColor = System.Drawing.Color.Black;
+            this.UpdateBtnSp.onHoverState.IconLeftImage = null;
+            this.UpdateBtnSp.onHoverState.IconRightImage = null;
+            this.UpdateBtnSp.OnIdleState.BorderColor = System.Drawing.Color.LightBlue;
+            this.UpdateBtnSp.OnIdleState.BorderRadius = 0;
+            this.UpdateBtnSp.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.UpdateBtnSp.OnIdleState.BorderThickness = 2;
+            this.UpdateBtnSp.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(144)))), ((int)(((byte)(231)))));
+            this.UpdateBtnSp.OnIdleState.ForeColor = System.Drawing.SystemColors.Info;
+            this.UpdateBtnSp.OnIdleState.IconLeftImage = null;
+            this.UpdateBtnSp.OnIdleState.IconRightImage = null;
+            this.UpdateBtnSp.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.UpdateBtnSp.OnPressedState.BorderRadius = 0;
+            this.UpdateBtnSp.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.UpdateBtnSp.OnPressedState.BorderThickness = 2;
+            this.UpdateBtnSp.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.UpdateBtnSp.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.UpdateBtnSp.OnPressedState.IconLeftImage = null;
+            this.UpdateBtnSp.OnPressedState.IconRightImage = null;
+            this.UpdateBtnSp.Size = new System.Drawing.Size(134, 59);
+            this.UpdateBtnSp.TabIndex = 18;
+            this.UpdateBtnSp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.UpdateBtnSp.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.UpdateBtnSp.TextMarginLeft = 0;
+            this.UpdateBtnSp.TextPadding = new System.Windows.Forms.Padding(0);
+            this.UpdateBtnSp.UseDefaultRadiusAndThickness = true;
+            // 
             // CeoUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1064,7 +1082,7 @@
             this.Inputs.ResumeLayout(false);
             this.Inputs.PerformLayout();
             this.BottomContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.SalesPersonsDataView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SPGridView1)).EndInit();
             this.ButtonsContainer.ResumeLayout(false);
             this.MainPanel.ResumeLayout(false);
             this.InputsContainer.ResumeLayout(false);
@@ -1113,16 +1131,16 @@
         private System.Windows.Forms.TableLayoutPanel ButtonsContainer;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton AddSpbtn;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton DeleteSpBtn;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton UpdateSpbtn;
-        private System.Windows.Forms.DataGridView SalesPersonsDataView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridView SPGridView1;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn Column6;
+        private DataGridViewTextBoxColumn Column7;
+        private DataGridViewTextBoxColumn Column8;
+        private DataGridViewTextBoxColumn Column9;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton UpdateBtnSp;
     }
 }

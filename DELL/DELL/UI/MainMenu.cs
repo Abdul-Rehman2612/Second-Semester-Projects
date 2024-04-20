@@ -9,6 +9,7 @@ namespace DELL
         public MainMenu()
         {
             InitializeComponent();
+            WindowState = FormWindowState.Maximized; // maximize windows size
         }
         // if user clicks sign in button sign in form appears
         private void SignInbtn_Click(object sender, EventArgs e)

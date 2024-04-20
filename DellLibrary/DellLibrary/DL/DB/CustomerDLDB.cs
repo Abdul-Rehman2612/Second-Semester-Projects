@@ -73,7 +73,7 @@ namespace DellLibrary.DL.DB
                     command.Parameters.AddWithValue("@Username", username);
 
                     SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
-                    int rowAffected = sqlDataReader.RecordsAffected;
+                    int rowAffected = command.ExecuteNonQuery();
                     if (rowAffected>0)
                     {
                         message="True";
@@ -92,18 +92,19 @@ namespace DellLibrary.DL.DB
             // returns the message
             return message;
         }
-        public List<CustomerBL> GetAllCustomers() // returns the list of all customers
+        public List<CustomerBL> GetAllCustomers(string s) // returns the list of all customers
         {
             List<CustomerBL> Customers = new List<CustomerBL>();
             // makes connection with DB to get customers
             using (SqlConnection con = Configuration.GetConnection())
             {
-                string query = $"Select * from Customers;";
+                string query = $"Select * from Customers where Status=@Status;";
                 // first try to execute retreive command
                 try
                 {
                     con.Open(); // opens Database Connection
                     SqlCommand command = new SqlCommand(query, con); // command to execute the query
+                    command.Parameters.AddWithValue("@Status", s);
                     SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
                     if (sqlDataReader.Read()) // if customers data found
                     {

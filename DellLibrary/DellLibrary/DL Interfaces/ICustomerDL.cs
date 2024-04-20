@@ -7,7 +7,7 @@ namespace DellLibrary.DL_Interfaces
     {
         string AddCustomer(CustomerBL customer); // for adding a customer
         string RemoveCustomer(string username); // for removing a customer
-        List<CustomerBL> GetAllCustomers(); // returns all customers list
+        List<CustomerBL> GetAllCustomers(string s); // returns all customers list
         int GetCustomerCount(); // returns customer count
     }
 }

@@ -17,6 +17,7 @@ namespace DELL.UI.UsersUI
         public SalesPersonUI(EmployeeBL emp)
         {
             InitializeComponent();
+            WindowState = FormWindowState.Maximized; // maximize windows size
             SalesPerson = emp;
         }
         private void Backbtn_Click(object sender, EventArgs e)

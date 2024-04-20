@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DellLibrary.BL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +13,13 @@ namespace DELL.UI.UsersUI
 {
     public partial class CustomerUI : Form
     {
-        public CustomerUI()
+        private CustomerBL customer=null;
+        public CustomerUI(CustomerBL customer)
         {
             InitializeComponent();
+            WindowState = FormWindowState.Maximized; // maximize windows size
+            this.customer = customer;
         }
-
         private void Backbtn_Click(object sender, EventArgs e)
         {
             Hide();

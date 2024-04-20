@@ -10,72 +10,77 @@ namespace DellLibrary.DL.DB
     public class OrderDLDB : IOrderDL
     {
         private readonly static IEmployeeDL employeeDL = new EmployeeDLDB();
-        public List<OrderBL> GetOrdersForUser(string username)
+        public int GetOrderCount() // returns order count
         {
-            List<OrderBL> orders = new List<OrderBL>();
-            // makes connection with DB to get orders count
+            int OrderCount = 0;
             using (SqlConnection con = Configuration.GetConnection())
             {
-                string query = $"Select Count(O.OrderId) from Orders as O join Customers as C on O.CustomerID=C.Username where C.Username=@Username;";
-                // first try to execute retreive command
                 try
                 {
-                    con.Open(); // opens Database Connection
-                    SqlCommand command = new SqlCommand(query, con); // command to execute the query
-                    command.Parameters.AddWithValue("@Username", username); // add parameters
-                    SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
-                    if (sqlDataReader.Read()) // if orders data found
-                    {
-                        int orderId = sqlDataReader.GetInt32(0);
-                        string orderType = sqlDataReader.GetString(3);
-                        DateTime orderDate = sqlDataReader.GetDateTime(4);
-                        string employeeUN = sqlDataReader.GetString(2);
-                        EmployeeBL employee = employeeDL.GetEmployeebyUsername(username);
-                        OrderBL order = new OrderBL(orderId, orderType, orderDate,employee);
-                        orders.Add(order);
+                    string query = "SELECT Count(O.OrderId) FROM Orders AS O JOIN Customers AS C ON O.CustomerID = C.Username;";
 
+                    con.Open(); // Opens Database Connection
+
+                    SqlCommand command = new SqlCommand(query, con); // Command to execute the query
+                    SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
+
+                    if (sqlDataReader.Read()) // If orders data found
+                    {
+                        OrderCount = sqlDataReader.GetInt32(0);
                     }
                 }
-                catch (Exception e) // if any exception returns the exception message
+                catch (Exception e)
                 {
                     throw (e);
                 }
-                finally // closes the database connection at the end
+                finally
                 {
-                    con.Close();
+                    con.Close(); // Closes the database connection at the end
+                }
+            }
+            return OrderCount; // Returns orders count
+        }
+        public List<OrderBL> GetOrdersForUser(string username) // returns orders for a specific user
+        {
+            List<OrderBL> orders = new List<OrderBL>();
+            string query = "SELECT O.OrderId, O.OrderType, O.OrderDate, O.TotalPrice, C.EmployeeUN " +
+                           "FROM Orders AS O " +
+                           "JOIN Customers AS C ON O.CustomerID = C.Username " +
+                           "WHERE C.Username = @Username;";
+            using (SqlConnection con = Configuration.GetConnection())
+            {
+                try
+                {
+                    con.Open(); // Opens Database Connection
+
+                    SqlCommand command = new SqlCommand(query, con); // Command to execute the query
+                    command.Parameters.AddWithValue("@Username", username); // Add parameters
+
+                    SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
+
+                    while (sqlDataReader.Read()) // Loop through results
+                    {
+                        int orderId = sqlDataReader.GetInt32(0);
+                        string orderType = sqlDataReader.GetString(1);
+                        DateTime orderDate = sqlDataReader.GetDateTime(2);
+                        double totalPrice = sqlDataReader.GetDouble(3);
+                        string employeeUN = sqlDataReader.GetString(4);
+                        EmployeeBL employee = employeeDL.GetEmployeebyUsername(employeeUN); // Retrieve employee
+                        OrderBL order = new OrderBL(orderId, orderType, orderDate, employee, totalPrice);
+                        orders.Add(order);
+                    }
+                }
+                catch (Exception e) // throw exception
+                {
+                    throw (e);
+                }
+                finally
+                {
+                    con.Close(); // Closes the database connection at the end
                 }
             }
             return orders;
         }
-        public int GetOrderCount() // returns order count
-        {
-            int OrderCount = 0;
-            // makes connection with DB to get orders count
-            using (SqlConnection con = Configuration.GetConnection())
-            {
-                string query = $"Select Count(O.OrderId) from Orders as O join Customers as C on O.CustomerID=C.Username where C.Status='Active';";
-                // first try to execute retreive command
-                try
-                {
-                    con.Open(); // opens Database Connection
-                    SqlCommand command = new SqlCommand(query, con); // command to execute the query
-                    command.Parameters.AddWithValue("@Status", "Active"); // add parameters
-                    SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
-                    if (sqlDataReader.Read()) // if orders data found
-                    {
-                        OrderCount= sqlDataReader.GetInt32(0);
-                    }
-                }
-                catch (Exception e) // if any exception returns the exception message
-                {
-                    throw (e);
-                }
-                finally // closes the database connection at the end
-                {
-                    con.Close();
-                }
-            }
-            return OrderCount; // returns orders count
-        }
+
     }
 }
