@@ -14,15 +14,13 @@ namespace DELL.UI.UsersUI
             InitializeComponent();
             WindowState = FormWindowState.Maximized; // maximize windows size
             CEO = emp; // intializing the CEO object with the userdata found
-            LoadData(); // loading data for the forms
-        }
-        private void LoadData()
-        {
             LoadStats(); // loads statistical data for CEO
             LoadSalesPersonsData(); // loads SalesPersons data for CEO
             LoadTechniciansData(); // loads SalesPersons data for CEO
+            LoadCustomersData(); // loads customers data for CEO
             ClearInputsSP(); // clears input fields
             ClearInputsMT(); // clears input fields
+            ClearInputsC(); // clears input fields
         }
         private void LoadStats()
         {
@@ -39,31 +37,38 @@ namespace DELL.UI.UsersUI
             }
             catch (Exception e) // if any exception returns the exception message
             {
-                throw (e);
+                MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         //                           SalesPersons Operations
         private void LoadSalesPersonsData()
         {
-            // Retrieve salespersons' data from the data access layer
-            SPGridView.DataSource = null; // Unbind the data source
-            SPGridView.Rows.Clear(); // Clear the rows
-            // Add rows to the DataGridView
-            List<EmployeeBL> employees = ObjectHandler.GetEmployeeDL().GetEmployeesByDesignation("SalesPerson");
-            foreach (EmployeeBL e in employees)
+            try
             {
-                SPGridView.Rows.Add(
-                    e.GetName(),
-                    e.GetUsername(),
-                    e.GetPassword(),
-                    e.GetEmail(),
-                    e.GetDob(),
-                    e.GetContact(),
-                    e.GetAddress(),
-                    e.GetGender(),
-                    e.GetHireDate()
-                );
+                // Retrieve salespersons' data from the data access layer
+                SPGridView.DataSource = null; // Unbind the data source
+                SPGridView.Rows.Clear(); // Clear the rows
+                                         // Add rows to the DataGridView
+                List<EmployeeBL> employees = ObjectHandler.GetEmployeeDL().GetEmployeesByDesignation("SalesPerson");
+                foreach (EmployeeBL e in employees)
+                {
+                    SPGridView.Rows.Add(
+                        e.GetName(),
+                        e.GetUsername(),
+                        e.GetPassword(),
+                        e.GetEmail(),
+                        e.GetDob(),
+                        e.GetContact(),
+                        e.GetAddress(),
+                        e.GetGender(),
+                        e.GetHireDate()
+                    );
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void ClearInputsSP()
@@ -135,7 +140,7 @@ namespace DELL.UI.UsersUI
             // if employee added successfully
             if (uStatus=="True")
             {
-                MessageBox.Show("Sales person added successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("SalesPerson data added successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadSalesPersonsData();
                 ClearInputsSP();
             }
@@ -145,6 +150,24 @@ namespace DELL.UI.UsersUI
                 MessageBox.Show(uStatus, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void UpdateSpBtn_Click(object sender, EventArgs e)
+        {
+            if (UInputSP.Text!="")
+            {
+                string message = ObjectHandler.GetEmployeeDL().RemoveEmployee(UInputSP.Text);
+                if (message=="True")
+                {
+                    MessageBox.Show("SalesPerson data updated successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadSalesPersonsData();
+                    ClearInputsSP();
+                }
+                // if employee not deleted
+                else
+                {
+                    MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
         private void DeleteSpBtn_Click(object sender, EventArgs e)
         {
             if (UInputSP.Text!="")
@@ -152,7 +175,7 @@ namespace DELL.UI.UsersUI
                 string message = ObjectHandler.GetEmployeeDL().RemoveEmployee(UInputSP.Text);
                 if (message=="True")
                 {
-                    MessageBox.Show("Sales person deleted successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("SalesPerson data deleted successfully!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadSalesPersonsData();
                     ClearInputsSP();
                 }
@@ -168,25 +191,31 @@ namespace DELL.UI.UsersUI
         //                           Technicians Operations
         private void LoadTechniciansData()
         {
-            // Retrieve technicians' data from the data access layer
-            TGridView.DataSource = null; // Unbind the data source
-            TGridView.Rows.Clear(); // Clear the rows
-            List<EmployeeBL> employees = ObjectHandler.GetEmployeeDL().GetEmployeesByDesignation("Technician");
-            MessageBox.Show($"{employees.Count}","indp");
-            // Add rows to the DataGridView
-            foreach (EmployeeBL e in employees)
+            try
             {
-                TGridView.Rows.Add(
-                    e.GetName(),
-                    e.GetUsername(),
-                    e.GetPassword(),
-                    e.GetEmail(),
-                    e.GetDob(),
-                    e.GetContact(),
-                    e.GetAddress(),
-                    e.GetGender(),
-                    e.GetHireDate()
-                );
+                // Retrieve technicians' data from the data access layer
+                TGridView.DataSource = null; // Unbind the data source
+                TGridView.Rows.Clear(); // Clear the rows
+                List<EmployeeBL> employees = ObjectHandler.GetEmployeeDL().GetEmployeesByDesignation("Technician");
+                // Add rows to the DataGridView
+                foreach (EmployeeBL e in employees)
+                {
+                    TGridView.Rows.Add(
+                        e.GetName(),
+                        e.GetUsername(),
+                        e.GetPassword(),
+                        e.GetEmail(),
+                        e.GetDob(),
+                        e.GetContact(),
+                        e.GetAddress(),
+                        e.GetGender(),
+                        e.GetHireDate()
+                    );
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void ClearInputsMT()
@@ -268,14 +297,14 @@ namespace DELL.UI.UsersUI
                 MessageBox.Show(uStatus, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void DeleteMTBtn_Click(object sender, EventArgs e)
+        private void UpdateMTBtn_Click(object sender, EventArgs e)
         {
             if (UInputMT.Text!="")
             {
                 string message = ObjectHandler.GetEmployeeDL().RemoveEmployee(UInputMT.Text);
                 if (message=="True")
                 {
-                    MessageBox.Show("Technician deleted successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Technician data updated successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadTechniciansData();
                     ClearInputsMT();
                 }
@@ -286,5 +315,146 @@ namespace DELL.UI.UsersUI
                 }
             }
         }
+        private void DeleteMTBtn_Click(object sender, EventArgs e)
+        {
+            if (UInputMT.Text!="")
+            {
+                string message = ObjectHandler.GetEmployeeDL().RemoveEmployee(UInputMT.Text);
+                if (message=="True")
+                {
+                    MessageBox.Show("Technician data deleted successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadTechniciansData();
+                    ClearInputsMT();
+                }
+                // if employee not deleted
+                else
+                {
+                    MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+
+        //                           Customers Operations
+        private void LoadCustomersData()
+        {
+            try
+            {
+                // Retrieve customers' data from the data access layer
+                CGridView.DataSource = null; // Unbind the data source
+                CGridView.Rows.Clear(); // Clear the rows
+                List<CustomerBL> customers = ObjectHandler.GetCustomerDL().GetAllCustomers("Active");
+                // Add rows to the DataGridView
+                foreach (CustomerBL c in customers)
+                {
+                    CGridView.Rows.Add(
+                        c.GetName(),
+                        c.GetUsername(),
+                        c.GetPassword(),
+                        c.GetEmail(),
+                        c.GetDob(),
+                        c.GetContact(),
+                        c.GetAddress(),
+                        c.GetGender()
+                    );
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void ClearInputsC()
+        {
+            NInputC.Text="";
+            UInputC.Text="";
+            PInputC.Text="";
+            EInputC.Text="";
+            AInputC.Text="";
+            CInputC.Text="";
+            GInputC.Text="";
+            DOBIC.Value = DateTime.Now.AddDays(-1);
+        }
+        private void LoadDataIntoInputsC(CustomerBL customer)
+        {
+            NInputC.Text=customer.GetName();
+            UInputC.Text=customer.GetUsername();
+            PInputC.Text=customer.GetPassword();
+            EInputC.Text=customer.GetEmail();
+            AInputC.Text=customer.GetAddress();
+            CInputC.Text=customer.GetContact();
+            GInputC.Text=customer.GetGender();
+            DOBIC.Value=customer.GetDob();
+        }
+        private void CGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            if (CGridView.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = CGridView.SelectedRows[0];
+                if (selectedRow.Index >= 0 && selectedRow.Index < CGridView.Rows.Count)
+                {
+                    string name = selectedRow.Cells["Column1C"].Value?.ToString();
+                    string username = selectedRow.Cells["Column2C"].Value?.ToString();
+                    string password = selectedRow.Cells["Column3C"].Value?.ToString();
+                    string email = selectedRow.Cells["Column4C"].Value?.ToString();
+                    if (DateTime.TryParse(selectedRow.Cells["Column5C"].Value?.ToString(), out DateTime dob))
+                    {
+                        // Successfully parsed the DOB
+                        string contact = selectedRow.Cells["Column6C"].Value?.ToString();
+                        string address = selectedRow.Cells["Column7C"].Value?.ToString();
+                        string gender = selectedRow.Cells["Column8C"].Value?.ToString();
+                        string status = "Active";
+                        CustomerBL customer = new CustomerBL(name, username, password, email, dob, address, contact, gender, status);
+                        LoadDataIntoInputsC(customer);
+                    }
+                    else
+                    {
+                        ClearInputsC();
+                    }
+                }
+            }
+        }
+        private void AddCbtn_Click(object sender, EventArgs e)
+        {
+            // makes new user object
+            CustomerBL user = new CustomerBL(NInputC.Text, UInputC.Text, PInputC.Text, EInputC.Text, DOBIC.Value, AInputC.Text, CInputC.Text, GInputC.Text, "Active");
+            // calls Object Handler to call customer interface to add customer
+            string uStatus = ObjectHandler.GetCustomerDL().AddCustomer(user);
+            // if customer added successfully
+            if (uStatus=="True")
+            {
+                MessageBox.Show("Customer added successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadCustomersData();
+                ClearInputsC();
+            }
+            // if customer not added
+            else
+            {
+                MessageBox.Show(uStatus, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void UpdateCBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void DeleteCBtn_Click(object sender, EventArgs e)
+        {
+            if (UInputC.Text!="")
+            {
+                string message = ObjectHandler.GetCustomerDL().RemoveCustomer(UInputC.Text);
+                if (message=="True")
+                {
+                    MessageBox.Show("Customer data deleted successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadCustomersData();
+                    ClearInputsC();
+                }
+                // if customer not deleted
+                else
+                {
+                    MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
     }
 }

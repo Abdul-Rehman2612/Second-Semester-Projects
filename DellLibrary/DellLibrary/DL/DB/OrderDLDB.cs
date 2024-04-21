@@ -43,7 +43,7 @@ namespace DellLibrary.DL.DB
         public List<OrderBL> GetOrdersForUser(string username) // returns orders for a specific user
         {
             List<OrderBL> orders = new List<OrderBL>();
-            string query = "SELECT O.OrderId, O.OrderType, O.OrderDate, O.TotalPrice, C.EmployeeUN " +
+            string query = "SELECT O.OrderId, O.OrderType, O.OrderDate, O.TotalPrice, O.EmployeeID " +
                            "FROM Orders AS O " +
                            "JOIN Customers AS C ON O.CustomerID = C.Username " +
                            "WHERE C.Username = @Username;";
@@ -52,22 +52,27 @@ namespace DellLibrary.DL.DB
                 try
                 {
                     con.Open(); // Opens Database Connection
-
                     SqlCommand command = new SqlCommand(query, con); // Command to execute the query
                     command.Parameters.AddWithValue("@Username", username); // Add parameters
-
                     SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
-
                     while (sqlDataReader.Read()) // Loop through results
                     {
                         int orderId = sqlDataReader.GetInt32(0);
-                        string orderType = sqlDataReader.GetString(1);
-                        DateTime orderDate = sqlDataReader.GetDateTime(2);
-                        double totalPrice = sqlDataReader.GetDouble(3);
-                        string employeeUN = sqlDataReader.GetString(4);
+                        string orderType = sqlDataReader.GetString(3);
+                        DateTime orderDate = sqlDataReader.GetDateTime(4);
+                        double totalPrice = sqlDataReader.GetDouble(5);
+                        string employeeUN = sqlDataReader.GetString(2);
                         EmployeeBL employee = employeeDL.GetEmployeebyUsername(employeeUN); // Retrieve employee
-                        OrderBL order = new OrderBL(orderId, orderType, orderDate, employee, totalPrice);
-                        orders.Add(order);
+                        if(employee!=null)
+                        {
+                            OrderBL order = new OrderBL(orderId, orderType, orderDate, employee, totalPrice);
+                            orders.Add(order);
+                        }
+                        else
+                        {
+                            OrderBL order = new OrderBL(orderId, orderType, orderDate, totalPrice);
+                            orders.Add(order);
+                        }
                     }
                 }
                 catch (Exception e) // throw exception

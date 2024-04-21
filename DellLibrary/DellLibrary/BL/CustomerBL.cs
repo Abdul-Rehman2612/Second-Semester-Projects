@@ -19,7 +19,6 @@ namespace DellLibrary.BL
             foreach (OrderBL order in orders)
             {
                 orderList.Add(new OrderBL(order));
-
             }
         }
     }

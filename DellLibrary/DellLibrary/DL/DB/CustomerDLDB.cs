@@ -12,7 +12,7 @@ namespace DellLibrary.DL.DB
         private static readonly IOrderDL orderDL = new OrderDLDB();
         public string AddCustomer(CustomerBL user) // adds customer to DB
         {
-            string message = Validations.IsValidUser(user); // checks if user is valid or not
+            string message = Validations.IsValidNewUser(user); // checks if user is valid or not
 
             if (message == "True") // if the user is valid
             {
@@ -73,7 +73,7 @@ namespace DellLibrary.DL.DB
                     command.Parameters.AddWithValue("@Username", username);
 
                     SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
-                    int rowAffected = command.ExecuteNonQuery();
+                    int rowAffected = sqlDataReader.RecordsAffected;
                     if (rowAffected>0)
                     {
                         message="True";
@@ -106,23 +106,25 @@ namespace DellLibrary.DL.DB
                     SqlCommand command = new SqlCommand(query, con); // command to execute the query
                     command.Parameters.AddWithValue("@Status", s);
                     SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
-                    if (sqlDataReader.Read()) // if customers data found
+                    
+                    while (sqlDataReader.Read()) // if customers data found
                     {
-                        while (sqlDataReader.Read())
+                        string name = sqlDataReader.GetString(0);
+                        string username = sqlDataReader.GetString(1);
+                        string password = sqlDataReader.GetString(2);
+                        string email = sqlDataReader.GetString(3);
+                        DateTime birthDate = sqlDataReader.GetDateTime(4);
+                        string address = sqlDataReader.GetString(5);
+                        string contact = sqlDataReader.GetString(6);
+                        string gender = sqlDataReader.GetString(7);
+                        string status = sqlDataReader.GetString(8);
+                        CustomerBL customer = new CustomerBL(name, username, password, email, birthDate, address, contact, gender, status);
+                        List<OrderBL> orders = orderDL.GetOrdersForUser(username);
+                        if (orders!= null)
                         {
-                            string name = sqlDataReader.GetString(0);
-                            string username = sqlDataReader.GetString(1);
-                            string password = sqlDataReader.GetString(2);
-                            string email = sqlDataReader.GetString(3);
-                            DateTime birthDate = sqlDataReader.GetDateTime(4);
-                            string address = sqlDataReader.GetString(5);
-                            string contact = sqlDataReader.GetString(6);
-                            string gender = sqlDataReader.GetString(7);
-                            string status = sqlDataReader.GetString(8);
-                            CustomerBL customer = new CustomerBL(name, username, password, email, birthDate, address, contact, gender, status);
-                            customer.AddOrdersList(orderDL.GetOrdersForUser(username));
-                            Customers.Add(customer);
+                            customer.AddOrdersList(orders);
                         }
+                        Customers.Add(customer);
                     }
                 }
                 catch (Exception e) // if any exception returns the exception message
@@ -152,7 +154,7 @@ namespace DellLibrary.DL.DB
                     SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
                     if (sqlDataReader.Read()) // if customers data found
                     {
-                        CustomerCount= sqlDataReader.GetInt32(0);
+                        CustomerCount = sqlDataReader.GetInt32(0);
                     }
                 }
                 catch (Exception e) // if any exception returns the exception message
@@ -169,29 +171,36 @@ namespace DellLibrary.DL.DB
         public bool UniqueAttributeCheck(string text, string attribute) // checks for unique attributes
         {
             bool check = false;
+            // query to check attributes
             string Query = $"Select * from Customers where {attribute}='{text}';";
+
+            // making connection with database
             using (SqlConnection con = Configuration.GetConnection())
             {
                 try
                 {
+                    // Open the database connection
                     con.Open();
+
                     SqlCommand command = new SqlCommand(Query, con);
-                    SqlDataReader sqlDataReader = command.ExecuteReader();
-                    if (sqlDataReader.Read())
+                    SqlDataReader sqlDataReader = command.ExecuteReader(); // executes command
+
+                    if (sqlDataReader.Read()) // if attribute found
                     {
-                        check=true;
+                        check = true;
                     }
                 }
-                catch (Exception)
+                catch (Exception) // If an exception occurs during database operations, set check to true
                 {
                     check = true;
                 }
-                finally
+                finally // Ensure the connection is closed after database operations
                 {
                     con.Close();
                 }
             }
-            return check;
+            
+            return check; // Return the result of the check
         }
         public UserBL UserSignIn(UserBL user) // checks user in database for signing in
         {
@@ -222,7 +231,11 @@ namespace DellLibrary.DL.DB
                         string gender = sqlDataReader.GetString(7);
                         string status = sqlDataReader.GetString(8);
                         customer = new CustomerBL(name, username, password, email, birthDate, address, contact, gender, status);
-                        customer.AddOrdersList(orderDL.GetOrdersForUser(username));
+                        List<OrderBL> orders = orderDL.GetOrdersForUser(username);
+                        if (orders!= null)
+                        {
+                            customer.AddOrdersList(orders);
+                        }
                     }
                     else // if user not found
                     {

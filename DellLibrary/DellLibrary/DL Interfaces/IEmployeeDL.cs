@@ -11,6 +11,7 @@ namespace DellLibrary.DL_Interfaces
     {
         string AddEmployee(EmployeeBL employee); // for adding an employee
         string RemoveEmployee(string username); // for removing an employee
+        string UpdateEmployee(EmployeeBL employee); // for updating an employee's info
         EmployeeBL GetEmployeebyUsername(string username); // for getting employee for specific username
         List<EmployeeBL> GetAllEmployees(); // returns all employees list
         int GetEmployeeCount(); // returns employees count

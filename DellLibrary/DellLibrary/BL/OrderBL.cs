@@ -19,6 +19,14 @@ namespace DellLibrary.BL
             this.employee = employee;
             this.totalPrice = totalPrice;
         }
+        public OrderBL(int orderID, string orderType, DateTime orderDate, double totalPrice)
+        {
+            this.orderID = orderID;
+            this.orderType = orderType;
+            this.orderDate = orderDate;
+            this.employee = null;
+            this.totalPrice = totalPrice;
+        }
         public OrderBL(OrderBL order)
         {
             orderID = order.orderID;

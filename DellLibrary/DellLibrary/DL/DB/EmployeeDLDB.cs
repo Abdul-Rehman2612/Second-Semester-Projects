@@ -11,7 +11,7 @@ namespace DellLibrary.DL.DB
     {
         public string AddEmployee(EmployeeBL user) // adds employee to DB
         {
-            string message = Validations.IsValidUser(user); // checks if user is valid or not
+            string message = Validations.IsValidNewUser(user); // checks if user is valid or not
             // if the user is valid
             if (message == "True")
             {
@@ -59,6 +59,10 @@ namespace DellLibrary.DL.DB
             }
             return message; // return the result message
         }
+        public string UpdateEmployee(EmployeeBL user)
+        {
+            return null;
+        }
         public string RemoveEmployee(string username) // removes employee
         {
             string message = "";
@@ -101,27 +105,25 @@ namespace DellLibrary.DL.DB
             // makes connection with DB to get employees
             using (SqlConnection con = Configuration.GetConnection())
             {
-                string query = $"Select * from Employees where Designation<>'CEO';";
+                string query = $"Select * from Employees where Designation<>'CEO' And Status='Active';";
                 // first try to execute retreive command
                 try
                 {
                     con.Open(); // opens Database Connection
                     SqlCommand command = new SqlCommand(query, con); // command to execute the query
                     SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
-                    if (sqlDataReader.Read()) // if employees data found
+
+                    while (sqlDataReader.Read()) // if employees data found
                     {
-                        while (sqlDataReader.Read())
+                        if (sqlDataReader.IsDBNull(11)) // if resignation date is null
                         {
-                            if (sqlDataReader.IsDBNull(11)) // if resignation date is null
-                            {
-                                EmployeeBL employee = new EmployeeBL(sqlDataReader.GetString(0), sqlDataReader.GetString(1), sqlDataReader.GetString(2), sqlDataReader.GetString(3), sqlDataReader.GetDateTime(4), sqlDataReader.GetString(5), sqlDataReader.GetString(6), sqlDataReader.GetString(7), sqlDataReader.GetString(8), sqlDataReader.GetString(9), sqlDataReader.GetDateTime(10));
-                                Employees.Add(employee);
-                            }
-                            else
-                            {
-                                EmployeeBL employee = new EmployeeBL(sqlDataReader.GetString(0), sqlDataReader.GetString(1), sqlDataReader.GetString(2), sqlDataReader.GetString(3), sqlDataReader.GetDateTime(4), sqlDataReader.GetString(5), sqlDataReader.GetString(6), sqlDataReader.GetString(7), sqlDataReader.GetString(8), sqlDataReader.GetString(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11));
-                                Employees.Add(employee);
-                            }
+                            EmployeeBL employee = new EmployeeBL(sqlDataReader.GetString(0), sqlDataReader.GetString(1), sqlDataReader.GetString(2), sqlDataReader.GetString(3), sqlDataReader.GetDateTime(4), sqlDataReader.GetString(5), sqlDataReader.GetString(6), sqlDataReader.GetString(7), sqlDataReader.GetString(8), sqlDataReader.GetString(9), sqlDataReader.GetDateTime(10));
+                            Employees.Add(employee);
+                        }
+                        else
+                        {
+                            EmployeeBL employee = new EmployeeBL(sqlDataReader.GetString(0), sqlDataReader.GetString(1), sqlDataReader.GetString(2), sqlDataReader.GetString(3), sqlDataReader.GetDateTime(4), sqlDataReader.GetString(5), sqlDataReader.GetString(6), sqlDataReader.GetString(7), sqlDataReader.GetString(8), sqlDataReader.GetString(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11));
+                            Employees.Add(employee);
                         }
                     }
                 }
@@ -150,18 +152,16 @@ namespace DellLibrary.DL.DB
                     SqlCommand command = new SqlCommand(query, con); // command to execute the query
                     command.Parameters.AddWithValue("@Username", username);
                     SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
-                    if (sqlDataReader.Read()) // if employees data found
+
+                    while (sqlDataReader.Read()) // if employees data found
                     {
-                        while (sqlDataReader.Read())
+                        if (sqlDataReader.IsDBNull(11)) // if resignation date is null
                         {
-                            if (sqlDataReader.IsDBNull(11)) // if resignation date is null
-                            {
-                                employee = new EmployeeBL(sqlDataReader.GetString(0), username, sqlDataReader.GetString(2), sqlDataReader.GetString(3), sqlDataReader.GetDateTime(4), sqlDataReader.GetString(5), sqlDataReader.GetString(6), sqlDataReader.GetString(7), sqlDataReader.GetString(8), sqlDataReader.GetString(9), sqlDataReader.GetDateTime(10));
-                            }
-                            else
-                            {
-                                employee = new EmployeeBL(sqlDataReader.GetString(0), username, sqlDataReader.GetString(2), sqlDataReader.GetString(3), sqlDataReader.GetDateTime(4), sqlDataReader.GetString(5), sqlDataReader.GetString(6), sqlDataReader.GetString(7), sqlDataReader.GetString(8), sqlDataReader.GetString(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11));
-                            }
+                            employee = new EmployeeBL(sqlDataReader.GetString(0), username, sqlDataReader.GetString(2), sqlDataReader.GetString(3), sqlDataReader.GetDateTime(4), sqlDataReader.GetString(5), sqlDataReader.GetString(6), sqlDataReader.GetString(7), sqlDataReader.GetString(8), sqlDataReader.GetString(9), sqlDataReader.GetDateTime(10));
+                        }
+                        else
+                        {
+                            employee = new EmployeeBL(sqlDataReader.GetString(0), username, sqlDataReader.GetString(2), sqlDataReader.GetString(3), sqlDataReader.GetDateTime(4), sqlDataReader.GetString(5), sqlDataReader.GetString(6), sqlDataReader.GetString(7), sqlDataReader.GetString(8), sqlDataReader.GetString(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11));
                         }
                     }
                 }
@@ -174,7 +174,7 @@ namespace DellLibrary.DL.DB
                     con.Close();
                 }
             }
-            return employee; // returns list
+            return employee; // returns employee
         }
         public List<EmployeeBL> GetEmployeesByDesignation(string designation) // returns the list of employees with specific designation
         {
@@ -262,17 +262,10 @@ namespace DellLibrary.DL.DB
                     command.Parameters.AddWithValue("@Username", user.GetUsername());
                     command.Parameters.AddWithValue("@Password", user.GetPassword());
                     SqlDataReader sqlDataReader = command.ExecuteReader(); // datareader
-                    if (sqlDataReader.Read()) // if employee was found
+                    if (sqlDataReader.Read() && sqlDataReader.IsDBNull(11)) // if employee was found && resignation date is null
                     {
-                        if (sqlDataReader.IsDBNull(11)) // if resignation date is null
-                        {
                             string designation = sqlDataReader.GetString(9);
                             employee = new EmployeeBL(sqlDataReader.GetString(0), sqlDataReader.GetString(1), sqlDataReader.GetString(2), sqlDataReader.GetString(3), sqlDataReader.GetDateTime(4), sqlDataReader.GetString(5), sqlDataReader.GetString(6), sqlDataReader.GetString(7), sqlDataReader.GetString(8), sqlDataReader.GetString(9), sqlDataReader.GetDateTime(10));
-                        }
-                    }
-                    else // if user not found
-                    {
-                        employee = null;
                     }
                 }
                 catch (Exception ex) // throw exception in case of errors
