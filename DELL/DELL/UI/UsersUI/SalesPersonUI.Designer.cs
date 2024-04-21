@@ -30,21 +30,89 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesPersonUI));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            this.Dashboard = new System.Windows.Forms.TabPage();
-            this.Backbtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.SalesPersonPanel = new Guna.UI2.WinForms.Guna2TabControl();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.MainPanel = new Guna.UI.WinForms.GunaPanel();
-            this.BottomContainer = new Guna.UI2.WinForms.Guna2Panel();
             this.TopContainer = new Guna.UI2.WinForms.Guna2Panel();
             this.Logo2 = new System.Windows.Forms.Label();
             this.Logo = new System.Windows.Forms.Label();
-            this.Dashboard.SuspendLayout();
-            this.SalesPersonPanel.SuspendLayout();
+            this.SalesPersonPanel = new Guna.UI2.WinForms.Guna2TabControl();
+            this.Dashboard = new System.Windows.Forms.TabPage();
+            this.Backbtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.MainPanel.SuspendLayout();
-            this.BottomContainer.SuspendLayout();
             this.TopContainer.SuspendLayout();
+            this.SalesPersonPanel.SuspendLayout();
+            this.Dashboard.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // MainPanel
+            // 
+            this.MainPanel.Controls.Add(this.SalesPersonPanel);
+            this.MainPanel.Controls.Add(this.TopContainer);
+            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPanel.Location = new System.Drawing.Point(0, 0);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Size = new System.Drawing.Size(934, 687);
+            this.MainPanel.TabIndex = 3;
+            // 
+            // TopContainer
+            // 
+            this.TopContainer.Controls.Add(this.Logo2);
+            this.TopContainer.Controls.Add(this.Logo);
+            this.TopContainer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TopContainer.Location = new System.Drawing.Point(0, 0);
+            this.TopContainer.Name = "TopContainer";
+            this.TopContainer.Size = new System.Drawing.Size(934, 150);
+            this.TopContainer.TabIndex = 0;
+            // 
+            // Logo2
+            // 
+            this.Logo2.BackColor = System.Drawing.Color.Lavender;
+            this.Logo2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Logo2.Image = ((System.Drawing.Image)(resources.GetObject("Logo2.Image")));
+            this.Logo2.Location = new System.Drawing.Point(150, 0);
+            this.Logo2.Name = "Logo2";
+            this.Logo2.Size = new System.Drawing.Size(784, 150);
+            this.Logo2.TabIndex = 1;
+            // 
+            // Logo
+            // 
+            this.Logo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
+            this.Logo.Location = new System.Drawing.Point(0, 0);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(150, 150);
+            this.Logo.TabIndex = 0;
+            // 
+            // SalesPersonPanel
+            // 
+            this.SalesPersonPanel.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.SalesPersonPanel.Controls.Add(this.Dashboard);
+            this.SalesPersonPanel.Controls.Add(this.tabPage2);
+            this.SalesPersonPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SalesPersonPanel.Font = new System.Drawing.Font("Sitka Display", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SalesPersonPanel.ItemSize = new System.Drawing.Size(150, 40);
+            this.SalesPersonPanel.Location = new System.Drawing.Point(0, 150);
+            this.SalesPersonPanel.Name = "SalesPersonPanel";
+            this.SalesPersonPanel.SelectedIndex = 0;
+            this.SalesPersonPanel.Size = new System.Drawing.Size(934, 537);
+            this.SalesPersonPanel.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
+            this.SalesPersonPanel.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.SalesPersonPanel.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.SalesPersonPanel.TabButtonHoverState.ForeColor = System.Drawing.Color.White;
+            this.SalesPersonPanel.TabButtonHoverState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.SalesPersonPanel.TabButtonIdleState.BorderColor = System.Drawing.Color.Empty;
+            this.SalesPersonPanel.TabButtonIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.SalesPersonPanel.TabButtonIdleState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.SalesPersonPanel.TabButtonIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
+            this.SalesPersonPanel.TabButtonIdleState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.SalesPersonPanel.TabButtonSelectedState.BorderColor = System.Drawing.Color.Empty;
+            this.SalesPersonPanel.TabButtonSelectedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            this.SalesPersonPanel.TabButtonSelectedState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.SalesPersonPanel.TabButtonSelectedState.ForeColor = System.Drawing.Color.White;
+            this.SalesPersonPanel.TabButtonSelectedState.InnerColor = System.Drawing.Color.Lime;
+            this.SalesPersonPanel.TabButtonSize = new System.Drawing.Size(150, 40);
+            this.SalesPersonPanel.TabIndex = 1;
+            this.SalesPersonPanel.TabMenuBackColor = System.Drawing.Color.Lavender;
             // 
             // Dashboard
             // 
@@ -146,38 +214,6 @@
             this.Backbtn.TextMarginLeft = 0;
             this.Backbtn.TextPadding = new System.Windows.Forms.Padding(0);
             this.Backbtn.UseDefaultRadiusAndThickness = true;
-            this.Backbtn.Click += new System.EventHandler(this.Backbtn_Click);
-            // 
-            // SalesPersonPanel
-            // 
-            this.SalesPersonPanel.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.SalesPersonPanel.Controls.Add(this.Dashboard);
-            this.SalesPersonPanel.Controls.Add(this.tabPage2);
-            this.SalesPersonPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SalesPersonPanel.Font = new System.Drawing.Font("Sitka Display", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SalesPersonPanel.ItemSize = new System.Drawing.Size(150, 40);
-            this.SalesPersonPanel.Location = new System.Drawing.Point(0, 0);
-            this.SalesPersonPanel.Name = "SalesPersonPanel";
-            this.SalesPersonPanel.SelectedIndex = 0;
-            this.SalesPersonPanel.Size = new System.Drawing.Size(934, 537);
-            this.SalesPersonPanel.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
-            this.SalesPersonPanel.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.SalesPersonPanel.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.SalesPersonPanel.TabButtonHoverState.ForeColor = System.Drawing.Color.White;
-            this.SalesPersonPanel.TabButtonHoverState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.SalesPersonPanel.TabButtonIdleState.BorderColor = System.Drawing.Color.Empty;
-            this.SalesPersonPanel.TabButtonIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
-            this.SalesPersonPanel.TabButtonIdleState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.SalesPersonPanel.TabButtonIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
-            this.SalesPersonPanel.TabButtonIdleState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
-            this.SalesPersonPanel.TabButtonSelectedState.BorderColor = System.Drawing.Color.Empty;
-            this.SalesPersonPanel.TabButtonSelectedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
-            this.SalesPersonPanel.TabButtonSelectedState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.SalesPersonPanel.TabButtonSelectedState.ForeColor = System.Drawing.Color.White;
-            this.SalesPersonPanel.TabButtonSelectedState.InnerColor = System.Drawing.Color.Lime;
-            this.SalesPersonPanel.TabButtonSize = new System.Drawing.Size(150, 40);
-            this.SalesPersonPanel.TabIndex = 0;
-            this.SalesPersonPanel.TabMenuBackColor = System.Drawing.Color.Lavender;
             // 
             // tabPage2
             // 
@@ -186,57 +222,9 @@
             this.tabPage2.Location = new System.Drawing.Point(154, 4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(776, 591);
+            this.tabPage2.Size = new System.Drawing.Size(776, 529);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
-            // 
-            // MainPanel
-            // 
-            this.MainPanel.Controls.Add(this.BottomContainer);
-            this.MainPanel.Controls.Add(this.TopContainer);
-            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainPanel.Location = new System.Drawing.Point(0, 0);
-            this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(934, 687);
-            this.MainPanel.TabIndex = 3;
-            // 
-            // BottomContainer
-            // 
-            this.BottomContainer.Controls.Add(this.SalesPersonPanel);
-            this.BottomContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BottomContainer.Location = new System.Drawing.Point(0, 150);
-            this.BottomContainer.Name = "BottomContainer";
-            this.BottomContainer.Size = new System.Drawing.Size(934, 537);
-            this.BottomContainer.TabIndex = 1;
-            // 
-            // TopContainer
-            // 
-            this.TopContainer.Controls.Add(this.Logo2);
-            this.TopContainer.Controls.Add(this.Logo);
-            this.TopContainer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TopContainer.Location = new System.Drawing.Point(0, 0);
-            this.TopContainer.Name = "TopContainer";
-            this.TopContainer.Size = new System.Drawing.Size(934, 150);
-            this.TopContainer.TabIndex = 0;
-            // 
-            // Logo2
-            // 
-            this.Logo2.BackColor = System.Drawing.Color.Lavender;
-            this.Logo2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Logo2.Image = ((System.Drawing.Image)(resources.GetObject("Logo2.Image")));
-            this.Logo2.Location = new System.Drawing.Point(150, 0);
-            this.Logo2.Name = "Logo2";
-            this.Logo2.Size = new System.Drawing.Size(784, 150);
-            this.Logo2.TabIndex = 1;
-            // 
-            // Logo
-            // 
-            this.Logo.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
-            this.Logo.Location = new System.Drawing.Point(0, 0);
-            this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(150, 150);
-            this.Logo.TabIndex = 0;
             // 
             // SalesPersonUI
             // 
@@ -248,25 +236,22 @@
             this.Name = "SalesPersonUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SalesPersonUI";
-            this.Dashboard.ResumeLayout(false);
-            this.SalesPersonPanel.ResumeLayout(false);
             this.MainPanel.ResumeLayout(false);
-            this.BottomContainer.ResumeLayout(false);
             this.TopContainer.ResumeLayout(false);
+            this.SalesPersonPanel.ResumeLayout(false);
+            this.Dashboard.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TabPage Dashboard;
-        private Guna.UI2.WinForms.Guna2TabControl SalesPersonPanel;
-        private System.Windows.Forms.TabPage tabPage2;
         private Guna.UI.WinForms.GunaPanel MainPanel;
-        private Guna.UI2.WinForms.Guna2Panel BottomContainer;
         private Guna.UI2.WinForms.Guna2Panel TopContainer;
         private System.Windows.Forms.Label Logo2;
         private System.Windows.Forms.Label Logo;
+        private Guna.UI2.WinForms.Guna2TabControl SalesPersonPanel;
+        private System.Windows.Forms.TabPage Dashboard;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton Backbtn;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }

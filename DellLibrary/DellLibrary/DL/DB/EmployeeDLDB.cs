@@ -160,7 +160,7 @@ namespace DellLibrary.DL.DB
                             }
                             else
                             {
-                                employee = new EmployeeBL(sqlDataReader.GetString(0), username, sqlDataReader.GetString(2), sqlDataReader.GetString(3), sqlDataReader.GetDateTime(4), sqlDataReader.GetString(5), sqlDataReader.GetString(6), sqlDataReader.GetString(7), sqlDataReader.GetString(8), sqlDataReader.GetString(9), sqlDataReader.GetDateTime(10),sqlDataReader.GetDateTime(11));
+                                employee = new EmployeeBL(sqlDataReader.GetString(0), username, sqlDataReader.GetString(2), sqlDataReader.GetString(3), sqlDataReader.GetDateTime(4), sqlDataReader.GetString(5), sqlDataReader.GetString(6), sqlDataReader.GetString(7), sqlDataReader.GetString(8), sqlDataReader.GetString(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11));
                             }
                         }
                     }
@@ -182,33 +182,27 @@ namespace DellLibrary.DL.DB
             // makes connection with DB to get employees
             using (SqlConnection con = Configuration.GetConnection())
             {
-                string query = $"Select * from Employees where Designation=@Designation;";
+                string query = $"Select * from Employees where Designation='{designation}';";
                 // first try to execute retreive command
                 try
                 {
                     con.Open(); // opens Database Connection
-                    SqlCommand command = new SqlCommand(query, con); // command to execute the query
-                    command.Parameters.AddWithValue("@Designation", designation);
+                    SqlCommand sqlCommand = new SqlCommand(query, con);
+                    SqlCommand command = sqlCommand; // command to execute the query
                     SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
-                    if (sqlDataReader.Read()) // if employees data found
+                    while (sqlDataReader.Read())
                     {
-                        while (sqlDataReader.Read())
-                        {
-                            string name = sqlDataReader.GetString(0);
-                            string username = sqlDataReader.GetString(1);
-                            string password = sqlDataReader.GetString(2);
-                            string email = sqlDataReader.GetString(3);
-                            DateTime birthDate = sqlDataReader.GetDateTime(4);
-                            string address = sqlDataReader.GetString(5);
-                            string contact = sqlDataReader.GetString(6);
-                            string gender = sqlDataReader.GetString(7);
-                            string status = sqlDataReader.GetString(8);
-                            if (sqlDataReader.IsDBNull(11)) // if resignation date is null
-                            {
-                                EmployeeBL employee = new EmployeeBL(sqlDataReader.GetString(0), sqlDataReader.GetString(1), sqlDataReader.GetString(2), sqlDataReader.GetString(3), sqlDataReader.GetDateTime(4), sqlDataReader.GetString(5), sqlDataReader.GetString(6), sqlDataReader.GetString(7), sqlDataReader.GetString(8), sqlDataReader.GetString(9), sqlDataReader.GetDateTime(10));
-                                Employees.Add(employee);
-                            }
-                        }
+                        string name = sqlDataReader.GetString(0);
+                        string username = sqlDataReader.GetString(1);
+                        string password = sqlDataReader.GetString(2);
+                        string email = sqlDataReader.GetString(3);
+                        DateTime birthDate = sqlDataReader.GetDateTime(4);
+                        string address = sqlDataReader.GetString(5);
+                        string contact = sqlDataReader.GetString(6);
+                        string gender = sqlDataReader.GetString(7);
+                        string status = sqlDataReader.GetString(8);
+                        EmployeeBL employee = new EmployeeBL(sqlDataReader.GetString(0), sqlDataReader.GetString(1), sqlDataReader.GetString(2), sqlDataReader.GetString(3), sqlDataReader.GetDateTime(4), sqlDataReader.GetString(5), sqlDataReader.GetString(6), sqlDataReader.GetString(7), sqlDataReader.GetString(8), sqlDataReader.GetString(9), sqlDataReader.GetDateTime(10));
+                        Employees.Add(employee);
                     }
                 }
                 catch (Exception e) // if any exception returns the exception message
