@@ -51,7 +51,6 @@ namespace DELL.UI.UsersUI
             SPGridView.Rows.Clear(); // Clear the rows
             // Add rows to the DataGridView
             List<EmployeeBL> employees = ObjectHandler.GetEmployeeDL().GetEmployeesByDesignation("SalesPerson");
-            MessageBox.Show($"{employees.Count}", "indp");
             foreach (EmployeeBL e in employees)
             {
                 SPGridView.Rows.Add(
@@ -154,7 +153,8 @@ namespace DELL.UI.UsersUI
                 if (message=="True")
                 {
                     MessageBox.Show("Sales person deleted successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadData();
+                    LoadSalesPersonsData();
+                    ClearInputsSP();
                 }
                 // if employee not deleted
                 else
@@ -239,12 +239,12 @@ namespace DELL.UI.UsersUI
                         }
                         else
                         {
-                            ClearInputsSP();
+                            ClearInputsMT();
                         }
                     }
                     else
                     {
-                        ClearInputsSP();
+                        ClearInputsMT();
                     }
                 }
             }
@@ -276,7 +276,8 @@ namespace DELL.UI.UsersUI
                 if (message=="True")
                 {
                     MessageBox.Show("Technician deleted successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadData();
+                    LoadTechniciansData();
+                    ClearInputsMT();
                 }
                 // if employee not deleted
                 else
