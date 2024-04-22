@@ -1,9 +1,5 @@
 ﻿using DellLibrary.BL;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DellLibrary.DL_Interfaces
 {
@@ -11,9 +7,10 @@ namespace DellLibrary.DL_Interfaces
     {
         string AddEmployee(EmployeeBL employee); // for adding an employee
         string RemoveEmployee(string username); // for removing an employee
-        string UpdateEmployee(EmployeeBL employee); // for updating an employee's info
+        string UpdateEmployee(EmployeeBL employee,string username,string email); // for updating an employee's info
         EmployeeBL GetEmployeebyUsername(string username); // for getting employee for specific username
         List<EmployeeBL> GetAllEmployees(); // returns all employees list
+        List<EmployeeBL> GetAllEmployeesByStatus(string status); // returns all employees list by status
         int GetEmployeeCount(); // returns employees count
         List<EmployeeBL> GetEmployeesByDesignation(string designation); // returns the list of employees with specific designation
     }

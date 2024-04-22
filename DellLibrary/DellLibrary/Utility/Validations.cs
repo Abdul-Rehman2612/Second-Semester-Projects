@@ -63,7 +63,16 @@ namespace DellLibrary.Utility
             Check = AgeCheck(user.GetDob());
             return Check;
         }
-        public static string IsValidUpdatedUser(UserBL user,string username,string email)
+        public static string AdminUsernameCheck(string username,string u2)
+        {
+            string Check = "True";
+            if (UsernameCheck(username)!="True" && username!=u2)
+            {
+                Check=UsernameCheck(username);
+            }
+            return Check;
+        }
+        public static string IsValidUpdatedUser(UserBL user,string username,string email,bool isAdmin)
         {
             string Check;
 
@@ -72,10 +81,20 @@ namespace DellLibrary.Utility
             {
                 return "Missing Information!";
             }
-
-            if (user.GetUsername()!=username)
+            if(isAdmin)
             {
-                return "Username cannot be changed!";
+                Check = AdminUsernameCheck(username, user.GetUsername());
+                if (Check!="True")
+                {
+                    return Check;
+                }
+            }
+            else
+            {
+                if (user.GetUsername()!=username)
+                {
+                    return "Username cannot be changed!";
+                }
             }
 
             Check = EmailCheck(user.GetEmail());
@@ -84,7 +103,7 @@ namespace DellLibrary.Utility
                 return Check;
             }
 
-            Check = IsValidNewUser(user);
+            Check = IsValidInfo(user);
             return Check;
         }
         // Check if the contact information is valid

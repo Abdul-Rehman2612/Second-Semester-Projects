@@ -92,21 +92,65 @@ namespace DellLibrary.DL.DB
             // returns the message
             return message;
         }
-        public List<CustomerBL> GetAllCustomers(string s) // returns the list of all active customers
+        public string UpdateCustomer(CustomerBL user, string username, string email) // updates customer in DB
+        {
+            string message = Validations.IsValidUpdatedUser(user, username, email, false); // checks if user is valid or not
+
+            if (message == "True") // if the user is valid
+            {
+                // query to add customer
+                string query = "UPDATE Customers SET Name=@Name, Password=@Password, Email=@Email, DOB=@DOB, Address=@Address, Contact=@Contact, Gender=@Gender WHERE Username=@user";
+                // connection to the database
+                using (SqlConnection con = Configuration.GetConnection())
+                {
+                    try
+                    {
+                        con.Open();
+                        SqlCommand command = new SqlCommand(query, con); // command to execute query
+
+                        // Add parameters
+                        command.Parameters.AddWithValue("@Name", user.GetName());
+                        command.Parameters.AddWithValue("@user", username);
+                        command.Parameters.AddWithValue("@Password", user.GetPassword());
+                        command.Parameters.AddWithValue("@Email", user.GetEmail());
+                        command.Parameters.AddWithValue("@DOB", user.GetDob());
+                        command.Parameters.AddWithValue("@Address", user.GetAddress());
+                        command.Parameters.AddWithValue("@Contact", user.GetContact());
+                        command.Parameters.AddWithValue("@Gender", user.GetGender());
+
+                        int rowsAffected = command.ExecuteNonQuery(); // execute command
+                        if (rowsAffected > 0) // if the customer was added
+                        {
+                            message = "True";
+                        }
+                    }
+                    catch (Exception e) // if error occurs
+                    {
+                        message = e.Message;
+                    }
+                    finally // Close the database connection at end
+                    {
+                        con.Close();
+                    }
+                }
+            }
+            return message; // return the result message
+        }
+        public List<CustomerBL> GetAllCustomersByStatus(string cstatus) // returns the list of all customers by status
         {
             List<CustomerBL> Customers = new List<CustomerBL>();
             // makes connection with DB to get customers
             using (SqlConnection con = Configuration.GetConnection())
             {
-                string query = $"Select * from Customers where Status=@Status;";
+                string query = $"Select * from Customers where Status=@cstatus;";
                 // first try to execute retreive command
                 try
                 {
                     con.Open(); // opens Database Connection
                     SqlCommand command = new SqlCommand(query, con); // command to execute the query
-                    command.Parameters.AddWithValue("@Status", s);
+                    command.Parameters.AddWithValue("@cstatus", cstatus);
                     SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
-                    
+
                     while (sqlDataReader.Read()) // if customers data found
                     {
                         string name = sqlDataReader.GetString(0);
@@ -189,13 +233,13 @@ namespace DellLibrary.DL.DB
             // makes connection with DB to get customers count
             using (SqlConnection con = Configuration.GetConnection())
             {
-                string query = $"Select Count(username) from Customers where Status=@Status;";
+                string query = $"Select Count(username) from Customers where Status=@status;";
                 // first try to execute retreive command
                 try
                 {
                     con.Open(); // opens Database Connection
                     SqlCommand command = new SqlCommand(query, con); // command to execute the query
-                    command.Parameters.AddWithValue("@Status", "Active"); // add parameters
+                    command.Parameters.AddWithValue("@status", "Active"); // add parameters
                     SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
                     if (sqlDataReader.Read()) // if customers data found
                     {
@@ -244,7 +288,7 @@ namespace DellLibrary.DL.DB
                     con.Close();
                 }
             }
-            
+
             return check; // Return the result of the check
         }
         public UserBL UserSignIn(UserBL user) // checks user in database for signing in

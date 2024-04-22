@@ -55,7 +55,7 @@ namespace DELL.UI.UsersUI
                 // Retrieve customers' data from the data access layer
                 CGridView.DataSource = null; // Unbind the data source
                 CGridView.Rows.Clear(); // Clear the rows
-                List<CustomerBL> customers = ObjectHandler.GetCustomerDL().GetAllCustomers("Active");
+                List<CustomerBL> customers = ObjectHandler.GetCustomerDL().GetAllCustomersByStatus("Active");
                 // Add rows to the DataGridView
                 foreach (CustomerBL c in customers)
                 {

@@ -10,6 +10,8 @@ namespace DELL.UI.UsersUI
     public partial class CeoUI : Form
     {
         private EmployeeBL CEO = null; // CEO data stored
+        private string username = null; // username checked for update
+        private string email = null; // email checked for update
         public CeoUI(EmployeeBL emp)
         {
             InitializeComponent();
@@ -31,7 +33,6 @@ namespace DELL.UI.UsersUI
             ClearInputsCO(); // clears input fields
         }
         
-
         private void LoadStats() // Loads statistical data for CEO
         {
             try
@@ -59,6 +60,7 @@ namespace DELL.UI.UsersUI
         }
         private void LoadEntityData(string op) // Loads data for an entity based on operation type
         {
+            SelectionNull();
             if (op == "SP")
             {
                 LoadSalesPersonsData(); // Loads SalesPersons data for CEO
@@ -77,6 +79,9 @@ namespace DELL.UI.UsersUI
                 LoadDataForCustomerID(); // Loads data for customerID in view orders
             }
             LoadStats(); // Loads statistical data after entity data is loaded
+            // set attributes null
+            username=null;
+            email=null;
         }
         private void SelectionNull() // Clears selection of DataGridViews
         {
@@ -174,6 +179,8 @@ namespace DELL.UI.UsersUI
                             if (DateTime.TryParse(selectedRow.Cells["Column9SP"].Value?.ToString(), out DateTime hireDate))
                             {
                                 // Successfully parsed the hire date
+                                this.username = username;
+                                this.email = email;
                                 // Create employee object
                                 EmployeeBL employee = new EmployeeBL(name, username, password, email, dob, address, contact, gender, status, designation, hireDate);
                                 LoadDataIntoInputsSP(employee);
@@ -215,10 +222,11 @@ namespace DELL.UI.UsersUI
         private void UpdateSpBtn_Click(object sender, EventArgs e) // Handles update of SalesPerson
         {
             // Check if username is provided
-            if (UInputSP.Text!="")
+            if (UInputSP.Text!="" && username!=null && email!=null)
             {
-                // Remove employee
-                string message = ObjectHandler.GetEmployeeDL().RemoveEmployee(UInputSP.Text);
+                EmployeeBL employee = new EmployeeBL(NInputSP.Text, UInputSP.Text, PInputSP.Text, EInputSP.Text, DOBISP.Value, AInputSP.Text, CInputSP.Text, GInputSP.Text);
+                // Update employee
+                string message = ObjectHandler.GetEmployeeDL().UpdateEmployee(employee,username,email);
                 if (message=="True")
                 {
                     MessageBox.Show("SalesPerson data updated successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -332,6 +340,8 @@ namespace DELL.UI.UsersUI
                             {
                                 // Successfully parsed the hire date
                                 // Create employee object
+                                this.username = username;
+                                this.email = email;
                                 EmployeeBL employee = new EmployeeBL(name, username, password, email, dob, address, contact, gender, status, designation, hireDate);
                                 LoadDataIntoInputsMT(employee);
                             }
@@ -371,17 +381,17 @@ namespace DELL.UI.UsersUI
         }
         private void UpdateMTBtn_Click(object sender, EventArgs e) // Handles update of Technician
         {
-            if (UInputMT.Text!="")
+            if (UInputMT.Text!=""  && username!=null && email!=null)
             {
                 // Create new Technician object
                 EmployeeBL user = new EmployeeBL(NInputMT.Text, UInputMT.Text, PInputMT.Text, EInputMT.Text, DOBIMT.Value, AInputMT.Text, CInputMT.Text, GInputMT.Text);
-                string message = ObjectHandler.GetEmployeeDL().UpdateEmployee(user);
+                string message = ObjectHandler.GetEmployeeDL().UpdateEmployee(user,username,email);
                 if (message=="True")
                 {
                     MessageBox.Show("Technician data updated successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadEntityData("T");
                 }
-                // if employee not deleted
+                // if employee not updated
                 else
                 {
                     MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -417,7 +427,7 @@ namespace DELL.UI.UsersUI
                 // Retrieve customers' data from the data access layer
                 CGridView.DataSource = null; // Unbind the data source
                 CGridView.Rows.Clear(); // Clear the rows
-                List<CustomerBL> customers = ObjectHandler.GetCustomerDL().GetAllCustomers("Active");
+                List<CustomerBL> customers = ObjectHandler.GetCustomerDL().GetAllCustomersByStatus("Active");
                 // Add rows to the DataGridView
                 foreach (CustomerBL c in customers)
                 {
@@ -481,6 +491,8 @@ namespace DELL.UI.UsersUI
                             string address = selectedRow.Cells["Column7C"].Value?.ToString();
                             string gender = selectedRow.Cells["Column8C"].Value?.ToString();
                             string status = "Active";
+                            this.username = username;
+                            this.email = email;
                             // Create customer object
                             CustomerBL customer = new CustomerBL(name, username, password, email, dob, address, contact, gender, status);
                             LoadDataIntoInputsC(customer);
@@ -520,7 +532,22 @@ namespace DELL.UI.UsersUI
         } 
         private void UpdateCBtn_Click(object sender, EventArgs e) // Handles update of Customer
         {
-            // Not implemented yet
+            if (UInputC.Text!=""  && username!=null && email!=null)
+            {
+                // Create new customer object
+                CustomerBL user = new CustomerBL(NInputC.Text, UInputC.Text, PInputC.Text, EInputC.Text, DOBIC.Value, AInputC.Text, CInputC.Text, GInputC.Text);
+                string message = ObjectHandler.GetCustomerDL().UpdateCustomer(user, username, email);
+                if (message=="True")
+                {
+                    MessageBox.Show("Customer data updated successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadEntityData("C");
+                }
+                // if customer not updated
+                else
+                {
+                    MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
         private void DeleteCBtn_Click(object sender, EventArgs e)  // Handles deletion of Customer
         {
