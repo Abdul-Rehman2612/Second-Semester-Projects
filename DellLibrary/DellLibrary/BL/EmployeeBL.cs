@@ -18,6 +18,9 @@ namespace DellLibrary.BL
             this.designation = designation;
             this.hireDate = hireDate;
         }
+        public EmployeeBL(string name, string username, string password, string email, DateTime dob, string address, string contact, string gender) : base(name, username, password, email, dob, address, contact, gender)
+        {
+        }
         public EmployeeBL() { }
         public EmployeeBL(string username, string password) : base(username, password)
         { }

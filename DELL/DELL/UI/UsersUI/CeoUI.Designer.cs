@@ -32,23 +32,26 @@ namespace DELL.UI.UsersUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CeoUI));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges46 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges47 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges48 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges49 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges50 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges51 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle56 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges52 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges53 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges54 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle59 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CEOMainPanel = new Guna.UI.WinForms.GunaPanel();
             this.CEOTabControl = new Guna.UI2.WinForms.Guna2TabControl();
             this.Dashboard = new System.Windows.Forms.TabPage();
@@ -138,9 +141,18 @@ namespace DELL.UI.UsersUI
             this.MainPanelC = new Guna.UI.WinForms.GunaPanel();
             this.BottomContainerC = new Guna.UI.WinForms.GunaPanel();
             this.CGridView = new System.Windows.Forms.DataGridView();
+            this.Column1C = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2C = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3C = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4C = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5C = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6C = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7C = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8C = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ButtonsContainerC = new System.Windows.Forms.TableLayoutPanel();
             this.DeleteCBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.AddCbtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.UpdateCBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.TopContainerC = new Guna.UI.WinForms.GunaPanel();
             this.CLabel = new System.Windows.Forms.Label();
             this.InputsC = new System.Windows.Forms.TableLayoutPanel();
@@ -160,18 +172,61 @@ namespace DELL.UI.UsersUI
             this.AInputC = new Guna.UI2.WinForms.Guna2TextBox();
             this.GInputC = new Guna.UI2.WinForms.Guna2ComboBox();
             this.DOBIC = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.ViewEmpOrders = new System.Windows.Forms.TabPage();
+            this.MainPanelEO = new Guna.UI.WinForms.GunaPanel();
+            this.BottomContainerEO = new Guna.UI.WinForms.GunaPanel();
+            this.EOrdersGridView = new System.Windows.Forms.DataGridView();
+            this.TopContainerEO = new Guna.UI.WinForms.GunaPanel();
+            this.T = new Guna.UI.WinForms.GunaPanel();
+            this.EOLabel = new System.Windows.Forms.Label();
+            this.EODataView = new System.Windows.Forms.TableLayoutPanel();
+            this.EOEmployeeID = new Guna.UI.WinForms.GunaLabel();
+            this.EmployeeIDEO = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.EOOrderID = new Guna.UI.WinForms.GunaLabel();
+            this.NameTXT = new Guna.UI.WinForms.GunaLabel();
+            this.EOCustomerID = new Guna.UI.WinForms.GunaLabel();
+            this.OrderID = new Guna.UI.WinForms.GunaLabel();
+            this.CustomerIDTXT = new Guna.UI.WinForms.GunaLabel();
+            this.OrderIDTXT = new Guna.UI.WinForms.GunaLabel();
             this.CEOTopContainer = new Guna.UI2.WinForms.Guna2Panel();
             this.Logo2 = new System.Windows.Forms.Label();
             this.Logo = new System.Windows.Forms.Label();
-            this.Column1C = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2C = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3C = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4C = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5C = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6C = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7C = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8C = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UpdateCBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.OrderDate = new Guna.UI.WinForms.GunaLabel();
+            this.OrderDateTXT = new Guna.UI.WinForms.GunaLabel();
+            this.TotalPrice = new Guna.UI.WinForms.GunaLabel();
+            this.PriceTXT = new Guna.UI.WinForms.GunaLabel();
+            this.Column1EO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2EO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3EO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4EO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5EO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6EO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ViewCustOrders = new System.Windows.Forms.TabPage();
+            this.MainPanelCO = new Guna.UI.WinForms.GunaPanel();
+            this.BottomContainerCO = new Guna.UI.WinForms.GunaPanel();
+            this.COGridView = new System.Windows.Forms.DataGridView();
+            this.TopContainerCO = new Guna.UI.WinForms.GunaPanel();
+            this.s = new Guna.UI.WinForms.GunaPanel();
+            this.COLabel = new System.Windows.Forms.Label();
+            this.CODataView = new System.Windows.Forms.TableLayoutPanel();
+            this.COCustID = new Guna.UI.WinForms.GunaLabel();
+            this.CustomerIDCO = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.NCO = new Guna.UI.WinForms.GunaLabel();
+            this.NameCOTXT = new Guna.UI.WinForms.GunaLabel();
+            this.EmployeeID = new Guna.UI.WinForms.GunaLabel();
+            this.OrderIDCO = new Guna.UI.WinForms.GunaLabel();
+            this.EmployeeIDCOTXT = new Guna.UI.WinForms.GunaLabel();
+            this.OIDTXT = new Guna.UI.WinForms.GunaLabel();
+            this.ODCO = new Guna.UI.WinForms.GunaLabel();
+            this.OrderDateCOTXT = new Guna.UI.WinForms.GunaLabel();
+            this.TPCO = new Guna.UI.WinForms.GunaLabel();
+            this.TotalPriceCO = new Guna.UI.WinForms.GunaLabel();
+            this.Column1CO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2CO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3CO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4CO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5CO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6CO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CEOMainPanel.SuspendLayout();
             this.CEOTabControl.SuspendLayout();
             this.Dashboard.SuspendLayout();
@@ -202,7 +257,21 @@ namespace DELL.UI.UsersUI
             this.ButtonsContainerC.SuspendLayout();
             this.TopContainerC.SuspendLayout();
             this.InputsC.SuspendLayout();
+            this.ViewEmpOrders.SuspendLayout();
+            this.MainPanelEO.SuspendLayout();
+            this.BottomContainerEO.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EOrdersGridView)).BeginInit();
+            this.TopContainerEO.SuspendLayout();
+            this.T.SuspendLayout();
+            this.EODataView.SuspendLayout();
             this.CEOTopContainer.SuspendLayout();
+            this.ViewCustOrders.SuspendLayout();
+            this.MainPanelCO.SuspendLayout();
+            this.BottomContainerCO.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.COGridView)).BeginInit();
+            this.TopContainerCO.SuspendLayout();
+            this.s.SuspendLayout();
+            this.CODataView.SuspendLayout();
             this.SuspendLayout();
             // 
             // CEOMainPanel
@@ -222,6 +291,8 @@ namespace DELL.UI.UsersUI
             this.CEOTabControl.Controls.Add(this.ManageSalesPersons);
             this.CEOTabControl.Controls.Add(this.ManageTechnicians);
             this.CEOTabControl.Controls.Add(this.ManageCustomers);
+            this.CEOTabControl.Controls.Add(this.ViewEmpOrders);
+            this.CEOTabControl.Controls.Add(this.ViewCustOrders);
             this.CEOTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CEOTabControl.Font = new System.Drawing.Font("Sitka Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CEOTabControl.ItemSize = new System.Drawing.Size(150, 40);
@@ -301,7 +372,7 @@ namespace DELL.UI.UsersUI
             // 
             // Pic1
             // 
-            this.Pic1.Image = ((System.Drawing.Image)(resources.GetObject("Pic1.Image")));
+            this.Pic1.Image = global::DELL.Properties.Resources.Customers;
             this.Pic1.ImageRotate = 0F;
             this.Pic1.Location = new System.Drawing.Point(126, 59);
             this.Pic1.Name = "Pic1";
@@ -314,7 +385,7 @@ namespace DELL.UI.UsersUI
             // 
             this.Pic2.BackColor = System.Drawing.Color.Transparent;
             this.Pic2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Pic2.Image = ((System.Drawing.Image)(resources.GetObject("Pic2.Image")));
+            this.Pic2.Image = global::DELL.Properties.Resources.Employees;
             this.Pic2.ImageRotate = 0F;
             this.Pic2.Location = new System.Drawing.Point(449, 59);
             this.Pic2.Name = "Pic2";
@@ -326,7 +397,7 @@ namespace DELL.UI.UsersUI
             // Pic3
             // 
             this.Pic3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Pic3.Image = ((System.Drawing.Image)(resources.GetObject("Pic3.Image")));
+            this.Pic3.Image = global::DELL.Properties.Resources.Orders;
             this.Pic3.ImageRotate = 0F;
             this.Pic3.Location = new System.Drawing.Point(126, 299);
             this.Pic3.Name = "Pic3";
@@ -338,7 +409,7 @@ namespace DELL.UI.UsersUI
             // Pic4
             // 
             this.Pic4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Pic4.Image = ((System.Drawing.Image)(resources.GetObject("Pic4.Image")));
+            this.Pic4.Image = global::DELL.Properties.Resources.Products;
             this.Pic4.ImageRotate = 0F;
             this.Pic4.Location = new System.Drawing.Point(449, 299);
             this.Pic4.Name = "Pic4";
@@ -417,18 +488,10 @@ namespace DELL.UI.UsersUI
             // 
             // SPGridView
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SPGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle51.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SPGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle51;
             this.SPGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.SPGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Sitka Display", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SPGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.SPGridView.ColumnHeadersHeight = 30;
             this.SPGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.SPGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -447,8 +510,8 @@ namespace DELL.UI.UsersUI
             this.SPGridView.ReadOnly = true;
             this.SPGridView.RowHeadersWidth = 40;
             this.SPGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Sitka Text", 12F);
-            this.SPGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle52.Font = new System.Drawing.Font("Sitka Text", 12F);
+            this.SPGridView.RowsDefaultCellStyle = dataGridViewCellStyle52;
             this.SPGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SPGridView.RowTemplate.Height = 20;
             this.SPGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -552,11 +615,11 @@ namespace DELL.UI.UsersUI
             this.DeleteSpBtn.ColorContrastOnClick = 45;
             this.DeleteSpBtn.ColorContrastOnHover = 45;
             this.DeleteSpBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.DeleteSpBtn.CustomizableEdges = borderEdges1;
+            borderEdges46.BottomLeft = true;
+            borderEdges46.BottomRight = true;
+            borderEdges46.TopLeft = true;
+            borderEdges46.TopRight = true;
+            this.DeleteSpBtn.CustomizableEdges = borderEdges46;
             this.DeleteSpBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.DeleteSpBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.DeleteSpBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -643,11 +706,11 @@ namespace DELL.UI.UsersUI
             this.AddSpbtn.ColorContrastOnClick = 45;
             this.AddSpbtn.ColorContrastOnHover = 45;
             this.AddSpbtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.AddSpbtn.CustomizableEdges = borderEdges2;
+            borderEdges47.BottomLeft = true;
+            borderEdges47.BottomRight = true;
+            borderEdges47.TopLeft = true;
+            borderEdges47.TopRight = true;
+            this.AddSpbtn.CustomizableEdges = borderEdges47;
             this.AddSpbtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.AddSpbtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.AddSpbtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -734,11 +797,11 @@ namespace DELL.UI.UsersUI
             this.UpdateSpBtn.ColorContrastOnClick = 45;
             this.UpdateSpBtn.ColorContrastOnHover = 45;
             this.UpdateSpBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.UpdateSpBtn.CustomizableEdges = borderEdges3;
+            borderEdges48.BottomLeft = true;
+            borderEdges48.BottomRight = true;
+            borderEdges48.TopLeft = true;
+            borderEdges48.TopRight = true;
+            this.UpdateSpBtn.CustomizableEdges = borderEdges48;
             this.UpdateSpBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.UpdateSpBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.UpdateSpBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -823,7 +886,7 @@ namespace DELL.UI.UsersUI
             this.MSPLabel.Font = new System.Drawing.Font("Sitka Display", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MSPLabel.Location = new System.Drawing.Point(0, 0);
             this.MSPLabel.Name = "MSPLabel";
-            this.MSPLabel.Size = new System.Drawing.Size(770, 39);
+            this.MSPLabel.Size = new System.Drawing.Size(770, 40);
             this.MSPLabel.TabIndex = 4;
             this.MSPLabel.Text = "Manage SalesPersons";
             this.MSPLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -857,14 +920,14 @@ namespace DELL.UI.UsersUI
             this.InputsSP.Controls.Add(this.DOBISP, 5, 0);
             this.InputsSP.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.InputsSP.ForeColor = System.Drawing.Color.Black;
-            this.InputsSP.Location = new System.Drawing.Point(0, 39);
+            this.InputsSP.Location = new System.Drawing.Point(0, 40);
             this.InputsSP.Name = "InputsSP";
             this.InputsSP.RowCount = 4;
             this.InputsSP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.InputsSP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.InputsSP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.InputsSP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
-            this.InputsSP.Size = new System.Drawing.Size(770, 195);
+            this.InputsSP.Size = new System.Drawing.Size(770, 194);
             this.InputsSP.TabIndex = 3;
             // 
             // ContactSP
@@ -1148,7 +1211,7 @@ namespace DELL.UI.UsersUI
             this.DOBISP.Font = new System.Drawing.Font("Sitka Text", 8F);
             this.DOBISP.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.DOBISP.Location = new System.Drawing.Point(511, 3);
-            this.DOBISP.MaxDate = new System.DateTime(2024, 4, 21, 1, 42, 13, 873);
+            this.DOBISP.MaxDate = new System.DateTime(2024, 4, 22, 13, 12, 24, 925);
             this.DOBISP.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.DOBISP.Name = "DOBISP";
             this.DOBISP.Size = new System.Drawing.Size(168, 43);
@@ -1188,8 +1251,8 @@ namespace DELL.UI.UsersUI
             // 
             // TGridView
             // 
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle53.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle53;
             this.TGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.TGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.TGridView.ColumnHeadersHeight = 30;
@@ -1210,8 +1273,8 @@ namespace DELL.UI.UsersUI
             this.TGridView.ReadOnly = true;
             this.TGridView.RowHeadersWidth = 40;
             this.TGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Sitka Text", 12F);
-            this.TGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle54.Font = new System.Drawing.Font("Sitka Text", 12F);
+            this.TGridView.RowsDefaultCellStyle = dataGridViewCellStyle54;
             this.TGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TGridView.RowTemplate.Height = 20;
             this.TGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1315,11 +1378,11 @@ namespace DELL.UI.UsersUI
             this.DeleteMTBtn.ColorContrastOnClick = 45;
             this.DeleteMTBtn.ColorContrastOnHover = 45;
             this.DeleteMTBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.DeleteMTBtn.CustomizableEdges = borderEdges4;
+            borderEdges49.BottomLeft = true;
+            borderEdges49.BottomRight = true;
+            borderEdges49.TopLeft = true;
+            borderEdges49.TopRight = true;
+            this.DeleteMTBtn.CustomizableEdges = borderEdges49;
             this.DeleteMTBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.DeleteMTBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.DeleteMTBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1406,11 +1469,11 @@ namespace DELL.UI.UsersUI
             this.AddMTBtn.ColorContrastOnClick = 45;
             this.AddMTBtn.ColorContrastOnHover = 45;
             this.AddMTBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.AddMTBtn.CustomizableEdges = borderEdges5;
+            borderEdges50.BottomLeft = true;
+            borderEdges50.BottomRight = true;
+            borderEdges50.TopLeft = true;
+            borderEdges50.TopRight = true;
+            this.AddMTBtn.CustomizableEdges = borderEdges50;
             this.AddMTBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.AddMTBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.AddMTBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1497,11 +1560,11 @@ namespace DELL.UI.UsersUI
             this.UpdateMTBtn.ColorContrastOnClick = 45;
             this.UpdateMTBtn.ColorContrastOnHover = 45;
             this.UpdateMTBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.UpdateMTBtn.CustomizableEdges = borderEdges6;
+            borderEdges51.BottomLeft = true;
+            borderEdges51.BottomRight = true;
+            borderEdges51.TopLeft = true;
+            borderEdges51.TopRight = true;
+            this.UpdateMTBtn.CustomizableEdges = borderEdges51;
             this.UpdateMTBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.UpdateMTBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.UpdateMTBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1585,7 +1648,7 @@ namespace DELL.UI.UsersUI
             this.MTLabel.Font = new System.Drawing.Font("Sitka Display", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MTLabel.Location = new System.Drawing.Point(0, 0);
             this.MTLabel.Name = "MTLabel";
-            this.MTLabel.Size = new System.Drawing.Size(770, 39);
+            this.MTLabel.Size = new System.Drawing.Size(770, 40);
             this.MTLabel.TabIndex = 4;
             this.MTLabel.Text = "Manage Technicians";
             this.MTLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1619,14 +1682,14 @@ namespace DELL.UI.UsersUI
             this.InputsMT.Controls.Add(this.DOBIMT, 5, 0);
             this.InputsMT.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.InputsMT.ForeColor = System.Drawing.Color.Black;
-            this.InputsMT.Location = new System.Drawing.Point(0, 39);
+            this.InputsMT.Location = new System.Drawing.Point(0, 40);
             this.InputsMT.Name = "InputsMT";
             this.InputsMT.RowCount = 4;
             this.InputsMT.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.InputsMT.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.InputsMT.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.InputsMT.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
-            this.InputsMT.Size = new System.Drawing.Size(770, 195);
+            this.InputsMT.Size = new System.Drawing.Size(770, 194);
             this.InputsMT.TabIndex = 3;
             // 
             // ContactMT
@@ -1910,7 +1973,7 @@ namespace DELL.UI.UsersUI
             this.DOBIMT.Font = new System.Drawing.Font("Sitka Text", 8F);
             this.DOBIMT.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.DOBIMT.Location = new System.Drawing.Point(511, 3);
-            this.DOBIMT.MaxDate = new System.DateTime(2024, 4, 21, 1, 42, 13, 873);
+            this.DOBIMT.MaxDate = new System.DateTime(2024, 4, 22, 13, 12, 25, 591);
             this.DOBIMT.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.DOBIMT.Name = "DOBIMT";
             this.DOBIMT.Size = new System.Drawing.Size(168, 43);
@@ -1950,8 +2013,8 @@ namespace DELL.UI.UsersUI
             // 
             // CGridView
             // 
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle55.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle55;
             this.CGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.CGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.CGridView.ColumnHeadersHeight = 30;
@@ -1971,14 +2034,63 @@ namespace DELL.UI.UsersUI
             this.CGridView.ReadOnly = true;
             this.CGridView.RowHeadersWidth = 40;
             this.CGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Sitka Text", 12F);
-            this.CGridView.RowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle56.Font = new System.Drawing.Font("Sitka Text", 12F);
+            this.CGridView.RowsDefaultCellStyle = dataGridViewCellStyle56;
             this.CGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CGridView.RowTemplate.Height = 20;
             this.CGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.CGridView.Size = new System.Drawing.Size(770, 287);
             this.CGridView.TabIndex = 2;
             this.CGridView.SelectionChanged += new System.EventHandler(this.CGridView_SelectionChanged);
+            // 
+            // Column1C
+            // 
+            this.Column1C.HeaderText = "Name";
+            this.Column1C.Name = "Column1C";
+            this.Column1C.ReadOnly = true;
+            // 
+            // Column2C
+            // 
+            this.Column2C.HeaderText = "Username";
+            this.Column2C.Name = "Column2C";
+            this.Column2C.ReadOnly = true;
+            // 
+            // Column3C
+            // 
+            this.Column3C.HeaderText = "Password";
+            this.Column3C.Name = "Column3C";
+            this.Column3C.ReadOnly = true;
+            // 
+            // Column4C
+            // 
+            this.Column4C.HeaderText = "Email";
+            this.Column4C.Name = "Column4C";
+            this.Column4C.ReadOnly = true;
+            // 
+            // Column5C
+            // 
+            this.Column5C.HeaderText = "Dob";
+            this.Column5C.Name = "Column5C";
+            this.Column5C.ReadOnly = true;
+            // 
+            // Column6C
+            // 
+            this.Column6C.HeaderText = "Contact";
+            this.Column6C.Name = "Column6C";
+            this.Column6C.ReadOnly = true;
+            // 
+            // Column7C
+            // 
+            this.Column7C.HeaderText = "Address";
+            this.Column7C.Name = "Column7C";
+            this.Column7C.ReadOnly = true;
+            // 
+            // Column8C
+            // 
+            this.Column8C.FillWeight = 80F;
+            this.Column8C.HeaderText = "Gender";
+            this.Column8C.Name = "Column8C";
+            this.Column8C.ReadOnly = true;
             // 
             // ButtonsContainerC
             // 
@@ -2021,11 +2133,11 @@ namespace DELL.UI.UsersUI
             this.DeleteCBtn.ColorContrastOnClick = 45;
             this.DeleteCBtn.ColorContrastOnHover = 45;
             this.DeleteCBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges7.BottomLeft = true;
-            borderEdges7.BottomRight = true;
-            borderEdges7.TopLeft = true;
-            borderEdges7.TopRight = true;
-            this.DeleteCBtn.CustomizableEdges = borderEdges7;
+            borderEdges52.BottomLeft = true;
+            borderEdges52.BottomRight = true;
+            borderEdges52.TopLeft = true;
+            borderEdges52.TopRight = true;
+            this.DeleteCBtn.CustomizableEdges = borderEdges52;
             this.DeleteCBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.DeleteCBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.DeleteCBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -2112,11 +2224,11 @@ namespace DELL.UI.UsersUI
             this.AddCbtn.ColorContrastOnClick = 45;
             this.AddCbtn.ColorContrastOnHover = 45;
             this.AddCbtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges8.BottomLeft = true;
-            borderEdges8.BottomRight = true;
-            borderEdges8.TopLeft = true;
-            borderEdges8.TopRight = true;
-            this.AddCbtn.CustomizableEdges = borderEdges8;
+            borderEdges53.BottomLeft = true;
+            borderEdges53.BottomRight = true;
+            borderEdges53.TopLeft = true;
+            borderEdges53.TopRight = true;
+            this.AddCbtn.CustomizableEdges = borderEdges53;
             this.AddCbtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.AddCbtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.AddCbtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -2184,6 +2296,97 @@ namespace DELL.UI.UsersUI
             this.AddCbtn.UseDefaultRadiusAndThickness = true;
             this.AddCbtn.Click += new System.EventHandler(this.AddCbtn_Click);
             // 
+            // UpdateCBtn
+            // 
+            this.UpdateCBtn.AllowAnimations = true;
+            this.UpdateCBtn.AllowMouseEffects = true;
+            this.UpdateCBtn.AllowToggling = false;
+            this.UpdateCBtn.AnimationSpeed = 200;
+            this.UpdateCBtn.AutoGenerateColors = false;
+            this.UpdateCBtn.AutoRoundBorders = false;
+            this.UpdateCBtn.AutoSizeLeftIcon = true;
+            this.UpdateCBtn.AutoSizeRightIcon = true;
+            this.UpdateCBtn.BackColor = System.Drawing.Color.Transparent;
+            this.UpdateCBtn.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(144)))), ((int)(((byte)(231)))));
+            this.UpdateCBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("UpdateCBtn.BackgroundImage")));
+            this.UpdateCBtn.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.UpdateCBtn.ButtonText = "Update";
+            this.UpdateCBtn.ButtonTextMarginLeft = 0;
+            this.UpdateCBtn.ColorContrastOnClick = 45;
+            this.UpdateCBtn.ColorContrastOnHover = 45;
+            this.UpdateCBtn.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges54.BottomLeft = true;
+            borderEdges54.BottomRight = true;
+            borderEdges54.TopLeft = true;
+            borderEdges54.TopRight = true;
+            this.UpdateCBtn.CustomizableEdges = borderEdges54;
+            this.UpdateCBtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.UpdateCBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.UpdateCBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.UpdateCBtn.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.UpdateCBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.UpdateCBtn.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Idle;
+            this.UpdateCBtn.Font = new System.Drawing.Font("Sitka Display", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateCBtn.ForeColor = System.Drawing.SystemColors.Info;
+            this.UpdateCBtn.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.UpdateCBtn.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.UpdateCBtn.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.UpdateCBtn.IconMarginLeft = 11;
+            this.UpdateCBtn.IconPadding = 10;
+            this.UpdateCBtn.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.UpdateCBtn.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.UpdateCBtn.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.UpdateCBtn.IconSize = 25;
+            this.UpdateCBtn.IdleBorderColor = System.Drawing.Color.LightBlue;
+            this.UpdateCBtn.IdleBorderRadius = 50;
+            this.UpdateCBtn.IdleBorderThickness = 2;
+            this.UpdateCBtn.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(144)))), ((int)(((byte)(231)))));
+            this.UpdateCBtn.IdleIconLeftImage = null;
+            this.UpdateCBtn.IdleIconRightImage = null;
+            this.UpdateCBtn.IndicateFocus = false;
+            this.UpdateCBtn.Location = new System.Drawing.Point(317, 3);
+            this.UpdateCBtn.Name = "UpdateCBtn";
+            this.UpdateCBtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.UpdateCBtn.OnDisabledState.BorderRadius = 0;
+            this.UpdateCBtn.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.UpdateCBtn.OnDisabledState.BorderThickness = 2;
+            this.UpdateCBtn.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.UpdateCBtn.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.UpdateCBtn.OnDisabledState.IconLeftImage = null;
+            this.UpdateCBtn.OnDisabledState.IconRightImage = null;
+            this.UpdateCBtn.onHoverState.BorderColor = System.Drawing.Color.Black;
+            this.UpdateCBtn.onHoverState.BorderRadius = 0;
+            this.UpdateCBtn.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.UpdateCBtn.onHoverState.BorderThickness = 2;
+            this.UpdateCBtn.onHoverState.FillColor = System.Drawing.Color.Red;
+            this.UpdateCBtn.onHoverState.ForeColor = System.Drawing.Color.Black;
+            this.UpdateCBtn.onHoverState.IconLeftImage = null;
+            this.UpdateCBtn.onHoverState.IconRightImage = null;
+            this.UpdateCBtn.OnIdleState.BorderColor = System.Drawing.Color.LightBlue;
+            this.UpdateCBtn.OnIdleState.BorderRadius = 0;
+            this.UpdateCBtn.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.UpdateCBtn.OnIdleState.BorderThickness = 2;
+            this.UpdateCBtn.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(144)))), ((int)(((byte)(231)))));
+            this.UpdateCBtn.OnIdleState.ForeColor = System.Drawing.SystemColors.Info;
+            this.UpdateCBtn.OnIdleState.IconLeftImage = null;
+            this.UpdateCBtn.OnIdleState.IconRightImage = null;
+            this.UpdateCBtn.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.UpdateCBtn.OnPressedState.BorderRadius = 0;
+            this.UpdateCBtn.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.UpdateCBtn.OnPressedState.BorderThickness = 2;
+            this.UpdateCBtn.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.UpdateCBtn.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.UpdateCBtn.OnPressedState.IconLeftImage = null;
+            this.UpdateCBtn.OnPressedState.IconRightImage = null;
+            this.UpdateCBtn.Size = new System.Drawing.Size(134, 59);
+            this.UpdateCBtn.TabIndex = 18;
+            this.UpdateCBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.UpdateCBtn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.UpdateCBtn.TextMarginLeft = 0;
+            this.UpdateCBtn.TextPadding = new System.Windows.Forms.Padding(0);
+            this.UpdateCBtn.UseDefaultRadiusAndThickness = true;
+            this.UpdateCBtn.Click += new System.EventHandler(this.UpdateCBtn_Click);
+            // 
             // TopContainerC
             // 
             this.TopContainerC.Controls.Add(this.CLabel);
@@ -2200,7 +2403,7 @@ namespace DELL.UI.UsersUI
             this.CLabel.Font = new System.Drawing.Font("Sitka Display", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CLabel.Location = new System.Drawing.Point(0, 0);
             this.CLabel.Name = "CLabel";
-            this.CLabel.Size = new System.Drawing.Size(770, 39);
+            this.CLabel.Size = new System.Drawing.Size(770, 40);
             this.CLabel.TabIndex = 4;
             this.CLabel.Text = "Manage Customers";
             this.CLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2234,14 +2437,14 @@ namespace DELL.UI.UsersUI
             this.InputsC.Controls.Add(this.DOBIC, 5, 0);
             this.InputsC.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.InputsC.ForeColor = System.Drawing.Color.Black;
-            this.InputsC.Location = new System.Drawing.Point(0, 39);
+            this.InputsC.Location = new System.Drawing.Point(0, 40);
             this.InputsC.Name = "InputsC";
             this.InputsC.RowCount = 4;
             this.InputsC.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.InputsC.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.InputsC.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.InputsC.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
-            this.InputsC.Size = new System.Drawing.Size(770, 195);
+            this.InputsC.Size = new System.Drawing.Size(770, 194);
             this.InputsC.TabIndex = 3;
             // 
             // ContactC
@@ -2525,12 +2728,241 @@ namespace DELL.UI.UsersUI
             this.DOBIC.Font = new System.Drawing.Font("Sitka Text", 8F);
             this.DOBIC.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.DOBIC.Location = new System.Drawing.Point(511, 3);
-            this.DOBIC.MaxDate = new System.DateTime(2024, 4, 21, 1, 42, 13, 873);
+            this.DOBIC.MaxDate = new System.DateTime(2024, 4, 22, 13, 12, 26, 199);
             this.DOBIC.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.DOBIC.Name = "DOBIC";
             this.DOBIC.Size = new System.Drawing.Size(168, 43);
             this.DOBIC.TabIndex = 18;
             this.DOBIC.Value = new System.DateTime(2024, 4, 1, 0, 0, 0, 0);
+            // 
+            // ViewEmpOrders
+            // 
+            this.ViewEmpOrders.Controls.Add(this.MainPanelEO);
+            this.ViewEmpOrders.Location = new System.Drawing.Point(154, 4);
+            this.ViewEmpOrders.Name = "ViewEmpOrders";
+            this.ViewEmpOrders.Padding = new System.Windows.Forms.Padding(3);
+            this.ViewEmpOrders.Size = new System.Drawing.Size(776, 591);
+            this.ViewEmpOrders.TabIndex = 4;
+            this.ViewEmpOrders.Text = "View Orders by EmployeeID";
+            this.ViewEmpOrders.UseVisualStyleBackColor = true;
+            // 
+            // MainPanelEO
+            // 
+            this.MainPanelEO.Controls.Add(this.BottomContainerEO);
+            this.MainPanelEO.Controls.Add(this.TopContainerEO);
+            this.MainPanelEO.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPanelEO.Location = new System.Drawing.Point(3, 3);
+            this.MainPanelEO.Name = "MainPanelEO";
+            this.MainPanelEO.Size = new System.Drawing.Size(770, 585);
+            this.MainPanelEO.TabIndex = 1;
+            // 
+            // BottomContainerEO
+            // 
+            this.BottomContainerEO.Controls.Add(this.EOrdersGridView);
+            this.BottomContainerEO.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BottomContainerEO.Location = new System.Drawing.Point(0, 190);
+            this.BottomContainerEO.Name = "BottomContainerEO";
+            this.BottomContainerEO.Size = new System.Drawing.Size(770, 395);
+            this.BottomContainerEO.TabIndex = 1;
+            // 
+            // EOrdersGridView
+            // 
+            dataGridViewCellStyle57.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EOrdersGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle57;
+            this.EOrdersGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.EOrdersGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.EOrdersGridView.ColumnHeadersHeight = 30;
+            this.EOrdersGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.EOrdersGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1EO,
+            this.Column2EO,
+            this.Column3EO,
+            this.Column4EO,
+            this.Column5EO,
+            this.Column6EO});
+            this.EOrdersGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EOrdersGridView.Location = new System.Drawing.Point(0, 0);
+            this.EOrdersGridView.Name = "EOrdersGridView";
+            this.EOrdersGridView.ReadOnly = true;
+            this.EOrdersGridView.RowHeadersWidth = 40;
+            this.EOrdersGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle58.Font = new System.Drawing.Font("Sitka Text", 12F);
+            this.EOrdersGridView.RowsDefaultCellStyle = dataGridViewCellStyle58;
+            this.EOrdersGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EOrdersGridView.RowTemplate.Height = 20;
+            this.EOrdersGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.EOrdersGridView.Size = new System.Drawing.Size(770, 395);
+            this.EOrdersGridView.TabIndex = 2;
+            this.EOrdersGridView.SelectionChanged += new System.EventHandler(this.EOGridView_SelectionChanged);
+            // 
+            // TopContainerEO
+            // 
+            this.TopContainerEO.Controls.Add(this.T);
+            this.TopContainerEO.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TopContainerEO.Location = new System.Drawing.Point(0, 0);
+            this.TopContainerEO.Name = "TopContainerEO";
+            this.TopContainerEO.Size = new System.Drawing.Size(770, 190);
+            this.TopContainerEO.TabIndex = 0;
+            // 
+            // T
+            // 
+            this.T.Controls.Add(this.EOLabel);
+            this.T.Controls.Add(this.EODataView);
+            this.T.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.T.Location = new System.Drawing.Point(0, 0);
+            this.T.Name = "T";
+            this.T.Size = new System.Drawing.Size(770, 190);
+            this.T.TabIndex = 1;
+            // 
+            // EOLabel
+            // 
+            this.EOLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EOLabel.Font = new System.Drawing.Font("Sitka Display", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EOLabel.Location = new System.Drawing.Point(0, 0);
+            this.EOLabel.Name = "EOLabel";
+            this.EOLabel.Size = new System.Drawing.Size(770, 41);
+            this.EOLabel.TabIndex = 4;
+            this.EOLabel.Text = "Employee Placed Orders";
+            this.EOLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // EODataView
+            // 
+            this.EODataView.BackColor = System.Drawing.Color.GhostWhite;
+            this.EODataView.ColumnCount = 7;
+            this.EODataView.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.46055F));
+            this.EODataView.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.20111F));
+            this.EODataView.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.295F));
+            this.EODataView.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.302407F));
+            this.EODataView.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.11686F));
+            this.EODataView.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.64033F));
+            this.EODataView.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.98374F));
+            this.EODataView.Controls.Add(this.EOEmployeeID, 1, 0);
+            this.EODataView.Controls.Add(this.EmployeeIDEO, 2, 0);
+            this.EODataView.Controls.Add(this.EOOrderID, 4, 0);
+            this.EODataView.Controls.Add(this.NameTXT, 5, 0);
+            this.EODataView.Controls.Add(this.EOCustomerID, 1, 1);
+            this.EODataView.Controls.Add(this.OrderID, 4, 1);
+            this.EODataView.Controls.Add(this.CustomerIDTXT, 2, 1);
+            this.EODataView.Controls.Add(this.OrderIDTXT, 5, 1);
+            this.EODataView.Controls.Add(this.OrderDate, 1, 2);
+            this.EODataView.Controls.Add(this.OrderDateTXT, 2, 2);
+            this.EODataView.Controls.Add(this.TotalPrice, 4, 2);
+            this.EODataView.Controls.Add(this.PriceTXT, 5, 2);
+            this.EODataView.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.EODataView.ForeColor = System.Drawing.Color.Black;
+            this.EODataView.Location = new System.Drawing.Point(0, 41);
+            this.EODataView.Name = "EODataView";
+            this.EODataView.RowCount = 3;
+            this.EODataView.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.EODataView.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.EODataView.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.EODataView.Size = new System.Drawing.Size(770, 149);
+            this.EODataView.TabIndex = 3;
+            // 
+            // EOEmployeeID
+            // 
+            this.EOEmployeeID.AutoSize = true;
+            this.EOEmployeeID.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EOEmployeeID.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EOEmployeeID.Location = new System.Drawing.Point(83, 0);
+            this.EOEmployeeID.Name = "EOEmployeeID";
+            this.EOEmployeeID.Size = new System.Drawing.Size(118, 49);
+            this.EOEmployeeID.TabIndex = 9;
+            this.EOEmployeeID.Text = "EmployeeID";
+            this.EOEmployeeID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // EmployeeIDEO
+            // 
+            this.EmployeeIDEO.AutoRoundedCorners = true;
+            this.EmployeeIDEO.BackColor = System.Drawing.Color.Transparent;
+            this.EmployeeIDEO.BorderRadius = 19;
+            this.EmployeeIDEO.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EmployeeIDEO.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.EmployeeIDEO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.EmployeeIDEO.FillColor = System.Drawing.SystemColors.InactiveBorder;
+            this.EmployeeIDEO.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.EmployeeIDEO.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.EmployeeIDEO.Font = new System.Drawing.Font("Sitka Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmployeeIDEO.ForeColor = System.Drawing.Color.Black;
+            this.EmployeeIDEO.ItemHeight = 34;
+            this.EmployeeIDEO.Items.AddRange(new object[] {
+            "Female",
+            "Male"});
+            this.EmployeeIDEO.Location = new System.Drawing.Point(207, 3);
+            this.EmployeeIDEO.Name = "EmployeeIDEO";
+            this.EmployeeIDEO.Size = new System.Drawing.Size(157, 40);
+            this.EmployeeIDEO.Sorted = true;
+            this.EmployeeIDEO.TabIndex = 17;
+            this.EmployeeIDEO.SelectionChangeCommitted += new System.EventHandler(this.EmployeeIDEO_SelectionChanged);
+            // 
+            // EOOrderID
+            // 
+            this.EOOrderID.AutoSize = true;
+            this.EOOrderID.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EOOrderID.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EOOrderID.Location = new System.Drawing.Point(387, 0);
+            this.EOOrderID.Name = "EOOrderID";
+            this.EOOrderID.Size = new System.Drawing.Size(118, 49);
+            this.EOOrderID.TabIndex = 18;
+            this.EOOrderID.Text = "Name";
+            this.EOOrderID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // NameTXT
+            // 
+            this.NameTXT.AutoSize = true;
+            this.NameTXT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NameTXT.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameTXT.Location = new System.Drawing.Point(511, 0);
+            this.NameTXT.Name = "NameTXT";
+            this.NameTXT.Size = new System.Drawing.Size(168, 49);
+            this.NameTXT.TabIndex = 19;
+            this.NameTXT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // EOCustomerID
+            // 
+            this.EOCustomerID.AutoSize = true;
+            this.EOCustomerID.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EOCustomerID.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EOCustomerID.Location = new System.Drawing.Point(83, 49);
+            this.EOCustomerID.Name = "EOCustomerID";
+            this.EOCustomerID.Size = new System.Drawing.Size(118, 49);
+            this.EOCustomerID.TabIndex = 20;
+            this.EOCustomerID.Text = "CustomerID";
+            this.EOCustomerID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // OrderID
+            // 
+            this.OrderID.AutoSize = true;
+            this.OrderID.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OrderID.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrderID.Location = new System.Drawing.Point(387, 49);
+            this.OrderID.Name = "OrderID";
+            this.OrderID.Size = new System.Drawing.Size(118, 49);
+            this.OrderID.TabIndex = 21;
+            this.OrderID.Text = "OrderID";
+            this.OrderID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // CustomerIDTXT
+            // 
+            this.CustomerIDTXT.AutoSize = true;
+            this.CustomerIDTXT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CustomerIDTXT.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustomerIDTXT.Location = new System.Drawing.Point(207, 49);
+            this.CustomerIDTXT.Name = "CustomerIDTXT";
+            this.CustomerIDTXT.Size = new System.Drawing.Size(157, 49);
+            this.CustomerIDTXT.TabIndex = 22;
+            this.CustomerIDTXT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // OrderIDTXT
+            // 
+            this.OrderIDTXT.AutoSize = true;
+            this.OrderIDTXT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OrderIDTXT.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrderIDTXT.Location = new System.Drawing.Point(511, 49);
+            this.OrderIDTXT.Name = "OrderIDTXT";
+            this.OrderIDTXT.Size = new System.Drawing.Size(168, 49);
+            this.OrderIDTXT.TabIndex = 23;
+            this.OrderIDTXT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // CEOTopContainer
             // 
@@ -2546,7 +2978,7 @@ namespace DELL.UI.UsersUI
             // 
             this.Logo2.BackColor = System.Drawing.Color.Lavender;
             this.Logo2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Logo2.Image = ((System.Drawing.Image)(resources.GetObject("Logo2.Image")));
+            this.Logo2.Image = global::DELL.Properties.Resources.CEO;
             this.Logo2.Location = new System.Drawing.Point(150, 0);
             this.Logo2.Name = "Logo2";
             this.Logo2.Size = new System.Drawing.Size(784, 150);
@@ -2561,145 +2993,398 @@ namespace DELL.UI.UsersUI
             this.Logo.Size = new System.Drawing.Size(150, 150);
             this.Logo.TabIndex = 0;
             // 
-            // Column1C
+            // OrderDate
             // 
-            this.Column1C.HeaderText = "Name";
-            this.Column1C.Name = "Column1C";
-            this.Column1C.ReadOnly = true;
+            this.OrderDate.AutoSize = true;
+            this.OrderDate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OrderDate.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrderDate.Location = new System.Drawing.Point(83, 98);
+            this.OrderDate.Name = "OrderDate";
+            this.OrderDate.Size = new System.Drawing.Size(118, 51);
+            this.OrderDate.TabIndex = 24;
+            this.OrderDate.Text = "Order Date";
+            this.OrderDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Column2C
+            // OrderDateTXT
             // 
-            this.Column2C.HeaderText = "Username";
-            this.Column2C.Name = "Column2C";
-            this.Column2C.ReadOnly = true;
+            this.OrderDateTXT.AutoSize = true;
+            this.OrderDateTXT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OrderDateTXT.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrderDateTXT.Location = new System.Drawing.Point(207, 98);
+            this.OrderDateTXT.Name = "OrderDateTXT";
+            this.OrderDateTXT.Size = new System.Drawing.Size(157, 51);
+            this.OrderDateTXT.TabIndex = 25;
+            this.OrderDateTXT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Column3C
+            // TotalPrice
             // 
-            this.Column3C.HeaderText = "Password";
-            this.Column3C.Name = "Column3C";
-            this.Column3C.ReadOnly = true;
+            this.TotalPrice.AutoSize = true;
+            this.TotalPrice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TotalPrice.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalPrice.Location = new System.Drawing.Point(387, 98);
+            this.TotalPrice.Name = "TotalPrice";
+            this.TotalPrice.Size = new System.Drawing.Size(118, 51);
+            this.TotalPrice.TabIndex = 26;
+            this.TotalPrice.Text = "Total Price";
+            this.TotalPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Column4C
+            // PriceTXT
             // 
-            this.Column4C.HeaderText = "Email";
-            this.Column4C.Name = "Column4C";
-            this.Column4C.ReadOnly = true;
+            this.PriceTXT.AutoSize = true;
+            this.PriceTXT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PriceTXT.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PriceTXT.Location = new System.Drawing.Point(511, 98);
+            this.PriceTXT.Name = "PriceTXT";
+            this.PriceTXT.Size = new System.Drawing.Size(168, 51);
+            this.PriceTXT.TabIndex = 27;
+            this.PriceTXT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Column5C
+            // Column1EO
             // 
-            this.Column5C.HeaderText = "Dob";
-            this.Column5C.Name = "Column5C";
-            this.Column5C.ReadOnly = true;
+            this.Column1EO.HeaderText = "OrderID";
+            this.Column1EO.Name = "Column1EO";
+            this.Column1EO.ReadOnly = true;
             // 
-            // Column6C
+            // Column2EO
             // 
-            this.Column6C.HeaderText = "Contact";
-            this.Column6C.Name = "Column6C";
-            this.Column6C.ReadOnly = true;
+            this.Column2EO.HeaderText = "CustomerID";
+            this.Column2EO.Name = "Column2EO";
+            this.Column2EO.ReadOnly = true;
             // 
-            // Column7C
+            // Column3EO
             // 
-            this.Column7C.HeaderText = "Address";
-            this.Column7C.Name = "Column7C";
-            this.Column7C.ReadOnly = true;
+            this.Column3EO.HeaderText = "EmployeeID";
+            this.Column3EO.Name = "Column3EO";
+            this.Column3EO.ReadOnly = true;
             // 
-            // Column8C
+            // Column4EO
             // 
-            this.Column8C.FillWeight = 80F;
-            this.Column8C.HeaderText = "Gender";
-            this.Column8C.Name = "Column8C";
-            this.Column8C.ReadOnly = true;
+            this.Column4EO.HeaderText = "OrderType";
+            this.Column4EO.Name = "Column4EO";
+            this.Column4EO.ReadOnly = true;
             // 
-            // UpdateCBtn
+            // Column5EO
             // 
-            this.UpdateCBtn.AllowAnimations = true;
-            this.UpdateCBtn.AllowMouseEffects = true;
-            this.UpdateCBtn.AllowToggling = false;
-            this.UpdateCBtn.AnimationSpeed = 200;
-            this.UpdateCBtn.AutoGenerateColors = false;
-            this.UpdateCBtn.AutoRoundBorders = false;
-            this.UpdateCBtn.AutoSizeLeftIcon = true;
-            this.UpdateCBtn.AutoSizeRightIcon = true;
-            this.UpdateCBtn.BackColor = System.Drawing.Color.Transparent;
-            this.UpdateCBtn.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(144)))), ((int)(((byte)(231)))));
-            this.UpdateCBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("UpdateCBtn.BackgroundImage")));
-            this.UpdateCBtn.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.UpdateCBtn.ButtonText = "Update";
-            this.UpdateCBtn.ButtonTextMarginLeft = 0;
-            this.UpdateCBtn.ColorContrastOnClick = 45;
-            this.UpdateCBtn.ColorContrastOnHover = 45;
-            this.UpdateCBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges9.BottomLeft = true;
-            borderEdges9.BottomRight = true;
-            borderEdges9.TopLeft = true;
-            borderEdges9.TopRight = true;
-            this.UpdateCBtn.CustomizableEdges = borderEdges9;
-            this.UpdateCBtn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.UpdateCBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.UpdateCBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.UpdateCBtn.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.UpdateCBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.UpdateCBtn.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Idle;
-            this.UpdateCBtn.Font = new System.Drawing.Font("Sitka Display", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateCBtn.ForeColor = System.Drawing.SystemColors.Info;
-            this.UpdateCBtn.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.UpdateCBtn.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.UpdateCBtn.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.UpdateCBtn.IconMarginLeft = 11;
-            this.UpdateCBtn.IconPadding = 10;
-            this.UpdateCBtn.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.UpdateCBtn.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.UpdateCBtn.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.UpdateCBtn.IconSize = 25;
-            this.UpdateCBtn.IdleBorderColor = System.Drawing.Color.LightBlue;
-            this.UpdateCBtn.IdleBorderRadius = 50;
-            this.UpdateCBtn.IdleBorderThickness = 2;
-            this.UpdateCBtn.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(144)))), ((int)(((byte)(231)))));
-            this.UpdateCBtn.IdleIconLeftImage = null;
-            this.UpdateCBtn.IdleIconRightImage = null;
-            this.UpdateCBtn.IndicateFocus = false;
-            this.UpdateCBtn.Location = new System.Drawing.Point(317, 3);
-            this.UpdateCBtn.Name = "UpdateCBtn";
-            this.UpdateCBtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.UpdateCBtn.OnDisabledState.BorderRadius = 0;
-            this.UpdateCBtn.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.UpdateCBtn.OnDisabledState.BorderThickness = 2;
-            this.UpdateCBtn.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.UpdateCBtn.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.UpdateCBtn.OnDisabledState.IconLeftImage = null;
-            this.UpdateCBtn.OnDisabledState.IconRightImage = null;
-            this.UpdateCBtn.onHoverState.BorderColor = System.Drawing.Color.Black;
-            this.UpdateCBtn.onHoverState.BorderRadius = 0;
-            this.UpdateCBtn.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.UpdateCBtn.onHoverState.BorderThickness = 2;
-            this.UpdateCBtn.onHoverState.FillColor = System.Drawing.Color.Red;
-            this.UpdateCBtn.onHoverState.ForeColor = System.Drawing.Color.Black;
-            this.UpdateCBtn.onHoverState.IconLeftImage = null;
-            this.UpdateCBtn.onHoverState.IconRightImage = null;
-            this.UpdateCBtn.OnIdleState.BorderColor = System.Drawing.Color.LightBlue;
-            this.UpdateCBtn.OnIdleState.BorderRadius = 0;
-            this.UpdateCBtn.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.UpdateCBtn.OnIdleState.BorderThickness = 2;
-            this.UpdateCBtn.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(144)))), ((int)(((byte)(231)))));
-            this.UpdateCBtn.OnIdleState.ForeColor = System.Drawing.SystemColors.Info;
-            this.UpdateCBtn.OnIdleState.IconLeftImage = null;
-            this.UpdateCBtn.OnIdleState.IconRightImage = null;
-            this.UpdateCBtn.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.UpdateCBtn.OnPressedState.BorderRadius = 0;
-            this.UpdateCBtn.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.UpdateCBtn.OnPressedState.BorderThickness = 2;
-            this.UpdateCBtn.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.UpdateCBtn.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.UpdateCBtn.OnPressedState.IconLeftImage = null;
-            this.UpdateCBtn.OnPressedState.IconRightImage = null;
-            this.UpdateCBtn.Size = new System.Drawing.Size(134, 59);
-            this.UpdateCBtn.TabIndex = 18;
-            this.UpdateCBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.UpdateCBtn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.UpdateCBtn.TextMarginLeft = 0;
-            this.UpdateCBtn.TextPadding = new System.Windows.Forms.Padding(0);
-            this.UpdateCBtn.UseDefaultRadiusAndThickness = true;
-            this.UpdateCBtn.Click += new System.EventHandler(this.UpdateCBtn_Click);
+            this.Column5EO.HeaderText = "Order Date";
+            this.Column5EO.Name = "Column5EO";
+            this.Column5EO.ReadOnly = true;
+            // 
+            // Column6EO
+            // 
+            this.Column6EO.HeaderText = "Total Price";
+            this.Column6EO.Name = "Column6EO";
+            this.Column6EO.ReadOnly = true;
+            // 
+            // ViewCustOrders
+            // 
+            this.ViewCustOrders.Controls.Add(this.MainPanelCO);
+            this.ViewCustOrders.Location = new System.Drawing.Point(154, 4);
+            this.ViewCustOrders.Name = "ViewCustOrders";
+            this.ViewCustOrders.Padding = new System.Windows.Forms.Padding(3);
+            this.ViewCustOrders.Size = new System.Drawing.Size(776, 591);
+            this.ViewCustOrders.TabIndex = 5;
+            this.ViewCustOrders.Text = "View Orders by CustomerID";
+            this.ViewCustOrders.UseVisualStyleBackColor = true;
+            // 
+            // MainPanelCO
+            // 
+            this.MainPanelCO.Controls.Add(this.BottomContainerCO);
+            this.MainPanelCO.Controls.Add(this.TopContainerCO);
+            this.MainPanelCO.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPanelCO.Location = new System.Drawing.Point(3, 3);
+            this.MainPanelCO.Name = "MainPanelCO";
+            this.MainPanelCO.Size = new System.Drawing.Size(770, 585);
+            this.MainPanelCO.TabIndex = 2;
+            // 
+            // BottomContainerCO
+            // 
+            this.BottomContainerCO.Controls.Add(this.COGridView);
+            this.BottomContainerCO.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BottomContainerCO.Location = new System.Drawing.Point(0, 190);
+            this.BottomContainerCO.Name = "BottomContainerCO";
+            this.BottomContainerCO.Size = new System.Drawing.Size(770, 395);
+            this.BottomContainerCO.TabIndex = 1;
+            // 
+            // COGridView
+            // 
+            dataGridViewCellStyle59.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.COGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle59;
+            this.COGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.COGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.COGridView.ColumnHeadersHeight = 30;
+            this.COGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.COGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1CO,
+            this.Column2CO,
+            this.Column3CO,
+            this.Column4CO,
+            this.Column5CO,
+            this.Column6CO});
+            this.COGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.COGridView.Location = new System.Drawing.Point(0, 0);
+            this.COGridView.Name = "COGridView";
+            this.COGridView.ReadOnly = true;
+            this.COGridView.RowHeadersWidth = 40;
+            this.COGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle60.Font = new System.Drawing.Font("Sitka Text", 12F);
+            this.COGridView.RowsDefaultCellStyle = dataGridViewCellStyle60;
+            this.COGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.COGridView.RowTemplate.Height = 20;
+            this.COGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.COGridView.Size = new System.Drawing.Size(770, 395);
+            this.COGridView.TabIndex = 2;
+            this.COGridView.SelectionChanged += new System.EventHandler(this.COGridView_SelectionChanged);
+            // 
+            // TopContainerCO
+            // 
+            this.TopContainerCO.Controls.Add(this.s);
+            this.TopContainerCO.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TopContainerCO.Location = new System.Drawing.Point(0, 0);
+            this.TopContainerCO.Name = "TopContainerCO";
+            this.TopContainerCO.Size = new System.Drawing.Size(770, 190);
+            this.TopContainerCO.TabIndex = 0;
+            // 
+            // s
+            // 
+            this.s.Controls.Add(this.COLabel);
+            this.s.Controls.Add(this.CODataView);
+            this.s.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.s.Location = new System.Drawing.Point(0, 0);
+            this.s.Name = "s";
+            this.s.Size = new System.Drawing.Size(770, 190);
+            this.s.TabIndex = 1;
+            // 
+            // COLabel
+            // 
+            this.COLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.COLabel.Font = new System.Drawing.Font("Sitka Display", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.COLabel.Location = new System.Drawing.Point(0, 0);
+            this.COLabel.Name = "COLabel";
+            this.COLabel.Size = new System.Drawing.Size(770, 41);
+            this.COLabel.TabIndex = 4;
+            this.COLabel.Text = "Customer Orders";
+            this.COLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // CODataView
+            // 
+            this.CODataView.BackColor = System.Drawing.Color.GhostWhite;
+            this.CODataView.ColumnCount = 7;
+            this.CODataView.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.46055F));
+            this.CODataView.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.20111F));
+            this.CODataView.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.295F));
+            this.CODataView.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.302407F));
+            this.CODataView.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.11686F));
+            this.CODataView.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.64033F));
+            this.CODataView.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.98374F));
+            this.CODataView.Controls.Add(this.COCustID, 1, 0);
+            this.CODataView.Controls.Add(this.CustomerIDCO, 2, 0);
+            this.CODataView.Controls.Add(this.NCO, 4, 0);
+            this.CODataView.Controls.Add(this.NameCOTXT, 5, 0);
+            this.CODataView.Controls.Add(this.EmployeeID, 1, 1);
+            this.CODataView.Controls.Add(this.OrderIDCO, 4, 1);
+            this.CODataView.Controls.Add(this.EmployeeIDCOTXT, 2, 1);
+            this.CODataView.Controls.Add(this.OIDTXT, 5, 1);
+            this.CODataView.Controls.Add(this.ODCO, 1, 2);
+            this.CODataView.Controls.Add(this.OrderDateCOTXT, 2, 2);
+            this.CODataView.Controls.Add(this.TPCO, 4, 2);
+            this.CODataView.Controls.Add(this.TotalPriceCO, 5, 2);
+            this.CODataView.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.CODataView.ForeColor = System.Drawing.Color.Black;
+            this.CODataView.Location = new System.Drawing.Point(0, 41);
+            this.CODataView.Name = "CODataView";
+            this.CODataView.RowCount = 3;
+            this.CODataView.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.CODataView.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.CODataView.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.CODataView.Size = new System.Drawing.Size(770, 149);
+            this.CODataView.TabIndex = 3;
+            // 
+            // COCustID
+            // 
+            this.COCustID.AutoSize = true;
+            this.COCustID.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.COCustID.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.COCustID.Location = new System.Drawing.Point(83, 0);
+            this.COCustID.Name = "COCustID";
+            this.COCustID.Size = new System.Drawing.Size(118, 49);
+            this.COCustID.TabIndex = 9;
+            this.COCustID.Text = "CustomerID";
+            this.COCustID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // CustomerIDCO
+            // 
+            this.CustomerIDCO.AutoRoundedCorners = true;
+            this.CustomerIDCO.BackColor = System.Drawing.Color.Transparent;
+            this.CustomerIDCO.BorderRadius = 19;
+            this.CustomerIDCO.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CustomerIDCO.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CustomerIDCO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CustomerIDCO.FillColor = System.Drawing.SystemColors.InactiveBorder;
+            this.CustomerIDCO.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CustomerIDCO.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CustomerIDCO.Font = new System.Drawing.Font("Sitka Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustomerIDCO.ForeColor = System.Drawing.Color.Black;
+            this.CustomerIDCO.ItemHeight = 34;
+            this.CustomerIDCO.Items.AddRange(new object[] {
+            "Female",
+            "Male"});
+            this.CustomerIDCO.Location = new System.Drawing.Point(207, 3);
+            this.CustomerIDCO.Name = "CustomerIDCO";
+            this.CustomerIDCO.Size = new System.Drawing.Size(157, 40);
+            this.CustomerIDCO.Sorted = true;
+            this.CustomerIDCO.TabIndex = 17;
+            this.CustomerIDCO.SelectedIndexChanged += new System.EventHandler(this.CustomerIDCO_SelectionChanged);
+            // 
+            // NCO
+            // 
+            this.NCO.AutoSize = true;
+            this.NCO.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NCO.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NCO.Location = new System.Drawing.Point(387, 0);
+            this.NCO.Name = "NCO";
+            this.NCO.Size = new System.Drawing.Size(118, 49);
+            this.NCO.TabIndex = 18;
+            this.NCO.Text = "Name";
+            this.NCO.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // NameCOTXT
+            // 
+            this.NameCOTXT.AutoSize = true;
+            this.NameCOTXT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NameCOTXT.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameCOTXT.Location = new System.Drawing.Point(511, 0);
+            this.NameCOTXT.Name = "NameCOTXT";
+            this.NameCOTXT.Size = new System.Drawing.Size(168, 49);
+            this.NameCOTXT.TabIndex = 19;
+            this.NameCOTXT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // EmployeeID
+            // 
+            this.EmployeeID.AutoSize = true;
+            this.EmployeeID.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EmployeeID.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmployeeID.Location = new System.Drawing.Point(83, 49);
+            this.EmployeeID.Name = "EmployeeID";
+            this.EmployeeID.Size = new System.Drawing.Size(118, 49);
+            this.EmployeeID.TabIndex = 20;
+            this.EmployeeID.Text = "EmployeeID";
+            this.EmployeeID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // OrderIDCO
+            // 
+            this.OrderIDCO.AutoSize = true;
+            this.OrderIDCO.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OrderIDCO.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrderIDCO.Location = new System.Drawing.Point(387, 49);
+            this.OrderIDCO.Name = "OrderIDCO";
+            this.OrderIDCO.Size = new System.Drawing.Size(118, 49);
+            this.OrderIDCO.TabIndex = 21;
+            this.OrderIDCO.Text = "OrderID";
+            this.OrderIDCO.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // EmployeeIDCOTXT
+            // 
+            this.EmployeeIDCOTXT.AutoSize = true;
+            this.EmployeeIDCOTXT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EmployeeIDCOTXT.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmployeeIDCOTXT.Location = new System.Drawing.Point(207, 49);
+            this.EmployeeIDCOTXT.Name = "EmployeeIDCOTXT";
+            this.EmployeeIDCOTXT.Size = new System.Drawing.Size(157, 49);
+            this.EmployeeIDCOTXT.TabIndex = 22;
+            this.EmployeeIDCOTXT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // OIDTXT
+            // 
+            this.OIDTXT.AutoSize = true;
+            this.OIDTXT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OIDTXT.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OIDTXT.Location = new System.Drawing.Point(511, 49);
+            this.OIDTXT.Name = "OIDTXT";
+            this.OIDTXT.Size = new System.Drawing.Size(168, 49);
+            this.OIDTXT.TabIndex = 23;
+            this.OIDTXT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ODCO
+            // 
+            this.ODCO.AutoSize = true;
+            this.ODCO.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ODCO.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ODCO.Location = new System.Drawing.Point(83, 98);
+            this.ODCO.Name = "ODCO";
+            this.ODCO.Size = new System.Drawing.Size(118, 51);
+            this.ODCO.TabIndex = 24;
+            this.ODCO.Text = "Order Date";
+            this.ODCO.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // OrderDateCOTXT
+            // 
+            this.OrderDateCOTXT.AutoSize = true;
+            this.OrderDateCOTXT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OrderDateCOTXT.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrderDateCOTXT.Location = new System.Drawing.Point(207, 98);
+            this.OrderDateCOTXT.Name = "OrderDateCOTXT";
+            this.OrderDateCOTXT.Size = new System.Drawing.Size(157, 51);
+            this.OrderDateCOTXT.TabIndex = 25;
+            this.OrderDateCOTXT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TPCO
+            // 
+            this.TPCO.AutoSize = true;
+            this.TPCO.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TPCO.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TPCO.Location = new System.Drawing.Point(387, 98);
+            this.TPCO.Name = "TPCO";
+            this.TPCO.Size = new System.Drawing.Size(118, 51);
+            this.TPCO.TabIndex = 26;
+            this.TPCO.Text = "Total Price";
+            this.TPCO.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TotalPriceCO
+            // 
+            this.TotalPriceCO.AutoSize = true;
+            this.TotalPriceCO.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TotalPriceCO.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalPriceCO.Location = new System.Drawing.Point(511, 98);
+            this.TotalPriceCO.Name = "TotalPriceCO";
+            this.TotalPriceCO.Size = new System.Drawing.Size(168, 51);
+            this.TotalPriceCO.TabIndex = 27;
+            this.TotalPriceCO.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Column1CO
+            // 
+            this.Column1CO.HeaderText = "OrderID";
+            this.Column1CO.Name = "Column1CO";
+            this.Column1CO.ReadOnly = true;
+            // 
+            // Column2CO
+            // 
+            this.Column2CO.HeaderText = "CustomerID";
+            this.Column2CO.Name = "Column2CO";
+            this.Column2CO.ReadOnly = true;
+            // 
+            // Column3CO
+            // 
+            this.Column3CO.HeaderText = "EmployeeID";
+            this.Column3CO.Name = "Column3CO";
+            this.Column3CO.ReadOnly = true;
+            // 
+            // Column4CO
+            // 
+            this.Column4CO.HeaderText = "OrderType";
+            this.Column4CO.Name = "Column4CO";
+            this.Column4CO.ReadOnly = true;
+            // 
+            // Column5CO
+            // 
+            this.Column5CO.HeaderText = "Order Date";
+            this.Column5CO.Name = "Column5CO";
+            this.Column5CO.ReadOnly = true;
+            // 
+            // Column6CO
+            // 
+            this.Column6CO.HeaderText = "Total Price";
+            this.Column6CO.Name = "Column6CO";
+            this.Column6CO.ReadOnly = true;
             // 
             // CeoUI
             // 
@@ -2744,7 +3429,23 @@ namespace DELL.UI.UsersUI
             this.TopContainerC.ResumeLayout(false);
             this.InputsC.ResumeLayout(false);
             this.InputsC.PerformLayout();
+            this.ViewEmpOrders.ResumeLayout(false);
+            this.MainPanelEO.ResumeLayout(false);
+            this.BottomContainerEO.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.EOrdersGridView)).EndInit();
+            this.TopContainerEO.ResumeLayout(false);
+            this.T.ResumeLayout(false);
+            this.EODataView.ResumeLayout(false);
+            this.EODataView.PerformLayout();
             this.CEOTopContainer.ResumeLayout(false);
+            this.ViewCustOrders.ResumeLayout(false);
+            this.MainPanelCO.ResumeLayout(false);
+            this.BottomContainerCO.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.COGridView)).EndInit();
+            this.TopContainerCO.ResumeLayout(false);
+            this.s.ResumeLayout(false);
+            this.CODataView.ResumeLayout(false);
+            this.CODataView.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2756,7 +3457,6 @@ namespace DELL.UI.UsersUI
         private System.Windows.Forms.Label Logo;
         private Guna.UI2.WinForms.Guna2TabControl CEOTabControl;
         private TabPage Dashboard;
-        private TabPage ManageSalesPersons;
         private Guna.UI.WinForms.GunaPanel MainPanelDB;
         private TableLayoutPanel DashboardInfo;
         private Guna.UI2.WinForms.Guna2PictureBox Pic1;
@@ -2767,8 +3467,25 @@ namespace DELL.UI.UsersUI
         private Label DataShow2;
         private Label DataShow3;
         private Label DataShow4;
+        private TabPage ManageSalesPersons;
         private Guna.UI.WinForms.GunaPanel MainPanelMSP;
+        private Guna.UI.WinForms.GunaPanel BottomContainerMSP;
+        private DataGridView SPGridView;
+        private DataGridViewTextBoxColumn Column1SP;
+        private DataGridViewTextBoxColumn Column2SP;
+        private DataGridViewTextBoxColumn Column3SP;
+        private DataGridViewTextBoxColumn Column4SP;
+        private DataGridViewTextBoxColumn Column5SP;
+        private DataGridViewTextBoxColumn Column6SP;
+        private DataGridViewTextBoxColumn Column7SP;
+        private DataGridViewTextBoxColumn Column8SP;
+        private DataGridViewTextBoxColumn Column9SP;
+        private TableLayoutPanel ButtonsContainerMSP;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton DeleteSpBtn;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton AddSpbtn;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton UpdateSpBtn;
         private Guna.UI.WinForms.GunaPanel TopContainerMSP;
+        private Label MSPLabel;
         private TableLayoutPanel InputsSP;
         private Guna.UI.WinForms.GunaLabel ContactSP;
         private Guna.UI.WinForms.GunaLabel DOBSP;
@@ -2786,17 +3503,19 @@ namespace DELL.UI.UsersUI
         private Guna.UI2.WinForms.Guna2TextBox AInputSP;
         private Guna.UI2.WinForms.Guna2ComboBox GInputSP;
         private Guna.UI2.WinForms.Guna2DateTimePicker DOBISP;
-        private Guna.UI.WinForms.GunaPanel BottomContainerMSP;
-        private TableLayoutPanel ButtonsContainerMSP;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton DeleteSpBtn;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton AddSpbtn;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton UpdateSpBtn;
-        private DataGridView SPGridView;
-        private Label MSPLabel;
         private TabPage ManageTechnicians;
         private Guna.UI.WinForms.GunaPanel MainPanelMT;
         private Guna.UI.WinForms.GunaPanel BottomContainerMT;
         private DataGridView TGridView;
+        private DataGridViewTextBoxColumn Column1MT;
+        private DataGridViewTextBoxColumn Column2MT;
+        private DataGridViewTextBoxColumn Column3MT;
+        private DataGridViewTextBoxColumn Column4MT;
+        private DataGridViewTextBoxColumn Column5MT;
+        private DataGridViewTextBoxColumn Column6MT;
+        private DataGridViewTextBoxColumn Column7MT;
+        private DataGridViewTextBoxColumn Column8MT;
+        private DataGridViewTextBoxColumn Column9MT;
         private TableLayoutPanel ButtonsContainerMT;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton DeleteMTBtn;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton AddMTBtn;
@@ -2820,31 +3539,22 @@ namespace DELL.UI.UsersUI
         private Guna.UI2.WinForms.Guna2TextBox AInputMT;
         private Guna.UI2.WinForms.Guna2ComboBox GInputMT;
         private Guna.UI2.WinForms.Guna2DateTimePicker DOBIMT;
-        private DataGridViewTextBoxColumn Column1SP;
-        private DataGridViewTextBoxColumn Column2SP;
-        private DataGridViewTextBoxColumn Column3SP;
-        private DataGridViewTextBoxColumn Column4SP;
-        private DataGridViewTextBoxColumn Column5SP;
-        private DataGridViewTextBoxColumn Column6SP;
-        private DataGridViewTextBoxColumn Column7SP;
-        private DataGridViewTextBoxColumn Column8SP;
-        private DataGridViewTextBoxColumn Column9SP;
-        private DataGridViewTextBoxColumn Column1MT;
-        private DataGridViewTextBoxColumn Column2MT;
-        private DataGridViewTextBoxColumn Column3MT;
-        private DataGridViewTextBoxColumn Column4MT;
-        private DataGridViewTextBoxColumn Column5MT;
-        private DataGridViewTextBoxColumn Column6MT;
-        private DataGridViewTextBoxColumn Column7MT;
-        private DataGridViewTextBoxColumn Column8MT;
-        private DataGridViewTextBoxColumn Column9MT;
         private TabPage ManageCustomers;
         private Guna.UI.WinForms.GunaPanel MainPanelC;
         private Guna.UI.WinForms.GunaPanel BottomContainerC;
         private DataGridView CGridView;
+        private DataGridViewTextBoxColumn Column1C;
+        private DataGridViewTextBoxColumn Column2C;
+        private DataGridViewTextBoxColumn Column3C;
+        private DataGridViewTextBoxColumn Column4C;
+        private DataGridViewTextBoxColumn Column5C;
+        private DataGridViewTextBoxColumn Column6C;
+        private DataGridViewTextBoxColumn Column7C;
+        private DataGridViewTextBoxColumn Column8C;
         private TableLayoutPanel ButtonsContainerC;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton DeleteCBtn;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton AddCbtn;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton UpdateCBtn;
         private Guna.UI.WinForms.GunaPanel TopContainerC;
         private Label CLabel;
         private TableLayoutPanel InputsC;
@@ -2864,14 +3574,57 @@ namespace DELL.UI.UsersUI
         private Guna.UI2.WinForms.Guna2TextBox AInputC;
         private Guna.UI2.WinForms.Guna2ComboBox GInputC;
         private Guna.UI2.WinForms.Guna2DateTimePicker DOBIC;
-        private DataGridViewTextBoxColumn Column1C;
-        private DataGridViewTextBoxColumn Column2C;
-        private DataGridViewTextBoxColumn Column3C;
-        private DataGridViewTextBoxColumn Column4C;
-        private DataGridViewTextBoxColumn Column5C;
-        private DataGridViewTextBoxColumn Column6C;
-        private DataGridViewTextBoxColumn Column7C;
-        private DataGridViewTextBoxColumn Column8C;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton UpdateCBtn;
+        private TabPage ViewEmpOrders;
+        private Guna.UI.WinForms.GunaPanel MainPanelEO;
+        private Guna.UI.WinForms.GunaPanel BottomContainerEO;
+        private DataGridView EOrdersGridView;
+        private Guna.UI.WinForms.GunaPanel TopContainerEO;
+        private Guna.UI.WinForms.GunaPanel T;
+        private Label EOLabel;
+        private TableLayoutPanel EODataView;
+        private Guna.UI.WinForms.GunaLabel EOEmployeeID;
+        private Guna.UI2.WinForms.Guna2ComboBox EmployeeIDEO;
+        private Guna.UI.WinForms.GunaLabel EOOrderID;
+        private Guna.UI.WinForms.GunaLabel NameTXT;
+        private Guna.UI.WinForms.GunaLabel EOCustomerID;
+        private Guna.UI.WinForms.GunaLabel OrderID;
+        private Guna.UI.WinForms.GunaLabel CustomerIDTXT;
+        private Guna.UI.WinForms.GunaLabel OrderIDTXT;
+        private Guna.UI.WinForms.GunaLabel OrderDate;
+        private Guna.UI.WinForms.GunaLabel OrderDateTXT;
+        private Guna.UI.WinForms.GunaLabel TotalPrice;
+        private Guna.UI.WinForms.GunaLabel PriceTXT;
+        private DataGridViewTextBoxColumn Column1EO;
+        private DataGridViewTextBoxColumn Column2EO;
+        private DataGridViewTextBoxColumn Column3EO;
+        private DataGridViewTextBoxColumn Column4EO;
+        private DataGridViewTextBoxColumn Column5EO;
+        private DataGridViewTextBoxColumn Column6EO;
+        private TabPage ViewCustOrders;
+        private Guna.UI.WinForms.GunaPanel MainPanelCO;
+        private Guna.UI.WinForms.GunaPanel BottomContainerCO;
+        private DataGridView COGridView;
+        private Guna.UI.WinForms.GunaPanel TopContainerCO;
+        private Guna.UI.WinForms.GunaPanel s;
+        private Label COLabel;
+        private TableLayoutPanel CODataView;
+        private Guna.UI.WinForms.GunaLabel COCustID;
+        private Guna.UI2.WinForms.Guna2ComboBox CustomerIDCO;
+        private Guna.UI.WinForms.GunaLabel NCO;
+        private Guna.UI.WinForms.GunaLabel NameCOTXT;
+        private Guna.UI.WinForms.GunaLabel EmployeeID;
+        private Guna.UI.WinForms.GunaLabel OrderIDCO;
+        private Guna.UI.WinForms.GunaLabel EmployeeIDCOTXT;
+        private Guna.UI.WinForms.GunaLabel OIDTXT;
+        private Guna.UI.WinForms.GunaLabel ODCO;
+        private Guna.UI.WinForms.GunaLabel OrderDateCOTXT;
+        private Guna.UI.WinForms.GunaLabel TPCO;
+        private Guna.UI.WinForms.GunaLabel TotalPriceCO;
+        private DataGridViewTextBoxColumn Column1CO;
+        private DataGridViewTextBoxColumn Column2CO;
+        private DataGridViewTextBoxColumn Column3CO;
+        private DataGridViewTextBoxColumn Column4CO;
+        private DataGridViewTextBoxColumn Column5CO;
+        private DataGridViewTextBoxColumn Column6CO;
     }
 }

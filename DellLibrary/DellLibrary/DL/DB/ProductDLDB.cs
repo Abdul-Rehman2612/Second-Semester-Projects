@@ -1,11 +1,8 @@
-﻿using DellLibrary.DL_Interfaces;
-using DellLibrary.Utility;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using DellLibrary.BL;
+using DellLibrary.DL_Interfaces;
+using DellLibrary.Utility;
 
 namespace DellLibrary.DL.DB
 {
@@ -40,6 +37,10 @@ namespace DellLibrary.DL.DB
                 }
             }
             return ProductCount; // returns products count
+        }
+        public ProductBL GetProductByProductID(int id)
+        {
+            return null;
         }
     }
 }

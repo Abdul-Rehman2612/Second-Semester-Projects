@@ -21,5 +21,6 @@ namespace DellLibrary.BL
                 orderList.Add(new OrderBL(order));
             }
         }
+        public List<OrderBL> GetOrders() { return orderList; }
     }
 }

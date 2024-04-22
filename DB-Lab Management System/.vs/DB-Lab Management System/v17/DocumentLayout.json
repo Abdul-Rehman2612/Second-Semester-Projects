@@ -11,6 +11,18 @@
       "RelativeMoniker": "D:0:0:{3F249A55-1F54-4181-9AFD-37143A10FCE5}|DB-Lab Management System\\DB-Lab Management System.csproj|solutionrelative:db-lab management system\\attendance\\studentregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{3F249A55-1F54-4181-9AFD-37143A10FCE5}|DB-Lab Management System\\DB-Lab Management System.csproj|d:\\project\\second semester\\db-lab management system\\db-lab management system\\attendance\\studentattendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3F249A55-1F54-4181-9AFD-37143A10FCE5}|DB-Lab Management System\\DB-Lab Management System.csproj|solutionrelative:db-lab management system\\attendance\\studentattendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F249A55-1F54-4181-9AFD-37143A10FCE5}|DB-Lab Management System\\DB-Lab Management System.csproj|d:\\project\\second semester\\db-lab management system\\db-lab management system\\attendance\\managestudents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3F249A55-1F54-4181-9AFD-37143A10FCE5}|DB-Lab Management System\\DB-Lab Management System.csproj|solutionrelative:db-lab management system\\attendance\\managestudents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F249A55-1F54-4181-9AFD-37143A10FCE5}|DB-Lab Management System\\DB-Lab Management System.csproj|d:\\project\\second semester\\db-lab management system\\db-lab management system\\attendance\\classattendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3F249A55-1F54-4181-9AFD-37143A10FCE5}|DB-Lab Management System\\DB-Lab Management System.csproj|solutionrelative:db-lab management system\\attendance\\classattendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3F249A55-1F54-4181-9AFD-37143A10FCE5}|DB-Lab Management System\\DB-Lab Management System.csproj|D:\\Project\\Second Semester\\DB-Lab Management System\\db-lab management system\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3F249A55-1F54-4181-9AFD-37143A10FCE5}|DB-Lab Management System\\DB-Lab Management System.csproj|solutionrelative:db-lab management system\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -38,11 +50,47 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StudentAttendance.cs [Design]",
+              "DocumentMoniker": "D:\\Project\\Second Semester\\DB-Lab Management System\\DB-Lab Management System\\Attendance\\StudentAttendance.cs",
+              "RelativeDocumentMoniker": "DB-Lab Management System\\Attendance\\StudentAttendance.cs",
+              "ToolTip": "D:\\Project\\Second Semester\\DB-Lab Management System\\DB-Lab Management System\\Attendance\\StudentAttendance.cs [Design]",
+              "RelativeToolTip": "DB-Lab Management System\\Attendance\\StudentAttendance.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T09:46:33.789Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ManageStudents.cs [Design]",
+              "DocumentMoniker": "D:\\Project\\Second Semester\\DB-Lab Management System\\DB-Lab Management System\\Attendance\\ManageStudents.cs",
+              "RelativeDocumentMoniker": "DB-Lab Management System\\Attendance\\ManageStudents.cs",
+              "ToolTip": "D:\\Project\\Second Semester\\DB-Lab Management System\\DB-Lab Management System\\Attendance\\ManageStudents.cs [Design]",
+              "RelativeToolTip": "DB-Lab Management System\\Attendance\\ManageStudents.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T09:46:28.675Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ClassAttendance.cs [Design]",
+              "DocumentMoniker": "D:\\Project\\Second Semester\\DB-Lab Management System\\DB-Lab Management System\\Attendance\\ClassAttendance.cs",
+              "RelativeDocumentMoniker": "DB-Lab Management System\\Attendance\\ClassAttendance.cs",
+              "ToolTip": "D:\\Project\\Second Semester\\DB-Lab Management System\\DB-Lab Management System\\Attendance\\ClassAttendance.cs [Design]",
+              "RelativeToolTip": "DB-Lab Management System\\Attendance\\ClassAttendance.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T09:46:24.321Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -52,7 +100,7 @@
               "RelativeDocumentMoniker": "DB-Lab Management System\\Attendance\\StudentRegistration.cs",
               "ToolTip": "D:\\Project\\Second Semester\\DB-Lab Management System\\DB-Lab Management System\\Attendance\\StudentRegistration.cs",
               "RelativeToolTip": "DB-Lab Management System\\Attendance\\StudentRegistration.cs",
-              "ViewState": "AQIAAE8BAAAAAAAAAAAewF8BAAA7AAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAAlwBsAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-29T16:10:19.775Z",
               "EditorCaption": ""
@@ -71,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "Results.cs",
               "DocumentMoniker": "D:\\Project\\Second Semester\\DB-Lab Management System\\DB-Lab Management System\\Assessments\\Results.cs",
               "RelativeDocumentMoniker": "DB-Lab Management System\\Assessments\\Results.cs",
@@ -83,7 +131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "Assessment.cs",
               "DocumentMoniker": "D:\\Project\\Second Semester\\DB-Lab Management System\\DB-Lab Management System\\Assessments\\Assessment.cs",
               "RelativeDocumentMoniker": "DB-Lab Management System\\Assessments\\Assessment.cs",
@@ -95,7 +143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "StudentAttendance.cs",
               "DocumentMoniker": "D:\\Project\\Second Semester\\DB-Lab Management System\\DB-Lab Management System\\Attendance\\StudentAttendance.cs",
               "RelativeDocumentMoniker": "DB-Lab Management System\\Attendance\\StudentAttendance.cs",
@@ -103,11 +151,12 @@
               "RelativeToolTip": "DB-Lab Management System\\Attendance\\StudentAttendance.cs",
               "ViewState": "AQIAAIsAAAAAAAAAAAAAAJEAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-29T15:39:53.426Z"
+              "WhenOpened": "2024-03-29T15:39:53.426Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Rubrics.cs",
               "DocumentMoniker": "D:\\Project\\Second Semester\\DB-Lab Management System\\DB-Lab Management System\\CLOs\\Rubrics.cs",
               "RelativeDocumentMoniker": "DB-Lab Management System\\CLOs\\Rubrics.cs",
@@ -119,7 +168,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "AdminDashboard.cs [Design]",
               "DocumentMoniker": "D:\\Project\\Second Semester\\DB-Lab Management System\\DB-Lab Management System\\AdminDashboard.cs",
               "RelativeDocumentMoniker": "DB-Lab Management System\\AdminDashboard.cs",

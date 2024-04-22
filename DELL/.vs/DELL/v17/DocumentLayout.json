@@ -11,60 +11,20 @@
       "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|solutionrelative:dell\\ui\\usersui\\ceoui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|D:\\Dell\\dell\\ui\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|solutionrelative:dell\\ui\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|D:\\Dell\\dell\\ui\\usersui\\ceoui.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|solutionrelative:dell\\ui\\usersui\\ceoui.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|D:\\Dell\\dell\\ui\\usersui\\salespersonui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|solutionrelative:dell\\ui\\usersui\\salespersonui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|D:\\Dell\\dell\\ui\\usersui\\salespersonui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|solutionrelative:dell\\ui\\usersui\\salespersonui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|D:\\Dell\\dell\\ui\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|solutionrelative:dell\\ui\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|D:\\Dell\\dell\\ui\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|solutionrelative:dell\\ui\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|D:\\Dell\\dell\\ui\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|solutionrelative:dell\\ui\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|D:\\Dell\\dell\\ui\\usersui\\technicianui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|solutionrelative:dell\\ui\\usersui\\technicianui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|D:\\Dell\\dell\\ui\\usersui\\customerui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|solutionrelative:dell\\ui\\usersui\\customerui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|D:\\Dell\\dell\\ui\\usersui\\technicianui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|solutionrelative:dell\\ui\\usersui\\technicianui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|D:\\Dell\\dell\\ui\\usersui\\customerui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|solutionrelative:dell\\ui\\usersui\\customerui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|D:\\Dell\\dell\\ui\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|solutionrelative:dell\\ui\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|D:\\Dell\\dell\\utility\\custommessagebox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|solutionrelative:dell\\utility\\custommessagebox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|D:\\Dell\\dell\\ui\\signup.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|solutionrelative:dell\\ui\\signup.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|D:\\Dell\\dell\\ui\\usersui\\technicianui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|solutionrelative:dell\\ui\\usersui\\technicianui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|D:\\Dell\\dell\\ui\\usersui\\salespersonui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|solutionrelative:dell\\ui\\usersui\\salespersonui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -84,7 +44,7 @@
               "RelativeDocumentMoniker": "DELL\\UI\\UsersUI\\CeoUI.cs",
               "ToolTip": "D:\\Dell\\DELL\\UI\\UsersUI\\CeoUI.cs",
               "RelativeToolTip": "DELL\\UI\\UsersUI\\CeoUI.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAFoBAAAvAAAA",
+              "ViewState": "AQIAACECAAAAAAAAAAAkwJQCAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-17T18:25:00.316Z",
               "IsPinned": true,
@@ -97,15 +57,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "SignUp.cs",
-              "DocumentMoniker": "D:\\Dell\\DELL\\UI\\SignUp.cs",
-              "RelativeDocumentMoniker": "DELL\\UI\\SignUp.cs",
-              "ToolTip": "D:\\Dell\\DELL\\UI\\SignUp.cs",
-              "RelativeToolTip": "DELL\\UI\\SignUp.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABNAAAA",
+              "Title": "SalesPersonUI.cs",
+              "DocumentMoniker": "D:\\Dell\\DELL\\UI\\UsersUI\\SalesPersonUI.cs",
+              "RelativeDocumentMoniker": "DELL\\UI\\UsersUI\\SalesPersonUI.cs",
+              "ToolTip": "D:\\Dell\\DELL\\UI\\UsersUI\\SalesPersonUI.cs",
+              "RelativeToolTip": "DELL\\UI\\UsersUI\\SalesPersonUI.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T18:02:53.85Z",
+              "WhenOpened": "2024-04-22T07:58:31.471Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CustomerUI.cs [Design]",
+              "DocumentMoniker": "D:\\Dell\\DELL\\UI\\UsersUI\\CustomerUI.cs",
+              "RelativeDocumentMoniker": "DELL\\UI\\UsersUI\\CustomerUI.cs",
+              "ToolTip": "D:\\Dell\\DELL\\UI\\UsersUI\\CustomerUI.cs [Design]",
+              "RelativeToolTip": "DELL\\UI\\UsersUI\\CustomerUI.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T07:58:01.86Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -116,33 +88,8 @@
               "ToolTip": "D:\\Dell\\DELL\\UI\\UsersUI\\CeoUI.cs [Design]",
               "RelativeToolTip": "DELL\\UI\\UsersUI\\CeoUI.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T16:28:36.718Z",
+              "WhenOpened": "2024-04-22T07:58:01.14Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CeoUI.Designer.cs",
-              "DocumentMoniker": "D:\\Dell\\DELL\\UI\\UsersUI\\CeoUI.Designer.cs",
-              "RelativeDocumentMoniker": "DELL\\UI\\UsersUI\\CeoUI.Designer.cs",
-              "ToolTip": "D:\\Dell\\DELL\\UI\\UsersUI\\CeoUI.Designer.cs",
-              "RelativeToolTip": "DELL\\UI\\UsersUI\\CeoUI.Designer.cs",
-              "ViewState": "AQIAAL4HAAAAAAAAAADwv7sHAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T21:20:27.157Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SignIn.cs",
-              "DocumentMoniker": "D:\\Dell\\DELL\\UI\\SignIn.cs",
-              "RelativeDocumentMoniker": "DELL\\UI\\SignIn.cs",
-              "ToolTip": "D:\\Dell\\DELL\\UI\\SignIn.cs",
-              "RelativeToolTip": "DELL\\UI\\SignIn.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAswC4AAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T16:49:52.783Z"
             },
             {
               "$type": "Document",
@@ -153,125 +100,20 @@
               "ToolTip": "D:\\Dell\\DELL\\UI\\UsersUI\\SalesPersonUI.cs [Design]",
               "RelativeToolTip": "DELL\\UI\\UsersUI\\SalesPersonUI.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T16:43:26.283Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MainMenu.cs",
-              "DocumentMoniker": "D:\\Dell\\DELL\\UI\\MainMenu.cs",
-              "RelativeDocumentMoniker": "DELL\\UI\\MainMenu.cs",
-              "ToolTip": "D:\\Dell\\DELL\\UI\\MainMenu.cs",
-              "RelativeToolTip": "DELL\\UI\\MainMenu.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAAwAsAAABNAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T18:36:15.055Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SalesPersonUI.cs",
-              "DocumentMoniker": "D:\\Dell\\DELL\\UI\\UsersUI\\SalesPersonUI.cs",
-              "RelativeDocumentMoniker": "DELL\\UI\\UsersUI\\SalesPersonUI.cs",
-              "ToolTip": "D:\\Dell\\DELL\\UI\\UsersUI\\SalesPersonUI.cs",
-              "RelativeToolTip": "DELL\\UI\\UsersUI\\SalesPersonUI.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAnwA8AAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T11:01:04.615Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "SignUp.cs [Design]",
-              "DocumentMoniker": "D:\\Dell\\DELL\\UI\\SignUp.cs",
-              "RelativeDocumentMoniker": "DELL\\UI\\SignUp.cs",
-              "ToolTip": "D:\\Dell\\DELL\\UI\\SignUp.cs [Design]",
-              "RelativeToolTip": "DELL\\UI\\SignUp.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T21:35:17.328Z",
+              "WhenOpened": "2024-04-17T16:43:26.283Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "TechnicianUI.cs",
-              "DocumentMoniker": "D:\\Dell\\DELL\\UI\\UsersUI\\TechnicianUI.cs",
-              "RelativeDocumentMoniker": "DELL\\UI\\UsersUI\\TechnicianUI.cs",
-              "ToolTip": "D:\\Dell\\DELL\\UI\\UsersUI\\TechnicianUI.cs",
-              "RelativeToolTip": "DELL\\UI\\UsersUI\\TechnicianUI.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAswBQAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T03:44:35.774Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "CustomerUI.cs",
-              "DocumentMoniker": "D:\\Dell\\DELL\\UI\\UsersUI\\CustomerUI.cs",
-              "RelativeDocumentMoniker": "DELL\\UI\\UsersUI\\CustomerUI.cs",
-              "ToolTip": "D:\\Dell\\DELL\\UI\\UsersUI\\CustomerUI.cs",
-              "RelativeToolTip": "DELL\\UI\\UsersUI\\CustomerUI.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAswBMAAABNAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T20:00:02.672Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CustomerUI.cs [Design]",
-              "DocumentMoniker": "D:\\Dell\\DELL\\UI\\UsersUI\\CustomerUI.cs",
-              "RelativeDocumentMoniker": "DELL\\UI\\UsersUI\\CustomerUI.cs",
-              "ToolTip": "D:\\Dell\\DELL\\UI\\UsersUI\\CustomerUI.cs [Design]",
-              "RelativeToolTip": "DELL\\UI\\UsersUI\\CustomerUI.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T16:43:23.743Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "SignIn.cs [Design]",
-              "DocumentMoniker": "D:\\Dell\\DELL\\UI\\SignIn.cs",
-              "RelativeDocumentMoniker": "DELL\\UI\\SignIn.cs",
-              "ToolTip": "D:\\Dell\\DELL\\UI\\SignIn.cs [Design]",
-              "RelativeToolTip": "DELL\\UI\\SignIn.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T16:49:50.687Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "CustomMessageBox.cs",
-              "DocumentMoniker": "D:\\Dell\\DELL\\Utility\\CustomMessageBox.cs",
-              "RelativeDocumentMoniker": "DELL\\Utility\\CustomMessageBox.cs",
-              "ToolTip": "D:\\Dell\\DELL\\Utility\\CustomMessageBox.cs",
-              "RelativeToolTip": "DELL\\Utility\\CustomMessageBox.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAmwCkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T19:05:01.09Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "SignUp.Designer.cs",
-              "DocumentMoniker": "D:\\Dell\\DELL\\UI\\SignUp.Designer.cs",
-              "RelativeDocumentMoniker": "DELL\\UI\\SignUp.Designer.cs",
-              "ToolTip": "D:\\Dell\\DELL\\UI\\SignUp.Designer.cs",
-              "RelativeToolTip": "DELL\\UI\\SignUp.Designer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T17:57:37.485Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 3,
               "Title": "TechnicianUI.cs [Design]",
               "DocumentMoniker": "D:\\Dell\\DELL\\UI\\UsersUI\\TechnicianUI.cs",
               "RelativeDocumentMoniker": "DELL\\UI\\UsersUI\\TechnicianUI.cs",
               "ToolTip": "D:\\Dell\\DELL\\UI\\UsersUI\\TechnicianUI.cs [Design]",
               "RelativeToolTip": "DELL\\UI\\UsersUI\\TechnicianUI.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T16:42:50.422Z"
+              "WhenOpened": "2024-04-22T07:58:03.379Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

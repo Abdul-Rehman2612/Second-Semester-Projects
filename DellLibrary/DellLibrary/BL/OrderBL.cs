@@ -24,7 +24,7 @@ namespace DellLibrary.BL
             this.orderID = orderID;
             this.orderType = orderType;
             this.orderDate = orderDate;
-            this.employee = null;
+            employee = null;
             this.totalPrice = totalPrice;
         }
         public OrderBL(OrderBL order)
@@ -32,9 +32,18 @@ namespace DellLibrary.BL
             orderID = order.orderID;
             orderType = order.orderType;
             orderDate = order.orderDate;
+            employee = order.employee;
+            totalPrice = order.totalPrice;
             foreach(OrderDetailsBL o in order.orderDetails)
             {
                 orderDetails.Add(new OrderDetailsBL(o));
+            }
+        }
+        public void AddOrderDetailsList(List<OrderDetailsBL> orderDetails)
+        {
+            foreach (OrderDetailsBL orderDetail in orderDetails)
+            {
+                this.orderDetails.Add(new OrderDetailsBL(orderDetail));
             }
         }
         // public OrderBL(string orderType, DateTime orderDate)
@@ -61,10 +70,10 @@ namespace DellLibrary.BL
         //     return t;
         // }
         // public void SetOrderID(int value) { orderID = value; }
-        // public EmployeeBL GetEmployee() { return employee; }
-        // public int GetOrderID() { return orderID; }
-        // public double GetTotalPrice() { return totalPrice; }
-        // public string GetCustomerType() { return orderType; }
-        // public DateTime GetOrderDate() { return orderDate; }
+        public EmployeeBL GetEmployee() { return employee; }
+        public int GetOrderID() { return orderID; }
+        public double GetTotalPrice() { return totalPrice; }
+        public string GetOrderType() { return orderType; }
+        public DateTime GetOrderDate() { return orderDate; }
     }
 }

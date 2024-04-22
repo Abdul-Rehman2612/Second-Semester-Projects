@@ -31,6 +31,17 @@ namespace DellLibrary.BL
             this.gender = gender;
             this.status = status;
         }
+        public UserBL(string name, string username, string password, string email, DateTime dob, string address, string contact, string gender)
+        {
+            this.name = name;
+            this.username = username;
+            this.password = password;
+            this.email = email;
+            this.dob = dob;
+            this.address = address;
+            this.contact = contact;
+            this.gender = gender;
+        }
         public string GetName() { return name; }
         public void SetName(string value) { name = value; }
         public string GetUsername() { return username; }

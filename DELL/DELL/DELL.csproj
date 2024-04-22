@@ -64,7 +64,8 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuButton">
       <HintPath>..\..\Bunifu_UI_WinForms_5.0.3\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
     </Reference>
-    <Reference Include="DellLibrary">
+    <Reference Include="DellLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\DellLibrary\DellLibrary\bin\Debug\DellLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b, processorArchitecture=MSIL">
@@ -160,6 +161,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UI\SignIn.resx">
       <DependentUpon>SignIn.cs</DependentUpon>
@@ -203,8 +205,45 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <None Include="Resources\CEO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Customer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Customers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EmployeeContributions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Employees.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Orders.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OrdersPlaced.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Products.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SalesPerson.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SignIn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SignUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Technician.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

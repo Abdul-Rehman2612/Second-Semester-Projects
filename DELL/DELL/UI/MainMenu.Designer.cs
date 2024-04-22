@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.TopContainer = new Guna.UI2.WinForms.Guna2Panel();
+            this.Logo = new System.Windows.Forms.Label();
             this.BottomContainer = new Guna.UI2.WinForms.Guna2Panel();
             this.Inputs = new System.Windows.Forms.TableLayoutPanel();
             this.SignInbtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.SignUpbtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.Exitbtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.MainPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.Logo = new System.Windows.Forms.Label();
             this.TopContainer.SuspendLayout();
             this.BottomContainer.SuspendLayout();
             this.Inputs.SuspendLayout();
@@ -55,6 +55,18 @@
             this.TopContainer.Name = "TopContainer";
             this.TopContainer.Size = new System.Drawing.Size(784, 150);
             this.TopContainer.TabIndex = 0;
+            // 
+            // Logo
+            // 
+            this.Logo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Logo.Font = new System.Drawing.Font("Sitka Heading", 72F, System.Drawing.FontStyle.Bold);
+            this.Logo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(144)))), ((int)(((byte)(231)))));
+            this.Logo.Image = global::DELL.Properties.Resources.Dell;
+            this.Logo.Location = new System.Drawing.Point(0, 0);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(784, 150);
+            this.Logo.TabIndex = 1;
+            this.Logo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // BottomContainer
             // 
@@ -375,18 +387,6 @@
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(784, 561);
             this.MainPanel.TabIndex = 1;
-            // 
-            // Logo
-            // 
-            this.Logo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Logo.Font = new System.Drawing.Font("Sitka Heading", 72F, System.Drawing.FontStyle.Bold);
-            this.Logo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(144)))), ((int)(((byte)(231)))));
-            this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
-            this.Logo.Location = new System.Drawing.Point(0, 0);
-            this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(784, 150);
-            this.Logo.TabIndex = 1;
-            this.Logo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MainMenu
             // 

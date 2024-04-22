@@ -17,18 +17,18 @@ namespace DellLibrary.BL
         //     this.quantity = quantity;
         //     price = quantity * product.GetProductPrice();
         // }
-        // public OrderDetailsBL(ProductBL product,int quantity,double price)
-        // {
-        //     this.product = product;
-        //     this.quantity = quantity;
-        //     this.price = price;
-        // }
-        // public double GetPrice() { return price; }
+        public OrderDetailsBL(ProductBL product,int quantity,double price)
+        {
+            this.product = product;
+            this.quantity = quantity;
+            this.price = price;
+        }
         public OrderDetailsBL(OrderDetailsBL o)
         {
             product = o.product;
             quantity = o.quantity;
             price = o.price;
         }
+        // public double GetPrice() { return price; }
     }
 }
