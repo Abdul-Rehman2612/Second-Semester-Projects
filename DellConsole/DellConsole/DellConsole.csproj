@@ -33,8 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DellLibrary">
-      <HintPath>..\..\DellLibrary\DellLibrary\bin\Debug\DellLibrary.dll</HintPath>
+    <Reference Include="DellLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DellLibrary\DellLibrary\bin\Debug\DellLibrary.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

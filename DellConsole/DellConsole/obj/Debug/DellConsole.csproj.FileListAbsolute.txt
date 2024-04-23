@@ -8,3 +8,13 @@ D:\DellConsole\DellConsole\obj\Debug\DellConsole.pdb
 D:\DellConsole\DellConsole\bin\Debug\DellLibrary.dll
 D:\DellConsole\DellConsole\bin\Debug\DellLibrary.pdb
 D:\DellConsole\DellConsole\obj\Debug\DellCons.32AB3506.Up2Date
+D:\Project\Second Semester\DellConsole\DellConsole\bin\Debug\DellConsole.exe.config
+D:\Project\Second Semester\DellConsole\DellConsole\bin\Debug\DellConsole.exe
+D:\Project\Second Semester\DellConsole\DellConsole\bin\Debug\DellConsole.pdb
+D:\Project\Second Semester\DellConsole\DellConsole\bin\Debug\DellLibrary.dll
+D:\Project\Second Semester\DellConsole\DellConsole\bin\Debug\DellLibrary.pdb
+D:\Project\Second Semester\DellConsole\DellConsole\obj\Debug\DellConsole.csproj.AssemblyReference.cache
+D:\Project\Second Semester\DellConsole\DellConsole\obj\Debug\DellConsole.csproj.CoreCompileInputs.cache
+D:\Project\Second Semester\DellConsole\DellConsole\obj\Debug\DellCons.32AB3506.Up2Date
+D:\Project\Second Semester\DellConsole\DellConsole\obj\Debug\DellConsole.exe
+D:\Project\Second Semester\DellConsole\DellConsole\obj\Debug\DellConsole.pdb
