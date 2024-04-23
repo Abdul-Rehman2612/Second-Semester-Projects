@@ -8,27 +8,28 @@ namespace DellLibrary.BL
 {
     public class OrderDetailsBL
     {
-        private ProductBL product;
-        private int quantity;
-        private double price;
+        private ProductBL product; // Associated product
+        private int quantity; // Product quantity
+        private double price; // Product price
         // public OrderDetailsBL(ProductBL product,int quantity)
         // {
         //     this.product = product;
         //     this.quantity = quantity;
         //     price = quantity * product.GetProductPrice();
         // }
-        public OrderDetailsBL(ProductBL product,int quantity,double price)
+        public OrderDetailsBL(ProductBL product, int quantity, double price)
         {
-            this.product = product;
-            this.quantity = quantity;
-            this.price = price;
+            this.product = product; // Set product
+            this.quantity = quantity; // Set quantity
+            this.price = price; // Set price
         }
         public OrderDetailsBL(OrderDetailsBL o)
         {
-            product = o.product;
-            quantity = o.quantity;
-            price = o.price;
+            product = o.product; // Copy product
+            quantity = o.quantity; // Copy quantity
+            price = o.price; // Copy price
         }
+
         // public double GetPrice() { return price; }
     }
 }

@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 
 namespace DellLibrary.Utility
 {
-    internal class Validations
+    public class Validations
     {
         // Check if the user information is valid
         public static string IsValidNewUser(UserBL user)
@@ -63,6 +63,7 @@ namespace DellLibrary.Utility
             Check = AgeCheck(user.GetDob());
             return Check;
         }
+        // Check if the username for admin is valid
         public static string AdminUsernameCheck(string username,string u2)
         {
             string Check = "True";
@@ -72,6 +73,7 @@ namespace DellLibrary.Utility
             }
             return Check;
         }
+        // Check if the user information is valid to be updated
         public static string IsValidUpdatedUser(UserBL user,string username,string email,bool isAdmin)
         {
             string Check;
@@ -97,8 +99,8 @@ namespace DellLibrary.Utility
                 }
             }
 
-            Check = EmailCheck(user.GetEmail());
-            if (Check != "True" && user.GetEmail()!=email)
+            Check = UpdatedEmailCheck(email,user.GetEmail());
+            if(Check!="True")
             {
                 return Check;
             }
@@ -106,8 +108,18 @@ namespace DellLibrary.Utility
             Check = IsValidInfo(user);
             return Check;
         }
+        // Check if the updated email is valid
+        public static string UpdatedEmailCheck(string email,string em2)
+        {
+            string Check = EmailCheck(em2);
+            if (Check != "True" && em2!=email)
+            {
+                return Check;
+            }
+            return "True";
+        }
         // Check if the contact information is valid
-        private static string ContactCheck(string contact)
+        public static string ContactCheck(string contact)
         {
             // Check length of contact number
             if (contact.Length < 4)
@@ -129,7 +141,7 @@ namespace DellLibrary.Utility
             return "True";
         }
         // Check if the email address is valid
-        private static string EmailCheck(string email)
+        public static string EmailCheck(string email)
         {
             // Check length of email address
             if (email.Length > 50)
@@ -152,7 +164,7 @@ namespace DellLibrary.Utility
             return check.UniqueAttributeCheck(email, "Email") ? "Email already exists!" : "True";
         }
         // Check if the password is valid
-        private static string PasswordCheck(string password)
+        public static string PasswordCheck(string password)
         {
             // Check length of password
             if (password.Length < 6 || password.Length > 20)
@@ -168,7 +180,7 @@ namespace DellLibrary.Utility
             return password.Any(char.IsWhiteSpace) ? "Password cannot contain spaces." : "True";
         }
         // Check if the username is valid
-        private static string UsernameCheck(string username)
+        public static string UsernameCheck(string username)
         {
             // Check length of username
             if (username.Length > 20)
@@ -193,7 +205,7 @@ namespace DellLibrary.Utility
             return check.UniqueAttributeCheck(username, "Username") ? "Username already exists!" : "True";
         }
         // Check if the user is older than 15 years
-        private static string AgeCheck(DateTime dob)
+        public static string AgeCheck(DateTime dob)
         {
             // Calculate the date 15 years ago from the current date
             DateTime cutoffDate = DateTime.Today.AddYears(-15);
@@ -208,7 +220,7 @@ namespace DellLibrary.Utility
             }
         }
         // Check if the name is valid
-        private static string NameCheck(string text)
+        public static string NameCheck(string text)
         {
             // Check length of name
             if (text.Length > 50)

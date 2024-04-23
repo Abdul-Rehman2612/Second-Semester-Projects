@@ -92,6 +92,43 @@ namespace DellLibrary.DL.DB
             // returns the message
             return message;
         }
+        public string DeactivateCustomerAccount(string username) // deactivates customer account
+        {
+            string message = "";
+
+            // Query to update employee
+            string query = "UPDATE Customers SET Status='Deactivated' WHERE Username=@username;";
+
+            // Connection to the database
+            using (SqlConnection con = Configuration.GetConnection())
+            {
+                try
+                {
+                    con.Open();
+                    SqlCommand command = new SqlCommand(query, con);
+
+                    // Add parameters
+                    command.Parameters.AddWithValue("@username", username);
+
+                    // Execute command
+                    int rowsAffected = command.ExecuteNonQuery();
+                    if (rowsAffected > 0) // If the employee was updated
+                    {
+                        message = "True";
+                    }
+                }
+                catch (Exception e) // If an error occurs
+                {
+                    message = e.Message;
+                }
+                finally // Close the database connection at the end
+                {
+                    con.Close();
+                }
+            }
+
+            return message; // Return the result message
+        }
         public string UpdateCustomer(CustomerBL user, string username, string email) // updates customer in DB
         {
             string message = Validations.IsValidUpdatedUser(user, username, email, false); // checks if user is valid or not
@@ -135,6 +172,56 @@ namespace DellLibrary.DL.DB
                 }
             }
             return message; // return the result message
+        }
+        public CustomerBL GetCustomerByUsername(string userName) // returns customer for a username
+        {
+            CustomerBL customer = null;
+            // query to find user in the database
+            string query = $"SELECT * FROM Customers WHERE Username=@userName;";
+            using (SqlConnection con = Configuration.GetConnection()) // Connection to the database 
+            {
+                try
+                {
+                    con.Open();
+                    SqlCommand command = new SqlCommand(query, con); // command to execute the query
+
+                    // Add parameters
+                    command.Parameters.AddWithValue("@UserName", userName);
+
+                    SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
+                    if (sqlDataReader.Read()) // if user was found
+                    {
+                        string name = sqlDataReader.GetString(0);
+                        string username = sqlDataReader.GetString(1);
+                        string password = sqlDataReader.GetString(2);
+                        string email = sqlDataReader.GetString(3);
+                        DateTime birthDate = sqlDataReader.GetDateTime(4);
+                        string address = sqlDataReader.GetString(5);
+                        string contact = sqlDataReader.GetString(6);
+                        string gender = sqlDataReader.GetString(7);
+                        string status = sqlDataReader.GetString(8);
+                        customer = new CustomerBL(name, username, password, email, birthDate, address, contact, gender, status);
+                        List<OrderBL> orders = orderDL.GetOrdersForUser(username);
+                        if (orders!= null)
+                        {
+                            customer.AddOrdersList(orders);
+                        }
+                    }
+                    else // if user not found
+                    {
+                        customer = null;
+                    }
+                }
+                catch (Exception ex) // if error occurs
+                {
+                    throw (ex);
+                }
+                finally // Close the database connection at end
+                {
+                    con.Close();
+                }
+            }
+            return customer; // return the result message
         }
         public List<CustomerBL> GetAllCustomersByStatus(string cstatus) // returns the list of all customers by status
         {
@@ -227,36 +314,6 @@ namespace DellLibrary.DL.DB
             }
             return Customers; // returns list
         }
-        public int GetCustomerCount() // returns count of total customers in database
-        {
-            int CustomerCount = 0;
-            // makes connection with DB to get customers count
-            using (SqlConnection con = Configuration.GetConnection())
-            {
-                string query = $"Select Count(username) from Customers where Status=@status;";
-                // first try to execute retreive command
-                try
-                {
-                    con.Open(); // opens Database Connection
-                    SqlCommand command = new SqlCommand(query, con); // command to execute the query
-                    command.Parameters.AddWithValue("@status", "Active"); // add parameters
-                    SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
-                    if (sqlDataReader.Read()) // if customers data found
-                    {
-                        CustomerCount = sqlDataReader.GetInt32(0);
-                    }
-                }
-                catch (Exception e) // if any exception returns the exception message
-                {
-                    throw (e);
-                }
-                finally // closes the database connection at the end
-                {
-                    con.Close();
-                }
-            }
-            return CustomerCount; // returns customer count
-        }
         public bool UniqueAttributeCheck(string text, string attribute) // checks for unique attributes
         {
             bool check = false;
@@ -342,55 +399,35 @@ namespace DellLibrary.DL.DB
             }
             return customer; // return the result message
         }
-        public CustomerBL GetCustomerByUsername(string userName) // returns customer for a username
+        public int GetCustomerCount() // returns count of total customers in database
         {
-            CustomerBL customer = null;
-            // query to find user in the database
-            string query = $"SELECT * FROM Customers WHERE Username=@userName;";
-            using (SqlConnection con = Configuration.GetConnection()) // Connection to the database 
+            int CustomerCount = 0;
+            // makes connection with DB to get customers count
+            using (SqlConnection con = Configuration.GetConnection())
             {
+                string query = $"Select Count(username) from Customers where Status=@status;";
+                // first try to execute retreive command
                 try
                 {
-                    con.Open();
+                    con.Open(); // opens Database Connection
                     SqlCommand command = new SqlCommand(query, con); // command to execute the query
-
-                    // Add parameters
-                    command.Parameters.AddWithValue("@UserName", userName);
-
+                    command.Parameters.AddWithValue("@status", "Active"); // add parameters
                     SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
-                    if (sqlDataReader.Read()) // if user was found
+                    if (sqlDataReader.Read()) // if customers data found
                     {
-                        string name = sqlDataReader.GetString(0);
-                        string username = sqlDataReader.GetString(1);
-                        string password = sqlDataReader.GetString(2);
-                        string email = sqlDataReader.GetString(3);
-                        DateTime birthDate = sqlDataReader.GetDateTime(4);
-                        string address = sqlDataReader.GetString(5);
-                        string contact = sqlDataReader.GetString(6);
-                        string gender = sqlDataReader.GetString(7);
-                        string status = sqlDataReader.GetString(8);
-                        customer = new CustomerBL(name, username, password, email, birthDate, address, contact, gender, status);
-                        List<OrderBL> orders = orderDL.GetOrdersForUser(username);
-                        if (orders!= null)
-                        {
-                            customer.AddOrdersList(orders);
-                        }
-                    }
-                    else // if user not found
-                    {
-                        customer = null;
+                        CustomerCount = sqlDataReader.GetInt32(0);
                     }
                 }
-                catch (Exception ex) // if error occurs
+                catch (Exception e) // if any exception returns the exception message
                 {
-                    throw (ex);
+                    throw (e);
                 }
-                finally // Close the database connection at end
+                finally // closes the database connection at the end
                 {
                     con.Close();
                 }
             }
-            return customer; // return the result message
+            return CustomerCount; // returns customer count
         }
     }
 }

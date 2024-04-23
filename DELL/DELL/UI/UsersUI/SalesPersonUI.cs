@@ -3,12 +3,16 @@ using DellLibrary.BL;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace DELL.UI.UsersUI
 {
     public partial class SalesPersonUI : Form
     {
         EmployeeBL SalesPerson = null;
+        string username = null;
+        string email = null;
         public SalesPersonUI(EmployeeBL emp)
         {
             InitializeComponent();
@@ -47,8 +51,8 @@ namespace DELL.UI.UsersUI
         }
 
 
-        //                           Customers Operations
-        private void LoadCustomersData()
+        //                               Customers Operations
+        private void LoadCustomersData() // Loads customers' data into the CGridView
         {
             try
             {
@@ -76,7 +80,7 @@ namespace DELL.UI.UsersUI
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void ClearInputsC()
+        private void ClearInputsC() // Clears input fields for Customers
         {
             NInputC.Text="";
             UInputC.Text="";
@@ -86,7 +90,7 @@ namespace DELL.UI.UsersUI
             CInputC.Text="";
             GInputC.Text="";
         }
-        private void LoadDataIntoInputsC(CustomerBL customer)
+        private void LoadDataIntoInputsC(CustomerBL customer) // Loads data into input fields for Customers
         {
             NInputC.Text=customer.GetName();
             UInputC.Text=customer.GetUsername();
@@ -97,26 +101,38 @@ namespace DELL.UI.UsersUI
             GInputC.Text=customer.GetGender();
             DOBIC.Value=customer.GetDob();
         }
-        private void CGridView_SelectionChanged(object sender, EventArgs e)
+        private void CGridView_SelectionChanged(object sender, EventArgs e) // Handles selection change in CGridView
         {
-            if (CGridView.SelectedRows.Count > 0)
+            try
             {
-                DataGridViewRow selectedRow = CGridView.SelectedRows[0];
-                if (selectedRow.Index >= 0 && selectedRow.Index < CGridView.Rows.Count)
+                if (CGridView.SelectedRows.Count > 0)
                 {
-                    string name = selectedRow.Cells["Column1C"].Value?.ToString();
-                    string username = selectedRow.Cells["Column2C"].Value?.ToString();
-                    string password = selectedRow.Cells["Column3C"].Value?.ToString();
-                    string email = selectedRow.Cells["Column4C"].Value?.ToString();
-                    if (DateTime.TryParse(selectedRow.Cells["Column5C"].Value?.ToString(), out DateTime dob))
+                    // Retrieve selected row
+                    DataGridViewRow selectedRow = CGridView.SelectedRows[0];
+                    if (selectedRow.Index >= 0 && selectedRow.Index < CGridView.Rows.Count)
                     {
-                        // Successfully parsed the DOB
-                        string contact = selectedRow.Cells["Column6C"].Value?.ToString();
-                        string address = selectedRow.Cells["Column7C"].Value?.ToString();
-                        string gender = selectedRow.Cells["Column8C"].Value?.ToString();
-                        string status = "Active";
-                        CustomerBL customer = new CustomerBL(name, username, password, email, dob, address, contact, gender, status);
-                        LoadDataIntoInputsC(customer);
+                        // Extract data from selected row
+                        string name = selectedRow.Cells["Column1C"].Value?.ToString();
+                        string username = selectedRow.Cells["Column2C"].Value?.ToString();
+                        string password = selectedRow.Cells["Column3C"].Value?.ToString();
+                        string email = selectedRow.Cells["Column4C"].Value?.ToString();
+                        if (DateTime.TryParse(selectedRow.Cells["Column5C"].Value?.ToString(), out DateTime dob))
+                        {
+                            // Successfully parsed the DOB
+                            string contact = selectedRow.Cells["Column6C"].Value?.ToString();
+                            string address = selectedRow.Cells["Column7C"].Value?.ToString();
+                            string gender = selectedRow.Cells["Column8C"].Value?.ToString();
+                            string status = "Active";
+                            this.username = username;
+                            this.email = email;
+                            // Create customer object
+                            CustomerBL customer = new CustomerBL(name, username, password, email, dob, address, contact, gender, status);
+                            LoadDataIntoInputsC(customer);
+                        }
+                        else
+                        {
+                            ClearInputsC();
+                        }
                     }
                     else
                     {
@@ -124,38 +140,57 @@ namespace DELL.UI.UsersUI
                     }
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-        private void AddCbtn_Click(object sender, EventArgs e)
+        private void AddCbtn_Click(object sender, EventArgs e) // Handles addition of Customer
         {
-            // makes new user object
+            // Create new Customer object
             CustomerBL user = new CustomerBL(NInputC.Text, UInputC.Text, PInputC.Text, EInputC.Text, DOBIC.Value, AInputC.Text, CInputC.Text, GInputC.Text, "Active");
-            // calls Object Handler to call customer interface to add customer
+            // Add Customer using ObjectHandler
             string uStatus = ObjectHandler.GetCustomerDL().AddCustomer(user);
-            // if customer added successfully
+            // Show status message
             if (uStatus=="True")
             {
                 MessageBox.Show("Customer added successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadEntityData("C"); // loads customers data
+                LoadEntityData("C"); // Load customers data
             }
-            // if customer not added
             else
             {
                 MessageBox.Show(uStatus, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void UpdateCBtn_Click(object sender, EventArgs e)
+        private void UpdateCBtn_Click(object sender, EventArgs e) // Handles update of Customer
         {
-
+            if (UInputC.Text!=""  && username!=null && email!=null)
+            {
+                // Create new customer object
+                CustomerBL user = new CustomerBL(NInputC.Text, UInputC.Text, PInputC.Text, EInputC.Text, DOBIC.Value, AInputC.Text, CInputC.Text, GInputC.Text);
+                string message = ObjectHandler.GetCustomerDL().UpdateCustomer(user, username, email);
+                if (message=="True")
+                {
+                    MessageBox.Show("Customer data updated successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadEntityData("C");
+                }
+                // if customer not updated
+                else
+                {
+                    MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
-        private void DeleteCBtn_Click(object sender, EventArgs e)
+        private void DeleteCBtn_Click(object sender, EventArgs e)  // Handles deletion of Customer
         {
             if (UInputC.Text!="")
             {
+                // Remove customer
                 string message = ObjectHandler.GetCustomerDL().RemoveCustomer(UInputC.Text);
                 if (message=="True")
                 {
                     MessageBox.Show("Customer data deleted successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadEntityData("C"); // loads customers data
+                    LoadEntityData("C"); // Load customers data
                 }
                 // if customer not deleted
                 else

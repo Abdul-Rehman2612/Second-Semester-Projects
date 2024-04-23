@@ -59,7 +59,7 @@ namespace DellLibrary.DL.DB
             }
             return message; // return the result message
         }
-        public string UpdateEmployee(EmployeeBL user, string username, string email)
+        public string UpdateEmployee(EmployeeBL user, string username, string email) // updates employee data
         {
             string message;
 
@@ -149,84 +149,41 @@ namespace DellLibrary.DL.DB
             // returns the message
             return message;
         }
-        public List<EmployeeBL> GetAllEmployees() // returns the list of all employees
+        public string DeactivateEmployeeAccount(string username) // deactivates employee account
         {
-            List<EmployeeBL> Employees = new List<EmployeeBL>();
-            // makes connection with DB to get employees
+            string message="";
+
+            // Query to update employee
+            string query = "UPDATE Employees SET Status='Deactivated' WHERE Username=@username;";
+
+            // Connection to the database
             using (SqlConnection con = Configuration.GetConnection())
             {
-                string query = $"Select * from Employees where Designation<>'CEO';";
-                // first try to execute retreive command
                 try
                 {
-                    con.Open(); // opens Database Connection
-                    SqlCommand command = new SqlCommand(query, con); // command to execute the query
-                    SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
+                    con.Open();
+                    SqlCommand command = new SqlCommand(query, con);
 
-                    while (sqlDataReader.Read()) // if employees data found
+                    // Add parameters
+                    command.Parameters.AddWithValue("@username", username);
+
+                    // Execute command
+                    int rowsAffected = command.ExecuteNonQuery();
+                    if (rowsAffected > 0) // If the employee was updated
                     {
-                        if (sqlDataReader.IsDBNull(11)) // if resignation date is null
-                        {
-                            EmployeeBL employee = new EmployeeBL(sqlDataReader.GetString(0), sqlDataReader.GetString(1), sqlDataReader.GetString(2), sqlDataReader.GetString(3), sqlDataReader.GetDateTime(4), sqlDataReader.GetString(5), sqlDataReader.GetString(6), sqlDataReader.GetString(7), sqlDataReader.GetString(8), sqlDataReader.GetString(9), sqlDataReader.GetDateTime(10));
-                            Employees.Add(employee);
-                        }
-                        else
-                        {
-                            EmployeeBL employee = new EmployeeBL(sqlDataReader.GetString(0), sqlDataReader.GetString(1), sqlDataReader.GetString(2), sqlDataReader.GetString(3), sqlDataReader.GetDateTime(4), sqlDataReader.GetString(5), sqlDataReader.GetString(6), sqlDataReader.GetString(7), sqlDataReader.GetString(8), sqlDataReader.GetString(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11));
-                            Employees.Add(employee);
-                        }
+                        message = "True";
                     }
                 }
-                catch (Exception e) // if any exception returns the exception message
+                catch (Exception e) // If an error occurs
                 {
-                    throw (e);
+                    message = e.Message;
                 }
-                finally // closes the database connection at the end
+                finally // Close the database connection at the end
                 {
                     con.Close();
                 }
             }
-            return Employees; // returns list
-        }
-        public List<EmployeeBL> GetAllEmployeesByStatus(string eStatus)
-        {
-            List<EmployeeBL> Employees = new List<EmployeeBL>();
-            // makes connection with DB to get employees
-            using (SqlConnection con = Configuration.GetConnection())
-            {
-                string query = $"Select * from Employees where Designation<>'CEO' where status = @estatus;";
-                // first try to execute retreive command
-                try
-                {
-                    con.Open(); // opens Database Connection
-                    SqlCommand command = new SqlCommand(query, con); // command to execute the query
-                    command.Parameters.AddWithValue("@estatus",eStatus);
-                    SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
-
-                    while (sqlDataReader.Read()) // if employees data found
-                    {
-                        if (sqlDataReader.IsDBNull(11)) // if resignation date is null
-                        {
-                            EmployeeBL employee = new EmployeeBL(sqlDataReader.GetString(0), sqlDataReader.GetString(1), sqlDataReader.GetString(2), sqlDataReader.GetString(3), sqlDataReader.GetDateTime(4), sqlDataReader.GetString(5), sqlDataReader.GetString(6), sqlDataReader.GetString(7), sqlDataReader.GetString(8), sqlDataReader.GetString(9), sqlDataReader.GetDateTime(10));
-                            Employees.Add(employee);
-                        }
-                        else
-                        {
-                            EmployeeBL employee = new EmployeeBL(sqlDataReader.GetString(0), sqlDataReader.GetString(1), sqlDataReader.GetString(2), sqlDataReader.GetString(3), sqlDataReader.GetDateTime(4), sqlDataReader.GetString(5), sqlDataReader.GetString(6), sqlDataReader.GetString(7), sqlDataReader.GetString(8), sqlDataReader.GetString(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11));
-                            Employees.Add(employee);
-                        }
-                    }
-                }
-                catch (Exception e) // if any exception returns the exception message
-                {
-                    throw (e);
-                }
-                finally // closes the database connection at the end
-                {
-                    con.Close();
-                }
-            }
-            return Employees; // returns list
+            return message; // Return the result message
         }
         public EmployeeBL GetEmployeebyUsername(string username) // returns employee for a username
         {
@@ -234,7 +191,7 @@ namespace DellLibrary.DL.DB
             // makes connection with DB to get employees
             using (SqlConnection con = Configuration.GetConnection())
             {
-                string query = $"Select * from Employees where Username=@username;";
+                string query = $"Select * from Employees where Username=@username and designation!='CEO';";
                 // first try to execute retreive command
                 try
                 {
@@ -266,19 +223,63 @@ namespace DellLibrary.DL.DB
             }
             return employee; // returns employee
         }
-        public List<EmployeeBL> GetEmployeesByDesignation(string designation) // returns the list of employees with specific designation
+        public List<EmployeeBL> GetAllEmployeesByStatus(string eStatus) // returns the list of employees acc to current status
         {
             List<EmployeeBL> Employees = new List<EmployeeBL>();
             // makes connection with DB to get employees
             using (SqlConnection con = Configuration.GetConnection())
             {
-                string query = $"Select * from Employees where Designation='{designation}';";
+                string query = $"Select * from Employees where Designation<>'CEO' where status = @estatus;";
+                // first try to execute retreive command
+                try
+                {
+                    con.Open(); // opens Database Connection
+                    SqlCommand command = new SqlCommand(query, con); // command to execute the query
+                    command.Parameters.AddWithValue("@estatus", eStatus);
+                    SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
+
+                    while (sqlDataReader.Read()) // if employees data found
+                    {
+                        if (sqlDataReader.IsDBNull(11)) // if resignation date is null
+                        {
+                            EmployeeBL employee = new EmployeeBL(sqlDataReader.GetString(0), sqlDataReader.GetString(1), sqlDataReader.GetString(2), sqlDataReader.GetString(3), sqlDataReader.GetDateTime(4), sqlDataReader.GetString(5), sqlDataReader.GetString(6), sqlDataReader.GetString(7), sqlDataReader.GetString(8), sqlDataReader.GetString(9), sqlDataReader.GetDateTime(10));
+                            Employees.Add(employee);
+                        }
+                        else
+                        {
+                            EmployeeBL employee = new EmployeeBL(sqlDataReader.GetString(0), sqlDataReader.GetString(1), sqlDataReader.GetString(2), sqlDataReader.GetString(3), sqlDataReader.GetDateTime(4), sqlDataReader.GetString(5), sqlDataReader.GetString(6), sqlDataReader.GetString(7), sqlDataReader.GetString(8), sqlDataReader.GetString(9), sqlDataReader.GetDateTime(10), sqlDataReader.GetDateTime(11));
+                            Employees.Add(employee);
+                        }
+                    }
+                }
+                catch (Exception e) // if any exception returns the exception message
+                {
+                    throw (e);
+                }
+                finally // closes the database connection at the end
+                {
+                    con.Close();
+                }
+            }
+            return Employees; // returns list
+        }
+        public List<EmployeeBL> GetEmployeesByDesignation(string designation,string status) // returns the list of employees with specific designation and status
+        {
+            List<EmployeeBL> Employees = new List<EmployeeBL>();
+            // makes connection with DB to get employees
+            using (SqlConnection con = Configuration.GetConnection())
+            {
+                string query = $"Select * from Employees where Designation=@designation and Status=@status;";
                 // first try to execute retreive command
                 try
                 {
                     con.Open(); // opens Database Connection
                     SqlCommand sqlCommand = new SqlCommand(query, con);
                     SqlCommand command = sqlCommand; // command to execute the query
+                    // Add parameters
+                    command.Parameters.AddWithValue("@designation", designation);
+                    command.Parameters.AddWithValue("@status", status);
+
                     SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
                     while (sqlDataReader.Read())
                     {
@@ -290,8 +291,8 @@ namespace DellLibrary.DL.DB
                         string address = sqlDataReader.GetString(5);
                         string contact = sqlDataReader.GetString(6);
                         string gender = sqlDataReader.GetString(7);
-                        string status = sqlDataReader.GetString(8);
-                        EmployeeBL employee = new EmployeeBL(sqlDataReader.GetString(0), sqlDataReader.GetString(1), sqlDataReader.GetString(2), sqlDataReader.GetString(3), sqlDataReader.GetDateTime(4), sqlDataReader.GetString(5), sqlDataReader.GetString(6), sqlDataReader.GetString(7), sqlDataReader.GetString(8), sqlDataReader.GetString(9), sqlDataReader.GetDateTime(10));
+                        DateTime hireDate = sqlDataReader.GetDateTime(10);
+                        EmployeeBL employee = new EmployeeBL(name, username,password,email,birthDate,address,contact,gender,status,designation,hireDate);
                         Employees.Add(employee);
                     }
                 }

@@ -54,7 +54,6 @@
     <Compile Include="DL Interfaces\IOrderDetailsDL.cs" />
     <Compile Include="DL Interfaces\IOrderDL.cs" />
     <Compile Include="DL Interfaces\IProductDL.cs" />
-    <Compile Include="DL Interfaces\IReviewDL.cs" />
     <Compile Include="DL Interfaces\IUserDL.cs" />
     <Compile Include="DL\DB\CustomerDLDB.cs" />
     <Compile Include="DL\DB\EmployeeContributionDLDB.cs" />
@@ -62,7 +61,7 @@
     <Compile Include="DL\DB\OrderDetailsDLDB.cs" />
     <Compile Include="DL\DB\OrderDLDB.cs" />
     <Compile Include="DL\DB\ProductDLDB.cs" />
-    <Compile Include="DL\DB\ReviewDLDB.cs" />
+    <Compile Include="DL\FH\EmployeeDLFH.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utility\Configuration.cs" />
     <Compile Include="Utility\Validations.cs" />

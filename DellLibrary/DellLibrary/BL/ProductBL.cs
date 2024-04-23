@@ -8,12 +8,13 @@ namespace DellLibrary.BL
 {
     public class ProductBL
     {
-        private int productID;
-        private string productName;
-        private string productDetails;
-        private double productPrice;
-        private int unitInStock;
-        private string productStatus;
+        private int productID; // Unique identifier for the product
+        private string productName; // Name of the product
+        private string productDetails; // Details of the product
+        private double productPrice; // Price of the product
+        private int unitInStock; // Units in stock
+        private string productStatus; // Status of the product
+                                      // Full constructor
         public ProductBL(int productID, string productName, string productDetails, double productPrice, int unitInStock, string productStatus)
         {
             this.productID = productID;
@@ -23,6 +24,7 @@ namespace DellLibrary.BL
             this.unitInStock = unitInStock;
             this.productStatus = productStatus;
         }
+        // Constructor without product ID
         public ProductBL(string productName, string productDetails, double productPrice, int unitInStock, string productStatus)
         {
             this.productName = productName;
@@ -31,6 +33,7 @@ namespace DellLibrary.BL
             this.unitInStock = unitInStock;
             this.productStatus = productStatus;
         }
+        // Getters and setters for product properties
         public int GetProductID() { return productID; }
         public string GetProductName() { return productName; }
         public void SetProductName(string value) { productName = value; }
@@ -42,5 +45,6 @@ namespace DellLibrary.BL
         public void SetUnitInStock(int value) { unitInStock = value; }
         public string GetProductStatus() { return productStatus; }
         public void SetProductStatus(string value) { productStatus = value; }
+
     }
 }

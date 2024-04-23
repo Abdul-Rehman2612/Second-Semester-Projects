@@ -1,6 +1,5 @@
 ﻿using DELL.Utility;
 using DellLibrary.BL;
-using DellLibrary.DL_Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -110,7 +109,7 @@ namespace DELL.UI.UsersUI
                 SPGridView.DataSource = null; // Unbind the data source
                 SPGridView.Rows.Clear(); // Clear the rows
                                          // Add rows to the DataGridView
-                List<EmployeeBL> employees = ObjectHandler.GetEmployeeDL().GetEmployeesByDesignation("SalesPerson");
+                List<EmployeeBL> employees = ObjectHandler.GetEmployeeDL().GetEmployeesByDesignation("SalesPerson","Active");
                 foreach (EmployeeBL e in employees)
                 {
                     SPGridView.Rows.Add(
@@ -239,6 +238,25 @@ namespace DELL.UI.UsersUI
                 }
             }
         }
+        private void DeactivateSPBtn_Click(object sender, EventArgs e) // Handles deactivation of SalesPerson
+        {
+            // Check if username is provided
+            if (UInputSP.Text!="")
+            {
+                // Deactivate employee
+                string message = ObjectHandler.GetEmployeeDL().DeactivateEmployeeAccount(UInputSP.Text);
+                if (message=="True")
+                {
+                    MessageBox.Show("SalesPerson account deactivated successfully!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadEntityData("SP"); // Load salespersons data
+                }
+                // if employee not deactivated
+                else
+                {
+                    MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
         private void DeleteSpBtn_Click(object sender, EventArgs e) // Handles deletion of SalesPerson
         {
             // Check if username is provided
@@ -269,7 +287,7 @@ namespace DELL.UI.UsersUI
                 // Retrieve technicians' data from the data access layer
                 TGridView.DataSource = null; // Unbind the data source
                 TGridView.Rows.Clear(); // Clear the rows
-                List<EmployeeBL> employees = ObjectHandler.GetEmployeeDL().GetEmployeesByDesignation("Technician");
+                List<EmployeeBL> employees = ObjectHandler.GetEmployeeDL().GetEmployeesByDesignation("Technician","Active");
                 // Add rows to the DataGridView
                 foreach (EmployeeBL e in employees)
                 {
@@ -410,6 +428,25 @@ namespace DELL.UI.UsersUI
                     LoadEntityData("T"); // Load technicians data
                 }
                 // if employee not deleted
+                else
+                {
+                    MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+        private void DeactivateMTBtn_Click(object sender, EventArgs e)
+        {
+            // Check if username is provided
+            if (UInputMT.Text!="")
+            {
+                // Deactivate employee
+                string message = ObjectHandler.GetEmployeeDL().DeactivateEmployeeAccount(UInputMT.Text);
+                if (message=="True")
+                {
+                    MessageBox.Show("SalesPerson account deactivated successfully!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadEntityData("T"); // Load technicians data
+                }
+                // if employee not deactivated
                 else
                 {
                     MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -567,6 +604,25 @@ namespace DELL.UI.UsersUI
                 }
             }
         }
+        private void DeactivateCBtn_Click(object sender, EventArgs e) // Handles deactivation of Customer
+        {
+            // Check if username is provided
+            if (UInputC.Text!="")
+            {
+                // Deactivate customer
+                string message = ObjectHandler.GetCustomerDL().DeactivateCustomerAccount(UInputC.Text);
+                if (message=="True")
+                {
+                    MessageBox.Show("Customer account deactivated successfully!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadEntityData("C"); // Load customers data
+                }
+                // if customer not deactivated
+                else
+                {
+                    MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
 
 
 
@@ -609,7 +665,7 @@ namespace DELL.UI.UsersUI
         {
             try
             {
-                List<EmployeeBL> emp = ObjectHandler.GetEmployeeDL().GetEmployeesByDesignation("SalesPerson");
+                List<EmployeeBL> emp = ObjectHandler.GetEmployeeDL().GetEmployeesByDesignation("SalesPerson", "Active");
                 EmployeeIDEO.Items.Clear();
 
                 foreach (EmployeeBL employee in emp)

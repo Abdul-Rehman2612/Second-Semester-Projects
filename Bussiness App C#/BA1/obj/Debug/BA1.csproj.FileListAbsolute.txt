@@ -12,3 +12,10 @@ D:\Semester 2\Second Semester Projects\OOP\BA\BA1\obj\Debug\BA1.pdb
 D:\Semester 2\Second Semester Projects\OOP\BA\BA1\bin\Debug\BA1.exe.config
 D:\Semester 2\Second Semester Projects\OOP\BA\BA1\bin\Debug\BA1.exe
 D:\Semester 2\Second Semester Projects\OOP\BA\BA1\bin\Debug\BA1.pdb
+D:\Project\Second Semester\Bussiness App C#\BA1\bin\Debug\BA1.exe.config
+D:\Project\Second Semester\Bussiness App C#\BA1\bin\Debug\BA1.exe
+D:\Project\Second Semester\Bussiness App C#\BA1\bin\Debug\BA1.pdb
+D:\Project\Second Semester\Bussiness App C#\BA1\obj\Debug\BA1.csproj.AssemblyReference.cache
+D:\Project\Second Semester\Bussiness App C#\BA1\obj\Debug\BA1.csproj.CoreCompileInputs.cache
+D:\Project\Second Semester\Bussiness App C#\BA1\obj\Debug\BA1.exe
+D:\Project\Second Semester\Bussiness App C#\BA1\obj\Debug\BA1.pdb

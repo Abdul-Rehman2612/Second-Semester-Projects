@@ -1,12 +1,12 @@
-D:\DellLibrary\DellLibrary\bin\Debug\DellLibrary.dll
-D:\DellLibrary\DellLibrary\bin\Debug\DellLibrary.pdb
-D:\DellLibrary\DellLibrary\obj\Debug\DellLibrary.csproj.AssemblyReference.cache
-D:\DellLibrary\DellLibrary\obj\Debug\DellLibrary.csproj.CoreCompileInputs.cache
-D:\DellLibrary\DellLibrary\obj\Debug\DellLibrary.dll
-D:\DellLibrary\DellLibrary\obj\Debug\DellLibrary.pdb
 D:\Project\Second Semester\DellLibrary\DellLibrary\bin\Debug\DellLibrary.dll
 D:\Project\Second Semester\DellLibrary\DellLibrary\bin\Debug\DellLibrary.pdb
 D:\Project\Second Semester\DellLibrary\DellLibrary\obj\Debug\DellLibrary.csproj.AssemblyReference.cache
 D:\Project\Second Semester\DellLibrary\DellLibrary\obj\Debug\DellLibrary.csproj.CoreCompileInputs.cache
 D:\Project\Second Semester\DellLibrary\DellLibrary\obj\Debug\DellLibrary.dll
 D:\Project\Second Semester\DellLibrary\DellLibrary\obj\Debug\DellLibrary.pdb
+D:\DellLibrary\DellLibrary\bin\Debug\DellLibrary.dll
+D:\DellLibrary\DellLibrary\bin\Debug\DellLibrary.pdb
+D:\DellLibrary\DellLibrary\obj\Debug\DellLibrary.csproj.AssemblyReference.cache
+D:\DellLibrary\DellLibrary\obj\Debug\DellLibrary.csproj.CoreCompileInputs.cache
+D:\DellLibrary\DellLibrary\obj\Debug\DellLibrary.dll
+D:\DellLibrary\DellLibrary\obj\Debug\DellLibrary.pdb
