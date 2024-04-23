@@ -28,7 +28,7 @@ namespace DELL.UI.UsersUI
             {
                 int count = ObjectHandler.GetCustomerDL().GetCustomerCount(); // gets customer count
                 DataShow1.Text=$"Total Customers: {count}";
-                count = ObjectHandler.GetOrderDL().GetOrderCount(SalesPerson.GetUsername()); // gets employees count
+                count = ObjectHandler.GetOrderDL().GetOrderCountForEmployee(SalesPerson.GetUsername()); // gets employees count
                 DataShow2.Text=$"Orders Placed: {count}";
                 count = ObjectHandler.GetOrderDL().GetOrderCount(); // gets orders count
                 DataShow3.Text=$"Total Orders: {count}";

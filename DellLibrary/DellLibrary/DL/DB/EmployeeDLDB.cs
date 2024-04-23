@@ -376,7 +376,7 @@ namespace DellLibrary.DL.DB
             // makes connection with DB to get employees count
             using (SqlConnection con = Configuration.GetConnection())
             {
-                string query = $"Select Count(*) from Employees where Status=@Status;";
+                string query = $"Select Count(*) from Employees;";
                 // first try to execute retreive command
                 try
                 {

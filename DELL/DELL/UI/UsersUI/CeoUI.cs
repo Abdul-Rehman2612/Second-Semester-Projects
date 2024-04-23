@@ -684,6 +684,7 @@ namespace DELL.UI.UsersUI
             if (EmployeeIDEO.SelectedItem != null) // Check if an employee is selected
             {
                 LoadEmployeeOrdersData(); // Load orders for the selected employee
+                EmpTO.Text=ObjectHandler.GetOrderDL().GetOrderCountForEmployee(EmployeeIDEO.Text).ToString();
             }
         }
         private void EOGridView_SelectionChanged(object sender, EventArgs e) // Handle selection change
@@ -724,7 +725,6 @@ namespace DELL.UI.UsersUI
         }
         private void ClearInputsEO() // Clear input fields related to employee orders
         {
-            NameTXT.Text = "";
             CustomerIDTXT.Text = "";
             OrderDateTXT.Text = "";
             PriceTXT.Text = "";
@@ -732,7 +732,6 @@ namespace DELL.UI.UsersUI
         }
         private void LoadDataIntoInputsEO(OrderBL order, string customerID) // Load order data into input fields related to employee orders
         {
-            NameTXT.Text = order.GetEmployee().GetName();
             CustomerIDTXT.Text = customerID;
             OrderDateTXT.Text = order.GetOrderDate().ToString("yyyy-MM-dd");
             OrderIDTXT.Text = order.GetOrderID().ToString();
@@ -799,6 +798,7 @@ namespace DELL.UI.UsersUI
             if (CustomerIDCO.SelectedItem != null) // Check if selected
             {
                 LoadCustomersOrdersData(); // Load orders
+                CustTO.Text=ObjectHandler.GetOrderDL().GetOrderCountForCustomer(EmployeeIDEO.Text).ToString();
             }
         }
         private void COGridView_SelectionChanged(object sender, EventArgs e) // Handle selection change
@@ -822,7 +822,7 @@ namespace DELL.UI.UsersUI
                                     string customername = ObjectHandler.GetCustomerDL().GetCustomerByUsername(customerID).GetName(); // Get customer name
                                     EmployeeBL employee = ObjectHandler.GetEmployeeDL().GetEmployeebyUsername(employeeID); // Get employee
                                     OrderBL order = new OrderBL(orderID, orderType, orderDate, employee, totalPrice); // Create order
-                                    LoadDataIntoInputsCO(order, customername); // Load data
+                                    LoadDataIntoInputsCO(order); // Load data
                                 }
                             }
                         }
@@ -840,15 +840,13 @@ namespace DELL.UI.UsersUI
         }
         private void ClearInputsCO() // Clear input fields related to customer orders
         {
-            NameCOTXT.Text = "";
             EmployeeIDCOTXT.Text = "";
             OrderDateCOTXT.Text = "";
             TotalPriceCO.Text = "";
             OrderDateCOTXT.Text = "";
         }
-        private void LoadDataIntoInputsCO(OrderBL order, string customername) // Load order data into input fields related to customer orders
+        private void LoadDataIntoInputsCO(OrderBL order) // Load order data into input fields related to customer orders
         {
-            NameCOTXT.Text = customername;
             EmployeeIDCOTXT.Text = order.GetEmployee().GetUsername();
             OrderDateCOTXT.Text = order.GetOrderDate().ToString("yyyy-MM-dd");
             OrderDateCOTXT.Text = order.GetOrderID().ToString();

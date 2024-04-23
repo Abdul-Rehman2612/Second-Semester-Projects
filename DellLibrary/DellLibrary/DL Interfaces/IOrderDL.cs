@@ -11,6 +11,8 @@ namespace DellLibrary.DL_Interfaces
     {
         int GetOrderCount(); // returns the count of total orders
         List<OrderBL> GetOrdersForUser(string username); // returns the list of orders for a user
-        int GetOrderCount(string username); // returns orders count where employee username found
+        int GetOrderCountForEmployee(string username); // returns orders count where employee username found
+        int GetOrderCountForCustomer(string username); // returns orders count where customer username found
+
     }
 }

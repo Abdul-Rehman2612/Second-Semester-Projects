@@ -91,7 +91,7 @@ namespace DellLibrary.DL.DB
             }
             return orders;
         }
-        public int GetOrderCount(string empUsername) // returns order count
+        public int GetOrderCountForEmployee(string empUsername) // returns order count
         {
             int OrderCount = 0;
             using (SqlConnection con = Configuration.GetConnection())
@@ -122,5 +122,37 @@ namespace DellLibrary.DL.DB
             }
             return OrderCount; // Returns orders count
         }
+        public int GetOrderCountForCustomer(string custUsername) // returns order count
+        {
+            int OrderCount = 0;
+            using (SqlConnection con = Configuration.GetConnection())
+            {
+                try
+                {
+                    string query = "SELECT Count(OrderId) FROM Orders where CustomerID=@custUsername;";
+
+                    con.Open(); // Opens Database Connection
+
+                    SqlCommand command = new SqlCommand(query, con); // Command to execute the query
+                    command.Parameters.AddWithValue("custUsername", custUsername);
+                    SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
+
+                    if (sqlDataReader.Read()) // If orders data found for employee
+                    {
+                        OrderCount = sqlDataReader.GetInt32(0);
+                    }
+                }
+                catch (Exception e)
+                {
+                    throw (e);
+                }
+                finally
+                {
+                    con.Close(); // Closes the database connection at the end
+                }
+            }
+            return OrderCount; // Returns orders count
+        }
+
     }
 }

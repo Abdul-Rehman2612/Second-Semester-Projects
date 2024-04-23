@@ -9,16 +9,14 @@ namespace DELL.Utility
         // Initialize instances of data access layers for various entities
         private static readonly ICustomerDL customerDL = new CustomerDLDB(); // Customer Data Access Layer
         private static readonly IUserDL customerUDL = new CustomerDLDB(); // User Data Access Layer for Customers
-        // private static readonly IEmployeeDL employeeDL = new EmployeeDLDB(); // Employee Data Access Layer
         private static readonly IUserDL employeeUDL = new EmployeeDLDB(); // User Data Access Layer for Employees
         private static readonly IOrderDL orderDL = new OrderDLDB(); // Order Data Access Layer
         private static readonly IProductDL productDL = new ProductDLDB(); // Product Data Access Layer
         private static readonly IOrderDetailsDL orderDetailsDL = new OrderDetailsDLDB(); // Order Details Data Access Layer
         private static readonly IEmployeeContributionDL employeeContributionDL = new EmployeeContributionDLDB(); // Employee Contribution Data Access Layer
 
-
-
-        private static readonly IEmployeeDL employeeDL = new EmployeeDLFH(); // User Data Access Layer for Employees
+        private static readonly IEmployeeDL employeeDL = new EmployeeDLDB(); // Employee Data Access Layer
+        // private static readonly IEmployeeDL employeeDL = new EmployeeDLFH(); // User Data Access Layer for Employees
 
         // Methods to retrieve instances of data access layers
         public static ICustomerDL GetCustomerDL() { return customerDL; } // Get Customer Data Access Layer

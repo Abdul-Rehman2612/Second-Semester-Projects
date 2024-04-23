@@ -405,7 +405,7 @@ namespace DellLibrary.DL.DB
             // makes connection with DB to get customers count
             using (SqlConnection con = Configuration.GetConnection())
             {
-                string query = $"Select Count(username) from Customers where Status=@status;";
+                string query = $"Select Count(username) from Customers;";
                 // first try to execute retreive command
                 try
                 {
