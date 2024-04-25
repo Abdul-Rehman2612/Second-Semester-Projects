@@ -43,20 +43,17 @@
   <ItemGroup>
     <Compile Include="BL\CustomerBL.cs" />
     <Compile Include="BL\EmployeeBL.cs" />
-    <Compile Include="BL\EmployeeContributionBL.cs" />
     <Compile Include="BL\OrderBL.cs" />
     <Compile Include="BL\OrderDetailsBL.cs" />
     <Compile Include="BL\ProductBL.cs" />
     <Compile Include="BL\UserBL.cs" />
     <Compile Include="DL Interfaces\ICustomerDL.cs" />
-    <Compile Include="DL Interfaces\IEmployeeContributionDL.cs" />
     <Compile Include="DL Interfaces\IEmployeeDL.cs" />
     <Compile Include="DL Interfaces\IOrderDetailsDL.cs" />
     <Compile Include="DL Interfaces\IOrderDL.cs" />
     <Compile Include="DL Interfaces\IProductDL.cs" />
     <Compile Include="DL Interfaces\IUserDL.cs" />
     <Compile Include="DL\DB\CustomerDLDB.cs" />
-    <Compile Include="DL\DB\EmployeeContributionDLDB.cs" />
     <Compile Include="DL\DB\EmployeeDLDB.cs" />
     <Compile Include="DL\DB\OrderDetailsDLDB.cs" />
     <Compile Include="DL\DB\OrderDLDB.cs" />

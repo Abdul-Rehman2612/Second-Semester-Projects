@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "D:\\DellConsole\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{574409B2-5AA6-42AD-BEDD-4B627847B064}|DellConsole\\DellConsole.csproj|D:\\DellConsole\\dellconsole\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{574409B2-5AA6-42AD-BEDD-4B627847B064}|DellConsole\\DellConsole.csproj|solutionrelative:dellconsole\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{574409B2-5AA6-42AD-BEDD-4B627847B064}|DellConsole\\DellConsole.csproj|d:\\dellconsole\\dellconsole\\utility\\objecthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{574409B2-5AA6-42AD-BEDD-4B627847B064}|DellConsole\\DellConsole.csproj|solutionrelative:dellconsole\\utility\\objecthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{574409B2-5AA6-42AD-BEDD-4B627847B064}|DellConsole\\DellConsole.csproj|d:\\dellconsole\\dellconsole\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{574409B2-5AA6-42AD-BEDD-4B627847B064}|DellConsole\\DellConsole.csproj|solutionrelative:dellconsole\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{574409B2-5AA6-42AD-BEDD-4B627847B064}|DellConsole\\DellConsole.csproj|d:\\dellconsole\\dellconsole\\ui\\utility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{574409B2-5AA6-42AD-BEDD-4B627847B064}|DellConsole\\DellConsole.csproj|solutionrelative:dellconsole\\ui\\utility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{574409B2-5AA6-42AD-BEDD-4B627847B064}|DellConsole\\DellConsole.csproj|D:\\DellConsole\\dellconsole\\ui\\employeeui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{574409B2-5AA6-42AD-BEDD-4B627847B064}|DellConsole\\DellConsole.csproj|D:\\DellConsole\\dellconsole\\ui\\adminui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{574409B2-5AA6-42AD-BEDD-4B627847B064}|DellConsole\\DellConsole.csproj|solutionrelative:dellconsole\\ui\\adminui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{574409B2-5AA6-42AD-BEDD-4B627847B064}|DellConsole\\DellConsole.csproj|D:\\DellConsole\\dellconsole\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{574409B2-5AA6-42AD-BEDD-4B627847B064}|DellConsole\\DellConsole.csproj|solutionrelative:dellconsole\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,19 +42,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "App.config",
+              "DocumentMoniker": "D:\\DellConsole\\DellConsole\\App.config",
+              "RelativeDocumentMoniker": "DellConsole\\App.config",
+              "ToolTip": "D:\\DellConsole\\DellConsole\\App.config",
+              "RelativeToolTip": "DellConsole\\App.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-04-24T04:46:13.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Utility.cs",
+              "DocumentMoniker": "D:\\DellConsole\\DellConsole\\UI\\Utility.cs",
+              "RelativeDocumentMoniker": "DellConsole\\UI\\Utility.cs",
+              "ToolTip": "D:\\DellConsole\\DellConsole\\UI\\Utility.cs",
+              "RelativeToolTip": "DellConsole\\UI\\Utility.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAA7wGUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T04:46:03.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "EmployeeUI.cs",
               "DocumentMoniker": "D:\\DellConsole\\DellConsole\\UI\\EmployeeUI.cs",
               "RelativeDocumentMoniker": "DellConsole\\UI\\EmployeeUI.cs",
               "ToolTip": "D:\\DellConsole\\DellConsole\\UI\\EmployeeUI.cs",
               "RelativeToolTip": "DellConsole\\UI\\EmployeeUI.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAfAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAA3wCsBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T15:10:12.159Z"
+              "WhenOpened": "2024-04-23T15:10:12.159Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "AdminUI.cs",
               "DocumentMoniker": "D:\\DellConsole\\DellConsole\\UI\\AdminUI.cs",
               "RelativeDocumentMoniker": "DellConsole\\UI\\AdminUI.cs",
@@ -54,32 +89,34 @@
               "RelativeToolTip": "DellConsole\\UI\\AdminUI.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T15:10:06.675Z"
+              "WhenOpened": "2024-04-23T15:10:06.675Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ObjectHandler.cs",
               "DocumentMoniker": "D:\\DellConsole\\DellConsole\\Utility\\ObjectHandler.cs",
               "RelativeDocumentMoniker": "DellConsole\\Utility\\ObjectHandler.cs",
               "ToolTip": "D:\\DellConsole\\DellConsole\\Utility\\ObjectHandler.cs",
               "RelativeToolTip": "DellConsole\\Utility\\ObjectHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-23T08:36:56.106Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\DellConsole\\DellConsole\\Program.cs",
               "RelativeDocumentMoniker": "DellConsole\\Program.cs",
               "ToolTip": "D:\\DellConsole\\DellConsole\\Program.cs",
               "RelativeToolTip": "DellConsole\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAaAAAA",
+              "ViewState": "AQIAAJsAAAAAAAAAAAAIwMEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T08:06:51.74Z"
+              "WhenOpened": "2024-04-23T08:06:51.74Z",
+              "EditorCaption": ""
             }
           ]
         }

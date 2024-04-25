@@ -11,7 +11,8 @@ namespace DellLibrary.DL.DB
     {
         private readonly static IEmployeeDL employeeDL = new EmployeeDLDB();
         private readonly static IOrderDetailsDL orderDetailsDL = new OrderDetailsDLDB();
-        public int GetOrderCount() // returns order count
+
+        public int GetOrderCount()
         {
             int OrderCount = 0;
             using (SqlConnection con = Configuration.GetConnection())
@@ -19,13 +20,10 @@ namespace DellLibrary.DL.DB
                 try
                 {
                     string query = "SELECT Count(OrderId) FROM Orders;";
-
-                    con.Open(); // Opens Database Connection
-
-                    SqlCommand command = new SqlCommand(query, con); // Command to execute the query
-                    SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
-
-                    if (sqlDataReader.Read()) // If orders data found
+                    con.Open();
+                    SqlCommand command = new SqlCommand(query, con);
+                    SqlDataReader sqlDataReader = command.ExecuteReader();
+                    if (sqlDataReader.Read())
                     {
                         OrderCount = sqlDataReader.GetInt32(0);
                     }
@@ -36,12 +34,13 @@ namespace DellLibrary.DL.DB
                 }
                 finally
                 {
-                    con.Close(); // Closes the database connection at the end
+                    con.Close();
                 }
             }
-            return OrderCount; // Returns orders count
+            return OrderCount;
         }
-        public List<OrderBL> GetOrdersForUser(string username) // returns orders for a specific user
+
+        public List<OrderBL> GetOrdersForUser(string username)
         {
             List<OrderBL> orders = new List<OrderBL>();
             string query = "SELECT O.OrderId, O.OrderType, O.OrderDate, O.TotalPrice, O.EmployeeID " +
@@ -50,48 +49,38 @@ namespace DellLibrary.DL.DB
                            "WHERE C.Username = @Username;";
             using (SqlConnection con = Configuration.GetConnection())
             {
-                try
+                con.Open();
+                SqlCommand command = new SqlCommand(query, con);
+                command.Parameters.AddWithValue("@Username", username);
+                using (SqlDataReader sqlDataReader = command.ExecuteReader())
                 {
-                    con.Open(); // Opens Database Connection
-                    SqlCommand command = new SqlCommand(query, con); // Command to execute the query
-                    command.Parameters.AddWithValue("@Username", username); // Add parameters
-                    SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
-                    while (sqlDataReader.Read()) // Loop through results
+                    while (sqlDataReader.Read())
                     {
                         int orderId = sqlDataReader.GetInt32(0);
                         string orderType = sqlDataReader.GetString(1);
                         DateTime orderDate = sqlDataReader.GetDateTime(2);
                         double totalPrice = sqlDataReader.GetDouble(3);
-                        string employeeUN = sqlDataReader.GetString(4);
-                        EmployeeBL employee = employeeDL.GetEmployeebyUsername(employeeUN); // Retrieve employee
-                        if(employee!=null)
+                        string employeeUN = sqlDataReader.IsDBNull(4) ? null : sqlDataReader.GetString(4);
+                        EmployeeBL employee = null;
+                        if (!string.IsNullOrEmpty(employeeUN))
                         {
-                            OrderBL order = new OrderBL(orderId, orderType, orderDate, employee, totalPrice);
-                            List<OrderDetailsBL> orderDetails = orderDetailsDL.GetOrderDetailsForOrder(orderId);
-                            order.AddOrderDetailsList(orderDetails);
-                            orders.Add(order);
+                            employee = employeeDL.GetEmployeebyUsername(employeeUN);
                         }
-                        else
+                        OrderBL order = employee != null ? new OrderBL(orderId, orderType, orderDate, employee, totalPrice) :
+                                                            new OrderBL(orderId, orderType, orderDate, totalPrice);
+                        List<OrderDetailsBL> orderDetails = orderDetailsDL.GetOrderDetailsForOrder(orderId);
+                        if (orderDetails.Count > 0)
                         {
-                            OrderBL order = new OrderBL(orderId, orderType, orderDate, totalPrice);
-                            List<OrderDetailsBL> orderDetails = orderDetailsDL.GetOrderDetailsForOrder(orderId);
                             order.AddOrderDetailsList(orderDetails);
-                            orders.Add(order);
                         }
+                        orders.Add(order);
                     }
-                }
-                catch (Exception e) // throw exception
-                {
-                    throw (e);
-                }
-                finally
-                {
-                    con.Close(); // Closes the database connection at the end
                 }
             }
             return orders;
         }
-        public int GetOrderCountForEmployee(string empUsername) // returns order count
+
+        public int GetOrderCountForEmployee(string empUsername)
         {
             int OrderCount = 0;
             using (SqlConnection con = Configuration.GetConnection())
@@ -99,14 +88,11 @@ namespace DellLibrary.DL.DB
                 try
                 {
                     string query = "SELECT Count(OrderId) FROM Orders where EmployeeID=@empUsername;";
-
-                    con.Open(); // Opens Database Connection
-
-                    SqlCommand command = new SqlCommand(query, con); // Command to execute the query
+                    con.Open();
+                    SqlCommand command = new SqlCommand(query, con);
                     command.Parameters.AddWithValue("empUsername", empUsername);
-                    SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
-
-                    if (sqlDataReader.Read()) // If orders data found for employee
+                    SqlDataReader sqlDataReader = command.ExecuteReader();
+                    if (sqlDataReader.Read())
                     {
                         OrderCount = sqlDataReader.GetInt32(0);
                     }
@@ -117,12 +103,13 @@ namespace DellLibrary.DL.DB
                 }
                 finally
                 {
-                    con.Close(); // Closes the database connection at the end
+                    con.Close();
                 }
             }
-            return OrderCount; // Returns orders count
+            return OrderCount;
         }
-        public int GetOrderCountForCustomer(string custUsername) // returns order count
+
+        public int GetOrderCountForCustomer(string custUsername)
         {
             int OrderCount = 0;
             using (SqlConnection con = Configuration.GetConnection())
@@ -130,14 +117,11 @@ namespace DellLibrary.DL.DB
                 try
                 {
                     string query = "SELECT Count(OrderId) FROM Orders where CustomerID=@custUsername;";
-
-                    con.Open(); // Opens Database Connection
-
-                    SqlCommand command = new SqlCommand(query, con); // Command to execute the query
+                    con.Open();
+                    SqlCommand command = new SqlCommand(query, con);
                     command.Parameters.AddWithValue("custUsername", custUsername);
-                    SqlDataReader sqlDataReader = command.ExecuteReader(); // Execute the query
-
-                    if (sqlDataReader.Read()) // If orders data found for employee
+                    SqlDataReader sqlDataReader = command.ExecuteReader();
+                    if (sqlDataReader.Read())
                     {
                         OrderCount = sqlDataReader.GetInt32(0);
                     }
@@ -148,11 +132,36 @@ namespace DellLibrary.DL.DB
                 }
                 finally
                 {
-                    con.Close(); // Closes the database connection at the end
+                    con.Close();
                 }
             }
-            return OrderCount; // Returns orders count
+            return OrderCount;
         }
 
+        public int AddOrder(OrderBL order, string username)
+        {
+            try
+            {
+                using (SqlConnection con = Configuration.GetConnection())
+                {
+                    con.Open();
+                    string query = "INSERT INTO Orders (OrderType, CustomerID, OrderDate, TotalPrice) " +
+                                   "OUTPUT INSERTED.OrderID " +
+                                   "VALUES (@OrderType, @Username, @OrderDate, @TotalPrice)";
+                    SqlCommand command = new SqlCommand(query, con);
+                    command.Parameters.AddWithValue("@OrderType", order.GetOrderType());
+                    command.Parameters.AddWithValue("@Username", username);
+                    command.Parameters.AddWithValue("@OrderDate", order.GetOrderDate());
+                    command.Parameters.AddWithValue("@TotalPrice", order.GetTotalPrice());
+                    int orderID = (int)command.ExecuteScalar();
+                    return orderID;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error adding order to database: " + ex.Message);
+                return -1;
+            }
+        }
     }
 }

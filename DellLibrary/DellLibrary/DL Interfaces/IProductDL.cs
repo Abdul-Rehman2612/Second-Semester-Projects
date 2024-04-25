@@ -1,15 +1,16 @@
 ﻿using DellLibrary.BL;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DellLibrary.DL_Interfaces
 {
     public interface IProductDL
     {
-        int GetProductCount(); // returns products count
-        ProductBL GetProductByProductID(int id); // returns product
+        int GetProductCount();
+        ProductBL GetProductByProductID(int id);
+        string AddProduct(ProductBL product);
+        string UpdateProduct(ProductBL product, string productName);
+        List<ProductBL> GetAllProducts();
+        string DeleteProduct(int ProductID);
+        string CheckProductName(string ProductName);
     }
 }

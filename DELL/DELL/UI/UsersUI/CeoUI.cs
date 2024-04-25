@@ -3,6 +3,7 @@ using DellLibrary.BL;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DELL.UI.UsersUI
 {
@@ -11,6 +12,8 @@ namespace DELL.UI.UsersUI
         private EmployeeBL CEO = null; // CEO data stored
         private string username = null; // username checked for update
         private string email = null; // email checked for update
+        private string type = null; // type checked for deactivated accounts
+        private string productName = null;
         public CeoUI(EmployeeBL emp)
         {
             InitializeComponent();
@@ -24,14 +27,19 @@ namespace DELL.UI.UsersUI
             LoadCustomersOrdersData(); // loads orders placed by a customer
             LoadDataForEmployeeID(); // loads data for employeeID in view orders
             LoadDataForCustomerID(); // loads data for customerID in view orders
+            LoadDeactivatedUsersData(); // loads data for deactivated users in user view
+            LoadProductsData(); // loads products data
             SelectionNull(); // clears selections of each gridview
             ClearInputsSP(); // clears input fields
             ClearInputsMT(); // clears input fields
             ClearInputsC(); // clears input fields
             ClearInputsEO(); // clears input fields
             ClearInputsCO(); // clears input fields
+            ClearInputsDAU(); // clears input fields
+            ClearInputsP(); // clear input fields
+            LoadDataCEO();
         }
-        
+
         private void LoadStats() // Loads statistical data for CEO
         {
             try
@@ -91,6 +99,8 @@ namespace DELL.UI.UsersUI
                 TGridView.ClearSelection(); // Clears selection of TGridView
                 EOrdersGridView.ClearSelection(); // Clears selection of EOrdersGridView
                 COGridView.ClearSelection(); // Clears selection of COGridView
+                DAUGridView.ClearSelection(); // clears selection of DAUGridView
+                PGridView.ClearSelection(); // clear selection PGridView
             }
             catch (Exception ex)
             {
@@ -109,7 +119,7 @@ namespace DELL.UI.UsersUI
                 SPGridView.DataSource = null; // Unbind the data source
                 SPGridView.Rows.Clear(); // Clear the rows
                                          // Add rows to the DataGridView
-                List<EmployeeBL> employees = ObjectHandler.GetEmployeeDL().GetEmployeesByDesignation("SalesPerson","Active");
+                List<EmployeeBL> employees = ObjectHandler.GetEmployeeDL().GetEmployeesByDesignation("SalesPerson", "Active");
                 foreach (EmployeeBL e in employees)
                 {
                     SPGridView.Rows.Add(
@@ -225,7 +235,7 @@ namespace DELL.UI.UsersUI
             {
                 EmployeeBL employee = new EmployeeBL(NInputSP.Text, UInputSP.Text, PInputSP.Text, EInputSP.Text, DOBISP.Value, AInputSP.Text, CInputSP.Text, GInputSP.Text);
                 // Update employee
-                string message = ObjectHandler.GetEmployeeDL().UpdateEmployee(employee,username,email);
+                string message = ObjectHandler.GetEmployeeDL().UpdateEmployee(employee, username, email);
                 if (message=="True")
                 {
                     MessageBox.Show("SalesPerson data updated successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -249,6 +259,7 @@ namespace DELL.UI.UsersUI
                 {
                     MessageBox.Show("SalesPerson account deactivated successfully!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadEntityData("SP"); // Load salespersons data
+                    LoadDeactivatedUsersData(); // Loads data or deactivated users
                 }
                 // if employee not deactivated
                 else
@@ -287,7 +298,7 @@ namespace DELL.UI.UsersUI
                 // Retrieve technicians' data from the data access layer
                 TGridView.DataSource = null; // Unbind the data source
                 TGridView.Rows.Clear(); // Clear the rows
-                List<EmployeeBL> employees = ObjectHandler.GetEmployeeDL().GetEmployeesByDesignation("Technician","Active");
+                List<EmployeeBL> employees = ObjectHandler.GetEmployeeDL().GetEmployeesByDesignation("Technician", "Active");
                 // Add rows to the DataGridView
                 foreach (EmployeeBL e in employees)
                 {
@@ -403,7 +414,7 @@ namespace DELL.UI.UsersUI
             {
                 // Create new Technician object
                 EmployeeBL user = new EmployeeBL(NInputMT.Text, UInputMT.Text, PInputMT.Text, EInputMT.Text, DOBIMT.Value, AInputMT.Text, CInputMT.Text, GInputMT.Text);
-                string message = ObjectHandler.GetEmployeeDL().UpdateEmployee(user,username,email);
+                string message = ObjectHandler.GetEmployeeDL().UpdateEmployee(user, username, email);
                 if (message=="True")
                 {
                     MessageBox.Show("Technician data updated successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -445,6 +456,7 @@ namespace DELL.UI.UsersUI
                 {
                     MessageBox.Show("SalesPerson account deactivated successfully!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadEntityData("T"); // Load technicians data
+                    LoadDeactivatedUsersData(); // Loads data or deactivated users
                 }
                 // if employee not deactivated
                 else
@@ -505,7 +517,7 @@ namespace DELL.UI.UsersUI
             CInputC.Text=customer.GetContact();
             GInputC.Text=customer.GetGender();
             DOBIC.Value=customer.GetDob();
-        }        
+        }
         private void CGridView_SelectionChanged(object sender, EventArgs e) // Handles selection change in CGridView
         {
             try
@@ -566,7 +578,7 @@ namespace DELL.UI.UsersUI
             {
                 MessageBox.Show(uStatus, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        } 
+        }
         private void UpdateCBtn_Click(object sender, EventArgs e) // Handles update of Customer
         {
             if (UInputC.Text!=""  && username!=null && email!=null)
@@ -615,6 +627,7 @@ namespace DELL.UI.UsersUI
                 {
                     MessageBox.Show("Customer account deactivated successfully!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadEntityData("C"); // Load customers data
+                    LoadDeactivatedUsersData(); // Loads data or deactivated users
                 }
                 // if customer not deactivated
                 else
@@ -648,8 +661,8 @@ namespace DELL.UI.UsersUI
                                 order.GetOrderID(),
                                 c.GetUsername(),
                                 order.GetEmployee().GetUsername(),
-                                order.GetOrderDate(),
                                 order.GetOrderType(),
+                                order.GetOrderDate(),
                                 order.GetTotalPrice()
                             );
                         }
@@ -665,7 +678,7 @@ namespace DELL.UI.UsersUI
         {
             try
             {
-                List<EmployeeBL> emp = ObjectHandler.GetEmployeeDL().GetEmployeesByDesignation("SalesPerson", "Active");
+                List<EmployeeBL> emp = ObjectHandler.GetEmployeeDL().GetAllEmployees();
                 EmployeeIDEO.Items.Clear();
 
                 foreach (EmployeeBL employee in emp)
@@ -685,6 +698,8 @@ namespace DELL.UI.UsersUI
             {
                 LoadEmployeeOrdersData(); // Load orders for the selected employee
                 EmpTO.Text=ObjectHandler.GetOrderDL().GetOrderCountForEmployee(EmployeeIDEO.Text).ToString();
+                EOrdersGridView.ClearSelection();
+                ClearInputsEO();
             }
         }
         private void EOGridView_SelectionChanged(object sender, EventArgs e) // Handle selection change
@@ -698,7 +713,7 @@ namespace DELL.UI.UsersUI
                     {
                         if (int.TryParse(selectedRow.Cells["Column1EO"].Value?.ToString(), out int orderID)) // Parse order ID
                         {
-                            string customerID = selectedRow.Cells["Column3EO"].Value?.ToString(); // Get customer ID
+                            string customerID = selectedRow.Cells["Column2EO"].Value?.ToString(); // Get customer ID
                             string employeeID = selectedRow.Cells["Column3EO"].Value?.ToString(); // Get employee ID
                             string orderType = selectedRow.Cells["Column4EO"].Value?.ToString(); // Get order type
                             if (DateTime.TryParse(selectedRow.Cells["Column5EO"].Value?.ToString(), out DateTime orderDate)) // Parse order date
@@ -741,7 +756,7 @@ namespace DELL.UI.UsersUI
 
 
         //                               Customer Orders Operations
-        private void LoadCustomersOrdersData()
+        private void LoadCustomersOrdersData() // Load customer order into grid
         {
             try
             {
@@ -755,15 +770,15 @@ namespace DELL.UI.UsersUI
                     foreach (OrderBL order in c.GetOrders())
                     {
                         // Check if the order belongs to the selected customer
-                        if (order.GetEmployee().GetUsername() == CustomerIDCO.Text)
+                        if (c.GetUsername() == CustomerIDCO.Text)
                         {
                             // Add order details to the DataGridView
-                            COGridView.Rows.Add(
+                            _=COGridView.Rows.Add(
                                 order.GetOrderID(),
                                 c.GetUsername(),
                                 order.GetEmployee().GetUsername(),
-                                order.GetOrderDate(),
                                 order.GetOrderType(),
+                                order.GetOrderDate(),
                                 order.GetTotalPrice()
                             );
                         }
@@ -798,7 +813,9 @@ namespace DELL.UI.UsersUI
             if (CustomerIDCO.SelectedItem != null) // Check if selected
             {
                 LoadCustomersOrdersData(); // Load orders
-                CustTO.Text=ObjectHandler.GetOrderDL().GetOrderCountForCustomer(EmployeeIDEO.Text).ToString();
+                CustTO.Text=ObjectHandler.GetOrderDL().GetOrderCountForCustomer(CustomerIDCO.Text).ToString();
+                COGridView.ClearSelection();
+                ClearInputsCO();
             }
         }
         private void COGridView_SelectionChanged(object sender, EventArgs e) // Handle selection change
@@ -812,7 +829,7 @@ namespace DELL.UI.UsersUI
                     {
                         if (int.TryParse(selectedRow.Cells["Column1CO"].Value?.ToString(), out int orderID)) // Parse order ID
                         {
-                            string customerID = selectedRow.Cells["Column3CO"].Value?.ToString(); // Get customer ID
+                            string customerID = selectedRow.Cells["Column2CO"].Value?.ToString(); // Get customer ID
                             string employeeID = selectedRow.Cells["Column3CO"].Value?.ToString(); // Get employee ID
                             string orderType = selectedRow.Cells["Column4CO"].Value?.ToString(); // Get order type
                             if (DateTime.TryParse(selectedRow.Cells["Column5CO"].Value?.ToString(), out DateTime orderDate)) // Parse order date
@@ -843,14 +860,449 @@ namespace DELL.UI.UsersUI
             EmployeeIDCOTXT.Text = "";
             OrderDateCOTXT.Text = "";
             TotalPriceCO.Text = "";
-            OrderDateCOTXT.Text = "";
+            OIDTXT.Text = "";
         }
         private void LoadDataIntoInputsCO(OrderBL order) // Load order data into input fields related to customer orders
         {
             EmployeeIDCOTXT.Text = order.GetEmployee().GetUsername();
             OrderDateCOTXT.Text = order.GetOrderDate().ToString("yyyy-MM-dd");
-            OrderDateCOTXT.Text = order.GetOrderID().ToString();
+            OIDTXT.Text = order.GetOrderID().ToString();
             TotalPriceCO.Text = order.GetTotalPrice().ToString();
+        }
+
+
+
+        //                               Deactivated users Operations
+        private void LoadDeactivatedUsersData() // Load user data into grid
+        {
+            try
+            {
+                List<EmployeeBL> employees = ObjectHandler.GetEmployeeDL().GetAllEmployeesByStatus("Deactivated"); // Loads deactivated employees
+                List<CustomerBL> customers = ObjectHandler.GetCustomerDL().GetAllCustomersByStatus("Deactivated"); // Loads deactivated customers
+                DAUGridView.DataSource = null; // Unbind the data source
+                DAUGridView.Rows.Clear(); // Clear the rows
+                foreach (EmployeeBL u in employees)
+                {
+                    DAUGridView.Rows.Add(
+                        u.GetName(),
+                        u.GetUsername(),
+                        u.GetPassword(),
+                        u.GetEmail(),
+                        u.GetDob(),
+                        u.GetContact(),
+                        u.GetAddress(),
+                        u.GetGender(),
+                        "Employee"
+                    );
+                }
+                foreach (CustomerBL u in customers)
+                {
+                    DAUGridView.Rows.Add(
+                        u.GetName(),
+                        u.GetUsername(),
+                        u.GetPassword(),
+                        u.GetEmail(),
+                        u.GetDob(),
+                        u.GetContact(),
+                        u.GetAddress(),
+                        u.GetGender(),
+                        "Customer"
+                    );
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void DAUGridView_SelectionChanged(object sender, EventArgs e)// Load user data
+        {
+            try
+            {
+                if (DAUGridView.SelectedRows.Count > 0)
+                {
+                    // Retrieve selected row
+                    DataGridViewRow selectedRow = DAUGridView.SelectedRows[0];
+                    if (selectedRow.Index >= 0 && selectedRow.Index < DAUGridView.Rows.Count)
+                    {
+                        // Extract data from selected row
+                        string name = selectedRow.Cells["Column1D"].Value?.ToString();
+                        string username = selectedRow.Cells["Column2D"].Value?.ToString();
+                        string password = selectedRow.Cells["Column3D"].Value?.ToString();
+                        string email = selectedRow.Cells["Column4D"].Value?.ToString();
+                        if (DateTime.TryParse(selectedRow.Cells["Column5D"].Value?.ToString(), out DateTime dob))
+                        {
+                            // Successfully parsed the DOB
+                            string contact = selectedRow.Cells["Column6D"].Value?.ToString();
+                            string address = selectedRow.Cells["Column7D"].Value?.ToString();
+                            string gender = selectedRow.Cells["Column8D"].Value?.ToString();
+                            string type = selectedRow.Cells["Column9D"].Value?.ToString();
+                            // Create user object
+                            UserBL user = new UserBL(name, username, password, email, dob, address, contact, gender, "Deactivated");
+                            LoadDataIntoInputsDAU(user, type);
+                        }
+                        else
+                        {
+                            ClearInputsDAU();
+                        }
+                    }
+                    else
+                    {
+                        ClearInputsDAU();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void ClearInputsDAU() // Clears input fields for deactivated users
+        {
+            ND.Text="";
+            UD.Text="";
+            PD.Text="";
+            ED.Text="";
+            AD.Text="";
+            CD.Text="";
+            GD.Text="";
+            DD.Text="";
+            type = null;
+        }
+        private void LoadDataIntoInputsDAU(UserBL user, string type) // Load user data into input fields
+        {
+            ND.Text=user.GetName();
+            UD.Text=user.GetUsername();
+            PD.Text=user.GetPassword();
+            ED.Text=user.GetEmail();
+            AD.Text=user.GetAddress();
+            CD.Text=user.GetContact();
+            GD.Text=user.GetGender();
+            DD.Text=user.GetDob().ToString("yyyy-MM-dd");
+            this.type = type;
+        }
+
+
+
+        //                               Deactivated users Operations
+        private void ActivateAccBtn_Click(object sender, EventArgs e) // Handles activation of user
+        {
+            // Check if username is provided
+            if (UD.Text!="")
+            {
+                // Activate customer
+                if (type=="Customer")
+                {
+                    string message = ObjectHandler.GetCustomerDL().ActivateCustomerAccount(UD.Text);
+                    if (message=="True")
+                    {
+                        MessageBox.Show("Customer account activated successfully!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadEntityData("C"); // Load customers data
+                        LoadDeactivatedUsersData(); // Loads data of deactivated users
+                        ClearInputsDAU(); // clears fields
+                    }
+                    // if customer not activated
+                    else
+                    {
+                        MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else if(type=="Employee")
+                {
+                    string message = ObjectHandler.GetEmployeeDL().ActivateEmployeeAccount(UD.Text);
+                    if (message=="True")
+                    {
+                        MessageBox.Show("Employee account activated successfully!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadEntityData("T"); // Load customers data
+                        LoadEntityData("SP"); // Load customers data
+                        LoadDeactivatedUsersData(); // Loads data of deactivated users
+                        ClearInputsDAU(); // clears fields
+                    }
+                    // if employee not activated
+                    else
+                    {
+                        MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+        private void DeleteAccBtn_Click(object sender, EventArgs e) // Handles deletion of user
+        {
+            // Check if username is provided
+            if (UD.Text!="")
+            {
+                // Activate customer
+                if (type=="Customer")
+                {
+                    string message = ObjectHandler.GetCustomerDL().RemoveCustomer(UD.Text);
+                    if (message=="True")
+                    {
+                        MessageBox.Show("Customer account deleted successfully!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadEntityData("C"); // Load customers data
+                        LoadDeactivatedUsersData(); // Loads data of deactivated users
+                        ClearInputsDAU(); // clears fields
+                    }
+                    // if customer not deleted
+                    else
+                    {
+                        MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else if (type=="Employee")
+                {
+                    string message = ObjectHandler.GetEmployeeDL().RemoveEmployee(UD.Text);
+                    if (message=="True")
+                    {
+                        MessageBox.Show("Employee account deleted successfully!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadEntityData("T"); // Load customers data
+                        LoadEntityData("SP"); // Load customers data
+                        LoadDeactivatedUsersData(); // Loads data of deactivated users
+                        ClearInputsDAU(); // clears fields
+                    }
+                    // if employee not deleted
+                    else
+                    {
+                        MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+
+
+
+        //                               Manage Products
+        private void LoadProductsData() // Loads products' data into the CGridView
+        {
+            try
+            {
+                // Retrieve products' data from the data access layer
+                PGridView.DataSource = null; // Unbind the data source
+                PGridView.Rows.Clear(); // Clear the rows
+                List<ProductBL> products = ObjectHandler.GetProductDL().GetAllProducts();
+                // Add rows to the DataGridView
+                foreach (ProductBL p in products)
+                {
+                    PGridView.Rows.Add(
+                        p.GetProductID(),
+                        p.GetProductName(),
+                        p.GetProductDetails(),
+                        p.GetProductPrice(),
+                        p.GetUnitsInStock()
+                    );
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void ClearInputsP() // Clears input fields for Products
+        {
+            ProdNamInput.Text = "";
+            ProdDetInput.Text = "";
+            UnitStockInput.Text = "";
+            ProdPriceInput.Text = "";
+            PInput.Text="";
+            productName=null;
+        }
+        private void LoadDataIntoInputsP(ProductBL product) // Loads data into input fields for Products
+        {
+            ProdNamInput.Text = product.GetProductName();
+            ProdDetInput.Text = product.GetProductDetails();
+            UnitStockInput.Text = product.GetUnitsInStock().ToString();
+            ProdPriceInput.Text = product.GetProductPrice().ToString();
+            PInput.Text=product.GetProductID().ToString();
+            productName = product.GetProductName();
+        }
+        private void PGridView_SelectionChanged(object sender, EventArgs e) // Handles selection change in CGridView
+        {
+            try
+            {
+                if (PGridView.SelectedRows.Count > 0)
+                {
+                    // Retrieve selected row
+                    DataGridViewRow selectedRow = PGridView.SelectedRows[0];
+                    if (selectedRow.Index >= 0 && selectedRow.Index < PGridView.Rows.Count)
+                    {
+                        // Extract data from selected row
+                        int productID = Convert.ToInt32(selectedRow.Cells["Column1P"].Value);
+                        string productName = selectedRow.Cells["Column2P"].Value?.ToString();
+                        string productDetails = selectedRow.Cells["Column3P"].Value?.ToString();
+                        double price = Convert.ToDouble(selectedRow.Cells["Column4P"].Value);
+                        int unitsInStock = Convert.ToInt32(selectedRow.Cells["Column5P"].Value);
+                        // Create product object
+                        ProductBL product = new ProductBL(productID,productName, productDetails, price, unitsInStock);
+                        LoadDataIntoInputsP(product);
+                    }
+                    else
+                    {
+                        ClearInputsP();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void AddProductButton_Click(object sender, EventArgs e) // Handles addition of Product
+        {
+            try
+            {
+                if (!string.IsNullOrEmpty(ProdNamInput.Text))
+                {
+                    double price;
+                    int unitsInStock;
+
+                    // Check if entered price is valid
+                    if (!double.TryParse(ProdPriceInput.Text, out price))
+                    {
+                        MessageBox.Show("Invalid price format!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    // Check if entered units in stock is valid
+                    if (!int.TryParse(UnitStockInput.Text, out unitsInStock))
+                    {
+                        MessageBox.Show("Invalid units in stock format!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    // Create new Product object
+                    ProductBL product = new ProductBL(ProdNamInput.Text, ProdDetInput.Text, price, unitsInStock);
+                    // Add Product using ObjectHandler
+                    string status = ObjectHandler.GetProductDL().AddProduct(product);
+                    // Show status message
+                    if (int.TryParse(status, out int productId) && productId > 0)
+                    {
+                        MessageBox.Show("Product added successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadProductsData(); // Load products data
+                        ClearInputsP();
+                        LoadStats();
+                    }
+                    else
+                    {
+                        MessageBox.Show(status, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Missing Info!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void UpdateProductButton_Click(object sender, EventArgs e) // Handles update of Product
+        {
+            try
+            {
+                if (!string.IsNullOrEmpty(ProdNamInput.Text))
+                {
+                    double price;
+                    int unitsInStock;
+
+                    // Check if entered price is valid
+                    if (!double.TryParse(ProdPriceInput.Text, out price))
+                    {
+                        MessageBox.Show("Invalid price format!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    // Check if entered units in stock is valid
+                    if (!int.TryParse(UnitStockInput.Text, out unitsInStock))
+                    {
+                        MessageBox.Show("Invalid units in stock format!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    // Create new product object
+                    ProductBL product = new ProductBL(Convert.ToInt16(PInput.Text), ProdNamInput.Text, ProdDetInput.Text, price, unitsInStock);
+                    string message = ObjectHandler.GetProductDL().UpdateProduct(product, productName);
+                    if (message == "True")
+                    {
+                        MessageBox.Show("Product data updated successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadProductsData();
+                        ClearInputsP();
+                    }
+                    else
+                    {
+                        MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void DeleteProductButton_Click(object sender, EventArgs e) // Handles deletion of Product
+        {
+            if (!string.IsNullOrEmpty(PInput.Text))
+            {
+                // Remove product
+                string message = ObjectHandler.GetProductDL().DeleteProduct(Convert.ToInt16(PInput.Text));
+                if (message == "True")
+                {
+                    MessageBox.Show("Product data deleted successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadProductsData(); // Load products data
+                    ClearInputsP();
+                    LoadStats();
+                }
+                // if product not deleted
+                else
+                {
+                    MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void bunifuButton4_Click(object sender, EventArgs e)
+        {
+            // Check if username is provided
+            username=CEO.GetUsername();
+            email=CEO.GetEmail();
+            if (UNI.Text!="" && username!=null && email!=null)
+            {
+                EmployeeBL employee = new EmployeeBL(UnameI.Text, UNI.Text, UPI.Text, UEI.Text, DOBI.Value, UAI.Text, UCI.Text, UGI.Text,"Active","CEO",CEO.GetHireDate());
+                // Update employee
+                string message = ObjectHandler.GetEmployeeDL().UpdateEmployee(employee, username, email);
+                if (message=="True")
+                {
+                    MessageBox.Show("Admin updated successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadEntityData("SP");
+                    CEO.SetName(UnameI.Text); CEO.SetUsername(UNI.Text);CEO.SetPassword(UPI.Text);CEO.SetEmail(UEI.Text);CEO.SetDob(DOBI.Value);CEO.SetAddress(UAI.Text);CEO.SetContact(UCI.Text);CEO.SetGender(UGI.Text);
+                    username=null;
+                    LoadDataCEO();
+                    email=null;
+                }
+                // if employee not deleted
+                else
+                {
+                    MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+        private void LoadDataCEO()
+        {
+            UnameI.Text=CEO.GetName();
+            UNI.Text=CEO.GetUsername();
+            UPI.Text=CEO.GetPassword();
+            UEI.Text=CEO.GetEmail();
+            DOBI.Value=CEO.GetDob();
+            UCI.Text=CEO.GetContact();
+            UAI.Text=CEO.GetAddress();
+            UGI.Text=CEO.GetGender();
+        }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainMenu mainMenu = new MainMenu();
+            mainMenu.Show();
         }
     }
 }
