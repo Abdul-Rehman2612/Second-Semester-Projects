@@ -29,11 +29,10 @@ namespace DellLibrary.BL
             quantity = o.quantity; // Copy quantity
             price = o.price; // Copy price
         }
-        public int AddQuantity(int quantity)
+        public void AddQuantity(int quantity)
         {
             this.quantity += quantity;
             UpdatePrice();
-            return this.quantity;
         }
         public void UpdatePrice()
         {
@@ -42,5 +41,9 @@ namespace DellLibrary.BL
         public double GetPrice() { return price; }
         public ProductBL GetProduct() { return product; }
         public int GetQuantity() { return quantity; }
+        public void SetQuantity(int quantity)
+        {
+            this.quantity=quantity;
+        }
     }
 }

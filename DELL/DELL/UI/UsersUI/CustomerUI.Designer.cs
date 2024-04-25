@@ -28,25 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerUI));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges31 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges32 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges33 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges34 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges35 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges36 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.Dashboard = new System.Windows.Forms.TabPage();
             this.DashboardInfo = new System.Windows.Forms.TableLayoutPanel();
-            this.Pic1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Pic2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Pic3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.Pic4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.DataShow1 = new System.Windows.Forms.Label();
             this.DataShow2 = new System.Windows.Forms.Label();
             this.DataShow3 = new System.Windows.Forms.Label();
@@ -110,21 +109,15 @@
             this.gunaLabel10 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel11 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel12 = new Guna.UI.WinForms.GunaLabel();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.ViewOrdersPlaced = new System.Windows.Forms.TabPage();
             this.MainPanelCO = new Guna.UI.WinForms.GunaPanel();
             this.BottomContainerCO = new Guna.UI.WinForms.GunaPanel();
             this.COGridView = new System.Windows.Forms.DataGridView();
-            this.Column1CO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2CO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3CO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4CO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5CO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6CO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TopContainerCO = new Guna.UI.WinForms.GunaPanel();
             this.s = new Guna.UI.WinForms.GunaPanel();
             this.COLabel = new System.Windows.Forms.Label();
             this.CODataView = new System.Windows.Forms.TableLayoutPanel();
-            this.COCustID = new Guna.UI.WinForms.GunaLabel();
+            this.OrderID = new Guna.UI.WinForms.GunaLabel();
             this.CustomerIDCO = new Guna.UI2.WinForms.Guna2ComboBox();
             this.CO = new Guna.UI.WinForms.GunaLabel();
             this.CustTO = new Guna.UI.WinForms.GunaLabel();
@@ -160,21 +153,24 @@
             this.UAI = new Guna.UI2.WinForms.Guna2TextBox();
             this.UGI = new Guna.UI2.WinForms.Guna2ComboBox();
             this.DOBI = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.bunifuButton5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.MainPanel = new Guna.UI.WinForms.GunaPanel();
             this.BottomContainer = new Guna.UI2.WinForms.Guna2Panel();
             this.TopContainer = new Guna.UI2.WinForms.Guna2Panel();
             this.Logo2 = new System.Windows.Forms.Label();
             this.Logo = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.bunifuButton5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.Column1CO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2CO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3CO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4CO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5CO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Dashboard.SuspendLayout();
             this.DashboardInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic4)).BeginInit();
             this.CustomerPanel.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.MainPanelP.SuspendLayout();
@@ -194,7 +190,7 @@
             this.gunaPanel5.SuspendLayout();
             this.gunaPanel6.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.ViewOrdersPlaced.SuspendLayout();
             this.MainPanelCO.SuspendLayout();
             this.BottomContainerCO.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.COGridView)).BeginInit();
@@ -207,11 +203,11 @@
             this.tableLayoutPanel4.SuspendLayout();
             this.gunaPanel9.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
             this.MainPanel.SuspendLayout();
             this.BottomContainer.SuspendLayout();
             this.TopContainer.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // Dashboard
@@ -234,14 +230,12 @@
             this.DashboardInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.DashboardInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.DashboardInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.DashboardInfo.Controls.Add(this.Pic1, 1, 1);
             this.DashboardInfo.Controls.Add(this.Pic2, 3, 1);
-            this.DashboardInfo.Controls.Add(this.Pic3, 1, 4);
-            this.DashboardInfo.Controls.Add(this.Pic4, 3, 4);
             this.DashboardInfo.Controls.Add(this.DataShow1, 1, 2);
             this.DashboardInfo.Controls.Add(this.DataShow2, 3, 2);
             this.DashboardInfo.Controls.Add(this.DataShow3, 1, 5);
             this.DashboardInfo.Controls.Add(this.DataShow4, 3, 5);
+            this.DashboardInfo.Controls.Add(this.Pic3, 1, 1);
             this.DashboardInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DashboardInfo.Location = new System.Drawing.Point(3, 3);
             this.DashboardInfo.Name = "DashboardInfo";
@@ -256,22 +250,11 @@
             this.DashboardInfo.Size = new System.Drawing.Size(770, 523);
             this.DashboardInfo.TabIndex = 2;
             // 
-            // Pic1
-            // 
-            this.Pic1.Image = global::DELL.Properties.Resources.Customers;
-            this.Pic1.ImageRotate = 0F;
-            this.Pic1.Location = new System.Drawing.Point(126, 44);
-            this.Pic1.Name = "Pic1";
-            this.Pic1.Size = new System.Drawing.Size(194, 169);
-            this.Pic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Pic1.TabIndex = 8;
-            this.Pic1.TabStop = false;
-            // 
             // Pic2
             // 
             this.Pic2.BackColor = System.Drawing.Color.Transparent;
             this.Pic2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Pic2.Image = global::DELL.Properties.Resources.Employees;
+            this.Pic2.Image = global::DELL.Properties.Resources.Products;
             this.Pic2.ImageRotate = 0F;
             this.Pic2.Location = new System.Drawing.Point(449, 44);
             this.Pic2.Name = "Pic2";
@@ -285,24 +268,12 @@
             this.Pic3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Pic3.Image = global::DELL.Properties.Resources.Orders;
             this.Pic3.ImageRotate = 0F;
-            this.Pic3.Location = new System.Drawing.Point(126, 266);
+            this.Pic3.Location = new System.Drawing.Point(126, 44);
             this.Pic3.Name = "Pic3";
             this.Pic3.Size = new System.Drawing.Size(194, 169);
             this.Pic3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Pic3.TabIndex = 10;
             this.Pic3.TabStop = false;
-            // 
-            // Pic4
-            // 
-            this.Pic4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Pic4.Image = global::DELL.Properties.Resources.Products;
-            this.Pic4.ImageRotate = 0F;
-            this.Pic4.Location = new System.Drawing.Point(449, 266);
-            this.Pic4.Name = "Pic4";
-            this.Pic4.Size = new System.Drawing.Size(194, 169);
-            this.Pic4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Pic4.TabIndex = 11;
-            this.Pic4.TabStop = false;
             // 
             // DataShow1
             // 
@@ -334,7 +305,7 @@
             // DataShow4
             // 
             this.DataShow4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DataShow4.Font = new System.Drawing.Font("Sitka Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DataShow4.Font = new System.Drawing.Font("Sitka Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DataShow4.Location = new System.Drawing.Point(449, 438);
             this.DataShow4.Name = "DataShow4";
             this.DataShow4.Size = new System.Drawing.Size(194, 41);
@@ -346,7 +317,7 @@
             this.CustomerPanel.Controls.Add(this.Dashboard);
             this.CustomerPanel.Controls.Add(this.tabPage2);
             this.CustomerPanel.Controls.Add(this.ViewCart);
-            this.CustomerPanel.Controls.Add(this.tabPage1);
+            this.CustomerPanel.Controls.Add(this.ViewOrdersPlaced);
             this.CustomerPanel.Controls.Add(this.tabPage3);
             this.CustomerPanel.Controls.Add(this.tabPage4);
             this.CustomerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -418,10 +389,18 @@
             // 
             // PGridView
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle36.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle36;
             this.PGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.PGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle37.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle37.Font = new System.Drawing.Font("Sitka Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle37.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.PGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle37;
             this.PGridView.ColumnHeadersHeight = 30;
             this.PGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.PGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -436,8 +415,8 @@
             this.PGridView.ReadOnly = true;
             this.PGridView.RowHeadersWidth = 40;
             this.PGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Sitka Text", 12F);
-            this.PGridView.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Sitka Text", 12F);
+            this.PGridView.RowsDefaultCellStyle = dataGridViewCellStyle38;
             this.PGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PGridView.RowTemplate.Height = 20;
             this.PGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -477,6 +456,7 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.ColumnCount = 5;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -511,11 +491,11 @@
             this.AddP.ColorContrastOnClick = 45;
             this.AddP.ColorContrastOnHover = 45;
             this.AddP.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.AddP.CustomizableEdges = borderEdges1;
+            borderEdges31.BottomLeft = true;
+            borderEdges31.BottomRight = true;
+            borderEdges31.TopLeft = true;
+            borderEdges31.TopRight = true;
+            this.AddP.CustomizableEdges = borderEdges31;
             this.AddP.DialogResult = System.Windows.Forms.DialogResult.None;
             this.AddP.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.AddP.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -604,6 +584,7 @@
             // 
             // PLabel
             // 
+            this.PLabel.BackColor = System.Drawing.Color.White;
             this.PLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PLabel.Font = new System.Drawing.Font("Sitka Display", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PLabel.Location = new System.Drawing.Point(0, 0);
@@ -835,8 +816,8 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle39;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeight = 30;
@@ -853,8 +834,8 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 40;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Sitka Text", 12F);
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle40.Font = new System.Drawing.Font("Sitka Text", 12F);
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle40;
             this.dataGridView1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView1.RowTemplate.Height = 20;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -932,11 +913,11 @@
             this.bunifuButton2.ColorContrastOnClick = 45;
             this.bunifuButton2.ColorContrastOnHover = 45;
             this.bunifuButton2.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.bunifuButton2.CustomizableEdges = borderEdges2;
+            borderEdges32.BottomLeft = true;
+            borderEdges32.BottomRight = true;
+            borderEdges32.TopLeft = true;
+            borderEdges32.TopRight = true;
+            this.bunifuButton2.CustomizableEdges = borderEdges32;
             this.bunifuButton2.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton2.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1023,11 +1004,11 @@
             this.bunifuButton1.ColorContrastOnClick = 45;
             this.bunifuButton1.ColorContrastOnHover = 45;
             this.bunifuButton1.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.bunifuButton1.CustomizableEdges = borderEdges3;
+            borderEdges33.BottomLeft = true;
+            borderEdges33.BottomRight = true;
+            borderEdges33.TopLeft = true;
+            borderEdges33.TopRight = true;
+            this.bunifuButton1.CustomizableEdges = borderEdges33;
             this.bunifuButton1.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton1.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1114,11 +1095,11 @@
             this.bunifuButton3.ColorContrastOnClick = 45;
             this.bunifuButton3.ColorContrastOnHover = 45;
             this.bunifuButton3.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.bunifuButton3.CustomizableEdges = borderEdges4;
+            borderEdges34.BottomLeft = true;
+            borderEdges34.BottomRight = true;
+            borderEdges34.TopLeft = true;
+            borderEdges34.TopRight = true;
+            this.bunifuButton3.CustomizableEdges = borderEdges34;
             this.bunifuButton3.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton3.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton3.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1396,16 +1377,16 @@
             this.gunaLabel12.Text = "Enter Quantity";
             this.gunaLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tabPage1
+            // ViewOrdersPlaced
             // 
-            this.tabPage1.Controls.Add(this.MainPanelCO);
-            this.tabPage1.Location = new System.Drawing.Point(154, 4);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(776, 529);
-            this.tabPage1.TabIndex = 3;
-            this.tabPage1.Text = "Confirm Order";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.ViewOrdersPlaced.Controls.Add(this.MainPanelCO);
+            this.ViewOrdersPlaced.Location = new System.Drawing.Point(154, 4);
+            this.ViewOrdersPlaced.Name = "ViewOrdersPlaced";
+            this.ViewOrdersPlaced.Padding = new System.Windows.Forms.Padding(3);
+            this.ViewOrdersPlaced.Size = new System.Drawing.Size(776, 529);
+            this.ViewOrdersPlaced.TabIndex = 3;
+            this.ViewOrdersPlaced.Text = "View Orders Placed";
+            this.ViewOrdersPlaced.UseVisualStyleBackColor = true;
             // 
             // MainPanelCO
             // 
@@ -1428,8 +1409,8 @@
             // 
             // COGridView
             // 
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.COGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle41.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.COGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle41;
             this.COGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.COGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.COGridView.ColumnHeadersHeight = 30;
@@ -1439,57 +1420,20 @@
             this.Column2CO,
             this.Column3CO,
             this.Column4CO,
-            this.Column5CO,
-            this.Column6CO});
+            this.Column5CO});
             this.COGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.COGridView.Location = new System.Drawing.Point(0, 0);
             this.COGridView.Name = "COGridView";
             this.COGridView.ReadOnly = true;
             this.COGridView.RowHeadersWidth = 40;
             this.COGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Sitka Text", 12F);
-            this.COGridView.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle42.Font = new System.Drawing.Font("Sitka Text", 12F);
+            this.COGridView.RowsDefaultCellStyle = dataGridViewCellStyle42;
             this.COGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.COGridView.RowTemplate.Height = 20;
             this.COGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.COGridView.Size = new System.Drawing.Size(770, 333);
             this.COGridView.TabIndex = 2;
-            // 
-            // Column1CO
-            // 
-            this.Column1CO.HeaderText = "OrderID";
-            this.Column1CO.Name = "Column1CO";
-            this.Column1CO.ReadOnly = true;
-            // 
-            // Column2CO
-            // 
-            this.Column2CO.HeaderText = "CustomerID";
-            this.Column2CO.Name = "Column2CO";
-            this.Column2CO.ReadOnly = true;
-            // 
-            // Column3CO
-            // 
-            this.Column3CO.HeaderText = "EmployeeID";
-            this.Column3CO.Name = "Column3CO";
-            this.Column3CO.ReadOnly = true;
-            // 
-            // Column4CO
-            // 
-            this.Column4CO.HeaderText = "OrderType";
-            this.Column4CO.Name = "Column4CO";
-            this.Column4CO.ReadOnly = true;
-            // 
-            // Column5CO
-            // 
-            this.Column5CO.HeaderText = "Order Date";
-            this.Column5CO.Name = "Column5CO";
-            this.Column5CO.ReadOnly = true;
-            // 
-            // Column6CO
-            // 
-            this.Column6CO.HeaderText = "Total Price";
-            this.Column6CO.Name = "Column6CO";
-            this.Column6CO.ReadOnly = true;
             // 
             // TopContainerCO
             // 
@@ -1518,7 +1462,7 @@
             this.COLabel.Name = "COLabel";
             this.COLabel.Size = new System.Drawing.Size(770, 41);
             this.COLabel.TabIndex = 4;
-            this.COLabel.Text = "Customer Orders";
+            this.COLabel.Text = "View Orders";
             this.COLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // CODataView
@@ -1532,7 +1476,7 @@
             this.CODataView.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.11686F));
             this.CODataView.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.64033F));
             this.CODataView.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.98374F));
-            this.CODataView.Controls.Add(this.COCustID, 1, 0);
+            this.CODataView.Controls.Add(this.OrderID, 1, 0);
             this.CODataView.Controls.Add(this.CustomerIDCO, 2, 0);
             this.CODataView.Controls.Add(this.CO, 4, 0);
             this.CODataView.Controls.Add(this.CustTO, 5, 0);
@@ -1555,17 +1499,17 @@
             this.CODataView.Size = new System.Drawing.Size(770, 149);
             this.CODataView.TabIndex = 3;
             // 
-            // COCustID
+            // OrderID
             // 
-            this.COCustID.AutoSize = true;
-            this.COCustID.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.COCustID.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.COCustID.Location = new System.Drawing.Point(83, 0);
-            this.COCustID.Name = "COCustID";
-            this.COCustID.Size = new System.Drawing.Size(118, 49);
-            this.COCustID.TabIndex = 9;
-            this.COCustID.Text = "CustomerID";
-            this.COCustID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.OrderID.AutoSize = true;
+            this.OrderID.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OrderID.Font = new System.Drawing.Font("Sitka Heading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrderID.Location = new System.Drawing.Point(83, 0);
+            this.OrderID.Name = "OrderID";
+            this.OrderID.Size = new System.Drawing.Size(118, 49);
+            this.OrderID.TabIndex = 9;
+            this.OrderID.Text = "OrderID";
+            this.OrderID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // CustomerIDCO
             // 
@@ -1778,11 +1722,11 @@
             this.bunifuButton4.ColorContrastOnClick = 45;
             this.bunifuButton4.ColorContrastOnHover = 45;
             this.bunifuButton4.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.bunifuButton4.CustomizableEdges = borderEdges5;
+            borderEdges35.BottomLeft = true;
+            borderEdges35.BottomRight = true;
+            borderEdges35.TopLeft = true;
+            borderEdges35.TopRight = true;
+            this.bunifuButton4.CustomizableEdges = borderEdges35;
             this.bunifuButton4.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton4.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton4.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -2080,7 +2024,6 @@
             this.UPI.SelectedText = "";
             this.UPI.Size = new System.Drawing.Size(153, 47);
             this.UPI.TabIndex = 13;
-            this.UPI.UseSystemPasswordChar = true;
             // 
             // UEI
             // 
@@ -2198,54 +2141,6 @@
             this.DOBI.TabIndex = 18;
             this.DOBI.Value = new System.DateTime(2024, 4, 1, 0, 0, 0, 0);
             // 
-            // MainPanel
-            // 
-            this.MainPanel.Controls.Add(this.BottomContainer);
-            this.MainPanel.Controls.Add(this.TopContainer);
-            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainPanel.Location = new System.Drawing.Point(0, 0);
-            this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(934, 687);
-            this.MainPanel.TabIndex = 3;
-            // 
-            // BottomContainer
-            // 
-            this.BottomContainer.Controls.Add(this.CustomerPanel);
-            this.BottomContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BottomContainer.Location = new System.Drawing.Point(0, 150);
-            this.BottomContainer.Name = "BottomContainer";
-            this.BottomContainer.Size = new System.Drawing.Size(934, 537);
-            this.BottomContainer.TabIndex = 1;
-            // 
-            // TopContainer
-            // 
-            this.TopContainer.Controls.Add(this.Logo2);
-            this.TopContainer.Controls.Add(this.Logo);
-            this.TopContainer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TopContainer.Location = new System.Drawing.Point(0, 0);
-            this.TopContainer.Name = "TopContainer";
-            this.TopContainer.Size = new System.Drawing.Size(934, 150);
-            this.TopContainer.TabIndex = 0;
-            // 
-            // Logo2
-            // 
-            this.Logo2.BackColor = System.Drawing.Color.Lavender;
-            this.Logo2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Logo2.Image = ((System.Drawing.Image)(resources.GetObject("Logo2.Image")));
-            this.Logo2.Location = new System.Drawing.Point(150, 0);
-            this.Logo2.Name = "Logo2";
-            this.Logo2.Size = new System.Drawing.Size(784, 150);
-            this.Logo2.TabIndex = 1;
-            // 
-            // Logo
-            // 
-            this.Logo.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
-            this.Logo.Location = new System.Drawing.Point(0, 0);
-            this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(150, 150);
-            this.Logo.TabIndex = 0;
-            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.label3);
@@ -2316,11 +2211,11 @@
             this.bunifuButton5.ColorContrastOnClick = 45;
             this.bunifuButton5.ColorContrastOnHover = 45;
             this.bunifuButton5.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.bunifuButton5.CustomizableEdges = borderEdges6;
+            borderEdges36.BottomLeft = true;
+            borderEdges36.BottomRight = true;
+            borderEdges36.TopLeft = true;
+            borderEdges36.TopRight = true;
+            this.bunifuButton5.CustomizableEdges = borderEdges36;
             this.bunifuButton5.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton5.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton5.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -2388,6 +2283,86 @@
             this.bunifuButton5.UseDefaultRadiusAndThickness = true;
             this.bunifuButton5.Click += new System.EventHandler(this.bunifuButton5_Click);
             // 
+            // MainPanel
+            // 
+            this.MainPanel.BackColor = System.Drawing.Color.White;
+            this.MainPanel.Controls.Add(this.BottomContainer);
+            this.MainPanel.Controls.Add(this.TopContainer);
+            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPanel.Font = new System.Drawing.Font("Sitka Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainPanel.Location = new System.Drawing.Point(0, 0);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Size = new System.Drawing.Size(934, 687);
+            this.MainPanel.TabIndex = 3;
+            // 
+            // BottomContainer
+            // 
+            this.BottomContainer.Controls.Add(this.CustomerPanel);
+            this.BottomContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BottomContainer.Location = new System.Drawing.Point(0, 150);
+            this.BottomContainer.Name = "BottomContainer";
+            this.BottomContainer.Size = new System.Drawing.Size(934, 537);
+            this.BottomContainer.TabIndex = 1;
+            // 
+            // TopContainer
+            // 
+            this.TopContainer.Controls.Add(this.Logo2);
+            this.TopContainer.Controls.Add(this.Logo);
+            this.TopContainer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TopContainer.Location = new System.Drawing.Point(0, 0);
+            this.TopContainer.Name = "TopContainer";
+            this.TopContainer.Size = new System.Drawing.Size(934, 150);
+            this.TopContainer.TabIndex = 0;
+            // 
+            // Logo2
+            // 
+            this.Logo2.BackColor = System.Drawing.Color.Lavender;
+            this.Logo2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Logo2.Image = ((System.Drawing.Image)(resources.GetObject("Logo2.Image")));
+            this.Logo2.Location = new System.Drawing.Point(150, 0);
+            this.Logo2.Name = "Logo2";
+            this.Logo2.Size = new System.Drawing.Size(784, 150);
+            this.Logo2.TabIndex = 1;
+            // 
+            // Logo
+            // 
+            this.Logo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
+            this.Logo.Location = new System.Drawing.Point(0, 0);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(150, 150);
+            this.Logo.TabIndex = 0;
+            // 
+            // Column1CO
+            // 
+            this.Column1CO.HeaderText = "OrderID";
+            this.Column1CO.Name = "Column1CO";
+            this.Column1CO.ReadOnly = true;
+            // 
+            // Column2CO
+            // 
+            this.Column2CO.HeaderText = "EmployeeID";
+            this.Column2CO.Name = "Column2CO";
+            this.Column2CO.ReadOnly = true;
+            // 
+            // Column3CO
+            // 
+            this.Column3CO.HeaderText = "OrderType";
+            this.Column3CO.Name = "Column3CO";
+            this.Column3CO.ReadOnly = true;
+            // 
+            // Column4CO
+            // 
+            this.Column4CO.HeaderText = "Order Date";
+            this.Column4CO.Name = "Column4CO";
+            this.Column4CO.ReadOnly = true;
+            // 
+            // Column5CO
+            // 
+            this.Column5CO.HeaderText = "Total Price";
+            this.Column5CO.Name = "Column5CO";
+            this.Column5CO.ReadOnly = true;
+            // 
             // CustomerUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2399,10 +2374,8 @@
             this.Text = "CustomerUI";
             this.Dashboard.ResumeLayout(false);
             this.DashboardInfo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Pic1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic4)).EndInit();
             this.CustomerPanel.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.MainPanelP.ResumeLayout(false);
@@ -2424,7 +2397,7 @@
             this.gunaPanel6.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            this.tabPage1.ResumeLayout(false);
+            this.ViewOrdersPlaced.ResumeLayout(false);
             this.MainPanelCO.ResumeLayout(false);
             this.BottomContainerCO.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.COGridView)).EndInit();
@@ -2439,11 +2412,11 @@
             this.gunaPanel9.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
             this.MainPanel.ResumeLayout(false);
             this.BottomContainer.ResumeLayout(false);
             this.TopContainer.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
-            this.tableLayoutPanel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2459,10 +2432,8 @@
         private System.Windows.Forms.Label Logo2;
         private System.Windows.Forms.Label Logo;
         private System.Windows.Forms.TableLayoutPanel DashboardInfo;
-        private Guna.UI2.WinForms.Guna2PictureBox Pic1;
         private Guna.UI2.WinForms.Guna2PictureBox Pic2;
         private Guna.UI2.WinForms.Guna2PictureBox Pic3;
-        private Guna.UI2.WinForms.Guna2PictureBox Pic4;
         private System.Windows.Forms.Label DataShow1;
         private System.Windows.Forms.Label DataShow2;
         private System.Windows.Forms.Label DataShow3;
@@ -2495,7 +2466,7 @@
         private Guna.UI.WinForms.GunaLabel UISInput;
         private Guna.UI.WinForms.GunaLabel gunaLabel5;
         private System.Windows.Forms.TabPage ViewCart;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage ViewOrdersPlaced;
         private System.Windows.Forms.TabPage tabPage3;
         private Guna.UI.WinForms.GunaPanel gunaPanel2;
         private Guna.UI.WinForms.GunaPanel gunaPanel3;
@@ -2528,17 +2499,11 @@
         private Guna.UI.WinForms.GunaPanel MainPanelCO;
         private Guna.UI.WinForms.GunaPanel BottomContainerCO;
         private System.Windows.Forms.DataGridView COGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1CO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2CO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3CO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4CO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5CO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6CO;
         private Guna.UI.WinForms.GunaPanel TopContainerCO;
         private Guna.UI.WinForms.GunaPanel s;
         private System.Windows.Forms.Label COLabel;
         private System.Windows.Forms.TableLayoutPanel CODataView;
-        private Guna.UI.WinForms.GunaLabel COCustID;
+        private Guna.UI.WinForms.GunaLabel OrderID;
         private Guna.UI2.WinForms.Guna2ComboBox CustomerIDCO;
         private Guna.UI.WinForms.GunaLabel CO;
         private Guna.UI.WinForms.GunaLabel CustTO;
@@ -2578,5 +2543,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1CO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2CO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3CO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4CO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5CO;
     }
 }

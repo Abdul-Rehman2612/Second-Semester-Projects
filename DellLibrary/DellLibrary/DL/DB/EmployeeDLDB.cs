@@ -239,7 +239,7 @@ namespace DellLibrary.DL.DB
             EmployeeBL employee = null;
             using (SqlConnection con = Configuration.GetConnection())
             {
-                string query = $"Select * from Employees where Username=@username and designation!='CEO';";
+                string query = $"Select * from Employees where Username=@Username and designation!='CEO';";
                 try
                 {
                     con.Open();

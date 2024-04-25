@@ -2,10 +2,7 @@
 using DellLibrary.BL;
 using System;
 using System.Collections.Generic;
-using System.Runtime.ConstrainedExecution;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace DELL.UI.UsersUI
 {
@@ -18,13 +15,59 @@ namespace DELL.UI.UsersUI
             InitializeComponent();
             WindowState = FormWindowState.Maximized; // maximize windows size
             this.customer = customer;
+            LoadStats();
             LoadProductsData();
+            LoadDataUser();
         }
-        private void Backbtn_Click(object sender, EventArgs e)
+        private void LoadStats()
         {
-            Hide();
-            MainMenu mainMenu = new MainMenu();
-            mainMenu.Show();
+            try
+            {
+                int count = ObjectHandler.GetOrderDL().GetOrderCountForCustomer(customer.GetUsername());
+                DataShow1.Text = $"Orders placed: {count}";
+                DataShow2.Text = $"Products bought: {BoughtProductsCount()}";
+                count = ObjectHandler.GetOrderDL().GetOrderCount();
+                DataShow3.Text = $": {count}";
+                DataShow4.Text = $"Amount spent: {AmountSpent()}";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private double AmountSpent()
+        {
+            double pCount = 0.0;
+            if (customer.GetOrders()!=null)
+            {
+                if (customer.GetOrders().Count>0)
+                {
+                    foreach (OrderBL order in customer.GetOrders())
+                    {
+                        pCount+=order.GetTotalPrice();
+                    }
+                }
+            }
+            return pCount;
+        }
+        private int BoughtProductsCount()
+        {
+            int pCount = 0;
+            if (customer.GetOrders()!=null)
+            {
+                if (customer.GetOrders().Count>0)
+                {
+                    foreach (OrderBL order in customer.GetOrders())
+                    {
+                        foreach (OrderDetailsBL orderDetails in order.GetOrderDetails())
+                        {
+                            pCount+=orderDetails.GetQuantity();
+                        }
+
+                    }
+                }
+            }
+            return pCount;
         }
         private void LoadProductsData() // Loads products' data into the CGridView
         {
@@ -37,13 +80,32 @@ namespace DELL.UI.UsersUI
                 // Add rows to the DataGridView
                 foreach (ProductBL p in products)
                 {
-                    PGridView.Rows.Add(
-                        p.GetProductID(),
-                        p.GetProductName(),
-                        p.GetProductDetails(),
-                        p.GetProductPrice(),
-                        p.GetUnitsInStock()
-                    );
+                    if (cart.Count>0)
+                    {
+                        foreach (OrderDetailsBL od in cart)
+                        {
+                            if (od.GetProduct().GetProductID()==p.GetProductID())
+                            {
+                                PGridView.Rows.Add(
+                                    p.GetProductID(),
+                                    p.GetProductName(),
+                                    p.GetProductDetails(),
+                                    p.GetProductPrice(),
+                                    p.GetUnitsInStock()-od.GetQuantity()
+                                    );
+                            }
+                        }
+                    }
+                    else
+                    {
+                        PGridView.Rows.Add(
+                                    p.GetProductID(),
+                                    p.GetProductName(),
+                                    p.GetProductDetails(),
+                                    p.GetProductPrice(),
+                                    p.GetUnitsInStock()
+                                    );
+                    }
                 }
             }
             catch (Exception ex)
@@ -166,62 +228,67 @@ namespace DELL.UI.UsersUI
         {
             try
             {
-                // Retrieve the product from the data layer
-                ProductBL product = ObjectHandler.GetProductDL().GetProductByProductID(Convert.ToInt16(PInput.Text));
-                OrderDetailsBL existingDetail = null;
-                // Check if the product is already in the cart
-                foreach (OrderDetailsBL od in cart)
+                if (PInput.Text!=null)
                 {
-                    if (od.GetProduct().GetProductID()==product.GetProductID())
+                    // Retrieve the product from the data layer
+                    ProductBL product = ObjectHandler.GetProductDL().GetProductByProductID(Convert.ToInt16(PInput.Text));
+                    OrderDetailsBL existingDetail = null;
+                    // Check if the product is already in the cart
+                    foreach (OrderDetailsBL od in cart)
                     {
-                        existingDetail = new OrderDetailsBL(od);
+                        if (od.GetProduct().GetProductID()==product.GetProductID())
+                        {
+                            existingDetail = od;
+                        }
                     }
-                }
-                if (existingDetail != null)
-                {
-                    // Product already exists in the cart, ask user if they want to add more stock
-                    DialogResult result = MessageBox.Show("Product already exists in the cart. Do you want to add more stock?", "Product Exists", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (result == DialogResult.Yes)
+                    if (existingDetail != null)
                     {
-                        if (!int.TryParse(QuantityInput.Text, out int quantitsy) || quantitsy <= 0)
+                        // Product already exists in the cart, ask user if they want to add more stock
+                        DialogResult result = MessageBox.Show("Product already exists in the cart. Do you want to add more stock?", "Product Exists", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (result == DialogResult.Yes)
                         {
-                            MessageBox.Show("Please enter a valid positive quantity!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
+                            if (!int.TryParse(QuantityInput.Text, out int quantitsy) || quantitsy <= 0)
+                            {
+                                MessageBox.Show("Please enter a valid positive quantity!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
+                            if (Convert.ToInt16(UISInput.Text) - quantitsy-existingDetail.GetQuantity() < 0)
+                            {
+                                MessageBox.Show("Requested quantity exceeds available stock!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
+                            // Add more stock
+                            existingDetail.AddQuantity(quantitsy);
+                            MessageBox.Show("Stock added to existing product in the cart!");
+                            LoadDataForCart();
+                            LoadProductsData();
+                            ClearInputsP();
                         }
-                        if (Convert.ToInt16(UISInput.Text) - quantitsy-existingDetail.GetQuantity() < 0)
-                        {
-                            MessageBox.Show("Requested quantity exceeds available stock!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
-                        // Add more stock
-                        existingDetail.AddQuantity(quantitsy);
-                        MessageBox.Show("Stock added to existing product in the cart!");
-                        LoadDataForCart();
-                        ClearInputsP();
+                        return;
                     }
-                    return;
-                }
 
-                // Parse the quantity input
-                if (!int.TryParse(QuantityInput.Text, out int quantity) || quantity <= 0)
-                {
-                    MessageBox.Show("Please enter a valid positive quantity!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+                    // Parse the quantity input
+                    if (!int.TryParse(QuantityInput.Text, out int quantity) || quantity <= 0)
+                    {
+                        MessageBox.Show("Please enter a valid positive quantity!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
 
-                // Check if requested quantity exceeds available stock
-                if (Convert.ToInt16(UISInput.Text) - quantity < 0)
-                {
-                    MessageBox.Show("Requested quantity exceeds available stock!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+                    // Check if requested quantity exceeds available stock
+                    if (Convert.ToInt16(UISInput.Text) - quantity < 0)
+                    {
+                        MessageBox.Show("Requested quantity exceeds available stock!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
 
-                // Create an order details object and add it to the cart
-                OrderDetailsBL detail = new OrderDetailsBL(product, quantity);
-                cart.Add(detail);
-                LoadDataForCart();
-                ClearInputsP();
-                MessageBox.Show("Product added to cart!");
+                    // Create an order details object and add it to the cart
+                    OrderDetailsBL detail = new OrderDetailsBL(product, quantity);
+                    cart.Add(detail);
+                    LoadDataForCart();
+                    LoadProductsData();
+                    ClearInputsP();
+                    MessageBox.Show("Product added to cart!");
+                }
             }
             catch (Exception ex)
             {
@@ -232,19 +299,25 @@ namespace DELL.UI.UsersUI
         {
             try
             {
-                // Retrieve products' data from the data access layer
-                dataGridView1.DataSource = null; // Unbind the data source
                 dataGridView1.Rows.Clear(); // Clear the rows
-                // Add rows to the DataGridView
-                foreach (OrderDetailsBL od in cart)
+                if (cart!=null)
                 {
-                    dataGridView1.Rows.Add(
-                        od.GetProduct().GetProductID(),
-                        od.GetProduct().GetProductName(),
-                        od.GetProduct().GetProductDetails(),
-                        od.GetPrice(),
-                        od.GetQuantity()
-                    );
+                    if (cart.Count>0)
+                    {
+                        // Retrieve products' data from the data access layer
+                        dataGridView1.DataSource = null; // Unbind the data source
+                                                         // Add rows to the DataGridView
+                        foreach (OrderDetailsBL od in cart)
+                        {
+                            dataGridView1.Rows.Add(
+                                od.GetProduct().GetProductID(),
+                                od.GetProduct().GetProductName(),
+                                od.GetProduct().GetProductDetails(),
+                                od.GetPrice(),
+                                od.GetQuantity()
+                            );
+                        }
+                    }
                 }
             }
             catch (Exception ex)
@@ -272,6 +345,7 @@ namespace DELL.UI.UsersUI
                         if (check) { break; }
                     }
                     LoadDataForCart();
+                    LoadProductsData();
                     ClearInputs();
                     MessageBox.Show("Product removed from cart!");
                 }
@@ -286,6 +360,7 @@ namespace DELL.UI.UsersUI
             {
                 if (gunaLabel4.Text!= null)
                 {
+
                     // Retrieve the product from the data layer
                     ProductBL product = ObjectHandler.GetProductDL().GetProductByProductID(Convert.ToInt16(gunaLabel4.Text));
                     OrderDetailsBL existingDetail = null;
@@ -294,29 +369,30 @@ namespace DELL.UI.UsersUI
                     {
                         if (od.GetProduct().GetProductID()==product.GetProductID())
                         {
-                            existingDetail = new OrderDetailsBL(od);
+                            existingDetail = od;
                         }
                     }
                     if (existingDetail != null)
                     {
                         // Product already exists in the cart, ask user if they want to add more stock
-                        DialogResult result = MessageBox.Show("Do you want to add more stock?", "Product Exists", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        DialogResult result = MessageBox.Show("Do you want to update stock?", "Product Exists", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (result == DialogResult.Yes)
                         {
-                            if (!int.TryParse(QuantityInput.Text, out int quantitsy) || quantitsy <= 0)
+                            if (!int.TryParse(guna2TextBox1.Text, out int quantitsy) || quantitsy<0)
                             {
                                 MessageBox.Show("Please enter a valid positive quantity!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 return;
                             }
-                            if (Convert.ToInt16(UISInput.Text) - quantitsy-existingDetail.GetQuantity() < 0)
+                            if (product.GetUnitsInStock() - quantitsy < 0)
                             {
                                 MessageBox.Show("Requested quantity exceeds available stock!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 return;
                             }
                             // Add more stock
-                            existingDetail.AddQuantity(quantitsy);
-                            MessageBox.Show("Stock added to existing product in the cart!");
+                            existingDetail.SetQuantity(quantitsy);
+                            MessageBox.Show("Stock updated to existing product in the cart!");
                             LoadDataForCart();
+                            LoadProductsData();
                         }
                         return;
                     }
@@ -329,13 +405,28 @@ namespace DELL.UI.UsersUI
         {
             try
             {
-                OrderBL order = new OrderBL("Online",DateTime.Now);
-                int orderID =  ObjectHandler.GetOrderDL().AddOrder(order, customer.GetUsername());
-                order.SetOrderID(orderID);
-                customer.AddOrder(order);
-                MessageBox.Show("Order placed successfully!","Information",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (cart!=null)
+                {
+                    if (cart.Count>0)
+                    {
+                        OrderBL order = new OrderBL("Online", DateTime.Now, cart);
+                        order.SetOrderID(ObjectHandler.GetOrderDL().AddOrder(order, customer.GetUsername()));
+                        cart.Clear();
+                        customer.AddOrder(order);
+                        MessageBox.Show("Order placed successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadDataForCart();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No product selected!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No product selected!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -354,8 +445,8 @@ namespace DELL.UI.UsersUI
         private void bunifuButton4_Click(object sender, EventArgs e)
         {
             // Check if username is provided
-            string username=customer.GetUsername();
-            string email=customer.GetEmail();
+            string username = customer.GetUsername();
+            string email = customer.GetEmail();
             if (UNI.Text!="" && username!=null && email!=null)
             {
                 CustomerBL employee = new CustomerBL(UnameI.Text, UNI.Text, UPI.Text, UEI.Text, DOBI.Value, UAI.Text, UCI.Text, UGI.Text, "Active");
@@ -374,11 +465,10 @@ namespace DELL.UI.UsersUI
                 }
             }
         }
-
         private void bunifuButton5_Click(object sender, EventArgs e)
         {
             this.Hide();
-            MainMenu mainmenu=new MainMenu();
+            MainMenu mainmenu = new MainMenu();
             mainmenu.Show();
         }
     }

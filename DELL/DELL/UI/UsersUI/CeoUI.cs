@@ -770,13 +770,24 @@ namespace DELL.UI.UsersUI
                     foreach (OrderBL order in c.GetOrders())
                     {
                         // Check if the order belongs to the selected customer
-                        if (c.GetUsername() == CustomerIDCO.Text)
+                        if (c.GetUsername() == CustomerIDCO.Text && order.GetEmployee()!=null)
                         {
                             // Add order details to the DataGridView
                             _=COGridView.Rows.Add(
                                 order.GetOrderID(),
                                 c.GetUsername(),
                                 order.GetEmployee().GetUsername(),
+                                order.GetOrderType(),
+                                order.GetOrderDate(),
+                                order.GetTotalPrice()
+                            );
+                        }
+                        else if (c.GetUsername() == CustomerIDCO.Text && order.GetEmployee()==null)
+                        {
+                            _=COGridView.Rows.Add(
+                                order.GetOrderID(),
+                                c.GetUsername(),
+                                "N.A.",
                                 order.GetOrderType(),
                                 order.GetOrderDate(),
                                 order.GetTotalPrice()
@@ -864,7 +875,14 @@ namespace DELL.UI.UsersUI
         }
         private void LoadDataIntoInputsCO(OrderBL order) // Load order data into input fields related to customer orders
         {
-            EmployeeIDCOTXT.Text = order.GetEmployee().GetUsername();
+            if(order.GetEmployee()!=null)
+            {
+                EmployeeIDCOTXT.Text = order.GetEmployee().GetUsername();
+            }
+            else
+            {
+                EmployeeIDCOTXT.Text ="N.A";
+            }
             OrderDateCOTXT.Text = order.GetOrderDate().ToString("yyyy-MM-dd");
             OIDTXT.Text = order.GetOrderID().ToString();
             TotalPriceCO.Text = order.GetTotalPrice().ToString();
@@ -1297,7 +1315,6 @@ namespace DELL.UI.UsersUI
             UAI.Text=CEO.GetAddress();
             UGI.Text=CEO.GetGender();
         }
-
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
             this.Hide();

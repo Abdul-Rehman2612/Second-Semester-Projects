@@ -66,13 +66,9 @@ namespace DellLibrary.DL.DB
                         {
                             employee = employeeDL.GetEmployeebyUsername(employeeUN);
                         }
-                        OrderBL order = employee != null ? new OrderBL(orderId, orderType, orderDate, employee, totalPrice) :
-                                                            new OrderBL(orderId, orderType, orderDate, totalPrice);
                         List<OrderDetailsBL> orderDetails = orderDetailsDL.GetOrderDetailsForOrder(orderId);
-                        if (orderDetails.Count > 0)
-                        {
-                            order.AddOrderDetailsList(orderDetails);
-                        }
+                        OrderBL order = employee != null ? new OrderBL(orderId, orderType, orderDate, employee, totalPrice,orderDetails) :
+                                                            new OrderBL(orderId, orderType, orderDate, totalPrice,orderDetails);
                         orders.Add(order);
                     }
                 }
