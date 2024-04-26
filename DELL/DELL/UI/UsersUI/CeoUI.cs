@@ -3,17 +3,17 @@ using DellLibrary.BL;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DELL.UI.UsersUI
 {
     public partial class CeoUI : Form
     {
-        private EmployeeBL CEO = null; // CEO data stored
-        private string username = null; // username checked for update
-        private string email = null; // email checked for update
-        private string type = null; // type checked for deactivated accounts
+        private EmployeeBL CEO = null;
+        private string username = null;
+        private string email = null;
+        private string type = null;
         private string productName = null;
+
         public CeoUI(EmployeeBL emp)
         {
             InitializeComponent();
@@ -39,7 +39,6 @@ namespace DELL.UI.UsersUI
             ClearInputsP(); // clear input fields
             LoadDataCEO();
         }
-
         private void LoadStats() // Loads statistical data for CEO
         {
             try
@@ -468,7 +467,6 @@ namespace DELL.UI.UsersUI
 
 
 
-        //                               Customers Operations
         private void LoadCustomersData() // Loads customers' data into the CGridView
         {
             try

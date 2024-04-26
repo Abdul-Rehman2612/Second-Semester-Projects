@@ -12,5 +12,6 @@ namespace DellLibrary.DL_Interfaces
         List<ProductBL> GetAllProducts();
         string DeleteProduct(int ProductID);
         string CheckProductName(string ProductName);
+        void UpdateProductStock(ProductBL product,int u);
     }
 }

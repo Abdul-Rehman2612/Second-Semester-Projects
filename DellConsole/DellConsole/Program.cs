@@ -79,7 +79,7 @@ namespace DellConsole
                                     string op = Utility.YesNoOption();
                                     if (op == "Y")
                                     {
-                                        // Remove employee from data layer
+                                        // Remove employee 
                                         op = ObjectHandler.GetEmployeeDL().RemoveEmployee(username);
                                         if (op == "True")
                                         {
@@ -121,7 +121,7 @@ namespace DellConsole
                                 if (employee != null)
                                 {
                                     string email = employee.GetEmail();
-                                    // Display employee details and prompt for update
+                                   
                                     Console.WriteLine($"\n\n{"Name",-15}{"Username",-15}{"Password",-15}{"Email",-15}{"DOB",-15}{"Address",-15}{"Contact",-15}{"Gender",-15}{"Designation",-15}{"Join Date",-15}");
                                     EmployeeUI.PrintEmployeeInfo(employee);
                                     // Update employee information
@@ -153,7 +153,6 @@ namespace DellConsole
                             Console.Clear();
                             Utility.ViewEmpHeader();
 
-                            // Retrieve all employees with a specific designation
                             List<EmployeeBL> employees = ObjectHandler.GetEmployeeDL().GetEmployeesByDesignation("SalesPerson", "Active");
 
                             // Display all employees
@@ -167,7 +166,7 @@ namespace DellConsole
                         // If the user chooses to go back to the main menu
                         else if (option == "5")
                         {
-                            break; // Exit the current loop to return to the main menu
+                            break; 
                         }
                         // If the user enters an invalid option
                         else
@@ -176,13 +175,11 @@ namespace DellConsole
                         }
                     }
                 }
-                // If the user chooses option 2 (Exit)
                 else if (option == "2")
                 {
                     // Exit the application
                     Environment.Exit(0);
                 }
-                // If the user enters an invalid option
                 else
                 {
                     Utility.PressAnyKeyToContinue("Wrong user input!");

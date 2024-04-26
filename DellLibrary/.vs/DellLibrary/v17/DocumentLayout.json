@@ -3,56 +3,16 @@
   "WorkspaceRootPath": "D:\\DellLibrary\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|d:\\delllibrary\\delllibrary\\bl\\orderdetailsbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|solutionrelative:delllibrary\\bl\\orderdetailsbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|d:\\delllibrary\\delllibrary\\dl\\db\\customerdldb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|solutionrelative:delllibrary\\dl\\db\\customerdldb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|d:\\delllibrary\\delllibrary\\dl\\db\\orderdetailsdldb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|solutionrelative:delllibrary\\dl\\db\\orderdetailsdldb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|D:\\DellLibrary\\delllibrary\\bl\\customerbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|solutionrelative:delllibrary\\bl\\customerbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|d:\\delllibrary\\delllibrary\\bl\\orderbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|solutionrelative:delllibrary\\bl\\orderbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|d:\\delllibrary\\delllibrary\\dl\\db\\orderdldb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|solutionrelative:delllibrary\\dl\\db\\orderdldb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|d:\\delllibrary\\delllibrary\\dl\\db\\employeedldb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|solutionrelative:delllibrary\\dl\\db\\employeedldb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|D:\\DellLibrary\\delllibrary\\dl interfaces\\iemployeedl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|solutionrelative:delllibrary\\dl interfaces\\iemployeedl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|D:\\DellLibrary\\delllibrary\\dl interfaces\\iorderdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|solutionrelative:delllibrary\\dl interfaces\\iorderdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|d:\\delllibrary\\delllibrary\\utility\\validations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|solutionrelative:delllibrary\\utility\\validations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|D:\\DellLibrary\\delllibrary\\utility\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|solutionrelative:delllibrary\\utility\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|D:\\DellLibrary\\delllibrary\\dl interfaces\\iuserdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|solutionrelative:delllibrary\\dl interfaces\\iuserdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|D:\\DellLibrary\\delllibrary\\dl interfaces\\iproductdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|solutionrelative:delllibrary\\dl interfaces\\iproductdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|D:\\DellLibrary\\delllibrary\\dl interfaces\\iorderdetailsdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|solutionrelative:delllibrary\\dl interfaces\\iorderdetailsdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|D:\\DellLibrary\\delllibrary\\dl interfaces\\icustomerdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|solutionrelative:delllibrary\\dl interfaces\\icustomerdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|d:\\delllibrary\\delllibrary\\bl\\userbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|solutionrelative:delllibrary\\bl\\userbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -71,166 +31,41 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "OrderDetailsBL.cs",
-              "DocumentMoniker": "D:\\DellLibrary\\DellLibrary\\BL\\OrderDetailsBL.cs",
-              "RelativeDocumentMoniker": "DellLibrary\\BL\\OrderDetailsBL.cs",
-              "ToolTip": "D:\\DellLibrary\\DellLibrary\\BL\\OrderDetailsBL.cs",
-              "RelativeToolTip": "DellLibrary\\BL\\OrderDetailsBL.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAgwC0AAAAjAAAA",
+              "Title": "CustomerDLDB.cs",
+              "DocumentMoniker": "D:\\DellLibrary\\DellLibrary\\DL\\DB\\CustomerDLDB.cs",
+              "RelativeDocumentMoniker": "DellLibrary\\DL\\DB\\CustomerDLDB.cs",
+              "ToolTip": "D:\\DellLibrary\\DellLibrary\\DL\\DB\\CustomerDLDB.cs",
+              "RelativeToolTip": "DellLibrary\\DL\\DB\\CustomerDLDB.cs",
+              "ViewState": "AQIAAFYAAAAAAAAAAAA9wA0AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T22:15:42.596Z",
+              "WhenOpened": "2024-04-26T09:51:19.863Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "OrderBL.cs",
-              "DocumentMoniker": "D:\\DellLibrary\\DellLibrary\\BL\\OrderBL.cs",
-              "RelativeDocumentMoniker": "DellLibrary\\BL\\OrderBL.cs",
-              "ToolTip": "D:\\DellLibrary\\DellLibrary\\BL\\OrderBL.cs",
-              "RelativeToolTip": "DellLibrary\\BL\\OrderBL.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAcwDsAAABJAAAA",
+              "Title": "UserBL.cs",
+              "DocumentMoniker": "D:\\DellLibrary\\DellLibrary\\BL\\UserBL.cs",
+              "RelativeDocumentMoniker": "DellLibrary\\BL\\UserBL.cs",
+              "ToolTip": "D:\\DellLibrary\\DellLibrary\\BL\\UserBL.cs",
+              "RelativeToolTip": "DellLibrary\\BL\\UserBL.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T20:55:35.935Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EmployeeDLDB.cs",
-              "DocumentMoniker": "D:\\DellLibrary\\DellLibrary\\DL\\DB\\EmployeeDLDB.cs",
-              "RelativeDocumentMoniker": "DellLibrary\\DL\\DB\\EmployeeDLDB.cs",
-              "ToolTip": "D:\\DellLibrary\\DellLibrary\\DL\\DB\\EmployeeDLDB.cs",
-              "RelativeToolTip": "DellLibrary\\DL\\DB\\EmployeeDLDB.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAPcAAABKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T20:39:04.817Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "OrderDLDB.cs",
-              "DocumentMoniker": "D:\\DellLibrary\\DellLibrary\\DL\\DB\\OrderDLDB.cs",
-              "RelativeDocumentMoniker": "DellLibrary\\DL\\DB\\OrderDLDB.cs",
-              "ToolTip": "D:\\DellLibrary\\DellLibrary\\DL\\DB\\OrderDLDB.cs",
-              "RelativeToolTip": "DellLibrary\\DL\\DB\\OrderDLDB.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAewEYAAABHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T20:37:24.571Z",
+              "WhenOpened": "2024-04-26T09:51:01.14Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "OrderDetailsDLDB.cs",
-              "DocumentMoniker": "D:\\DellLibrary\\DellLibrary\\DL\\DB\\OrderDetailsDLDB.cs",
-              "RelativeDocumentMoniker": "DellLibrary\\DL\\DB\\OrderDetailsDLDB.cs",
-              "ToolTip": "D:\\DellLibrary\\DellLibrary\\DL\\DB\\OrderDetailsDLDB.cs",
-              "RelativeToolTip": "DellLibrary\\DL\\DB\\OrderDetailsDLDB.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB8AAABCAAAA",
+              "Title": "CustomerBL.cs",
+              "DocumentMoniker": "D:\\DellLibrary\\DellLibrary\\BL\\CustomerBL.cs",
+              "RelativeDocumentMoniker": "DellLibrary\\BL\\CustomerBL.cs",
+              "ToolTip": "D:\\DellLibrary\\DellLibrary\\BL\\CustomerBL.cs",
+              "RelativeToolTip": "DellLibrary\\BL\\CustomerBL.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T20:37:16.1Z",
+              "WhenOpened": "2024-04-26T05:41:16.286Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Configuration.cs",
-              "DocumentMoniker": "D:\\DellLibrary\\DellLibrary\\Utility\\Configuration.cs",
-              "RelativeDocumentMoniker": "DellLibrary\\Utility\\Configuration.cs",
-              "ToolTip": "D:\\DellLibrary\\DellLibrary\\Utility\\Configuration.cs",
-              "RelativeToolTip": "DellLibrary\\Utility\\Configuration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T05:19:13.867Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IUserDL.cs",
-              "DocumentMoniker": "D:\\DellLibrary\\DellLibrary\\DL Interfaces\\IUserDL.cs",
-              "RelativeDocumentMoniker": "DellLibrary\\DL Interfaces\\IUserDL.cs",
-              "ToolTip": "D:\\DellLibrary\\DellLibrary\\DL Interfaces\\IUserDL.cs",
-              "RelativeToolTip": "DellLibrary\\DL Interfaces\\IUserDL.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T05:18:59.385Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IOrderDL.cs",
-              "DocumentMoniker": "D:\\DellLibrary\\DellLibrary\\DL Interfaces\\IOrderDL.cs",
-              "RelativeDocumentMoniker": "DellLibrary\\DL Interfaces\\IOrderDL.cs",
-              "ToolTip": "D:\\DellLibrary\\DellLibrary\\DL Interfaces\\IOrderDL.cs",
-              "RelativeToolTip": "DellLibrary\\DL Interfaces\\IOrderDL.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T02:28:09.843Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Validations.cs",
-              "DocumentMoniker": "D:\\DellLibrary\\DellLibrary\\Utility\\Validations.cs",
-              "RelativeDocumentMoniker": "DellLibrary\\Utility\\Validations.cs",
-              "ToolTip": "D:\\DellLibrary\\DellLibrary\\Utility\\Validations.cs",
-              "RelativeToolTip": "DellLibrary\\Utility\\Validations.cs",
-              "ViewState": "AQIAAA0BAAAAAAAAAAAIwDMBAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T22:30:18.032Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IEmployeeDL.cs",
-              "DocumentMoniker": "D:\\DellLibrary\\DellLibrary\\DL Interfaces\\IEmployeeDL.cs",
-              "RelativeDocumentMoniker": "DellLibrary\\DL Interfaces\\IEmployeeDL.cs",
-              "ToolTip": "D:\\DellLibrary\\DellLibrary\\DL Interfaces\\IEmployeeDL.cs",
-              "RelativeToolTip": "DellLibrary\\DL Interfaces\\IEmployeeDL.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T05:17:56.63Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ICustomerDL.cs",
-              "DocumentMoniker": "D:\\DellLibrary\\DellLibrary\\DL Interfaces\\ICustomerDL.cs",
-              "RelativeDocumentMoniker": "DellLibrary\\DL Interfaces\\ICustomerDL.cs",
-              "ToolTip": "D:\\DellLibrary\\DellLibrary\\DL Interfaces\\ICustomerDL.cs",
-              "RelativeToolTip": "DellLibrary\\DL Interfaces\\ICustomerDL.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T19:33:52.521Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IProductDL.cs",
-              "DocumentMoniker": "D:\\DellLibrary\\DellLibrary\\DL Interfaces\\IProductDL.cs",
-              "RelativeDocumentMoniker": "DellLibrary\\DL Interfaces\\IProductDL.cs",
-              "ToolTip": "D:\\DellLibrary\\DellLibrary\\DL Interfaces\\IProductDL.cs",
-              "RelativeToolTip": "DellLibrary\\DL Interfaces\\IProductDL.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T20:37:12.169Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "IOrderDetailsDL.cs",
-              "DocumentMoniker": "D:\\DellLibrary\\DellLibrary\\DL Interfaces\\IOrderDetailsDL.cs",
-              "RelativeDocumentMoniker": "DellLibrary\\DL Interfaces\\IOrderDetailsDL.cs",
-              "ToolTip": "D:\\DellLibrary\\DellLibrary\\DL Interfaces\\IOrderDetailsDL.cs",
-              "RelativeToolTip": "DellLibrary\\DL Interfaces\\IOrderDetailsDL.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T20:23:28.297Z"
             }
           ]
         }

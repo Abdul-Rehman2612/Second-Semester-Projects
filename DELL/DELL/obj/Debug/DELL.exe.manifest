@@ -66,26 +66,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DELL.exe" size="626696">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DELL.exe" size="582664">
       <assemblyIdentity name="DELL" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>dbhkpJv8N1CgJKG8YvF4rEC7+PhDtPdhGJeAq2SfKXk=</dsig:DigestValue>
+        <dsig:DigestValue>hynIhfwK1Fc2XcsuWDyPtDQ2DfRzuro+8nL8pnQ5u48=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DellLibrary.dll" size="40448">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DellLibrary.dll" size="41472">
       <assemblyIdentity name="DellLibrary" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>sXdn5tacaj/QLAZBeMK9VDxp7/ToiPhWBG4xHRJBw6c=</dsig:DigestValue>
+        <dsig:DigestValue>rMofwZNqEdZlb/inEAEascaaQDY6uQ1cvzCgZ7hIRfY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

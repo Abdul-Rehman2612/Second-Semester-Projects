@@ -186,6 +186,35 @@ namespace DellLibrary.DL.DB
             }
             return message;
         }
+        public void UpdateProductStock(ProductBL product, int u)
+        {
+
+            string query = "UPDATE Products SET " +
+                           "UnitsInStock = @UnitsInStock " +
+                           "WHERE ProductID = @ProductID;";
+
+            using (SqlConnection con = Configuration.GetConnection())
+            {
+                try
+                {
+                    con.Open();
+                    SqlCommand command = new SqlCommand(query, con);
+
+                    command.Parameters.AddWithValue("@UnitsInStock", product.GetUnitsInStock()-u);
+                    command.Parameters.AddWithValue("@ProductID", product.GetProductID());
+
+                    int rowsAffected = command.ExecuteNonQuery();
+
+                }
+                catch (Exception)
+                {
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+        }
 
         public string DeleteProduct(int ProductID)
         {

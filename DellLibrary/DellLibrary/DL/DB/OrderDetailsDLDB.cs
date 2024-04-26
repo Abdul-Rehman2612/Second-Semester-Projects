@@ -4,6 +4,7 @@ using DellLibrary.Utility;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Windows.Input;
 
 namespace DellLibrary.DL.DB
 {
@@ -50,6 +51,37 @@ namespace DellLibrary.DL.DB
             }
 
             return orderDetails;
+        }
+        public void AddOrderDetails(OrderBL order)
+        {
+            foreach (OrderDetailsBL od in order.GetOrderDetails())
+            {
+                string query = "Insert into OrderDetails(OrderID,ProductID, Quantity, Price) Values(@oid,@pid,@qt,@p)";
+
+                using (SqlConnection con = Configuration.GetConnection())
+                {
+                    try
+                    {
+                        con.Open();
+                        SqlCommand command = new SqlCommand(query, con);
+                        command.Parameters.AddWithValue("@oid", order.GetOrderID());
+                        command.Parameters.AddWithValue("@pid", od.GetProduct().GetProductID());
+                        command.Parameters.AddWithValue("@qt", od.GetQuantity());
+                        command.Parameters.AddWithValue("@p", od.GetPrice());
+                        SqlDataReader sqlDataReader = command.ExecuteReader();
+                    }
+                    catch (Exception e)
+                    {
+                        throw e;
+                    }
+                    finally
+                    {
+                        con.Close();
+                        IProductDL productDetails = new ProductDLDB();
+                        productDetails.UpdateProductStock(od.GetProduct(),od.GetQuantity());
+                    }
+                }
+            }
         }
     }
 }

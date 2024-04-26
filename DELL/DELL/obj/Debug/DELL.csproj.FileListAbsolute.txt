@@ -48,7 +48,6 @@ D:\DELL\DELL\bin\Debug\DellLibrary.pdb
 D:\DELL\DELL\obj\Debug\DELL.UI.UsersUI.CeoUI.resources
 D:\DELL\DELL\obj\Debug\DELL.UI.UsersUI.CustomerUI.resources
 D:\DELL\DELL\obj\Debug\DELL.UI.UsersUI.SalesPersonUI.resources
-D:\DELL\DELL\obj\Debug\DELL.UI.UsersUI.TechnicianUI.resources
 D:\Project\Second Semester\Dell\DELL\obj\Debug\DELL.UI.UsersUI.CeoUI.resources
 D:\Project\Second Semester\Dell\DELL\obj\Debug\DELL.UI.UsersUI.CustomerUI.resources
 D:\Project\Second Semester\Dell\DELL\obj\Debug\DELL.UI.UsersUI.SalesPersonUI.resources
