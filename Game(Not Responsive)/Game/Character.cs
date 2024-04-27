@@ -26,10 +26,5 @@ namespace Game
             form.Controls.Add(pictureBox);
         }
         public PictureBox GetPictureBox() { return pictureBox; }
-        public void UpdateSize(Form form)
-        {
-            pictureBox.Width = (int)(50 * form.ClientSize.Width / 1370.0);
-            pictureBox.Height = (int)(50 * form.ClientSize.Height / 749.0);
-        }
     }
 }

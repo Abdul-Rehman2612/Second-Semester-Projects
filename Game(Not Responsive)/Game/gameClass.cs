@@ -23,14 +23,12 @@ namespace Game
         public void UpdateGame(Form form,Keys key)
         {
             player.Move(form,key);
-            player.UpdateSize(form);
             foreach (Enemy e in enemies)
             {
                 if (!player.GetPictureBox().Bounds.IntersectsWith(e.GetPictureBox().Bounds))
                 {
                     e.Move(form);
                 }
-                e.UpdateSize(form);
             }
         }
     }
