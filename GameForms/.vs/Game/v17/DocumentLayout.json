@@ -1,0 +1,153 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\GameForms\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CEFFB488-D125-45EA-B86B-A85135D398AB}|Game\\Game.csproj|d:\\gameforms\\game\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CEFFB488-D125-45EA-B86B-A85135D398AB}|Game\\Game.csproj|solutionrelative:game\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEFFB488-D125-45EA-B86B-A85135D398AB}|Game\\Game.csproj|D:\\GameForms\\game\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEFFB488-D125-45EA-B86B-A85135D398AB}|Game\\Game.csproj|solutionrelative:game\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEFFB488-D125-45EA-B86B-A85135D398AB}|Game\\Game.csproj|D:\\GameForms\\game\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEFFB488-D125-45EA-B86B-A85135D398AB}|Game\\Game.csproj|solutionrelative:game\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEFFB488-D125-45EA-B86B-A85135D398AB}|Game\\Game.csproj|D:\\GameForms\\game\\horizontalenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEFFB488-D125-45EA-B86B-A85135D398AB}|Game\\Game.csproj|solutionrelative:game\\horizontalenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEFFB488-D125-45EA-B86B-A85135D398AB}|Game\\Game.csproj|D:\\GameForms\\game\\verticalenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEFFB488-D125-45EA-B86B-A85135D398AB}|Game\\Game.csproj|solutionrelative:game\\verticalenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEFFB488-D125-45EA-B86B-A85135D398AB}|Game\\Game.csproj|D:\\GameForms\\game\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEFFB488-D125-45EA-B86B-A85135D398AB}|Game\\Game.csproj|solutionrelative:game\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEFFB488-D125-45EA-B86B-A85135D398AB}|Game\\Game.csproj|D:\\GameForms\\game\\gameclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEFFB488-D125-45EA-B86B-A85135D398AB}|Game\\Game.csproj|solutionrelative:game\\gameclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEFFB488-D125-45EA-B86B-A85135D398AB}|Game\\Game.csproj|D:\\GameForms\\game\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEFFB488-D125-45EA-B86B-A85135D398AB}|Game\\Game.csproj|solutionrelative:game\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "gameClass.cs",
+              "DocumentMoniker": "D:\\GameForms\\Game\\gameClass.cs",
+              "RelativeDocumentMoniker": "Game\\gameClass.cs",
+              "ToolTip": "D:\\GameForms\\Game\\gameClass.cs",
+              "RelativeToolTip": "Game\\gameClass.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAwwCUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T21:25:49.679Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Player.cs",
+              "DocumentMoniker": "D:\\GameForms\\Game\\Player.cs",
+              "RelativeDocumentMoniker": "Game\\Player.cs",
+              "ToolTip": "D:\\GameForms\\Game\\Player.cs",
+              "RelativeToolTip": "Game\\Player.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAA0wCcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T21:05:56.602Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "VerticalEnemy.cs",
+              "DocumentMoniker": "D:\\GameForms\\Game\\VerticalEnemy.cs",
+              "RelativeDocumentMoniker": "Game\\VerticalEnemy.cs",
+              "ToolTip": "D:\\GameForms\\Game\\VerticalEnemy.cs",
+              "RelativeToolTip": "Game\\VerticalEnemy.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAwwCAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T20:59:57.622Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HorizontalEnemy.cs",
+              "DocumentMoniker": "D:\\GameForms\\Game\\HorizontalEnemy.cs",
+              "RelativeDocumentMoniker": "Game\\HorizontalEnemy.cs",
+              "ToolTip": "D:\\GameForms\\Game\\HorizontalEnemy.cs",
+              "RelativeToolTip": "Game\\HorizontalEnemy.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAwwCQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T20:54:46.029Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Enemy.cs",
+              "DocumentMoniker": "D:\\GameForms\\Game\\Enemy.cs",
+              "RelativeDocumentMoniker": "Game\\Enemy.cs",
+              "ToolTip": "D:\\GameForms\\Game\\Enemy.cs",
+              "RelativeToolTip": "Game\\Enemy.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T19:16:35.674Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Character.cs",
+              "DocumentMoniker": "D:\\GameForms\\Game\\Character.cs",
+              "RelativeDocumentMoniker": "Game\\Character.cs",
+              "ToolTip": "D:\\GameForms\\Game\\Character.cs",
+              "RelativeToolTip": "Game\\Character.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAgwB4AAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T19:12:25.892Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Game1.cs",
+              "DocumentMoniker": "D:\\GameForms\\Game\\Game1.cs",
+              "RelativeDocumentMoniker": "Game\\Game1.cs",
+              "ToolTip": "D:\\GameForms\\Game\\Game1.cs",
+              "RelativeToolTip": "Game\\Game1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T18:45:46.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Game1.cs [Design]",
+              "DocumentMoniker": "D:\\GameForms\\Game\\Game1.cs",
+              "RelativeDocumentMoniker": "Game\\Game1.cs",
+              "ToolTip": "D:\\GameForms\\Game\\Game1.cs [Design]",
+              "RelativeToolTip": "Game\\Game1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T07:34:16.609Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
