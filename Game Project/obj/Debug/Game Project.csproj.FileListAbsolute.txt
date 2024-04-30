@@ -1,0 +1,15 @@
+C:\Users\3 Stars Laptop\OneDrive\Desktop\Game Project\bin\Debug\Game Project.exe.config
+C:\Users\3 Stars Laptop\OneDrive\Desktop\Game Project\bin\Debug\Game Project.exe
+C:\Users\3 Stars Laptop\OneDrive\Desktop\Game Project\bin\Debug\Game Project.pdb
+C:\Users\3 Stars Laptop\OneDrive\Desktop\Game Project\obj\Debug\Game Project.csproj.AssemblyReference.cache
+C:\Users\3 Stars Laptop\OneDrive\Desktop\Game Project\obj\Debug\Game_Project.Properties.Resources.resources
+C:\Users\3 Stars Laptop\OneDrive\Desktop\Game Project\obj\Debug\Game_Project.Resource1.resources
+C:\Users\3 Stars Laptop\OneDrive\Desktop\Game Project\obj\Debug\Game_Project.FrontPage.resources
+C:\Users\3 Stars Laptop\OneDrive\Desktop\Game Project\obj\Debug\Game Project.csproj.GenerateResource.cache
+C:\Users\3 Stars Laptop\OneDrive\Desktop\Game Project\obj\Debug\Game Project.csproj.CoreCompileInputs.cache
+C:\Users\3 Stars Laptop\OneDrive\Desktop\Game Project\obj\Debug\Game Project.exe
+C:\Users\3 Stars Laptop\OneDrive\Desktop\Game Project\obj\Debug\Game Project.pdb
+C:\Users\3 Stars Laptop\OneDrive\Desktop\Game Project\bin\Debug\EZInput.dll
+C:\Users\3 Stars Laptop\OneDrive\Desktop\Game Project\bin\Debug\EZInput.xml
+C:\Users\3 Stars Laptop\OneDrive\Desktop\Game Project\obj\Debug\Game Project.csproj.CopyComplete
+C:\Users\3 Stars Laptop\OneDrive\Desktop\Game Project\obj\Debug\Game_Project.NextForm.resources

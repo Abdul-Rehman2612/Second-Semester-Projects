@@ -1,0 +1,126 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\GameLib\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1C5F0E29-5653-4566-B5AE-0CFF56FBA9CA}|GameLib\\GameLib.csproj|d:\\gamelib\\gamelib\\gl\\verticalenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C5F0E29-5653-4566-B5AE-0CFF56FBA9CA}|GameLib\\GameLib.csproj|solutionrelative:gamelib\\gl\\verticalenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C5F0E29-5653-4566-B5AE-0CFF56FBA9CA}|GameLib\\GameLib.csproj|d:\\gamelib\\gamelib\\gl\\horizontalenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C5F0E29-5653-4566-B5AE-0CFF56FBA9CA}|GameLib\\GameLib.csproj|solutionrelative:gamelib\\gl\\horizontalenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C5F0E29-5653-4566-B5AE-0CFF56FBA9CA}|GameLib\\GameLib.csproj|d:\\gamelib\\gamelib\\gl\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C5F0E29-5653-4566-B5AE-0CFF56FBA9CA}|GameLib\\GameLib.csproj|solutionrelative:gamelib\\gl\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C5F0E29-5653-4566-B5AE-0CFF56FBA9CA}|GameLib\\GameLib.csproj|d:\\gamelib\\gamelib\\gl\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C5F0E29-5653-4566-B5AE-0CFF56FBA9CA}|GameLib\\GameLib.csproj|solutionrelative:gamelib\\gl\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C5F0E29-5653-4566-B5AE-0CFF56FBA9CA}|GameLib\\GameLib.csproj|d:\\gamelib\\gamelib\\gl\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C5F0E29-5653-4566-B5AE-0CFF56FBA9CA}|GameLib\\GameLib.csproj|solutionrelative:gamelib\\gl\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C5F0E29-5653-4566-B5AE-0CFF56FBA9CA}|GameLib\\GameLib.csproj|d:\\gamelib\\gamelib\\gl\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C5F0E29-5653-4566-B5AE-0CFF56FBA9CA}|GameLib\\GameLib.csproj|solutionrelative:gamelib\\gl\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VerticalEnemy.cs",
+              "DocumentMoniker": "D:\\GameLib\\GameLib\\GL\\VerticalEnemy.cs",
+              "RelativeDocumentMoniker": "GameLib\\GL\\VerticalEnemy.cs",
+              "ToolTip": "D:\\GameLib\\GameLib\\GL\\VerticalEnemy.cs",
+              "RelativeToolTip": "GameLib\\GL\\VerticalEnemy.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T20:05:22.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HorizontalEnemy.cs",
+              "DocumentMoniker": "D:\\GameLib\\GameLib\\GL\\HorizontalEnemy.cs",
+              "RelativeDocumentMoniker": "GameLib\\GL\\HorizontalEnemy.cs",
+              "ToolTip": "D:\\GameLib\\GameLib\\GL\\HorizontalEnemy.cs",
+              "RelativeToolTip": "GameLib\\GL\\HorizontalEnemy.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T20:04:59.765Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Player.cs",
+              "DocumentMoniker": "D:\\GameLib\\GameLib\\GL\\Player.cs",
+              "RelativeDocumentMoniker": "GameLib\\GL\\Player.cs",
+              "ToolTip": "D:\\GameLib\\GameLib\\GL\\Player.cs",
+              "RelativeToolTip": "GameLib\\GL\\Player.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T20:04:26.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GameObject.cs",
+              "DocumentMoniker": "D:\\GameLib\\GameLib\\GL\\GameObject.cs",
+              "RelativeDocumentMoniker": "GameLib\\GL\\GameObject.cs",
+              "ToolTip": "D:\\GameLib\\GameLib\\GL\\GameObject.cs",
+              "RelativeToolTip": "GameLib\\GL\\GameObject.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T20:03:54.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Enemy.cs",
+              "DocumentMoniker": "D:\\GameLib\\GameLib\\GL\\Enemy.cs",
+              "RelativeDocumentMoniker": "GameLib\\GL\\Enemy.cs",
+              "ToolTip": "D:\\GameLib\\GameLib\\GL\\Enemy.cs",
+              "RelativeToolTip": "GameLib\\GL\\Enemy.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAcwBkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T20:03:33.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Game.cs",
+              "DocumentMoniker": "D:\\GameLib\\GameLib\\GL\\Game.cs",
+              "RelativeDocumentMoniker": "GameLib\\GL\\Game.cs",
+              "ToolTip": "D:\\GameLib\\GameLib\\GL\\Game.cs",
+              "RelativeToolTip": "GameLib\\GL\\Game.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T20:02:52.411Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

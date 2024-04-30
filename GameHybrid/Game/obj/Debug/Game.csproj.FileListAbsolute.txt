@@ -26,3 +26,5 @@ D:\GameHybrid\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
 D:\GameHybrid\Game\obj\Debug\Game.csproj.Up2Date
 D:\GameHybrid\Game\obj\Debug\Game.exe
 D:\GameHybrid\Game\obj\Debug\Game.pdb
+D:\GameHybrid\Game\bin\Debug\PrisonEscapeLibrary.dll
+D:\GameHybrid\Game\bin\Debug\PrisonEscapeLibrary.pdb

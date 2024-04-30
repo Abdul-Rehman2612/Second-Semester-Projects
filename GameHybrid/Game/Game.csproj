@@ -38,6 +38,9 @@
     <Reference Include="EZInput, Version=1.3.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\EZInput.1.3.2\lib\netstandard2.0\EZInput.dll</HintPath>
     </Reference>
+    <Reference Include="PrisonEscapeLibrary">
+      <HintPath>..\..\PrisonEscapeLibrary\PrisonEscapeLibrary\bin\Debug\PrisonEscapeLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -54,16 +57,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Character.cs" />
-    <Compile Include="Enemy.cs" />
     <Compile Include="Game1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Game1.Designer.cs">
       <DependentUpon>Game1.cs</DependentUpon>
     </Compile>
-    <Compile Include="gameClass.cs" />
-    <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resource1.Designer.cs">
@@ -71,8 +70,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource1.resx</DependentUpon>
     </Compile>
-    <Compile Include="HorizontalEnemy.cs" />
-    <Compile Include="VerticalEnemy.cs" />
     <EmbeddedResource Include="Game1.resx">
       <DependentUpon>Game1.cs</DependentUpon>
     </EmbeddedResource>

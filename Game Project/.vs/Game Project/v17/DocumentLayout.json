@@ -1,0 +1,172 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Game Project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4EBB8330-BB23-45AD-8594-6748A9AFDCBE}|Game Project.csproj|d:\\game project\\bl\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EBB8330-BB23-45AD-8594-6748A9AFDCBE}|Game Project.csproj|solutionrelative:bl\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EBB8330-BB23-45AD-8594-6748A9AFDCBE}|Game Project.csproj|D:\\Game Project\\ui\\frontpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4EBB8330-BB23-45AD-8594-6748A9AFDCBE}|Game Project.csproj|solutionrelative:ui\\frontpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EBB8330-BB23-45AD-8594-6748A9AFDCBE}|Game Project.csproj|D:\\Game Project\\ui\\frontpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EBB8330-BB23-45AD-8594-6748A9AFDCBE}|Game Project.csproj|solutionrelative:ui\\frontpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EBB8330-BB23-45AD-8594-6748A9AFDCBE}|Game Project.csproj|D:\\Game Project\\bl\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EBB8330-BB23-45AD-8594-6748A9AFDCBE}|Game Project.csproj|solutionrelative:bl\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EBB8330-BB23-45AD-8594-6748A9AFDCBE}|Game Project.csproj|D:\\Game Project\\ui\\nextform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4EBB8330-BB23-45AD-8594-6748A9AFDCBE}|Game Project.csproj|solutionrelative:ui\\nextform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EBB8330-BB23-45AD-8594-6748A9AFDCBE}|Game Project.csproj|D:\\Game Project\\bl\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EBB8330-BB23-45AD-8594-6748A9AFDCBE}|Game Project.csproj|solutionrelative:bl\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EBB8330-BB23-45AD-8594-6748A9AFDCBE}|Game Project.csproj|D:\\Game Project\\ui\\nextform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EBB8330-BB23-45AD-8594-6748A9AFDCBE}|Game Project.csproj|solutionrelative:ui\\nextform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EBB8330-BB23-45AD-8594-6748A9AFDCBE}|Game Project.csproj|D:\\Game Project\\bl\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EBB8330-BB23-45AD-8594-6748A9AFDCBE}|Game Project.csproj|solutionrelative:bl\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EBB8330-BB23-45AD-8594-6748A9AFDCBE}|Game Project.csproj|D:\\Game Project\\bl\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EBB8330-BB23-45AD-8594-6748A9AFDCBE}|Game Project.csproj|solutionrelative:bl\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrontPage.cs [Design]",
+              "DocumentMoniker": "D:\\Game Project\\UI\\FrontPage.cs",
+              "RelativeDocumentMoniker": "UI\\FrontPage.cs",
+              "ToolTip": "D:\\Game Project\\UI\\FrontPage.cs [Design]",
+              "RelativeToolTip": "UI\\FrontPage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T16:31:38.39Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "NextForm.cs",
+              "DocumentMoniker": "D:\\Game Project\\UI\\NextForm.cs",
+              "RelativeDocumentMoniker": "UI\\NextForm.cs",
+              "ToolTip": "D:\\Game Project\\UI\\NextForm.cs",
+              "RelativeToolTip": "UI\\NextForm.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T16:31:38.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FrontPage.cs",
+              "DocumentMoniker": "D:\\Game Project\\UI\\FrontPage.cs",
+              "RelativeDocumentMoniker": "UI\\FrontPage.cs",
+              "ToolTip": "D:\\Game Project\\UI\\FrontPage.cs",
+              "RelativeToolTip": "UI\\FrontPage.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T16:31:38.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Bullet.cs",
+              "DocumentMoniker": "D:\\Game Project\\BL\\Bullet.cs",
+              "RelativeDocumentMoniker": "BL\\Bullet.cs",
+              "ToolTip": "D:\\Game Project\\BL\\Bullet.cs",
+              "RelativeToolTip": "BL\\Bullet.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwCQAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T16:31:38.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Player.cs",
+              "DocumentMoniker": "D:\\Game Project\\BL\\Player.cs",
+              "RelativeDocumentMoniker": "BL\\Player.cs",
+              "ToolTip": "D:\\Game Project\\BL\\Player.cs",
+              "RelativeToolTip": "BL\\Player.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T16:31:39.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Enemy.cs",
+              "DocumentMoniker": "D:\\Game Project\\BL\\Enemy.cs",
+              "RelativeDocumentMoniker": "BL\\Enemy.cs",
+              "ToolTip": "D:\\Game Project\\BL\\Enemy.cs",
+              "RelativeToolTip": "BL\\Enemy.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAEwCAAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T16:31:39.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NextForm.cs [Design]",
+              "DocumentMoniker": "D:\\Game Project\\UI\\NextForm.cs",
+              "RelativeDocumentMoniker": "UI\\NextForm.cs",
+              "ToolTip": "D:\\Game Project\\UI\\NextForm.cs [Design]",
+              "RelativeToolTip": "UI\\NextForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T16:31:39.287Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Game.cs",
+              "DocumentMoniker": "D:\\Game Project\\BL\\Game.cs",
+              "RelativeDocumentMoniker": "BL\\Game.cs",
+              "ToolTip": "D:\\Game Project\\BL\\Game.cs",
+              "RelativeToolTip": "BL\\Game.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAAACcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T16:31:39.29Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GameObject.cs",
+              "DocumentMoniker": "D:\\Game Project\\BL\\GameObject.cs",
+              "RelativeDocumentMoniker": "BL\\GameObject.cs",
+              "ToolTip": "D:\\Game Project\\BL\\GameObject.cs",
+              "RelativeToolTip": "BL\\GameObject.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T16:31:39.293Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
