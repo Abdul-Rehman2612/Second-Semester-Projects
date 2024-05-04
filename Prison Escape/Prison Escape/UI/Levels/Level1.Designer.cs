@@ -52,6 +52,7 @@
             this.GamePage.Name = "GamePage";
             this.GamePage.Size = new System.Drawing.Size(1170, 749);
             this.GamePage.TabIndex = 1;
+            this.GamePage.Paint += new System.Windows.Forms.PaintEventHandler(this.GamePage_Paint);
             // 
             // Level1
             // 
@@ -62,6 +63,7 @@
             this.MinimumSize = new System.Drawing.Size(1364, 726);
             this.Name = "Level1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.Level1_Load);
             this.ResumeLayout(false);
 
         }

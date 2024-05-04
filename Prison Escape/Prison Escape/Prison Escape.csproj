@@ -33,11 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EZInput, Version=1.3.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\EZInput.1.3.2\lib\netstandard2.0\EZInput.dll</HintPath>
-    </Reference>
-    <Reference Include="Game">
-      <HintPath>..\..\Game\Game\bin\Debug\Game.dll</HintPath>
+    <Reference Include="GameLibrary">
+      <HintPath>..\..\GameLibrary\GameLibrary\bin\Debug\GameLibrary.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -90,7 +87,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

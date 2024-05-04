@@ -17,7 +17,7 @@ namespace Prison_Escape
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
+            Application.Run(new Level1());
         }
     }
 }

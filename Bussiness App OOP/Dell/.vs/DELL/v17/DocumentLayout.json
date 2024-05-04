@@ -1,29 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Dell\\",
+  "WorkspaceRootPath": "D:\\Project\\Second Semester\\Bussiness App OOP\\Dell\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|d:\\dell\\dell\\ui\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|d:\\project\\second semester\\bussiness app oop\\dell\\dell\\ui\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|solutionrelative:dell\\ui\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|d:\\dell\\dell\\ui\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|D:\\Project\\Second Semester\\Bussiness App OOP\\Dell\\dell\\ui\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|solutionrelative:dell\\ui\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|d:\\dell\\dell\\ui\\usersui\\ceoui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|D:\\Project\\Second Semester\\Bussiness App OOP\\Dell\\dell\\ui\\usersui\\ceoui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|solutionrelative:dell\\ui\\usersui\\ceoui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|d:\\dell\\dell\\ui\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|D:\\Project\\Second Semester\\Bussiness App OOP\\Dell\\dell\\ui\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|solutionrelative:dell\\ui\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|d:\\dell\\dell\\ui\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|D:\\Project\\Second Semester\\Bussiness App OOP\\Dell\\dell\\ui\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|solutionrelative:dell\\ui\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|d:\\dell\\dell\\ui\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|D:\\Project\\Second Semester\\Bussiness App OOP\\Dell\\dell\\ui\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{78FC1E31-43AA-447F-ABC1-167AC2AEA5D9}|DELL\\Dell.csproj|solutionrelative:dell\\ui\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -44,11 +44,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "SignUp.cs",
-              "DocumentMoniker": "D:\\Dell\\DELL\\UI\\SignUp.cs",
+              "DocumentMoniker": "D:\\Project\\Second Semester\\Bussiness App OOP\\Dell\\DELL\\UI\\SignUp.cs",
               "RelativeDocumentMoniker": "DELL\\UI\\SignUp.cs",
-              "ToolTip": "D:\\Dell\\DELL\\UI\\SignUp.cs*",
-              "RelativeToolTip": "DELL\\UI\\SignUp.cs*",
-              "ViewState": "AQIAACAAAAAAAAAAAAAswDAAAABNAAAA",
+              "ToolTip": "D:\\Project\\Second Semester\\Bussiness App OOP\\Dell\\DELL\\UI\\SignUp.cs",
+              "RelativeToolTip": "DELL\\UI\\SignUp.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-26T09:52:13.791Z",
               "EditorCaption": ""
@@ -57,62 +57,57 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "SignUp.cs [Design]",
-              "DocumentMoniker": "D:\\Dell\\DELL\\UI\\SignUp.cs",
+              "DocumentMoniker": "D:\\Project\\Second Semester\\Bussiness App OOP\\Dell\\DELL\\UI\\SignUp.cs",
               "RelativeDocumentMoniker": "DELL\\UI\\SignUp.cs",
               "ToolTip": "D:\\Dell\\DELL\\UI\\SignUp.cs [Design]*",
-              "RelativeToolTip": "DELL\\UI\\SignUp.cs [Design]*",
+              "RelativeToolTip": "..\\..\\..\\..\\Dell\\DELL\\UI\\SignUp.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T09:52:08.005Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-26T09:52:08.005Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "CeoUI.cs [Design]",
-              "DocumentMoniker": "D:\\Dell\\DELL\\UI\\UsersUI\\CeoUI.cs",
+              "DocumentMoniker": "D:\\Project\\Second Semester\\Bussiness App OOP\\Dell\\DELL\\UI\\UsersUI\\CeoUI.cs",
               "RelativeDocumentMoniker": "DELL\\UI\\UsersUI\\CeoUI.cs",
               "ToolTip": "D:\\Dell\\DELL\\UI\\UsersUI\\CeoUI.cs [Design]",
-              "RelativeToolTip": "DELL\\UI\\UsersUI\\CeoUI.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\Dell\\DELL\\UI\\UsersUI\\CeoUI.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T09:52:04.163Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-26T09:52:04.163Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "SignIn.cs",
-              "DocumentMoniker": "D:\\Dell\\DELL\\UI\\SignIn.cs",
+              "DocumentMoniker": "D:\\Project\\Second Semester\\Bussiness App OOP\\Dell\\DELL\\UI\\SignIn.cs",
               "RelativeDocumentMoniker": "DELL\\UI\\SignIn.cs",
-              "ToolTip": "D:\\Dell\\DELL\\UI\\SignIn.cs",
+              "ToolTip": "D:\\Project\\Second Semester\\Bussiness App OOP\\Dell\\DELL\\UI\\SignIn.cs",
               "RelativeToolTip": "DELL\\UI\\SignIn.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABMAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T09:44:54.24Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-26T09:44:54.24Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "SignIn.cs [Design]",
-              "DocumentMoniker": "D:\\Dell\\DELL\\UI\\SignIn.cs",
+              "DocumentMoniker": "D:\\Project\\Second Semester\\Bussiness App OOP\\Dell\\DELL\\UI\\SignIn.cs",
               "RelativeDocumentMoniker": "DELL\\UI\\SignIn.cs",
               "ToolTip": "D:\\Dell\\DELL\\UI\\SignIn.cs [Design]",
-              "RelativeToolTip": "DELL\\UI\\SignIn.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\Dell\\DELL\\UI\\SignIn.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T09:44:50.964Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-26T09:44:50.964Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "MainMenu.cs [Design]",
-              "DocumentMoniker": "D:\\Dell\\DELL\\UI\\MainMenu.cs",
+              "DocumentMoniker": "D:\\Project\\Second Semester\\Bussiness App OOP\\Dell\\DELL\\UI\\MainMenu.cs",
               "RelativeDocumentMoniker": "DELL\\UI\\MainMenu.cs",
               "ToolTip": "D:\\Dell\\DELL\\UI\\MainMenu.cs [Design]",
-              "RelativeToolTip": "DELL\\UI\\MainMenu.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\Dell\\DELL\\UI\\MainMenu.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T09:40:05.269Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-26T09:40:05.269Z"
             }
           ]
         }

@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\DellLibrary\\",
+  "WorkspaceRootPath": "D:\\Project\\Second Semester\\Bussiness App OOP\\DellLibrary\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|d:\\delllibrary\\delllibrary\\dl\\db\\customerdldb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|d:\\project\\second semester\\bussiness app oop\\delllibrary\\delllibrary\\dl\\db\\customerdldb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|solutionrelative:delllibrary\\dl\\db\\customerdldb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|D:\\DellLibrary\\delllibrary\\bl\\customerbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|D:\\Project\\Second Semester\\Bussiness App OOP\\DellLibrary\\delllibrary\\bl\\customerbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|solutionrelative:delllibrary\\bl\\customerbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|d:\\delllibrary\\delllibrary\\bl\\userbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|D:\\Project\\Second Semester\\Bussiness App OOP\\DellLibrary\\delllibrary\\bl\\userbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E96943A8-CDEB-4CEF-A9D0-DF7F3D4FE90E}|DellLibrary\\DellLibrary.csproj|solutionrelative:delllibrary\\bl\\userbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -32,11 +32,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "CustomerDLDB.cs",
-              "DocumentMoniker": "D:\\DellLibrary\\DellLibrary\\DL\\DB\\CustomerDLDB.cs",
+              "DocumentMoniker": "D:\\Project\\Second Semester\\Bussiness App OOP\\DellLibrary\\DellLibrary\\DL\\DB\\CustomerDLDB.cs",
               "RelativeDocumentMoniker": "DellLibrary\\DL\\DB\\CustomerDLDB.cs",
-              "ToolTip": "D:\\DellLibrary\\DellLibrary\\DL\\DB\\CustomerDLDB.cs",
+              "ToolTip": "D:\\Project\\Second Semester\\Bussiness App OOP\\DellLibrary\\DellLibrary\\DL\\DB\\CustomerDLDB.cs",
               "RelativeToolTip": "DellLibrary\\DL\\DB\\CustomerDLDB.cs",
-              "ViewState": "AQIAAFYAAAAAAAAAAAA9wA0AAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-26T09:51:19.863Z",
               "EditorCaption": ""
@@ -45,27 +45,25 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "UserBL.cs",
-              "DocumentMoniker": "D:\\DellLibrary\\DellLibrary\\BL\\UserBL.cs",
+              "DocumentMoniker": "D:\\Project\\Second Semester\\Bussiness App OOP\\DellLibrary\\DellLibrary\\BL\\UserBL.cs",
               "RelativeDocumentMoniker": "DellLibrary\\BL\\UserBL.cs",
-              "ToolTip": "D:\\DellLibrary\\DellLibrary\\BL\\UserBL.cs",
+              "ToolTip": "D:\\Project\\Second Semester\\Bussiness App OOP\\DellLibrary\\DellLibrary\\BL\\UserBL.cs",
               "RelativeToolTip": "DellLibrary\\BL\\UserBL.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T09:51:01.14Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-26T09:51:01.14Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "CustomerBL.cs",
-              "DocumentMoniker": "D:\\DellLibrary\\DellLibrary\\BL\\CustomerBL.cs",
+              "DocumentMoniker": "D:\\Project\\Second Semester\\Bussiness App OOP\\DellLibrary\\DellLibrary\\BL\\CustomerBL.cs",
               "RelativeDocumentMoniker": "DellLibrary\\BL\\CustomerBL.cs",
-              "ToolTip": "D:\\DellLibrary\\DellLibrary\\BL\\CustomerBL.cs",
+              "ToolTip": "D:\\Project\\Second Semester\\Bussiness App OOP\\DellLibrary\\DellLibrary\\BL\\CustomerBL.cs",
               "RelativeToolTip": "DellLibrary\\BL\\CustomerBL.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T05:41:16.286Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-26T05:41:16.286Z"
             }
           ]
         }
