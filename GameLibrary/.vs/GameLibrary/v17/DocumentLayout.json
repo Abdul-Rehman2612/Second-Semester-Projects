@@ -3,27 +3,47 @@
   "WorkspaceRootPath": "D:\\GameLibrary\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B0B1F1AA-F2C7-4634-82C3-E485C264FC19}|GameLibrary\\GameLibrary.csproj|d:\\gamelibrary\\gamelibrary\\gl\\movement\\zigzagmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B0B1F1AA-F2C7-4634-82C3-E485C264FC19}|GameLibrary\\GameLibrary.csproj|solutionrelative:gamelibrary\\gl\\movement\\zigzagmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Abdul Rehman\\AppData\\Local\\Temp\\.vsdbgsrc\\3933a443edc8c13a8ec14a7f4d2196cd79c1d2d9f93cdf495e65585c71e37122\\UserControlTestContainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B0B1F1AA-F2C7-4634-82C3-E485C264FC19}|GameLibrary\\GameLibrary.csproj|D:\\GameLibrary\\gamelibrary\\gl\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B0B1F1AA-F2C7-4634-82C3-E485C264FC19}|GameLibrary\\GameLibrary.csproj|d:\\gamelibrary\\gamelibrary\\gl\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B0B1F1AA-F2C7-4634-82C3-E485C264FC19}|GameLibrary\\GameLibrary.csproj|solutionrelative:gamelibrary\\gl\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0B1F1AA-F2C7-4634-82C3-E485C264FC19}|GameLibrary\\GameLibrary.csproj|D:\\GameLibrary\\gamelibrary\\resource1.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{B0B1F1AA-F2C7-4634-82C3-E485C264FC19}|GameLibrary\\GameLibrary.csproj|solutionrelative:gamelibrary\\resource1.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0B1F1AA-F2C7-4634-82C3-E485C264FC19}|GameLibrary\\GameLibrary.csproj|d:\\gamelibrary\\gamelibrary\\gl\\movement\\firemovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0B1F1AA-F2C7-4634-82C3-E485C264FC19}|GameLibrary\\GameLibrary.csproj|solutionrelative:gamelibrary\\gl\\movement\\firemovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0B1F1AA-F2C7-4634-82C3-E485C264FC19}|GameLibrary\\GameLibrary.csproj|D:\\GameLibrary\\gamelibrary\\gl\\enum\\action.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0B1F1AA-F2C7-4634-82C3-E485C264FC19}|GameLibrary\\GameLibrary.csproj|solutionrelative:gamelibrary\\gl\\enum\\action.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0B1F1AA-F2C7-4634-82C3-E485C264FC19}|GameLibrary\\GameLibrary.csproj|D:\\GameLibrary\\gamelibrary\\gl\\collision\\collisions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0B1F1AA-F2C7-4634-82C3-E485C264FC19}|GameLibrary\\GameLibrary.csproj|solutionrelative:gamelibrary\\gl\\collision\\collisions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0B1F1AA-F2C7-4634-82C3-E485C264FC19}|GameLibrary\\GameLibrary.csproj|D:\\GameLibrary\\gamelibrary\\gl\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0B1F1AA-F2C7-4634-82C3-E485C264FC19}|GameLibrary\\GameLibrary.csproj|solutionrelative:gamelibrary\\gl\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0B1F1AA-F2C7-4634-82C3-E485C264FC19}|GameLibrary\\GameLibrary.csproj|D:\\GameLibrary\\gamelibrary\\gl\\interfaces\\interface1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0B1F1AA-F2C7-4634-82C3-E485C264FC19}|GameLibrary\\GameLibrary.csproj|solutionrelative:gamelibrary\\gl\\interfaces\\interface1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B0B1F1AA-F2C7-4634-82C3-E485C264FC19}|GameLibrary\\GameLibrary.csproj|D:\\GameLibrary\\gamelibrary\\gl\\movement\\keymovements.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B0B1F1AA-F2C7-4634-82C3-E485C264FC19}|GameLibrary\\GameLibrary.csproj|solutionrelative:gamelibrary\\gl\\movement\\keymovements.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B0B1F1AA-F2C7-4634-82C3-E485C264FC19}|GameLibrary\\GameLibrary.csproj|D:\\GameLibrary\\gamelibrary\\gl\\movement\\verticalmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B0B1F1AA-F2C7-4634-82C3-E485C264FC19}|GameLibrary\\GameLibrary.csproj|solutionrelative:gamelibrary\\gl\\movement\\verticalmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B0B1F1AA-F2C7-4634-82C3-E485C264FC19}|GameLibrary\\GameLibrary.csproj|D:\\GameLibrary\\gamelibrary\\resources\\image1.bmp||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{B0B1F1AA-F2C7-4634-82C3-E485C264FC19}|GameLibrary\\GameLibrary.csproj|solutionrelative:gamelibrary\\resources\\image1.bmp||{177559E0-D141-11D0-92DF-00A0C9138C45}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Abdul Rehman\\AppData\\Local\\Temp\\.vsdbgsrc\\3933a443edc8c13a8ec14a7f4d2196cd79c1d2d9f93cdf495e65585c71e37122\\UserControlTestContainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B0B1F1AA-F2C7-4634-82C3-E485C264FC19}|GameLibrary\\GameLibrary.csproj|D:\\GameLibrary\\gamelibrary\\gl\\movement\\imovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B0B1F1AA-F2C7-4634-82C3-E485C264FC19}|GameLibrary\\GameLibrary.csproj|solutionrelative:gamelibrary\\gl\\movement\\imovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B0B1F1AA-F2C7-4634-82C3-E485C264FC19}|GameLibrary\\GameLibrary.csproj|D:\\GameLibrary\\gamelibrary\\gl\\enum\\objecttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0B1F1AA-F2C7-4634-82C3-E485C264FC19}|GameLibrary\\GameLibrary.csproj|solutionrelative:gamelibrary\\gl\\enum\\objecttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,7 +53,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -41,62 +61,87 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "UserControlTestContainer.cs",
               "DocumentMoniker": "C:\\Users\\Abdul Rehman\\AppData\\Local\\Temp\\.vsdbgsrc\\3933a443edc8c13a8ec14a7f4d2196cd79c1d2d9f93cdf495e65585c71e37122\\UserControlTestContainer.cs",
               "ToolTip": "C:\\Users\\Abdul Rehman\\AppData\\Local\\Temp\\.vsdbgsrc\\3933a443edc8c13a8ec14a7f4d2196cd79c1d2d9f93cdf495e65585c71e37122\\UserControlTestContainer.cs [Read Only]",
-              "ViewState": "AQIAALcAAAAAAAAAAAAwwCQBAAACAAAA",
+              "ViewState": "AQIAAAwBAAAAAAAAAAApwBYBAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T04:00:49.738Z"
+              "WhenOpened": "2024-05-08T00:31:04.155Z",
+              "EditorCaption": " [Read Only]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IMovement.cs",
-              "DocumentMoniker": "D:\\GameLibrary\\GameLibrary\\GL\\Movement\\IMovement.cs",
-              "RelativeDocumentMoniker": "GameLibrary\\GL\\Movement\\IMovement.cs",
-              "ToolTip": "D:\\GameLibrary\\GameLibrary\\GL\\Movement\\IMovement.cs",
-              "RelativeToolTip": "GameLibrary\\GL\\Movement\\IMovement.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "DocumentIndex": 3,
+              "Title": "FireMovement.cs",
+              "DocumentMoniker": "D:\\GameLibrary\\GameLibrary\\GL\\Movement\\FireMovement.cs",
+              "RelativeDocumentMoniker": "GameLibrary\\GL\\Movement\\FireMovement.cs",
+              "ToolTip": "D:\\GameLibrary\\GameLibrary\\GL\\Movement\\FireMovement.cs",
+              "RelativeToolTip": "GameLibrary\\GL\\Movement\\FireMovement.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAuwA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-02T18:16:31.954Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ZigZagMovement.cs",
-              "DocumentMoniker": "D:\\GameLibrary\\GameLibrary\\GL\\Movement\\ZigZagMovement.cs",
-              "RelativeDocumentMoniker": "GameLibrary\\GL\\Movement\\ZigZagMovement.cs",
-              "ToolTip": "D:\\GameLibrary\\GameLibrary\\GL\\Movement\\ZigZagMovement.cs",
-              "RelativeToolTip": "GameLibrary\\GL\\Movement\\ZigZagMovement.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEgAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-02T19:17:06.684Z",
+              "WhenOpened": "2024-05-08T00:19:43.843Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
+              "Title": "Action.cs",
+              "DocumentMoniker": "D:\\GameLibrary\\GameLibrary\\GL\\Enum\\Action.cs",
+              "RelativeDocumentMoniker": "GameLibrary\\GL\\Enum\\Action.cs",
+              "ToolTip": "D:\\GameLibrary\\GameLibrary\\GL\\Enum\\Action.cs",
+              "RelativeToolTip": "GameLibrary\\GL\\Enum\\Action.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T21:56:17.913Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "KeyMovements.cs",
               "DocumentMoniker": "D:\\GameLibrary\\GameLibrary\\GL\\Movement\\KeyMovements.cs",
               "RelativeDocumentMoniker": "GameLibrary\\GL\\Movement\\KeyMovements.cs",
               "ToolTip": "D:\\GameLibrary\\GameLibrary\\GL\\Movement\\KeyMovements.cs",
               "RelativeToolTip": "GameLibrary\\GL\\Movement\\KeyMovements.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
+              "ViewState": "AQIAACcAAAAAAAAAAAAowC8AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-02T19:27:05.784Z"
+              "WhenOpened": "2024-05-07T19:43:22.582Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "VerticalMovement.cs",
-              "DocumentMoniker": "D:\\GameLibrary\\GameLibrary\\GL\\Movement\\VerticalMovement.cs",
-              "RelativeDocumentMoniker": "GameLibrary\\GL\\Movement\\VerticalMovement.cs",
-              "ToolTip": "D:\\GameLibrary\\GameLibrary\\GL\\Movement\\VerticalMovement.cs",
-              "RelativeToolTip": "GameLibrary\\GL\\Movement\\VerticalMovement.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAjAAAA",
+              "DocumentIndex": 7,
+              "Title": "Interface1.cs",
+              "DocumentMoniker": "D:\\GameLibrary\\GameLibrary\\GL\\Interfaces\\Interface1.cs",
+              "RelativeDocumentMoniker": "GameLibrary\\GL\\Interfaces\\Interface1.cs",
+              "ToolTip": "D:\\GameLibrary\\GameLibrary\\GL\\Interfaces\\Interface1.cs",
+              "RelativeToolTip": "GameLibrary\\GL\\Interfaces\\Interface1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-02T19:11:37.564Z"
+              "WhenOpened": "2024-05-07T19:35:35.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Collisions.cs",
+              "DocumentMoniker": "D:\\GameLibrary\\GameLibrary\\GL\\Collision\\Collisions.cs",
+              "RelativeDocumentMoniker": "GameLibrary\\GL\\Collision\\Collisions.cs",
+              "ToolTip": "D:\\GameLibrary\\GameLibrary\\GL\\Collision\\Collisions.cs",
+              "RelativeToolTip": "GameLibrary\\GL\\Collision\\Collisions.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T19:16:56.157Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GameObject.cs",
+              "DocumentMoniker": "D:\\GameLibrary\\GameLibrary\\GL\\GameObject.cs",
+              "RelativeDocumentMoniker": "GameLibrary\\GL\\GameObject.cs",
+              "ToolTip": "D:\\GameLibrary\\GameLibrary\\GL\\GameObject.cs",
+              "RelativeToolTip": "GameLibrary\\GL\\GameObject.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAWwCYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T19:48:01.946Z"
             },
             {
               "$type": "Document",
@@ -106,9 +151,45 @@
               "RelativeDocumentMoniker": "GameLibrary\\GL\\Game.cs",
               "ToolTip": "D:\\GameLibrary\\GameLibrary\\GL\\Game.cs",
               "RelativeToolTip": "GameLibrary\\GL\\Game.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAIwAEAAAAhAAAA",
+              "ViewState": "AQIAALoAAAAAAAAAAAAswMAAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-02T18:06:29.4Z"
+              "WhenOpened": "2024-05-07T18:57:29.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Resource1.resx",
+              "DocumentMoniker": "D:\\GameLibrary\\GameLibrary\\Resource1.resx",
+              "RelativeDocumentMoniker": "GameLibrary\\Resource1.resx",
+              "ToolTip": "D:\\GameLibrary\\GameLibrary\\Resource1.resx",
+              "RelativeToolTip": "GameLibrary\\Resource1.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-05-07T20:46:42.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Image1.bmp - Bitmap [48x48, 8 bit, BMP]",
+              "DocumentMoniker": "D:\\GameLibrary\\GameLibrary\\Resources\\Image1.bmp",
+              "RelativeDocumentMoniker": "GameLibrary\\Resources\\Image1.bmp",
+              "ToolTip": "D:\\GameLibrary\\GameLibrary\\Resources\\Image1.bmp - Bitmap [48x48, 8 bit, BMP]",
+              "RelativeToolTip": "GameLibrary\\Resources\\Image1.bmp - Bitmap [48x48, 8 bit, BMP]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2024-05-07T20:50:36.753Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ObjectType.cs",
+              "DocumentMoniker": "D:\\GameLibrary\\GameLibrary\\GL\\Enum\\ObjectType.cs",
+              "RelativeDocumentMoniker": "GameLibrary\\GL\\Enum\\ObjectType.cs",
+              "ToolTip": "D:\\GameLibrary\\GameLibrary\\GL\\Enum\\ObjectType.cs",
+              "RelativeToolTip": "GameLibrary\\GL\\Enum\\ObjectType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T20:28:23.452Z"
             }
           ]
         }

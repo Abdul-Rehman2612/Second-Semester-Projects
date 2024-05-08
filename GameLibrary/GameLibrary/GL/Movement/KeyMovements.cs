@@ -1,21 +1,30 @@
-﻿using EZInput;
+﻿using GameLibrary.GL.Enum;
+using GameLibrary.GL.Interfaces;
+using System.Drawing;
+using EZInput;
+using System.Collections.Generic;
+using Point = System.Drawing.Point;
+using GameLibrary.GL.Fire;
+using System.Windows.Forms;
+using System.ComponentModel;
+using System;
 
 namespace GameLibrary.GL.Movement
 {
     public class KeyMovements : IMovement
     {
         private readonly int speed;
-        private readonly System.Drawing.Point boundary;
+        private readonly Point boundary;
         private readonly int width;
         private readonly int height;
-        public KeyMovements(int speed, System.Drawing.Point boundary, int width, int height)
+        public KeyMovements(int speed, Point boundary, int width, int height)
         {
-            this.speed=speed;
-            this.boundary=boundary;
-            this.width=width;
-            this.height=height;
+            this.speed = speed;
+            this.boundary = boundary;
+            this.width = width;
+            this.height = height;
         }
-        public System.Drawing.Point Move(System.Drawing.Point Location)
+        public Point Move(Point Location)
         {
             if (Keyboard.IsKeyPressed(Key.LeftArrow))
             {

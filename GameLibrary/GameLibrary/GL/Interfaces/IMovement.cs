@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace GameLibrary.GL.Movement
+namespace GameLibrary.GL.Interfaces
 {
     public interface IMovement
     {

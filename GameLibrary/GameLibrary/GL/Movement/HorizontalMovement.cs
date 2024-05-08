@@ -1,12 +1,15 @@
-﻿namespace GameLibrary.GL.Movement
+﻿using GameLibrary.GL.Enum;
+using GameLibrary.GL.Interfaces;
+
+namespace GameLibrary.GL.Movement
 {
     public class HorizontalMovement : IMovement
     {
         private int speed;
         private System.Drawing.Point boundary;
         private int width;
-        private string direction;
-        public HorizontalMovement(int speed, System.Drawing.Point boundary, int width, string direction)
+        private Direction direction;
+        public HorizontalMovement(int speed, System.Drawing.Point boundary, int width, Direction direction)
         {
             this.speed=speed;
             this.boundary=boundary;
@@ -16,14 +19,14 @@
         }
         private void CheckDirection()
         {
-            if (direction !="Right" && direction !="Left")
+            if (direction !=Direction.Right && direction !=Direction.Left)
             {
-                direction="Left";
+                direction=Direction.Left;
             }
         }
         public System.Drawing.Point Move(System.Drawing.Point location)
         {
-            if (location.X +width + speed < boundary.X && direction == "Right")
+            if (location.X +width + speed < boundary.X && direction == Direction.Right)
             {
                 location.X += speed;
             }
@@ -31,7 +34,7 @@
             {
                 ChangeDirection();
             }
-            if (location.X - speed > 0 && direction == "Left")
+            if (location.X - speed > 0 && direction == Direction.Left)
             {
                 location.X -= speed;
             }
@@ -43,13 +46,13 @@
         }
         private void ChangeDirection()
         {
-            if (direction =="Right")
+            if (direction == Direction.Right)
             {
-                direction = "Left";
+                direction = Direction.Left;
             }
-            else if (direction == "Left")
+            else if (direction == Direction.Left)
             {
-                direction = "Right";
+                direction = Direction.Right;
             }
         }
     }

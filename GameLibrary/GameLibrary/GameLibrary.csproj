@@ -45,18 +45,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GL\Collision\Collisions.cs" />
+    <Compile Include="GL\Enum\Action.cs" />
+    <Compile Include="GL\Enum\Direction.cs" />
+    <Compile Include="GL\Enum\ObjectType.cs" />
     <Compile Include="GL\Game.cs" />
     <Compile Include="GL\GameObject.cs" />
+    <Compile Include="GL\Interfaces\Interface1.cs" />
+    <Compile Include="GL\Movement\FireMovement.cs" />
     <Compile Include="GL\Movement\ZigZagMovement.cs" />
     <Compile Include="GL\Movement\HorizontalMovement.cs" />
-    <Compile Include="GL\Movement\IMovement.cs" />
+    <Compile Include="GL\Interfaces\IMovement.cs" />
     <Compile Include="GL\Movement\KeyMovements.cs" />
     <Compile Include="GL\Movement\VerticalMovement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AmountSpent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fire.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

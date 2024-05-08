@@ -1,5 +1,6 @@
-﻿using System;
+﻿using GameLibrary.GL.Enum;
 using System.Drawing;
+using GameLibrary.GL.Interfaces;
 
 namespace GameLibrary.GL.Movement
 {
@@ -10,9 +11,8 @@ namespace GameLibrary.GL.Movement
         private readonly Point boundary;
         private readonly int width;
         private readonly int height;
-        private string direction;
-
-        public ZigZagMovement(int speedX, int speedY, Point boundary, int width, int height, string direction)
+        private Direction direction;
+        public ZigZagMovement(int speedX, int speedY, Point boundary, int width, int height, Direction direction)
         {
             this.speedX = speedX;
             this.speedY = speedY;
@@ -24,32 +24,32 @@ namespace GameLibrary.GL.Movement
         }
         private void CheckDirection()
         {
-            if (direction != "DiagUpRight" && direction != "DiagUpLeft" && direction != "DiagDownRight" && direction != "DiagDownLeft")
+            if (direction != Direction.DiagUpRight && direction != Direction.DiagUpLeft && direction != Direction.DiagDownRight && direction != Direction.DiagDownLeft)
             {
-                direction = "DiagDownRight";
+                direction = Direction.DiagDownRight;
             }
         }
         public Point Move(Point location)
         {
-            if (direction == "DiagUpRight" && location.X + width + speedX < boundary.X && location.Y - speedY > 0)
+            if (direction == Direction.DiagUpRight && location.X + width + speedX < boundary.X && location.Y - speedY > 0)
             {
                 location.X+=speedX;
                 location.Y-=speedY;
                 return location;
             }
-            if (direction == "DiagUpLeft" && location.X - speedX > 0 && location.Y - speedY > 0)
+            if (direction == Direction.DiagUpLeft && location.X - speedX > 0 && location.Y - speedY > 0)
             {
                 location.X-=speedX;
                 location.Y-=speedY;
                 return location;
             }
-            if (direction == "DiagDownRight" && location.X + width + speedX < boundary.X && location.Y + height + speedY < boundary.Y)
+            if (direction == Direction.DiagDownRight && location.X + width + speedX < boundary.X && location.Y + height + speedY < boundary.Y)
             {
                 location.X+=speedX;
                 location.Y+=speedY;
                 return location;
             }
-            if (direction == "DiagDownLeft" && location.X - speedX > 0 && location.Y + height + speedY < boundary.Y)
+            if (direction == Direction.DiagDownLeft && location.X - speedX > 0 && location.Y + height + speedY < boundary.Y)
             {
                 location.X-=speedX;
                 location.Y+=speedY;
@@ -60,48 +60,48 @@ namespace GameLibrary.GL.Movement
         }
         private void ChangeDirection(Point p)
         {
-            if (direction == "DiagUpRight")
+            if (direction == Direction.DiagUpRight)
             {
                 if (p.X + width + speedX < boundary.X && p.Y - speedY < 0)
                 {
-                    direction = "DiagDownRight";
+                    direction = Direction.DiagDownRight;
                 }
                 if (p.X + width + speedX > boundary.X && p.Y - speedY > 0)
                 {
-                    direction = "DiagUpLeft";
+                    direction = Direction.DiagUpLeft;
                 }
             }
-            if (direction == "DiagUpLeft")
+            if (direction == Direction.DiagUpLeft)
             {
                 if (p.X - speedX > 0 && p.Y - speedY < 0)
                 {
-                    direction = "DiagDownLeft";
+                    direction = Direction.DiagDownLeft;
                 }
                 if (p.X - speedX < 0 && p.Y - speedY > 0)
                 {
-                    direction = "DiagUpRight";
+                    direction = Direction.DiagUpRight;
                 }
             }
-            if (direction == "DiagDownLeft")
+            if (direction == Direction.DiagDownLeft)
             {
                 if (p.X - speedX > 0 && p.Y + height + speedY > boundary.Y)
                 {
-                    direction = "DiagUpLeft";
+                    direction = Direction.DiagUpLeft;
                 }
                 if (p.X - speedX < 0 && p.Y + height + speedY < boundary.Y)
                 {
-                    direction = "DiagDownRight";
+                    direction = Direction.DiagDownRight;
                 }
             }
-            if (direction == "DiagDownRight")
+            if (direction == Direction.DiagDownRight)
             {
                 if (p.X + width + speedX > boundary.X && p.Y + height + speedY < boundary.Y)
                 {
-                    direction = "DiagDownLeft";
+                    direction = Direction.DiagDownLeft;
                 }
                 if (p.X + width + speedX < boundary.X && p.Y + height + speedY > boundary.Y)
                 {
-                    direction = "DiagUpRight";
+                    direction = Direction.DiagUpRight;
                 }
             }
         }
