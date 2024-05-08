@@ -76,16 +76,28 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Image1.bmp" />
+    <None Include="Resources\RBullet.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AmountSpent.png" />
+    <None Include="Resources\LBullet.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Fire.png" />
+    <None Include="Resources\Ubullet.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\bullet.png" />
+    <None Include="Resources\Dbullet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DDLBullet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DDRBullet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DULBullet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DUR.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,11 +1,6 @@
 ﻿using GameLibrary.GL.Enum;
 using GameLibrary.GL.Interfaces;
-using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GameLibrary.GL.Fire
 {
@@ -28,6 +23,26 @@ namespace GameLibrary.GL.Fire
                 location.Y -= Speed;
             else if (Direction == Direction.Down)
                 location.Y += Speed;
+            if (Direction == Direction.DiagUpLeft)
+            {
+                location.X -= Speed;
+                location.Y -= Speed;
+            }
+            else if (Direction == Direction.DiagUpRight)
+            {
+                location.X += Speed;
+                location.Y -= Speed;
+            }
+            else if (Direction == Direction.DiagDownRight)
+            {
+                location.X += Speed;
+                location.Y += Speed;
+            }
+            else if (Direction == Direction.DiagDownLeft)
+            {
+                location.X -= Speed;
+                location.Y += Speed;
+            }
             return location;
         }
     }

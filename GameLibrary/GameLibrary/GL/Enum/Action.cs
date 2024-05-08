@@ -12,6 +12,7 @@ namespace GameLibrary.GL.Enum
         RemoveEnemy,
         RemoveBullet,
         RemoveEB,
-        DoNothing
+        DoNothing,
+        IncreaseScore
     }
 }

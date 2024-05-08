@@ -15,7 +15,7 @@ namespace GameLibrary.GL
         {
             pictureBox = new PictureBox
             {
-                BackColor = Color.White,
+                BackColor = Color.Transparent,
                 Height = image.Height,
                 Width = image.Width,
                 SizeMode = PictureBoxSizeMode.StretchImage,

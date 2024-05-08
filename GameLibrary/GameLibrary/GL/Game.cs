@@ -18,17 +18,20 @@ namespace GameLibrary.GL
         private List<GameObject> gameObjects;
         ICollision collision = new Collisions();
         private static string GameStatus;
+        private int playerScore;
         private Game(Form container)
         {
             this.container = container;
             gameObjects = new List<GameObject>();
             GameStatus="Play";
+            playerScore = 0;
         }
         private Game(Panel container1)
         {
             this.container1 = container1;
             gameObjects = new List<GameObject>();
-            GameStatus="Play";
+            GameStatus = "Play";
+            playerScore = 0;
         }
         public static Game GetInstance(Form container)
         {
@@ -69,7 +72,7 @@ namespace GameLibrary.GL
             {
                 container?.Controls.Add(gameObject.GetPictureBox());
             }
-            else if(container1 != null)
+            else if (container1 != null)
             {
                 container1?.Controls.Add(gameObject.GetPictureBox());
             }
@@ -94,26 +97,19 @@ namespace GameLibrary.GL
         }
         private void Fire()
         {
-            if(Keyboard.IsKeyPressed(Key.W))
-            {
-                FirePlayer(Direction.Up);
-            }
-            if(Keyboard.IsKeyPressed(Key.S))
-            {
-                FirePlayer(Direction.Down);
-            }
-            if(Keyboard.IsKeyPressed(Key.D))
-            {
-                FirePlayer(Direction.Right);
-            }
-            if(Keyboard.IsKeyPressed(Key.A))
-            {
-                FirePlayer(Direction.Left);
-            }
+            if (Keyboard.IsKeyPressed(Key.W)) FirePlayer(Direction.Up);
+            if (Keyboard.IsKeyPressed(Key.X)) FirePlayer(Direction.Down);
+            if (Keyboard.IsKeyPressed(Key.D)) FirePlayer(Direction.Right);
+            if (Keyboard.IsKeyPressed(Key.A)) FirePlayer(Direction.Left);
+            if (Keyboard.IsKeyPressed(Key.Q)) FirePlayer(Direction.DiagUpLeft);
+            if (Keyboard.IsKeyPressed(Key.E)) FirePlayer(Direction.DiagUpRight);
+            if (Keyboard.IsKeyPressed(Key.Z)) FirePlayer(Direction.DiagDownLeft);
+            if (Keyboard.IsKeyPressed(Key.C)) FirePlayer(Direction.DiagDownRight);
         }
         private void CheckCollisions()
         {
             List<GameObject> objectsToRemove = new List<GameObject>();
+
             for (int i = 0; i < gameObjects.Count; i++)
             {
                 for (int j = i + 1; j < gameObjects.Count; j++)
@@ -123,37 +119,43 @@ namespace GameLibrary.GL
                         if (collision.CheckCollisions(gameObjects[i], gameObjects[j]))
                         {
                             Action action = collision.CheckCollisionAction(gameObjects[i], gameObjects[j]);
+
                             if (action == Action.RemoveBullet)
                             {
-                                if (gameObjects[i].GetObjectType() == ObjectType.Bullet)
-                                    objectsToRemove.Add(gameObjects[i]);
-
-                                if (gameObjects[j].GetObjectType() == ObjectType.Bullet)
-                                    objectsToRemove.Add(gameObjects[j]);
+                                if (gameObjects[i].GetObjectType() == ObjectType.Bullet) objectsToRemove.Add(gameObjects[i]);
+                                if (gameObjects[j].GetObjectType() == ObjectType.Bullet) objectsToRemove.Add(gameObjects[j]);
                             }
                             else if (action == Action.RemoveEB)
                             {
                                 objectsToRemove.Add(gameObjects[i]);
                                 objectsToRemove.Add(gameObjects[j]);
                             }
+                            else if (action == Action.RemoveEnemy)
+                            {
+                                if (gameObjects[i].GetObjectType() == ObjectType.Enemy) objectsToRemove.Add(gameObjects[i]);
+                                if (gameObjects[j].GetObjectType() == ObjectType.Enemy) objectsToRemove.Add(gameObjects[j]);
+                            }
+                            else if (action == Action.IncreaseScore)
+                            {
+                                if (gameObjects[i].GetObjectType() == ObjectType.Reward) objectsToRemove.Add(gameObjects[i]);
+                                if (gameObjects[j].GetObjectType() == ObjectType.Reward) objectsToRemove.Add(gameObjects[j]);
+                            }
                             else if (action == Action.RemovePlayer)
                             {
-                                if (gameObjects[i].GetObjectType() == ObjectType.Player)
-                                    objectsToRemove.Add(gameObjects[i]);
-                                if (gameObjects[j].GetObjectType() == ObjectType.Player)
-                                    objectsToRemove.Add(gameObjects[j]);
+                                if (gameObjects[i].GetObjectType() == ObjectType.Player) objectsToRemove.Add(gameObjects[i]);
+                                if (gameObjects[j].GetObjectType() == ObjectType.Player) objectsToRemove.Add(gameObjects[j]);
                             }
                         }
                     }
                 }
             }
+
             foreach (GameObject obj in objectsToRemove)
             {
                 Control parent = obj.GetPictureBox().Parent;
-                if (parent != null)
-                {
-                    parent.Controls.Remove(obj.GetPictureBox());
-                }
+
+                if (parent != null) parent.Controls.Remove(obj.GetPictureBox());
+
                 obj.GetPictureBox().Dispose();
                 gameObjects.Remove(obj);
             }
@@ -161,41 +163,24 @@ namespace GameLibrary.GL
         public void FirePlayer(Direction direction)
         {
             int left = 0, top = 0;
+            Image img = null;
+
             foreach (GameObject gameobject in gameObjects)
             {
                 if (gameobject.GetObjectType() == ObjectType.Player)
                 {
-                    if(direction==Direction.Up)
-                    {
-                        left=gameobject.GetPictureBox().Left;
-                        top=gameobject.GetPictureBox().Top;
-                    }
-                    if(direction== Direction.Down)
-                    {
-                        left=gameobject.GetPictureBox().Left;
-                        top=gameobject.GetPictureBox().Top+gameobject.GetPictureBox().Height;
-                    }
-                    if(direction==Direction.Left)
-                    {
-                        left=gameobject.GetPictureBox().Left-15;
-                        top = gameobject.GetPictureBox().Top + gameobject.GetPictureBox().Height / 3;
-                    }
-                    if (direction==Direction.Right)
-                    {
-                        left = gameobject.GetPictureBox().Left + gameobject.GetPictureBox().Width;
-                        top = gameobject.GetPictureBox().Top + gameobject.GetPictureBox().Height / 3;
-                    }
-                    break;
+                    if (direction == Direction.Up) { img = Resource1.UBullet; left = gameobject.GetPictureBox().Left; top = gameobject.GetPictureBox().Top; }
+                    if (direction == Direction.Down) { img = Resource1.DBullet; left = gameobject.GetPictureBox().Left; top = gameobject.GetPictureBox().Top + gameobject.GetPictureBox().Height; }
+                    if (direction == Direction.Left) { img = Resource1.LBullet; left = gameobject.GetPictureBox().Left - 25; top = gameobject.GetPictureBox().Top + gameobject.GetPictureBox().Height / 3; }
+                    if (direction == Direction.Right) { img = Resource1.RBullet; left = gameobject.GetPictureBox().Left + gameobject.GetPictureBox().Width; top = gameobject.GetPictureBox().Top + gameobject.GetPictureBox().Height / 3; }
+                    if (direction == Direction.DiagUpLeft) { img = Resource1.DULBullet; left = gameobject.GetPictureBox().Left - img.Width; top = gameobject.GetPictureBox().Top - img.Height; break; }
+                    if (direction == Direction.DiagUpRight) { img = Resource1.DURBullet; left = gameobject.GetPictureBox().Left + gameobject.GetPictureBox().Width; top = gameobject.GetPictureBox().Top - img.Height; break; }
+                    if (direction == Direction.DiagDownLeft) { img = Resource1.DDLBullet; left = gameobject.GetPictureBox().Left - img.Width; top = gameobject.GetPictureBox().Top + gameobject.GetPictureBox().Height; break; }
+                    if (direction == Direction.DiagDownRight) { img = Resource1.DDRBullet; left = gameobject.GetPictureBox().Left + gameobject.GetPictureBox().Width; top = gameobject.GetPictureBox().Top + gameobject.GetPictureBox().Height; break; }
                 }
             }
-            if (container!=null)
-            {
-                AddGameObject(Resource1.bullet, left, top, new FireMovement(20, direction));
-            }
-            else if (container1!=null)
-            {
-                AddGameObject(Resource1.bullet, left, top, new FireMovement(20, direction));
-            }
+            if (container != null) AddGameObject(img, left, top, new FireMovement(20, direction));
+            else if (container1 != null) AddGameObject(img, left, top, new FireMovement(20, direction));
         }
         public void UpdateObjects()
         {
