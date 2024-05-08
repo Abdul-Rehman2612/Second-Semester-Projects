@@ -18,20 +18,50 @@ namespace GameLibrary.GL
         private List<GameObject> gameObjects;
         ICollision collision = new Collisions();
         private static string GameStatus;
-        private int playerScore;
+        private Label playerScore;
+        private Label EnemyCount;
+        private int enemyCount = 0;
+        private int score=0;
         private Game(Form container)
         {
             this.container = container;
             gameObjects = new List<GameObject>();
             GameStatus="Play";
-            playerScore = 0;
+            playerScore= new Label
+            {
+                Top=10,
+                Left=1250,
+                BackColor=Color.Teal,
+                ForeColor=Color.White
+            };
+            container.Controls.Add(playerScore);
+            EnemyCount= new Label
+            {
+                Top=50,
+                Left=1250,
+                BackColor=Color.Teal,
+                ForeColor=Color.White
+            };
+            container.Controls.Add(EnemyCount);
+        }
+        private int bulletCount()
+        {
+
+            int count = 0;
+            foreach (GameObject obj in gameObjects)
+            {
+                if (obj.GetObjectType()==ObjectType.Bullet)
+                {
+                    count++;
+                }
+            }
+            return count;
         }
         private Game(Panel container1)
         {
             this.container1 = container1;
             gameObjects = new List<GameObject>();
             GameStatus = "Play";
-            playerScore = 0;
         }
         public static Game GetInstance(Form container)
         {
@@ -55,6 +85,7 @@ namespace GameLibrary.GL
             if (movement is HorizontalMovement || movement is VerticalMovement || movement is ZigZagMovement)
             {
                 gameObject = new GameObject(img, x, y, movement, ObjectType.Enemy);
+                enemyCount++;
             }
             else if (movement is KeyMovements)
             {
@@ -66,7 +97,7 @@ namespace GameLibrary.GL
             }
             else
             {
-                gameObject = new GameObject(img, x, y, movement, ObjectType.Wall);
+                gameObject = new GameObject(img, x, y, movement, ObjectType.Reward);
             }
             if (container != null)
             {
@@ -86,14 +117,18 @@ namespace GameLibrary.GL
         {
             GameStatus="Play";
         }
-        public void UpdateGame()
+        public string UpdateGame()
         {
             if (GameStatus == "Play")
             {
                 UpdateObjects();
                 CheckCollisions();
                 Fire();
+                WinCheck();
+                playerScore.Text="Score: "+ score.ToString();
+                EnemyCount.Text="Enemy Count: "+ enemyCount.ToString();
             }
+            return GameStatus;
         }
         private void Fire()
         {
@@ -129,21 +164,25 @@ namespace GameLibrary.GL
                             {
                                 objectsToRemove.Add(gameObjects[i]);
                                 objectsToRemove.Add(gameObjects[j]);
+                                enemyCount--;
                             }
                             else if (action == Action.RemoveEnemy)
                             {
                                 if (gameObjects[i].GetObjectType() == ObjectType.Enemy) objectsToRemove.Add(gameObjects[i]);
                                 if (gameObjects[j].GetObjectType() == ObjectType.Enemy) objectsToRemove.Add(gameObjects[j]);
+                                enemyCount--;
                             }
                             else if (action == Action.IncreaseScore)
                             {
                                 if (gameObjects[i].GetObjectType() == ObjectType.Reward) objectsToRemove.Add(gameObjects[i]);
                                 if (gameObjects[j].GetObjectType() == ObjectType.Reward) objectsToRemove.Add(gameObjects[j]);
+                                score+=1;
                             }
                             else if (action == Action.RemovePlayer)
                             {
                                 if (gameObjects[i].GetObjectType() == ObjectType.Player) objectsToRemove.Add(gameObjects[i]);
                                 if (gameObjects[j].GetObjectType() == ObjectType.Player) objectsToRemove.Add(gameObjects[j]);
+                                GameStatus="Lose";
                             }
                         }
                     }
@@ -160,27 +199,45 @@ namespace GameLibrary.GL
                 gameObjects.Remove(obj);
             }
         }
-        public void FirePlayer(Direction direction)
+        public void WinCheck()
         {
-            int left = 0, top = 0;
-            Image img = null;
-
-            foreach (GameObject gameobject in gameObjects)
+            int count=0;
+            foreach(GameObject obj in gameObjects)
             {
-                if (gameobject.GetObjectType() == ObjectType.Player)
+                if(obj.GetObjectType()==ObjectType.Enemy)
                 {
-                    if (direction == Direction.Up) { img = Resource1.UBullet; left = gameobject.GetPictureBox().Left; top = gameobject.GetPictureBox().Top; }
-                    if (direction == Direction.Down) { img = Resource1.DBullet; left = gameobject.GetPictureBox().Left; top = gameobject.GetPictureBox().Top + gameobject.GetPictureBox().Height; }
-                    if (direction == Direction.Left) { img = Resource1.LBullet; left = gameobject.GetPictureBox().Left - 25; top = gameobject.GetPictureBox().Top + gameobject.GetPictureBox().Height / 3; }
-                    if (direction == Direction.Right) { img = Resource1.RBullet; left = gameobject.GetPictureBox().Left + gameobject.GetPictureBox().Width; top = gameobject.GetPictureBox().Top + gameobject.GetPictureBox().Height / 3; }
-                    if (direction == Direction.DiagUpLeft) { img = Resource1.DULBullet; left = gameobject.GetPictureBox().Left - img.Width; top = gameobject.GetPictureBox().Top - img.Height; break; }
-                    if (direction == Direction.DiagUpRight) { img = Resource1.DURBullet; left = gameobject.GetPictureBox().Left + gameobject.GetPictureBox().Width; top = gameobject.GetPictureBox().Top - img.Height; break; }
-                    if (direction == Direction.DiagDownLeft) { img = Resource1.DDLBullet; left = gameobject.GetPictureBox().Left - img.Width; top = gameobject.GetPictureBox().Top + gameobject.GetPictureBox().Height; break; }
-                    if (direction == Direction.DiagDownRight) { img = Resource1.DDRBullet; left = gameobject.GetPictureBox().Left + gameobject.GetPictureBox().Width; top = gameobject.GetPictureBox().Top + gameobject.GetPictureBox().Height; break; }
+                    count++;
                 }
             }
-            if (container != null) AddGameObject(img, left, top, new FireMovement(20, direction));
-            else if (container1 != null) AddGameObject(img, left, top, new FireMovement(20, direction));
+            if(count==0)
+            {
+                GameStatus="Win";
+            }
+        }
+        public void FirePlayer(Direction direction)
+        {
+            if (bulletCount()<=12)
+            {
+                int left = 0, top = 0;
+                Image img = null;
+
+                foreach (GameObject gameobject in gameObjects)
+                {
+                    if (gameobject.GetObjectType() == ObjectType.Player)
+                    {
+                        if (direction == Direction.Up) { img = Resource1.UBullet; left = gameobject.GetPictureBox().Left; top = gameobject.GetPictureBox().Top; }
+                        if (direction == Direction.Down) { img = Resource1.DBullet; left = gameobject.GetPictureBox().Left; top = gameobject.GetPictureBox().Top + gameobject.GetPictureBox().Height; }
+                        if (direction == Direction.Left) { img = Resource1.LBullet; left = gameobject.GetPictureBox().Left - 25; top = gameobject.GetPictureBox().Top + gameobject.GetPictureBox().Height / 3; }
+                        if (direction == Direction.Right) { img = Resource1.RBullet; left = gameobject.GetPictureBox().Left + gameobject.GetPictureBox().Width; top = gameobject.GetPictureBox().Top + gameobject.GetPictureBox().Height / 3; }
+                        if (direction == Direction.DiagUpLeft) { img = Resource1.DULBullet; left = gameobject.GetPictureBox().Left - img.Width; top = gameobject.GetPictureBox().Top - img.Height; break; }
+                        if (direction == Direction.DiagUpRight) { img = Resource1.DURBullet; left = gameobject.GetPictureBox().Left + gameobject.GetPictureBox().Width; top = gameobject.GetPictureBox().Top - img.Height; break; }
+                        if (direction == Direction.DiagDownLeft) { img = Resource1.DDLBullet; left = gameobject.GetPictureBox().Left - img.Width; top = gameobject.GetPictureBox().Top + gameobject.GetPictureBox().Height; break; }
+                        if (direction == Direction.DiagDownRight) { img = Resource1.DDRBullet; left = gameobject.GetPictureBox().Left + gameobject.GetPictureBox().Width; top = gameobject.GetPictureBox().Top + gameobject.GetPictureBox().Height; break; }
+                    }
+                }
+                if (container != null) AddGameObject(img, left, top, new FireMovement(20, direction));
+                else if (container1 != null) AddGameObject(img, left, top, new FireMovement(20, direction));
+            }
         }
         public void UpdateObjects()
         {

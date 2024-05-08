@@ -1,7 +1,6 @@
 ﻿using GameLibrary.GL.Enum;
 using GameLibrary.GL.Interfaces;
-using System.Collections.Generic;
-using System.Windows.Forms;
+
 
 namespace GameLibrary.GL.Collision
 {

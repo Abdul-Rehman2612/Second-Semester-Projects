@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>E:\Softwares\Bunifu_UI_WinForms_5.0.3\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
     <Reference Include="GameLibrary">
       <HintPath>..\..\GameLibrary\GameLibrary\bin\Debug\GameLibrary.dll</HintPath>
     </Reference>
@@ -49,25 +52,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\GameStates\LoseGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\GameStates\LoseGame.Designer.cs">
+      <DependentUpon>LoseGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\GameStates\WinGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\GameStates\WinGame.Designer.cs">
+      <DependentUpon>WinGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Instructions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Instructions.Designer.cs">
+      <DependentUpon>Instructions.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Levels\Level1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Levels\Level1.Designer.cs">
       <DependentUpon>Level1.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Main.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utility\Resource1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resource1.resx</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -77,15 +102,25 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\GameStates\LoseGame.resx">
+      <DependentUpon>LoseGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\GameStates\WinGame.resx">
+      <DependentUpon>WinGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Instructions.resx">
+      <DependentUpon>Instructions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Levels\Level1.resx">
       <DependentUpon>Level1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Utility\Resource1.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -100,9 +135,27 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <None Include="Resources\Y.jpg" />
+    <None Include="Resources\BGImg.jpeg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Enemy1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Enemy2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Enemy3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GPlayer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InstructionsBG.jpeg" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
