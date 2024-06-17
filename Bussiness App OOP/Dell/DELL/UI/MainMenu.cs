@@ -30,5 +30,30 @@ namespace DELL
         {
             Application.Exit();
         }
+
+        private void TopContainer_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void BottomContainer_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Inputs_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Logo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

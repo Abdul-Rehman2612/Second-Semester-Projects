@@ -1,0 +1,11 @@
+D:\GameLibrary\GameLibrary\bin\Debug\GameLibrary.pdb
+D:\GameLibrary\GameLibrary\obj\Debug\GameLibrary.csproj.AssemblyReference.cache
+D:\GameLibrary\GameLibrary\obj\Debug\GameLibrary.csproj.CoreCompileInputs.cache
+D:\GameLibrary\GameLibrary\obj\Debug\GameLibrary.dll
+D:\GameLibrary\GameLibrary\obj\Debug\GameLibrary.pdb
+D:\GameLibrary\GameLibrary\bin\Debug\EZInput.dll
+D:\GameLibrary\GameLibrary\bin\Debug\EZInput.xml
+D:\GameLibrary\GameLibrary\obj\Debug\GameLibr.D5A65543.Up2Date
+D:\GameLibrary\GameLibrary\obj\Debug\GameLibrary.Resource1.resources
+D:\GameLibrary\GameLibrary\obj\Debug\GameLibrary.csproj.GenerateResource.cache
+D:\GameLibrary\GameLibrary\bin\Debug\GameLibrary.dll

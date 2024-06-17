@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B0B1F1AA-F2C7-4634-82C3-E485C264FC19}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GameLibrary</RootNamespace>
+    <AssemblyName>GameLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EZInput, Version=1.3.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EZInput.1.3.2\lib\netstandard2.0\EZInput.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GL\Collision\Collisions.cs" />
+    <Compile Include="GL\Enum\Action.cs" />
+    <Compile Include="GL\Enum\Direction.cs" />
+    <Compile Include="GL\Enum\ObjectType.cs" />
+    <Compile Include="GL\Game.cs" />
+    <Compile Include="GL\GameObject.cs" />
+    <Compile Include="GL\Interfaces\Interface1.cs" />
+    <Compile Include="GL\Movement\FireMovement.cs" />
+    <Compile Include="GL\Movement\ZigZagMovement.cs" />
+    <Compile Include="GL\Movement\HorizontalMovement.cs" />
+    <Compile Include="GL\Interfaces\IMovement.cs" />
+    <Compile Include="GL\Movement\KeyMovements.cs" />
+    <Compile Include="GL\Movement\VerticalMovement.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RBullet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LBullet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ubullet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dbullet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DDLBullet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DDRBullet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DULBullet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DUR.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

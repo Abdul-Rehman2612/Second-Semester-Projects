@@ -55,6 +55,7 @@
             this.TopContainer.Name = "TopContainer";
             this.TopContainer.Size = new System.Drawing.Size(784, 150);
             this.TopContainer.TabIndex = 0;
+            this.TopContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.TopContainer_Paint);
             // 
             // Logo
             // 
@@ -67,6 +68,7 @@
             this.Logo.Size = new System.Drawing.Size(784, 150);
             this.Logo.TabIndex = 1;
             this.Logo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Logo.Click += new System.EventHandler(this.Logo_Click);
             // 
             // BottomContainer
             // 
@@ -76,6 +78,7 @@
             this.BottomContainer.Name = "BottomContainer";
             this.BottomContainer.Size = new System.Drawing.Size(784, 411);
             this.BottomContainer.TabIndex = 1;
+            this.BottomContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.BottomContainer_Paint);
             // 
             // Inputs
             // 
@@ -103,6 +106,7 @@
             this.Inputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.47917F));
             this.Inputs.Size = new System.Drawing.Size(784, 411);
             this.Inputs.TabIndex = 0;
+            this.Inputs.Paint += new System.Windows.Forms.PaintEventHandler(this.Inputs_Paint);
             // 
             // SignInbtn
             // 
@@ -387,6 +391,7 @@
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(784, 561);
             this.MainPanel.TabIndex = 1;
+            this.MainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MainPanel_Paint);
             // 
             // MainMenu
             // 

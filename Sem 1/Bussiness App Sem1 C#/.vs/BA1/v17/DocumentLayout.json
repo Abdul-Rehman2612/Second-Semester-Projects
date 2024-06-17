@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Project\\Second Semester\\Bussiness App C#\\",
+  "WorkspaceRootPath": "D:\\Project\\Second Semester\\Sem 1\\Bussiness App Sem1 C#\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{127C855C-9C71-483E-BBF1-E7582FDD7DE5}|BA1\\BA1.csproj|d:\\project\\second semester\\bussiness app c#\\ba1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{127C855C-9C71-483E-BBF1-E7582FDD7DE5}|BA1\\BA1.csproj|d:\\project\\second semester\\sem 1\\bussiness app sem1 c#\\ba1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{127C855C-9C71-483E-BBF1-E7582FDD7DE5}|BA1\\BA1.csproj|solutionrelative:ba1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -24,11 +24,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Project\\Second Semester\\Bussiness App C#\\BA1\\Program.cs",
+              "DocumentMoniker": "D:\\Project\\Second Semester\\Sem 1\\Bussiness App Sem1 C#\\BA1\\Program.cs",
               "RelativeDocumentMoniker": "BA1\\Program.cs",
-              "ToolTip": "D:\\Project\\Second Semester\\Bussiness App C#\\BA1\\Program.cs",
-              "RelativeToolTip": "BA1\\Program.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAA6wPsDAAAJAAAA",
+              "ToolTip": "D:\\Project\\Second Semester\\Sem 1\\Bussiness App Sem1 C#\\BA1\\Program.cs*",
+              "RelativeToolTip": "BA1\\Program.cs*",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAMwF8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-23T08:12:23.115Z",
               "EditorCaption": ""
